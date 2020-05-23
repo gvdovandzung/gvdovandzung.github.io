@@ -1,0 +1,347 @@
+.-
+help for ^Two-way (cross) tabulation and Three-way (by group) tabulation^
+.-
+                                                        Menu: Summaries--Tables
+
+Topic covered
+-------------
+
+^1. Description^
+^2. Example of Two-way (cross) tabulation (how to fill in the dialog box)^
+^3. Options for Two-way (cross) tabulation^
+^4. Example of Three-way (by group) tabulation (how to fill in the dialog box)^
+^5. Options for Three-way (by group) tabulation^
+
+
+^1. Description^
+^--------------^
+
+^Two-way (cross) tabulation^ produces a table like
+
+     Repair| Car type                                                           
+Record 1978|  Domestic    Foreign |     Total                                   
+-----------+----------------------+----------                                   
+         1 |         2          0 |         2                                   
+         2 |         8          0 |         8                                   
+         3 |        27          3 |        30                                   
+         4 |         9          9 |        18                                   
+         5 |         2          9 |        11                                   
+-----------+----------------------+----------                                   
+      Total|        48         21 |        69                                   
+                                                                                
+          Pearson chi2(4) =  27.2640   Pr = 0.000                               
+                                                                                
+^Three-way (by group) tabulation^ produces two-way tables for
+each value of the "by" variable.  For example:
+
+-> price=     low                                                               
+     Repair| Car type                                                           
+Record 1978|  Domestic    Foreign |     Total                                   
+-----------+----------------------+----------                                   
+      fair |         4          0 |         4                                   
+   average |        12          1 |        13                                   
+      good |         6          6 |        12                                   
+   excell. |         0          6 |         6                                   
+-----------+----------------------+----------                                   
+      Total|        22         13 |        35                                   
+                                                                                
+          Pearson chi2(3) =  18.1966   Pr = 0.000                               
+                                                                                
+-> price=    high                                                               
+     Repair| Car type                                                           
+Record 1978|  Domestic    Foreign |     Total                                   
+-----------+----------------------+----------                                   
+      poor |         2          0 |         2                                   
+      fair |         4          0 |         4                                   
+   average |        15          2 |        17                                   
+      good |         3          3 |         6                                   
+   excell. |         2          3 |         5                                   
+-----------+----------------------+----------                                   
+      Total|        26          8 |        34                                   
+                                                                                
+          Pearson chi2(4) =   9.1865   Pr = 0.057
+
+Both commands also give the Pearson's chi-squared statistic for each two-way
+table.                               
+                                                                                
+Note:  Only numeric variables can be tabulated; string variables cannot be.
+
+In the above examples, the values of these numeric variables were labeled
+using the ^Label values^ command from the ^Labels^ section of the ^Data^ menu.
+
+@vlabvar!Click here for help on Label values.@
+
+
+^2. Example of Two-way (cross) tabulation (how to fill in the dialog box)^
+^------------------------------------------------------------------------^
+
+Suppose your data are the following (list them by choosing ^List data^ under
+the ^Summaries^ menu):
+
+^. list race gender bp in 1/69^                                                  
+                                                                                
+         race    gender         bp                                              
+  1.    white      male        103                                              
+  2.    black      male        124                                              
+  3.    latin    female        117                                              
+  4.    white    female         94                                              
+  5.    black    female        130                                              
+  6.    black      male         92                                              
+  7.    black      male        118                                              
+  .       .         .           .
+  .       .         .           .  [data omitted]
+  .       .         .           .
+ 64.    black    female         92                                              
+ 65.    black      male        103                                              
+ 66.    latin    female         96                                              
+ 67.    black      male         98                                              
+ 68.    white      male        100                                              
+ 69.    white      male        130                                              
+ 
+If you want to determine how many persons there are in the race by gender
+categories, select ^Two-way (cross-tabulation)^ from the ^Tables^ section
+of the ^Summaries^ menu.
+
+Enter ^race^ for the "Row variable" and ^gender^ for the "Column variable".
+
+To enter variables, click on their names in the list box.  Or type them in.
+
+Output is
+
+^. tabulate race gender, chi2^                                                   
+                                                                                
+           | gender                                                             
+       race|      male     female |     Total                                   
+-----------+----------------------+----------                                   
+     white |        27          3 |        30                                   
+     black |        17          9 |        26                                   
+     latin |         2          9 |        11                                   
+     other |         2          0 |         2                                   
+-----------+----------------------+----------                                   
+      Total|        48         21 |        69                                   
+                                                                                
+          Pearson chi2(3) =  20.7241   Pr = 0.000                               
+                                                                                
+
+^3. Options for Two-way (cross) tabulation^
+^-----------------------------------------^
+
+Checking ^Report row percentages^ produces
+
+^. tabulate race gender, chi2 row^                                                
+                                                                                
+           | gender                                                             
+       race|      male     female |     Total                                   
+-----------+----------------------+----------                                   
+     white |        27          3 |        30                                   
+           |     90.00      10.00 |    100.00                                   
+-----------+----------------------+----------                                   
+     black |        17          9 |        26                                   
+           |     65.38      34.62 |    100.00                                   
+-----------+----------------------+----------                                   
+     latin |         2          9 |        11                                   
+           |     18.18      81.82 |    100.00                                   
+-----------+----------------------+----------                                   
+     other |         2          0 |         2                                   
+           |    100.00       0.00 |    100.00                                   
+-----------+----------------------+----------                                   
+      Total|        48         21 |        69                                   
+           |     69.57      30.43 |    100.00                                   
+                                                                                
+          Pearson chi2(3) =  20.7241   Pr = 0.000
+
+The row percentages are %male and %female within each race category.
+
+For example, black females: 9/26 = 0.3462 = 34.62%.                             
+                                                                                
+Checking ^Report columns percentages^ produces                                                                      
+
+. tabulate race gender, chi2 column                                             
+                                                                                
+           | gender                                                             
+       race|      male     female |     Total                                   
+-----------+----------------------+----------                                   
+     white |        27          3 |        30                                   
+           |     56.25      14.29 |     43.48                                   
+-----------+----------------------+----------                                   
+     black |        17          9 |        26                                   
+           |     35.42      42.86 |     37.68                                   
+-----------+----------------------+----------                                   
+     latin |         2          9 |        11                                   
+           |      4.17      42.86 |     15.94                                   
+-----------+----------------------+----------                                   
+     other |         2          0 |         2                                   
+           |      4.17       0.00 |      2.90                                   
+-----------+----------------------+----------                                   
+      Total|        48         21 |        69                                   
+           |    100.00     100.00 |    100.00                                   
+                                                                                
+          Pearson chi2(3) =  20.7241   Pr = 0.000                               
+            
+The column percentages are %white, %black, %latin, and %other within each
+gender category.
+
+For example, black females: 9/21 = 0.4286 = 42.86%.                           
+
+Checking ^Report cell percentages^ produces                                                                      
+
+. tabulate race gender, chi2 cell                                               
+                                                                                
+           | gender                                                             
+       race|      male     female |     Total                                   
+-----------+----------------------+----------                                   
+     white |        27          3 |        30                                   
+           |     39.13       4.35 |     43.48                                   
+-----------+----------------------+----------                                   
+     black |        17          9 |        26                                   
+           |     24.64      13.04 |     37.68                                   
+-----------+----------------------+----------                                   
+     latin |         2          9 |        11                                   
+           |      2.90      13.04 |     15.94                                   
+-----------+----------------------+----------                                   
+     other |         2          0 |         2                                   
+           |      2.90       0.00 |      2.90                                   
+-----------+----------------------+----------                                   
+      Total|        48         21 |        69                                   
+           |     69.57      30.43 |    100.00                                   
+                                                                                
+          Pearson chi2(3) =  20.7241   Pr = 0.000                               
+                                                                                
+The cell percentages are the % for the number in a cell over the total.
+
+For example, black females: 6/69 = 0.1304 = 13.04%.
+
+Checking ^Report all statistics^ gives additional statistics.
+
+Note: You can check more than one option.  The percentages appear in
+the table in the same order as the dialog box.
+
+The output below was produced with all options checked.                                                                   
+
+^. tabulate race gender, chi2 row column cell^                                    
+                                                                                
+           | gender                                                             
+       race|      male     female |     Total                                   
+-----------+----------------------+----------                                   
+     white |        27          3 |        30                                   
+           |     90.00      10.00 |    100.00  ^-> row percentages^                                  
+           |     56.25      14.29 |     43.48  ^-> column percentages^                                 
+           |     39.13       4.35 |     43.48  ^-> cell percentages^                               
+-----------+----------------------+----------                                   
+     black |        17          9 |        26                                   
+           |     65.38      34.62 |    100.00                                   
+           |     35.42      42.86 |     37.68                                   
+           |     24.64      13.04 |     37.68                                   
+-----------+----------------------+----------                                   
+     latin |         2          9 |        11                                   
+           |     18.18      81.82 |    100.00                                   
+           |      4.17      42.86 |     15.94                                   
+           |      2.90      13.04 |     15.94                                   
+-----------+----------------------+----------                                   
+     other |         2          0 |         2                                   
+           |    100.00       0.00 |    100.00                                   
+           |      4.17       0.00 |      2.90                                   
+           |      2.90       0.00 |      2.90                                   
+-----------+----------------------+----------                                   
+      Total|        48         21 |        69                                   
+           |     69.57      30.43 |    100.00                                   
+           |    100.00     100.00 |    100.00                                   
+           |     69.57      30.43 |    100.00                                   
+                                                                                
+          Pearson chi2(3) =  20.7241   Pr = 0.000                               
+ likelihood-ratio chi2(3) =        .                                            
+               Cramer's V =   0.5480                                            
+                    gamma =   0.6905  ASE = 0.126                               
+          Kendall's tau-b =   0.4203  ASE = 0.097                               
+ 
+
+^4. Example of Three-way (by group) tabulation (how to fill in the dialog box)^
+^-----------------------------------------------------------------------------
+
+Suppose your data consists of the data for 1978 automobiles:
+
+^price^   = 0 if low-priced (<= $5000), or 1 if high-priced (> $5000)
+
+^foreign^ = 0 if domestic, or 1 foreign
+
+^rep78^   = 1 if repair record poor,
+            2 if fair,
+            3 if average,
+            4 if good,
+            5 if excellent
+
+Say we want to compare repair record for foreign vs. domestic cars,
+separately by price category.
+
+Select ^Three-way (by group)^ from the ^Tables^ section of the ^Summaries^ menu.
+
+Enter ^rep78^   for the "Row variable".
+Enter ^foreign^ for the "Column variable".
+Enter ^price^   for the "By group".
+
+Enter variables by pressing the button to the right of the edit box.
+A list box will appear and you can select the variable you want by
+clicking on it.  Or you can type in the name of the variable.
+
+Output is
+
+^. sort price^                                                                    
+^. by price: tabulate rep78 foreign, chi2^                                        
+                                                                                
+-> price=     low                                                               
+     Repair| Car type                                                           
+Record 1978|  Domestic    Foreign |     Total                                   
+-----------+----------------------+----------                                   
+      fair |         4          0 |         4                                   
+   average |        12          1 |        13                                   
+      good |         6          6 |        12                                   
+   excell. |         0          6 |         6                                   
+-----------+----------------------+----------                                   
+      Total|        22         13 |        35                                   
+                                                                                
+          Pearson chi2(3) =  18.1966   Pr = 0.000                               
+                                                                                
+-> price=    high                                                               
+     Repair| Car type                                                           
+Record 1978|  Domestic    Foreign |     Total                                   
+-----------+----------------------+----------                                   
+      poor |         2          0 |         2                                   
+      fair |         4          0 |         4                                   
+   average |        15          2 |        17                                   
+      good |         3          3 |         6                                   
+   excell. |         2          3 |         5                                   
+-----------+----------------------+----------                                   
+      Total|        26          8 |        34                                   
+                                                                                
+          Pearson chi2(4) =   9.1865   Pr = 0.057                               
+                                                                                
+Note that we did not see the values 0 and 1 for ^price^.  We saw
+"low" and "high".  ^price^ is a numeric variable that we labeled
+using the ^Label values^ command from the ^Labels^ section of the
+^Data^ menu.
+
+We also used the ^Label values^ command to label ^rep78^ and ^foreign^. 
+
+@vlabvar!Click here for help on Label values.@
+
+ 
+^5. Options for Three-way (by group) tabulation^
+^----------------------------------------------^
+
+Options produce the same results here as they do with ^Two-way tabulation^.
+
+See ^3. Options for Two-way (cross) tabulation^ above.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@dpldlg!Dotplots@
+@histdlg!Histograms@
+@bardlg!Bar charts@
+
+@onedlg!One-way (frequency) tables@
+@sumbydlg!Means and SDs by group@
+@listdlg!List data@

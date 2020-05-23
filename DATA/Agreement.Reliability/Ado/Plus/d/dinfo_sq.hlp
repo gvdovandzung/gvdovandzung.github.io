@@ -1,0 +1,61 @@
+.-
+help for ^Dataset info^                                           Menu: Summaries
+.-
+
+^Description^
+^-----------^
+
+When you choose ^Dataset info^ from the ^Summaries^ menu, you will see a list of
+notes for the dataset you are using. 
+
+^How to create notes for a dataset^
+^---------------------------------^
+
+In the Command window, type ^note:^, then type the text of the note,
+then press ^Enter^.
+
+Example: Type
+
+	^note: This data came from Stan.^
+
+Choose ^Dataset info^ from the ^Summaries^ menu, and you will see
+
+^. notes^                                                                        
+                                                                                
+_dta:                                                                           
+  1.  This data came from Stan.
+
+You can add more notes.  Example: type
+
+	^note: Dataset created August 18, 1995.^
+
+Choose ^Dataset info^ from the ^Summaries^ menu, and you will see
+ 
+^. notes^                                                                        
+                                                                                
+_dta:                                                                           
+  1.  This data came from Stan.                                                 
+  2.  Dataset created August 18, 1995.                                          
+ 
+                                          
+^How to delete notes for a dataset^
+^---------------------------------^
+
+In the Command window, type
+
+	^notes drop _dta^
+
+Then press ^Enter^.
+
+All notes for a dataset will be deleted.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@dslabdlg!Label dataset@
+@varldlg!Label variable@
+@editr_sq!Using the spreadsheet editor (variable labels can also be entered@
+@editr_sq!in the editor)@

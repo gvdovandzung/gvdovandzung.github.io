@@ -1,0 +1,26 @@
+{smcl}
+{p 0 4}
+{bind:{bf:A Visual Guide to Stata Graphics}}
+{p_end}
+{hline}
+
+{p 1 1 1}
+This help file helps you access the online 
+resources associated with {it:A Visual Guide to Stata Graphics}.
+
+{p 4 8 4}
+{bf:{help vgsg_data:Data files}}{break}
+
+{p 4 8 4}
+{bf:{help vgsg_schemes:Schemes}}{break}
+
+{p 4 8 4}
+{bf:{help vgsg_ado:Additional programs}}{break}
+
+{p 4 8 4}
+{bf:{help vgsg_ref:Cross Reference to [G] Graph}}{break}
+
+{p 4 8 4}
+{bf:{browse www.stata-press.com/books/vgsg.html:Web site for book}}{break}
+
+{hline}

@@ -1,0 +1,83 @@
+*! version 1.0.0  21apr1995
+program define tt1dlg
+	version 5.0
+	
+        precmd tt1dlg
+	
+	global D_run "1"
+
+	global D_sm1 "No. of observations"
+	global D_sm2 "Sample mean"
+	global D_sm3 "Sample std. dev."
+	global D_sm4 "Hypothesized mean"
+	global D_sm5 "Confidence level"
+	
+	window control static D_sm1 10 15 70 10 left
+	window control static D_sm2 10 30 70 10
+	window control static D_sm3 10 45 70 10
+	window control static D_sm4 10 60 70 10
+	window control static D_sm5 10 75 70 10
+	
+        * Number of observations
+	window control edit 85 15 25 10 D_nobs
+	
+        * Sample mean
+	window control edit 85 30 25 10 D_mean1
+	
+        * Sample std. dev
+	window control edit 85 45 25 10 D_sd1
+	
+        * Hypothesized mean
+	window control edit 85 60 25 10 D_hyp
+	
+	* Confidence level
+	window control edit 85 75 25 10 D_level
+	
+        * Buttons
+      	window control button "Run"     8 95 30 16 D_bok
+	window control button "Cancel" 45 95 30 16 D_bex
+	window control button "Help"   82 95 30 16 D_bhl help
+	
+	global D_bhl "whelp tt1dlg"
+	global D_bok "noi tt1ok"
+	global D_bex "exit 3000"
+	
+	noi capture window dialog "1-sample t test" . . 125 130
+	if _rc>3000 {
+		tt1ok
+	}
+	global D_run
+end
+
+program define tt1ok
+	version 5.0
+	
+	if trim("$D_mean1") == "" | trim("$D_hyp") == "" | /*
+	*/ trim("$D_hyp") == "" | trim("$D_sd1") == "" {
+		window stopbox stop "Missing values not allowed."
+		exit
+	}
+	if $D_nobs <= 1 {
+		window stopbox stop "Number of observations must be > 1."
+		exit
+	}
+	if $D_sd1 <= 0 {
+		window stopbox stop "Standard deviation must be positive."
+		exit
+	}
+	if $D_mean1 == . | $D_hyp == . {
+		window stopbox stop "Missing values not allowed."
+		exit
+	}
+	global S_level $D_level
+	if "$D_run" != "" {
+		noi di in white "ttesti $D_nobs $D_mean1 $D_sd1 $D_hyp"
+	}
+	else {
+		noi di in white
+		noi di in white ". ttesti $D_nobs $D_mean1 $D_sd1 $D_hyp"
+	}
+	global D_run
+	window push ttesti $D_nobs $D_mean1 $D_sd1 $D_hyp
+	noi ttesti $D_nobs $D_mean1 $D_sd1 $D_hyp
+end

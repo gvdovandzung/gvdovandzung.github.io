@@ -1,0 +1,48 @@
+.-
+help for ^sdpair^                                                 (STB-55: sbe33)
+.-
+
+Pitman's test of difference in variance for paired data
+-------------------------------------------------------
+
+        ^sdpair^ varname1 varname2 [weight] [^if^ exp] [^in^ range] 
+              [^, format(^str^) l^evel^(^#^)^ ]
+
+^fweight^s and ^aweight^s are allowed; see help @weights@.
+
+
+Description
+-----------
+
+^sdpair^ produces Pitman's confidence interval for the ratio of variances
+for paired data.
+
+
+Options
+-------
+
+^format(^str^)^ sets the format for the display of results.
+
+^level(^#^)^ specifies the confidence level, in percent, for confidence 
+    intervals. The default is ^level(95)^ or as set by ^set level^.
+
+
+Examples 
+--------
+
+   . ^use suv2^
+   . ^sdpair log_p log_gp^
+
+
+Author
+------
+        Paul Seed
+        GKT School of Medicine
+        King's London, UK
+        email: paul.seed@@kcl.ac.uk
+
+
+Also see
+--------
+
+    STB: STB-55 sbe33

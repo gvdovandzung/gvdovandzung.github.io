@@ -1,0 +1,161 @@
+.-
+help for ^Multiple regression^                                   Menu: Statistics
+.-
+
+Topics covered
+--------------
+
+^1. Description^
+^2. Options^
+^2a. Use all selected variables (standard)^
+^2b. Do a stepwise regression^
+^2c. Durbin-Watson autocorrelation statistic^
+^3. Diagnostics menu^
+^4. Output^
+
+
+^1. Description^
+^--------------^
+
+This command computes ordinary least-squares regression (OLS) for more than
+one right-hand side variable; i.e., it computes the regression of Y on X1,
+X2,..., Xk.
+
+It fits the model
+
+	Y = b1*X1 + b2*X2 + ... + bk*Xk + c + error
+
+Y is the dependent variable, and X1, X2,..., Xk are the independent variables.
+
+
+^2. Options^
+^----------^
+
+^2a. Use all selected variables (standard)^
+^-----------------------------------------^
+  
+This is the standard choice: all of the independent variables X1, X2,..., Xk
+are included in the model.
+
+
+^2b. Do a stepwise regression^
+^----------------------------^
+
+If you choose this button and click ^OK^, you will get another dialog box
+asking you to choose either a
+
+	- Forward stepwise procedure, or a
+
+	- Backward stepwise procedure.
+
+In this dialog, you will also be asked to choose a 
+
+	- P-value entrance criterion, and a
+
+	- P-value removal criterion.
+
+
+Forward stepwise procedure
+--------------------------
+
+1. Starting with the constant-only model, the most significant variable with
+   P <= "P-value entrance criterion" is added to the model.
+
+2. Then the most significant variable among the variables not in the model 
+   with P <= "P-value entrance criterion" is added.
+
+3. Next the least significant variable in the model is tested to see if it
+   meets the removal criterion.  If it has P > "P-value removal criterion",
+   it is removed from the model.
+
+4. Then Step 2 is repeated.
+
+5. Then Step 3 is repeated.
+
+6. This process is continued until no variables among those not in the model
+   meet the entrance criterion, and no variables in the model meet the removal
+   criterion.
+
+
+Backward stepwise procedure
+---------------------------
+
+1. All independent variables are added to the model.  Then the least
+   significant variable in the model is tested.  If it has P > "P-value
+   removal criterion", it is removed from the model.
+
+2. Of the variables remaining in the model, the least significant one is
+   tested.  If it has P > "P-value removal criterion", it is removed from
+   the model.
+
+3. Then the most significant variable among the variables removed from the
+   model is tested.  If it has satisfies P <= "P-value entrance criterion",
+   it is added back into the model.
+
+4. Step 2 is repeated.
+
+5. Step 3 is repeated.
+
+6. This process is continued until no variables in the model meet the
+   removal criterion, and no variables among those not in the model meet
+   the entrance criterion.
+
+
+^2c. Durbin-Watson autocorrelation statistic^
+^-------------------------------------------^
+
+If this option is selected, the Durbin-Watson statistic (a test for
+autocorrelation) is reported after the regression.  
+
+
+^3. Diagnostics menu^
+^-------------------^
+
+If the "Show diagnostics menu" box is checked, you will get a menu of
+post-regression commands after you run the regression.
+
+The diagnostics menu has the following choices:
+
+	- Plot actual Y vs. prediction
+	- Plot residual vs. prediction
+	- Plot residual vs. an X
+	- Normal quantile plot of residuals
+	- Save YHAT as a variable
+	- Save residuals as a variable
+
+@pregmenu!Click here for help on the diagnostic menu.@
+
+
+^4. Output^
+^---------^
+
+The coefficient for Xi appears next to the Xi variable name.
+The constant term (intercept) appears last next to the word "_cons".
+
+Adjusted R-squared is R^^2 adjusted for the number k of independent variables
+in the model (not counting the constant term):
+
+	Adj. R^^2 = 1 - (1 - R^^2)(n - 1)/(n - k - 1)
+
+where R^^2 = 1 - SSResidual/SSTotal = SSModel/SSTotal is the standard R^^2 and
+n is the total number of observations.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@pregmenu!Post-regression diagnostics@
+
+@sregdlg!Simple regression (only one independent variable)@
+@rregdlg!Robust regression@
+@logdlg!Logistic regression@
+
+@kwaldlg!One-way ANOVA (nonparametric)@ 
+@onewdlg!One-way ANOVA (parametric)@ 
+@rpmdlg!Repeated-measures ANOVA@
+@twowdlg!Two-way ANOVA@
+@aovcdlg!N-factor ANOVA & ANOCOVA@
+
+@fit!For more diagnostics (in command-line version), see help for fit@

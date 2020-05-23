@@ -1,0 +1,93 @@
+.-
+help for ^StataQuest^
+.-
+
+Copyright (c) 1985-1996 Stata Corporation (including all help files).
+
+^Navigating help files^
+^---------------------^
+
+In this help file -- or any other help file -- clicking on a green word or 
+green phrase takes you to a help file for that topic.
+
+Try it.  The phrase "click me" is in green below.  Click on it.
+Then click on the ^Back^ button at the top of the screen to come back to 
+this help file.
+
+				@click_me!click me@
+
+
+^Help for data manipulation, graphics, and statistics^
+^----------------------------------------------------^
+
+Help for the items on the menus
+
+			^Data^
+			^Graphs^
+			^Summaries^
+			^Statistics^
+			^Calculator^
+
+can be found by choosing the menu item and clicking on the ^Help^ button
+in the dialog box.
+
+
+^Help for general features of StataQuest^
+^---------------------------------------^
+
+For a complete listing of help files for StataQuest, click on the ^Contents^
+button.
+
+For a description of the new features of this release of StataQuest,
+click on the ^What's new^ button.
+
+If you are new to StataQuest and would like to get an introduction to its
+basic features, click on any of the topics listed below to go to that help
+file.
+
+	@intro_sq!Introduction to the StataQuest windows@
+
+	@menu_sq!StataQuest menus and buttons@
+
+	@examp_sq!An example of a StataQuest session@
+
+	@input_sq!Inputting data using the spreadsheet editor@
+
+	@editr_sq!Using the spreadsheet editor to view and change data@
+
+	@save_sq!Creating, saving, and loading Stata data files@
+
+	@log_sq!Saving and printing results and output -- the Log button@
+
+	@mess_sq!What to do if your StataQuest windows become messed up@
+
+
+^Note about help for command-line mode (advanced feature)^
+^--------------------------------------------------------^
+
+You can enter commands in StataQuest using the menus, or alternatively,
+by typing in the ^Stata Command^ window.
+
+@cmd_sq!Click here for more information about command-line mode.@
+
+If you want to see a table of contents for all of the commands in Professional
+Stata, @contents!click here to see a table of contents for Professional Stata.@ 
+
+Note: StataQuest can only perform a fraction of the commands in Professional
+Stata.
+
+@stata_sq!Click here for information about Professional Stata.@
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@intro_sq!Introduction to the StataQuest windows@
+
+@menu_sq!StataQuest menus and buttons@
+
+@examp_sq!An example of a StataQuest session@
+
+@sqcont!Table of contents for StataQuest@

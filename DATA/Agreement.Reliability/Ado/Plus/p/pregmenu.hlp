@@ -1,0 +1,57 @@
+.-
+help for ^Post-regression diagnostics^
+.-
+                          Dialog after Simple, Multiple, and Robust regressions
+
+^Description^
+^-----------^
+
+The diagnostics menu has the following choices:
+
+^Plot fitted model^ (after Simple regression only)  This produces a scatter
+plot of Y versus X along with the regression line YHAT = b*X + c.
+
+^Plot actual Y vs. prediction^ (after Multiple regression and Robust regression)
+This produces a scatter plot of Y versus YHAT, where YHAT are the predicted
+values of Y:
+		YHAT = b1*X1 + b2*X2 + ... + bk*Xk + c
+
+^Plot residual vs. prediction^  This produces a scatter plot of the
+residuals (residual = Y - YHAT) versus YHAT.
+
+^Plot residual vs. an X^  If you select this option, a dialog box will
+appear and you will be asked to specify one of the independent variables
+(i.e., one of X1, X2,..., Xk).  Then a scatter plot of the residual versus
+the specified X is produced.
+
+^Normal quantile plot of residuals^  This produces a plot of the quantiles 
+of the residuals versus the quantiles of a standard normal distribution.  
+The closer the points are to the plotted straight line, the closer the
+distribution of the residuals is to normality.
+
+^Save YHAT as a variable^  This option allows you to save YHAT as a new
+variable in your data set.  You can then produce your own graphs, etc.  
+If you select this option, a dialog box will appear asking you to name 
+the variable.  By default, the name ^yhat^ is choosen (or ^yhat1^, etc.,
+if you already have a variable called ^yhat^ in your data set).  If you
+want to use this name just press "Enter".
+
+^Save residuals as a variable^  This option allows you to save the residuals 
+(residual = Y - YHAT) as a new variable in your data set.  You can then
+produce your own graphs, etc.  If you select this option, a dialog box will
+appear asking you to name the variable.  By default, the name ^resid^ is choosen
+(or ^resid1^, etc., if you already have a variable called ^resid^ in your data
+set).  If you want to use this name just press "Enter".
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@graph_sq!Saving, viewing, and printing graphs@
+
+@sregdlg!Simple regression@
+@mregdlg!Multiple regression@
+
+@fit!For more diagnostics (in command-line version), see help for fit@

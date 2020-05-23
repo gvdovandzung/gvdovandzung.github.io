@@ -1,0 +1,92 @@
+.-
+help for ^1-sample test of proportion^         Menu: Statistics--Parametric tests
+.-
+
+^Topics covered^
+^--------------^
+
+^1. Note on calculator version of command^
+^2. Description of the test^
+^3. How to fill in the dialog box^
+
+
+^1. Note on calculator version of command^
+^----------------------------------------^
+
+The 1-sample test of proportion is a test that can be used for a variable
+that has two possible values: "success" and "failure" (or "yes" and "no",
+etc.).
+
+If you have already counted the total number of successes in a sample, you
+can use the ^1-sample test of proportion^ command under the ^Calculator^ menu.
+
+@tp1dlg!Click here for help on the calculator version of the 1-sample test@
+@tp1dlg!of proportion.@
+
+Use this dataset version if you want StataQuest to count the number of
+successes from a variable that you have created or read into StataQuest.
+
+
+^2. Description of the test^
+^--------------------------^
+
+This command performs a 1-sample test of proportion for a variable that takes
+on the values 0 ("failure") or 1 ("success").
+
+It tests whether the proportion of successes (i.e., the fraction of time the
+variable is 1) equals a specified value.
+
+The total number of successes has a Binomial(n, p) distribution, where n
+is the sample size and p is the probability of success for one trial
+(i.e., p is the probability that a single observation is 1).
+
+Stated formally, if the variable is X and the sample is X_1, X_2,... , X_n,
+where each X_i = 0 or 1, then the total number of successes S = sum of X_i
+has a Binomial(n, p) distribution.
+
+The null hypothesis is
+
+	Ho: p = p0
+
+where p0 is an hypothesized probability of success for a single trial.
+
+Note that the expected value of S is np and that the expected value of 
+mean(X) = S/n is p.  Thus, mean(X) provides an estimate of p.
+  
+
+^3. How to fill in the dialog box^
+^--------------------------------^
+
+^Data variable (0/1)^  Only variables that take on the values 0 or 1 will appear
+in this list box.  If no variables appear, then there are no 0/1 variables in
+your dataset.
+
+^Probability of success or exp. no. successes^  This is where you specify either
+p0 = hypothesized probability of success or n0 = expected number of successes.
+
+You must enter 0 < p0 < 1 or 1 <= n0 < n.
+
+If the value entered is <  1, it is interpreted as p0.
+If the value entered is >= 1, it is interpreted as n0,
+and p0 is computed using the formula p0 = n0/n.
+
+^Conf. level^  This command also calculates confidence intervals.  Enter the
+desired level in percent for the confidence interval.
+
+^Normal approximation^  If left unchecked, it produces P-values and confidence
+intervals using an exact binomial distribution.  If checked, it produces
+P-values and confidence intervals using a normal approximation.   
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@ptp2dlg!2-sample test of proportions@
+
+@tp1dlg!1-sample test of proportion  (Calculator menu)@
+@tp2dlg!2-sample test of proportions (Calculator menu)@
+
+@bitest!For the command-line version for exact P-values, see help for bitest.@
+@ci!For the command-line version for exact confidence intervals, see help for ci.@

@@ -1,0 +1,146 @@
+.-
+help for ^Creating and printing a log^                            Button: Log...
+.-
+
+Topics covered
+--------------
+
+^1. Description^
+^2. How to start a log^
+^3. How to print a log^
+^4. How to close a log^
+^5. How to load a log into your word processor^
+^6. Appending to an old log^
+^7. Printing an old log^
+
+
+^1. Description^
+^--------------^
+
+You must create a log in order to save and print your results in StataQuest.
+
+A log is a text (ASCII) file that contains all the output that appears in
+the Results window.
+
+You can print the log file using ^Print log^ under the ^File^ menu,
+or you can load it into a text editor or word processor.
+
+IMPORTANT:  Output is only saved AFTER you start the log.
+
+
+^2. How to start a log^
+^---------------------^
+
+To start a log:
+
+	1. Click on the ^Log...^ button.
+
+	2. Enter the name of the file.  If you do not specify an
+	   extension, the file will be given the extension ^.log^.
+
+	3. Click ^OK^.
+
+	4. A Stata Log window will appear.  You can close this window.
+           Note: The log ^file^ will still be open, even though the
+           Log ^window^ is closed)
+
+	5. You can view your log at any time.  Click on the ^Log...^
+	   button and select "Bring log window to top".
+
+
+^3. How to print a log^
+^---------------------^
+
+To print a log:
+
+	1. Choose ^Print Log^ from the ^File^ menu.
+
+	2. Click ^OK^ and the "Output Settings" dialog box will appear.
+
+	3. You can fill in none, any, or all of the items "Header",
+           "Name", and "Project".
+
+	4. Optional: Click on ^Fonts...^ and select font and size.
+	   See below.
+
+	5. Click ^OK^.
+
+Fonts
+-----
+
+You can set the font that your printer will use by clicking on ^Fonts...^
+in the "Output Settings" dialog box.  The font dialog will only list the
+fixed-width "typewriter" fonts (e.g., Courier) available for your printer.
+
+StataQuest, by default, will choose a font size that it thinks is appropriate
+for your printer.  The font sizes are not to scale, and a size in the range
+of 25 to 40 points is usually a good choice.
+
+
+^4. How to close a log^
+^---------------------^
+
+The log file will be automatically closed when you exit StataQuest.
+
+Or you can close the file whenever you want.  Click on the ^Log...^ button
+and choose "Close log file".
+
+Note: The log ^file^ is open until you close it, even though the Log ^window^
+may be closed.
+
+
+^5. How to load a log into your word processor^
+^---------------------------------------------^
+
+The log file is a text file, so you can load it into a text editor
+(like Notepad) or your favorite word processor.
+
+In your word processor, you can add titles, etc., and delete anything that
+you don't want.
+
+You can also copy pieces of the log file to the clipboard, and from the
+clipboard, paste them into a word processor document.
+
+@clip_sq!Click here for more information on copying to the Windows clipboard.@
+
+Note: Your word processor will print out the file in its default font.
+This may look terrible.
+
+The log file will not be very readable when printed in a proportionally
+spaced font (e.g., Times Roman or Helvetica).
+
+It will look much better printed in a fixed-width "typewriter" font 
+(e.g., Courier).  So change the font in your word processor before you
+print it out.
+
+
+^6. Appending to an old log^
+^--------------------------^
+
+If you click on the ^Log...^ button and select a file that already exists,
+you will be asked if you want to append the new log to the existing file,
+or else overwrite the existing file.
+
+Choose "Append to existing file" if you want to add to an old log file.
+
+  
+^7. Printing an old log^
+^----------------------^
+
+To print an old log file:
+
+	1. Click on the ^Log...^ button and select the file.
+
+	2. Choose "Append to existing file".
+
+	3. Pull the ^File^ menu and choose ^Print Log^.
+
+	4. Click on the ^Log...^ button and select "Close log file".
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@graph_sq!Printing, saving, and viewing graphs@

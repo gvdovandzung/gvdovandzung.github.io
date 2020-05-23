@@ -1,0 +1,444 @@
+.-
+help with an ^Example of a StataQuest session^
+.-
+
+Topics covered
+--------------
+
+^1.  Entering data^
+^2.  Renaming variables^
+^3.  Exiting the editor^
+^4.  Summary statistics: means and standard deviations^
+^5.  Tables of means and standard deviations^
+^6.  Some helpful hints about managing StataQuest's windows^
+^7.  Saving and printing output -- the Log button^
+^8.  Graphs^
+^8a.  The Draw button^
+^8b.  Managing the Graph window^
+^8c.  Printing graphs^
+^8d.  Advanced graph features^
+^9.  Two-sample t test^
+^10. Two-sample test of equality of variance^
+^11. Calculator commands^
+^12. Saving your data and exiting StataQuest^
+
+
+Let's walk through an example of a session using StataQuest.
+
+
+^1. Entering data^
+^----------------^
+
+Suppose that you have the following data.
+
+      height of students        height of students
+    in group 1 (in inches)    in group 2 (in inches)
+    ----------------------    ----------------------
+
+             60                        72
+             62                        67
+             73                        65
+             67                        68
+             61                        74
+             69
+
+We can enter this data into StataQuest using the spreadsheet editor.
+
+To do so, first click on the ^Editor^ button.
+
+Start typing in the numbers, pressing the ^Enter^ key after each one.
+First enter the heights of the students in group 1.  Then, continuing
+in the same column, enter the heights of the students in group 2.
+
+At this point, your dataset will contain one variable called ^var1^
+and 11 observations.
+
+Now we will create another variable that indicates whether an observation
+is from group 1 or group 2.  Click on the top cell in the second column, 
+type ^1^ followed by ^Enter^ for each of the first six observations.  Then 
+type ^2^ followed by ^Enter^ for the next five observations.
+
+Here's what the data looks like now:
+
+^. list var1 var2 in 1/11^                                                     
+                                                                                
+         var1      var2                                                         
+  1.       60         1                                                         
+  2.       62         1                                                         
+  3.       73         1                                                         
+  4.       67         1                                                         
+  5.       61         1                                                         
+  6.       69         1                                                         
+  7.       72         2                                                         
+  8.       67         2                                                         
+  9.       65         2                                                         
+ 10.       68         2                                                         
+ 11.       74         2                                                         
+ 
+Note how we entered this data.  Each observation represents one person.
+The first variable contains the height of the person, and the second
+variable contains the group to which the person belongs.
+
+We did not create one variable for the heights of persons in group 1 and
+a second variable for the heights of persons in group 2.  If we did this,
+each observation would not correspond to a single person, and our data would
+not be in the required form for computing many types of statistics.
+
+
+^2. Renaming variables^
+^---------------------^
+
+The variables are called ^var1^ and ^var2^ by default.  These are lousy names,
+so let's change them.
+
+Double-click anywhere on the first column.  A ^Variable Information Box^ comes 
+up.  Change the name to ^height^.  Click ^OK^.  Double-click anywhere in the 
+second column.  Rename this variable ^group^.
+
+
+^3. Exiting the editor^
+^---------------------^
+
+Click on the ^Close^ button.  When you return to the StataQuest windows, you
+will see your new variables in the ^Variables^ window.
+
+You can list your data in the ^Results^ window by choosing ^List data^ from the
+^Summaries^ menu.  If you do this, it will look like
+
+^. list height group in 1/11^                                                     
+                                                                                
+       height     group                                                         
+  1.       60         1                                                         
+  2.       62         1                                                         
+  3.       73         1                                                         
+  4.       67         1                                                         
+  5.       61         1                                                         
+  6.       69         1                                                         
+  7.       72         2                                                         
+  8.       67         2                                                         
+  9.       65         2                                                         
+ 10.       68         2                                                         
+ 11.       74         2 
+ 
+@input_sq!Click here for details on inputting data using the spreadsheet editor.@
+
+@save_sq!Click here to learn how to save your data to disk after you have entered it.@
+
+@editr_sq!Click here to learn about using the spreadsheet editor to view and change data.@
+
+
+^4. Summary statistics: means and standard deviations^
+^----------------------------------------------------^
+
+Now that your data has been entered, you probably cannot wait to do some
+statistics!
+
+Go to the ^Summaries^ menu and choose ^Means and SDs^.
+
+The dialog box says that variables are optional.  This means that we don't
+have to enter anything in the edit box.  So just click ^OK^.
+
+In the ^Results^ window, we see
+
+^. summarize height group^ 
+
+Variable |     Obs        Mean   Std. Dev.       Min        Max
+---------+-----------------------------------------------------
+  height |      11    67.09091   4.784444         60         74  
+   group |      11    1.454545    .522233          1          2
+
+
+The mean height of persons in both groups combined is 67.09 inches with a 
+standard deviation of 4.78 inches.  
+
+The command also computed the mean and standard deviation of the group
+variable.  This isn't very meaningful.  If we were preparing a report,
+we wouldn't want this to appear in our write-up, so let's go back and
+run the command for ^height^ only.
+
+Again, choose ^Means and SDs^ under the ^Summaries^ menu.  Use the mouse to
+click on ^height^ in the list box.  Click ^OK^.  In the ^Results^ window, we see  
+
+^. summarize height^
+
+Variable |     Obs        Mean   Std. Dev.       Min        Max
+---------+-----------------------------------------------------
+  height |      11    67.09091   4.784444         60         74 
+
+
+^5. Tables of means and standard deviations^
+^------------------------------------------^
+
+If we want to compare the heights of the people in group 1 with those in 
+group 2, it makes sense to look at means for the groups.
+
+To do this, choose ^Means and SDs by group^ under the ^Summaries^ menu, and
+select the item ^One-way of means^ from the submenu.
+
+For the "Data variable", we click on ^height^, and for the "By group" variable, 
+we choose ^height^.  The result is
+
+^. tabulate group, summ(height)^
+
+            |          Summary of height
+       group|        Mean   Std. Dev.       Freq.
+------------+------------------------------------
+          1 |   65.333333   5.1639778           6
+          2 |        69.2   3.7013511           5
+------------+------------------------------------
+      Total |   67.090909   4.7844445          11
+
+
+^6. Some helpful hints about managing StataQuest's windows^
+^---------------------------------------------------------^
+
+^Dialog^ button    When you have a dialog box open, it can sometimes get
+                 covered by another window.  To bring the dialog box back
+                 to the top, click on the ^Dialog^ button.
+
+                 Note that when one dialog box is opened, the ^Data^ through
+                 ^Help^ menus are grayed out, so you cannot open another.
+
+                 If you notice that the menus are grayed out, but cannot see
+                 a dialog box, then the dialog box must be completely hidden
+                 by another window.  Click on the ^Dialog^ button to bring it
+                 to the top, and either run the command or click ^Cancel^.
+
+^Results^ button   If your ^Stata Results^ window is covered by another window,
+                 you can click on the ^Results^ window to bring it to the top.
+
+^More^ button      When a command produces many lines of output, StataQuest
+                 will display the first screen of it and put a ^--more--^ at 
+                 the bottom of the ^Results^ window.  To see the next screen
+                 of output, click on the ^More^ button.
+
+
+^7. Saving and printing output: the Log button^
+^---------------------------------------------^
+
+The ^Results^ window allows you to view output, but it is not saved.
+
+To save and print output, you must create a log file ^before^ you run the
+commands.
+
+To start a log, click on the ^Log^ button and enter the name of file.
+
+Now all the new output that appears in the ^Results^ window will be saved to
+the log file.
+
+To view the log, click on the ^Log^ button and select ^Bring log window to top^.
+You can scroll backward and forward in the log file to review your output.
+To close the log window, double-click on the control box in the upper-left
+corner of the window.
+
+To print the log file, choose ^Print Log^ from the ^File^ menu.
+
+To end the log, click on the ^Log^ button and choose ^Close log file^.
+
+@log_sq!Click here for more information about logs.@
+
+
+^8. Graphs^
+^---------^
+
+A picture is worth a thousand statistics, so let's graph our data.
+
+Go to the ^Graph^ menu and choose ^One variable^.  From the submenu,
+choose ^Histogram^.
+
+In the dialog box, click on the ^height^ variable and choose ^OK^.
+
+A ^Stata Graph^ window will appear containing our histogram.
+
+
+^8a. The Draw button^
+^-------------------^
+
+Let's try it again, but this time we'll use the ^Draw^ button in the
+dialog box rather than ^OK^.
+
+When we click on the ^Draw^ button, the dialog box stays up so that we
+can continue to view histograms of our other variables.
+
+
+^8b. Managing the Graph window^
+^-----------------------------^
+
+If the dialog box becomes covered by the ^Graph^ window, just click on
+the ^Dialog^ button to bring it to the top.
+
+If we want to see the ^Results^ window again, we can bring it to the top by
+clicking on the ^Results^ button.
+
+Want to see the graph again?  Just click on the ^Graph^ button.
+
+
+^8c. Printing graphs^
+^-------------------^
+
+To print a graph:
+
+	1. The ^Graph^ window must be open.
+
+	2. Choose ^Print Graph^ from the ^File^ menu.
+
+	3. A "Graph name" dialog box will appear.  You can enter text to
+           indentify the graph or leave it blank.
+
+	4. Click ^OK^.
+
+	5. A standard Windows print dialog will appear.
+
+
+^8d. Advanced graph features^
+^---------------------------^
+
+@graph_sq!Click here for more information on graphs.@
+
+@clip_sq!Click here for information on copying graphs to the Windows clipboard@
+(for importing into other applications).
+
+@prefs_sq!Click here for information on setting preferences for graphs@
+(this is advanced stuff).
+
+
+^9. Two-sample t test^
+^--------------------^
+
+Say, means are great, but let's get a p-value!
+
+Let's test the (null) hypothesis that the mean height in group 1 is the
+same as the mean height in group 2.  Since the groups are independent,
+we must do a two-sample test.
+
+Go the ^Statistics^ menu and choose ^Parametric tests^.  From the submenu,
+choose ^2-sample t test^.
+
+The option that is highlighted, ^1 data variable, 1 group variable^, is exactly
+the case we have.  So click ^OK^.
+
+In the dialog box, click on ^height^ for "Data variable" and click on
+^group^ where it says "Group var. (2 groups)".
+
+In the ^Results^ window, we see
+
+^. ttest height, by(group)^ 
+
+  Variable |      Obs        Mean   Std. Dev.                                   
+  ---------+---------------------------------                                   
+         1 |        6    65.33333    5.163978                                   
+         2 |        5        69.2    3.701351                                   
+  ---------+---------------------------------                                   
+  combined |       11    67.09091    4.784444                                   
+                                                                                
+           Ho:  mean(x) - mean(y) = 0  (assuming equal variances)               
+                      t = -1.40 with 9 d.f.                                     
+               Pr > |t| = 0.1960                                                
+                 95% CI = (-10.129487,2.3961533)                                
+
+
+^10. Two-sample test of equality of variance^
+^-------------------------------------------^
+
+Want to test the assumption of equal variances?  Choose ^2-sample test^
+^of variance^ from the ^Parametric tests^ submenu under ^Statistics^.
+
+^. sdtest height, by(group)^                                                      
+                                                                                
+  Variable |      Obs        Mean   Std. Dev.                                   
+  ---------+---------------------------------                                   
+         1 |        6    65.33333    5.163978                                   
+         2 |        5        69.2    3.701351                                   
+  ---------+---------------------------------                                   
+  combined |       11    67.09091    4.572057                                   
+                                                                                
+           Ho:  sd(1) = sd(2)  (two-sided test)                                 
+   Lower tail:  F1(5,4) =  0.51                                                 
+   Upper tail:  F2(5,4) =  1.95                                                 
+  (Pr < F1) + (Pr > F2) =  0.5104                                                                                                                               
+
+
+Isn't this fun?                                                                              
+
+
+^11. Calculator commands^
+^-----------------------^
+
+Let's suppose that we didn't have data on each individual in the groups.
+Suppose that we were only given the sample means, standard deviations, and
+number of observations in each group.  We would still have enough information
+to perform a t test.
+
+To do a t test knowing just the means, etc., go to the ^Calculator^ menu and
+choose ^2-sample t test^.
+
+We fill in the number of observations (6 and 5), the means (65.3 and 69.2),
+and standard deviations (5.2 and 3.7).  Choose ^Run^.  We get output that is
+almost identical to what we got before (with only trivial differences due to
+rounding):
+
+^. ttesti 6 65.3 5.2 5 69.2 3.7^                                                  
+                                                                                
+  Variable |      Obs        Mean   Std. Dev.                                   
+  ---------+---------------------------------                                   
+         x |        6        65.3         5.2                                   
+         y |        5        69.2         3.7                                   
+  ---------+---------------------------------                                   
+  combined |       11    67.07273     4.81084                                   
+                                                                                
+           Ho:  mean(x) - mean(y) = 0  (assuming equal variances)               
+                      t = -1.40 with 9 d.f.                                     
+               Pr > |t| = 0.1945                                                
+                 95% CI = (-10.19315,2.39315)                                   
+                                                                                                                                             
+ 
+^12. Saving your data and exiting StataQuest^
+^-------------------------------------------^
+
+You can exit StataQuest either by choosing ^Exit^ from the ^File^ menu or
+by double-clicking on the control-box in the upper-left corner.
+
+If you select ^Exit^ and have not saved your data, you will be given the chance
+to save it.  If you think that you may want to use the data again, you should
+save it to disk, so you won't have to enter it again.
+
+To save your data, simply choose ^Save^ from the ^File^ menu.  If this is new
+data (i.e., has never been saved as a Stata data file before), you will be 
+asked to name the file.
+
+Stata data filenames look like ^myfile.dta^ or ^problem1.dta^.  The extension
+of the filename should be ^.dta^.  When you enter the name of the file, just
+type the first part of the name, and StataQuest will add the extension ^.dta^.
+
+For example, type ^myfile^, and the actual name of file will be ^myfile.dta^.  
+
+
+^13. Loading a Stata data file^
+^-----------------------------^
+
+To load a Stata data file, choose ^Open^ from the ^File^ menu.  Then select
+the file.
+
+Now you're all ready to do more statistics on that dataset!
+
+@save_sq!Click here for details about creating, saving, and loading Stata data files.@
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@intro_sq!Introduction to the StataQuest windows@
+
+@menu_sq!StataQuest menus and buttons@
+
+@input_sq!Inputting data using the spreadsheet editor@
+
+@save_sq!Creating, saving, and loading Stata data files@
+
+@log_sq!Saving and printing results and output -- the Log button@
+
+@graph_sq!Printing, saving, and viewing graphs@
+
+@sqcont!Table of contents for StataQuest@

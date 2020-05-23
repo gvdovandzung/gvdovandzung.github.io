@@ -1,0 +1,2937 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+       log:  {res}D:\DATA\nhaplieu Bs Hong\ket qua phan tich 2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}11 Sep 2012, 07:57:30
+
+{com}. 
+. 
+. 
+. di "1. MO TA VA PHAN TICH DON BIEN"
+{res}1. MO TA VA PHAN TICH DON BIEN
+
+{com}. 
+. di "1.1. PHAN TICH DI NGUYEN"
+{res}1.1. PHAN TICH DI NGUYEN
+
+{com}. 
+. capture drop achung*
+
+. 
+. foreach stt of numlist 1/4 6/9 11/17 19 20 {c -(}
+{txt}  2{com}. 
+. gen achung`stt'=avnc`stt' | atkm`stt' | atkh`stt' | atkb`stt'
+{txt}  3{com}. 
+. tab1 avnc`stt'  atkm`stt'  atkh`stt'  atkb`stt' achung`stt' 
+{txt}  4{com}. 
+. cc outcome achung`stt'
+{txt}  5{com}. 
+. {c )-}
+
+{res}-> tabulation of avnc1  
+
+    {txt}nha nem {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         19       12.42       12.42
+{txt}         co {c |}{res}        134       87.58      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm1  
+
+    {txt}nha nem {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         19       12.42       12.42
+{txt}         co {c |}{res}        134       87.58      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh1  
+
+    {txt}nha nem {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         19       12.42       12.42
+{txt}         co {c |}{res}        134       87.58      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb1  
+
+    {txt}nha nem {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         19       12.42       12.42
+{txt}         co {c |}{res}        134       87.58      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung1  
+
+    {txt}achung1 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         19       12.42       12.42
+{txt}          1 {c |}{res}        134       87.58      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       62           3{txt}  {c |}  {res}       65       0.9538
+        {txt}Controls {c |} {res}       72          16{txt}  {c |}  {res}       88       0.8182
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      134          19{txt}  {c |}  {res}      153       0.8758
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 4.592593{txt}{col 43}{c |}   {res} 1.221834    25.51288{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .7822581{txt}{col 43}{c |}   {res} .1815581    .9608041{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .7461538{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     6.33{txt}  Pr>chi2 ={res} 0.0119
+
+-> tabulation of avnc2  
+
+       {txt}tham {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        148       96.73       96.73
+{txt}         co {c |}{res}          5        3.27      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm2  
+
+       {txt}tham {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        148       96.73       96.73
+{txt}         co {c |}{res}          5        3.27      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh2  
+
+       {txt}tham {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        148       96.73       96.73
+{txt}         co {c |}{res}          5        3.27      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb2  
+
+       {txt}tham {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        148       96.73       96.73
+{txt}         co {c |}{res}          5        3.27      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung2  
+
+    {txt}achung2 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        148       96.73       96.73
+{txt}          1 {c |}{res}          5        3.27      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}        1          64{txt}  {c |}  {res}       65       0.0154
+        {txt}Controls {c |} {res}        4          84{txt}  {c |}  {res}       88       0.0455
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}        5         148{txt}  {c |}  {res}      153       0.0327
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27}  .328125{txt}{col 43}{c |}   {res} .0065621    3.441486{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27}  .671875{txt}{col 43}{c |}   {res}-2.441486    .9934379{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0305398{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     1.07{txt}  Pr>chi2 ={res} 0.3011
+
+-> tabulation of avnc3  
+
+   {txt}tham nho {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         26       16.99       16.99
+{txt}         co {c |}{res}        127       83.01      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm3  
+
+   {txt}tham nho {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         27       17.65       17.65
+{txt}         co {c |}{res}        126       82.35      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh3  
+
+   {txt}tham nho {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         26       16.99       16.99
+{txt}         co {c |}{res}        127       83.01      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb3  
+
+   {txt}tham nho {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         26       16.99       16.99
+{txt}         co {c |}{res}        127       83.01      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung3  
+
+    {txt}achung3 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         26       16.99       16.99
+{txt}          1 {c |}{res}        127       83.01      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       50          15{txt}  {c |}  {res}       65       0.7692
+        {txt}Controls {c |} {res}       77          11{txt}  {c |}  {res}       88       0.8750
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      127          26{txt}  {c |}  {res}      153       0.8301
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .4761905{txt}{col 43}{c |}   {res} .1825948    1.218003{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .5238095{txt}{col 43}{c |}   {res}-.2180028    .8174052{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .4583333{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     2.97{txt}  Pr>chi2 ={res} 0.0851
+
+-> tabulation of avnc4  
+
+     {txt}do moi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        106       69.28       69.28
+{txt}         co {c |}{res}         47       30.72      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm4  
+
+     {txt}do moi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        119       77.78       77.78
+{txt}         co {c |}{res}         34       22.22      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh4  
+
+     {txt}do moi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        125       81.70       81.70
+{txt}         co {c |}{res}         28       18.30      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb4  
+
+     {txt}do moi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        125       81.70       81.70
+{txt}         co {c |}{res}         28       18.30      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung4  
+
+    {txt}achung4 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        104       67.97       67.97
+{txt}          1 {c |}{res}         49       32.03      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       24          41{txt}  {c |}  {res}       65       0.3692
+        {txt}Controls {c |} {res}       25          63{txt}  {c |}  {res}       88       0.2841
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       49         104{txt}  {c |}  {res}      153       0.3203
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.475122{txt}{col 43}{c |}   {res} .7018746    3.092358{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .3220899{txt}{col 43}{c |}   {res}-.4247559    .6766222{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .1189255{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     1.24{txt}  Pr>chi2 ={res} 0.2645
+
+-> tabulation of avnc6  
+
+     {txt}be nem {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         23       15.03       15.03
+{txt}         co {c |}{res}        130       84.97      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm6  
+
+     {txt}be nem {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         23       15.03       15.03
+{txt}         co {c |}{res}        130       84.97      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh6  
+
+     {txt}be nem {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         23       15.03       15.03
+{txt}         co {c |}{res}        130       84.97      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb6  
+
+     {txt}be nem {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         23       15.03       15.03
+{txt}         co {c |}{res}        130       84.97      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung6  
+
+    {txt}achung6 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         23       15.03       15.03
+{txt}          1 {c |}{res}        130       84.97      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       59           6{txt}  {c |}  {res}       65       0.9077
+        {txt}Controls {c |} {res}       71          17{txt}  {c |}  {res}       88       0.8068
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      130          23{txt}  {c |}  {res}      153       0.8497
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27}  2.35446{txt}{col 43}{c |}   {res} .8151286    7.731518{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .5752742{txt}{col 43}{c |}   {res}-.2268002    .8706593{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .5221719{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     2.98{txt}  Pr>chi2 ={res} 0.0844
+
+-> tabulation of avnc7  
+
+      {txt}chieu {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        113       73.86       73.86
+{txt}         co {c |}{res}         40       26.14      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm7  
+
+      {txt}chieu {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        113       73.86       73.86
+{txt}         co {c |}{res}         40       26.14      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh7  
+
+      {txt}chieu {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        113       73.86       73.86
+{txt}         co {c |}{res}         40       26.14      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb7  
+
+      {txt}chieu {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        113       73.86       73.86
+{txt}         co {c |}{res}         40       26.14      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung7  
+
+    {txt}achung7 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        112       73.20       73.20
+{txt}          1 {c |}{res}         41       26.80      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       16          49{txt}  {c |}  {res}       65       0.2462
+        {txt}Controls {c |} {res}       25          63{txt}  {c |}  {res}       88       0.2841
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       41         112{txt}  {c |}  {res}      153       0.2680
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .8228571{txt}{col 43}{c |}   {res} .3677646    1.809157{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .1771429{txt}{col 43}{c |}   {res}-.8091566    .6322354{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0503247{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.27{txt}  Pr>chi2 ={res} 0.6005
+
+-> tabulation of avnc8  
+
+    {txt}goi gon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         90       58.82       58.82
+{txt}         co {c |}{res}         63       41.18      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm8  
+
+    {txt}goi gon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         90       58.82       58.82
+{txt}         co {c |}{res}         63       41.18      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh8  
+
+    {txt}goi gon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         90       58.82       58.82
+{txt}         co {c |}{res}         63       41.18      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb8  
+
+    {txt}goi gon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         90       58.82       58.82
+{txt}         co {c |}{res}         63       41.18      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung8  
+
+    {txt}achung8 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         90       58.82       58.82
+{txt}          1 {c |}{res}         63       41.18      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       29          36{txt}  {c |}  {res}       65       0.4462
+        {txt}Controls {c |} {res}       34          54{txt}  {c |}  {res}       88       0.3864
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       63          90{txt}  {c |}  {res}      153       0.4118
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.279412{txt}{col 43}{c |}   {res}  .633534    2.579289{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .2183908{txt}{col 43}{c |}   {res}-.5784472    .6122962{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .0974359{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.55{txt}  Pr>chi2 ={res} 0.4576
+
+-> tabulation of avnc9  
+
+  {txt}nuoc dong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        109       71.24       71.24
+{txt}         co {c |}{res}         44       28.76      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm9  
+
+  {txt}nuoc dong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        111       72.55       72.55
+{txt}         co {c |}{res}         42       27.45      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh9  
+
+  {txt}nuoc dong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        110       71.90       71.90
+{txt}         co {c |}{res}         43       28.10      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb9  
+
+  {txt}nuoc dong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        110       71.90       71.90
+{txt}         co {c |}{res}         43       28.10      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung9  
+
+    {txt}achung9 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        109       71.24       71.24
+{txt}          1 {c |}{res}         44       28.76      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       17          48{txt}  {c |}  {res}       65       0.2615
+        {txt}Controls {c |} {res}       27          61{txt}  {c |}  {res}       88       0.3068
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       44         109{txt}  {c |}  {res}      153       0.2876
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .8001543{txt}{col 43}{c |}   {res} .3644791     1.72927{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .1998457{txt}{col 43}{c |}   {res}-.7292699    .6355209{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0613163{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.37{txt}  Pr>chi2 ={res} 0.5408
+
+-> tabulation of avnc11  
+
+  {txt}xit phong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        133       86.93       86.93
+{txt}         co {c |}{res}         20       13.07      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm11  
+
+  {txt}xit phong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        134       87.58       87.58
+{txt}         co {c |}{res}         19       12.42      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh11  
+
+  {txt}xit phong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        134       87.58       87.58
+{txt}         co {c |}{res}         19       12.42      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb11  
+
+  {txt}xit phong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        134       87.58       87.58
+{txt}         co {c |}{res}         19       12.42      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung11  
+
+   {txt}achung11 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        133       86.93       86.93
+{txt}          1 {c |}{res}         20       13.07      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}        7          58{txt}  {c |}  {res}       65       0.1077
+        {txt}Controls {c |} {res}       13          75{txt}  {c |}  {res}       88       0.1477
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       20         133{txt}  {c |}  {res}      153       0.1307
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .6962865{txt}{col 43}{c |}   {res} .2208961     2.02656{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .3037135{txt}{col 43}{c |}   {res} -1.02656    .7791039{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0448668{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.53{txt}  Pr>chi2 ={res} 0.4677
+
+-> tabulation of avnc12  
+
+   {txt}may lanh {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         72       47.06       47.06
+{txt}         co {c |}{res}         81       52.94      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm12  
+
+   {txt}may lanh {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         71       46.41       46.41
+{txt}         co {c |}{res}         82       53.59      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh12  
+
+   {txt}may lanh {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         71       46.41       46.41
+{txt}         co {c |}{res}         82       53.59      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb12  
+
+   {txt}may lanh {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         71       46.41       46.41
+{txt}         co {c |}{res}         82       53.59      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung12  
+
+   {txt}achung12 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         71       46.41       46.41
+{txt}          1 {c |}{res}         82       53.59      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       34          31{txt}  {c |}  {res}       65       0.5231
+        {txt}Controls {c |} {res}       48          40{txt}  {c |}  {res}       88       0.5455
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       82          71{txt}  {c |}  {res}      153       0.5359
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .9139785{txt}{col 43}{c |}   {res} .4574149    1.827931{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .0860215{txt}{col 43}{c |}   {res}-.8279305    .5425851{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0469208{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.08{txt}  Pr>chi2 ={res} 0.7838
+
+-> tabulation of avnc13  
+
+        {txt}moc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        121       79.08       79.08
+{txt}         co {c |}{res}         32       20.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm13  
+
+        {txt}moc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        121       79.08       79.08
+{txt}         co {c |}{res}         32       20.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh13  
+
+        {txt}moc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        121       79.08       79.08
+{txt}         co {c |}{res}         32       20.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb13  
+
+        {txt}moc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        121       79.08       79.08
+{txt}         co {c |}{res}         32       20.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung13  
+
+   {txt}achung13 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        121       79.08       79.08
+{txt}          1 {c |}{res}         32       20.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       10          55{txt}  {c |}  {res}       65       0.1538
+        {txt}Controls {c |} {res}       22          66{txt}  {c |}  {res}       88       0.2500
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       32         121{txt}  {c |}  {res}      153       0.2092
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .5454545{txt}{col 43}{c |}   {res} .2123941    1.328487{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .4545455{txt}{col 43}{c |}   {res}-.3284868    .7876059{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .1136364{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     2.09{txt}  Pr>chi2 ={res} 0.1483
+
+-> tabulation of avnc14  
+
+    {txt}mui moc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        140       91.50       91.50
+{txt}         co {c |}{res}         13        8.50      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm14  
+
+    {txt}mui moc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        140       91.50       91.50
+{txt}         co {c |}{res}         13        8.50      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh14  
+
+    {txt}mui moc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        140       91.50       91.50
+{txt}         co {c |}{res}         13        8.50      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb14  
+
+    {txt}mui moc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        140       91.50       91.50
+{txt}         co {c |}{res}         13        8.50      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung14  
+
+   {txt}achung14 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        140       91.50       91.50
+{txt}          1 {c |}{res}         13        8.50      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}        5          60{txt}  {c |}  {res}       65       0.0769
+        {txt}Controls {c |} {res}        8          80{txt}  {c |}  {res}       88       0.0909
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       13         140{txt}  {c |}  {res}      153       0.0850
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .8333333{txt}{col 43}{c |}   {res} .2040555    3.063213{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .1666667{txt}{col 43}{c |}   {res}-2.063213    .7959445{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0151515{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.09{txt}  Pr>chi2 ={res} 0.7591
+
+-> tabulation of avnc15  
+
+        {txt}cho {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        125       81.70       81.70
+{txt}         co {c |}{res}         28       18.30      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm15  
+
+        {txt}cho {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        126       82.35       82.35
+{txt}         co {c |}{res}         27       17.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh15  
+
+        {txt}cho {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        126       82.35       82.35
+{txt}         co {c |}{res}         27       17.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb15  
+
+        {txt}cho {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        126       82.35       82.35
+{txt}         co {c |}{res}         27       17.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung15  
+
+   {txt}achung15 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        125       81.70       81.70
+{txt}          1 {c |}{res}         28       18.30      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       14          51{txt}  {c |}  {res}       65       0.2154
+        {txt}Controls {c |} {res}       14          74{txt}  {c |}  {res}       88       0.1591
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       28         125{txt}  {c |}  {res}      153       0.1830
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27}  1.45098{txt}{col 43}{c |}   {res} .5843412    3.589958{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .3108108{txt}{col 43}{c |}   {res}-.7113289    .7214452{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .0669439{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.79{txt}  Pr>chi2 ={res} 0.3734
+
+-> tabulation of avnc16  
+
+        {txt}meo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        138       90.20       90.20
+{txt}         co {c |}{res}         15        9.80      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm16  
+
+        {txt}meo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        138       90.20       90.20
+{txt}         co {c |}{res}         15        9.80      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh16  
+
+        {txt}meo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        139       90.85       90.85
+{txt}         co {c |}{res}         14        9.15      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb16  
+
+        {txt}meo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        139       90.85       90.85
+{txt}         co {c |}{res}         14        9.15      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung16  
+
+   {txt}achung16 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        137       89.54       89.54
+{txt}          1 {c |}{res}         16       10.46      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}        3          62{txt}  {c |}  {res}       65       0.0462
+        {txt}Controls {c |} {res}       13          75{txt}  {c |}  {res}       88       0.1477
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       16         137{txt}  {c |}  {res}      153       0.1046
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2791563{txt}{col 43}{c |}   {res} .0492093    1.087574{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7208437{txt}{col 43}{c |}   {res}-.0875737    .9507907{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .1064883{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     4.12{txt}  Pr>chi2 ={res} 0.0424
+
+-> tabulation of avnc17  
+
+  {txt}trai chan {c |}
+       nuoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         61       39.87       39.87
+{txt}         co {c |}{res}         92       60.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm17  
+
+  {txt}trai chan {c |}
+       nuoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         61       39.87       39.87
+{txt}         co {c |}{res}         92       60.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh17  
+
+  {txt}trai chan {c |}
+       nuoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         61       39.87       39.87
+{txt}         co {c |}{res}         92       60.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb17  
+
+  {txt}trai chan {c |}
+       nuoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         61       39.87       39.87
+{txt}         co {c |}{res}         92       60.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung17  
+
+   {txt}achung17 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         61       39.87       39.87
+{txt}          1 {c |}{res}         92       60.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       39          26{txt}  {c |}  {res}       65       0.6000
+        {txt}Controls {c |} {res}       53          35{txt}  {c |}  {res}       88       0.6023
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       92          61{txt}  {c |}  {res}      153       0.6013
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27}  .990566{txt}{col 43}{c |}   {res} .4896095    2.011804{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27}  .009434{txt}{col 43}{c |}   {res}-1.011804    .5103905{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0056818{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.00{txt}  Pr>chi2 ={res} 0.9774
+
+-> tabulation of avnc19  
+
+       {txt}gian {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         44       28.76       28.76
+{txt}         co {c |}{res}        109       71.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm19  
+
+       {txt}gian {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         44       28.76       28.76
+{txt}         co {c |}{res}        109       71.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh19  
+
+       {txt}gian {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         44       28.76       28.76
+{txt}         co {c |}{res}        109       71.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb19  
+
+       {txt}gian {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         44       28.76       28.76
+{txt}         co {c |}{res}        109       71.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung19  
+
+   {txt}achung19 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         44       28.76       28.76
+{txt}          1 {c |}{res}        109       71.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       48          17{txt}  {c |}  {res}       65       0.7385
+        {txt}Controls {c |} {res}       61          27{txt}  {c |}  {res}       88       0.6932
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      109          44{txt}  {c |}  {res}      153       0.7124
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.249759{txt}{col 43}{c |}   {res} .5783722    2.743568{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .1998457{txt}{col 43}{c |}   {res}-.7289904    .6355111{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .1475783{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.37{txt}  Pr>chi2 ={res} 0.5408
+
+-> tabulation of avnc20  
+
+      {txt}chuot {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         72       47.06       47.06
+{txt}         co {c |}{res}         81       52.94      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkm20  
+
+      {txt}chuot {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         72       47.06       47.06
+{txt}         co {c |}{res}         81       52.94      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkh20  
+
+      {txt}chuot {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         72       47.06       47.06
+{txt}         co {c |}{res}         81       52.94      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of atkb20  
+
+      {txt}chuot {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         72       47.06       47.06
+{txt}         co {c |}{res}         81       52.94      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of achung20  
+
+   {txt}achung20 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         72       47.06       47.06
+{txt}          1 {c |}{res}         81       52.94      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       35          30{txt}  {c |}  {res}       65       0.5385
+        {txt}Controls {c |} {res}       46          42{txt}  {c |}  {res}       88       0.5227
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       81          72{txt}  {c |}  {res}      153       0.5294
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.065217{txt}{col 43}{c |}   {res} .5333337    2.130626{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .0612245{txt}{col 43}{c |}   {res}-.8749988    .5306544{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27}  .032967{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.04{txt}  Pr>chi2 ={res} 0.8472
+
+{com}. 
+. 
+. 
+. di "1.2. PHAN TICH O NHIEM KHONG KHI"
+{res}1.2. PHAN TICH O NHIEM KHONG KHI
+
+{com}. 
+. capture drop bchung*
+
+. 
+. foreach stt of numlist 1/7 9/13 15 17/20 22 24 26 {c -(}
+{txt}  2{com}. 
+. gen bchung`stt'=bvnc`stt' | btkm`stt' | btkh`stt' | btkb`stt'
+{txt}  3{com}. 
+. tab1 bvnc`stt'  btkm`stt'  btkh`stt'  btkb`stt' bchung`stt' 
+{txt}  4{com}. 
+. cc outcome bchung`stt'
+{txt}  5{com}. 
+. {c )-}
+
+{res}-> tabulation of bvnc1  
+
+  {txt}hut thuoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         83       54.25       54.25
+{txt}         co {c |}{res}         70       45.75      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm1  
+
+  {txt}hut thuoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         83       54.25       54.25
+{txt}         co {c |}{res}         70       45.75      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkh1  
+
+  {txt}hut thuoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         83       54.25       54.25
+{txt}         co {c |}{res}         70       45.75      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb1  
+
+  {txt}hut thuoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         83       54.25       54.25
+{txt}         co {c |}{res}         70       45.75      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung1  
+
+    {txt}bchung1 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         83       54.25       54.25
+{txt}          1 {c |}{res}         70       45.75      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       29          36{txt}  {c |}  {res}       65       0.4462
+        {txt}Controls {c |} {res}       41          47{txt}  {c |}  {res}       88       0.4659
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       70          83{txt}  {c |}  {res}      153       0.4575
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .9234417{txt}{col 43}{c |}   {res} .4607867    1.846991{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .0765583{txt}{col 43}{c |}   {res}-.8469911    .5392133{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0356692{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.06{txt}  Pr>chi2 ={res} 0.8084
+
+-> tabulation of bvnc2  
+
+    {txt}hut nha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        111       72.55       72.55
+{txt}         co {c |}{res}         42       27.45      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm2  
+
+    {txt}hut nha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        111       72.55       72.55
+{txt}         co {c |}{res}         42       27.45      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkh2  
+
+    {txt}hut nha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        111       72.55       72.55
+{txt}         co {c |}{res}         42       27.45      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb2  
+
+    {txt}hut nha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        111       72.55       72.55
+{txt}         co {c |}{res}         42       27.45      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung2  
+
+    {txt}bchung2 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        111       72.55       72.55
+{txt}          1 {c |}{res}         42       27.45      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       18          47{txt}  {c |}  {res}       65       0.2769
+        {txt}Controls {c |} {res}       24          64{txt}  {c |}  {res}       88       0.2727
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       42         111{txt}  {c |}  {res}      153       0.2745
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.021277{txt}{col 43}{c |}   {res} .4647759    2.218852{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .0208333{txt}{col 43}{c |}   {res}-1.151575    .5493164{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .0057692{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.00{txt}  Pr>chi2 ={res} 0.9542
+
+-> tabulation of bvnc3  
+
+   {txt}so nguoi {c |}
+        hut {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         83       54.25       54.25
+{txt}          1 {c |}{res}         54       35.29       89.54
+{txt}          2 {c |}{res}         11        7.19       96.73
+{txt}          3 {c |}{res}          4        2.61       99.35
+{txt}          9 {c |}{res}          1        0.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm3  
+
+   {txt}so nguoi {c |}
+        hut {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         83       54.61       54.61
+{txt}          1 {c |}{res}         55       36.18       90.79
+{txt}          2 {c |}{res}         10        6.58       97.37
+{txt}          3 {c |}{res}          3        1.97       99.34
+{txt}          9 {c |}{res}          1        0.66      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        152      100.00
+
+-> tabulation of btkh3  
+
+   {txt}so nguoi {c |}
+        hut {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         83       54.25       54.25
+{txt}          1 {c |}{res}         56       36.60       90.85
+{txt}          2 {c |}{res}         10        6.54       97.39
+{txt}          3 {c |}{res}          3        1.96       99.35
+{txt}          9 {c |}{res}          1        0.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb3  
+
+   {txt}so nguoi {c |}
+        hut {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         83       54.61       54.61
+{txt}          1 {c |}{res}         55       36.18       90.79
+{txt}          2 {c |}{res}         10        6.58       97.37
+{txt}          3 {c |}{res}          3        1.97       99.34
+{txt}          9 {c |}{res}          1        0.66      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        152      100.00
+
+-> tabulation of bchung3  
+
+    {txt}bchung3 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         83       54.25       54.25
+{txt}          1 {c |}{res}         70       45.75      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       29          36{txt}  {c |}  {res}       65       0.4462
+        {txt}Controls {c |} {res}       41          47{txt}  {c |}  {res}       88       0.4659
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       70          83{txt}  {c |}  {res}      153       0.4575
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .9234417{txt}{col 43}{c |}   {res} .4607867    1.846991{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .0765583{txt}{col 43}{c |}   {res}-.8469911    .5392133{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0356692{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.06{txt}  Pr>chi2 ={res} 0.8084
+
+-> tabulation of bvnc4  
+
+     {txt}nau an {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        144       94.12       94.12
+{txt}         co {c |}{res}          9        5.88      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm4  
+
+     {txt}nau an {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        145       94.77       94.77
+{txt}         co {c |}{res}          8        5.23      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkh4  
+
+     {txt}nau an {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        144       94.12       94.12
+{txt}         co {c |}{res}          9        5.88      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb4  
+
+     {txt}nau an {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        144       94.12       94.12
+{txt}         co {c |}{res}          9        5.88      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung4  
+
+    {txt}bchung4 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        142       92.81       92.81
+{txt}          1 {c |}{res}         11        7.19      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}        1          64{txt}  {c |}  {res}       65       0.0154
+        {txt}Controls {c |} {res}       10          78{txt}  {c |}  {res}       88       0.1136
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       11         142{txt}  {c |}  {res}      153       0.0719
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27}  .121875{txt}{col 43}{c |}   {res}  .002766    .9063402{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27}  .878125{txt}{col 43}{c |}   {res} .0936598     .997234{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0997869{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     5.41{txt}  Pr>chi2 ={res} 0.0200
+
+-> tabulation of bvnc5  
+
+     {txt}bep ga {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          6        3.92        3.92
+{txt}         co {c |}{res}        147       96.08      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm5  
+
+     {txt}bep ga {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          5        3.27        3.27
+{txt}         co {c |}{res}        148       96.73      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkh5  
+
+     {txt}bep ga {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          6        3.92        3.92
+{txt}         co {c |}{res}        147       96.08      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb5  
+
+     {txt}bep ga {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          6        3.92        3.92
+{txt}         co {c |}{res}        147       96.08      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung5  
+
+    {txt}bchung5 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          5        3.27        3.27
+{txt}          1 {c |}{res}        148       96.73      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       63           2{txt}  {c |}  {res}       65       0.9692
+        {txt}Controls {c |} {res}       85           3{txt}  {c |}  {res}       88       0.9659
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      148           5{txt}  {c |}  {res}      153       0.9673
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.111765{txt}{col 43}{c |}   {res} .1234561     13.6679{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .1005291{txt}{col 43}{c |}   {res}-7.100044    .9268359{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .0974359{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.01{txt}  Pr>chi2 ={res} 0.9091
+
+-> tabulation of bvnc6  
+
+   {txt}hut khoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        122       79.74       79.74
+{txt}         co {c |}{res}         31       20.26      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm6  
+
+   {txt}hut khoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        123       80.39       80.39
+{txt}         co {c |}{res}         30       19.61      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkh6  
+
+   {txt}hut khoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        123       80.39       80.39
+{txt}         co {c |}{res}         30       19.61      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb6  
+
+   {txt}hut khoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        124       81.05       81.05
+{txt}         co {c |}{res}         29       18.95      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung6  
+
+    {txt}bchung6 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        122       79.74       79.74
+{txt}          1 {c |}{res}         31       20.26      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       14          51{txt}  {c |}  {res}       65       0.2154
+        {txt}Controls {c |} {res}       17          71{txt}  {c |}  {res}       88       0.1932
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       31         122{txt}  {c |}  {res}      153       0.2026
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.146482{txt}{col 43}{c |}   {res} .4756085    2.723907{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .1277666{txt}{col 43}{c |}   {res} -1.10257    .6328803{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27}  .027519{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.11{txt}  Pr>chi2 ={res} 0.7356
+
+-> tabulation of bvnc7  
+
+   {txt}diet con {c |}
+      trung {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         55       35.95       35.95
+{txt}         co {c |}{res}         98       64.05      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm7  
+
+   {txt}diet con {c |}
+      trung {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         56       36.60       36.60
+{txt}         co {c |}{res}         97       63.40      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkh7  
+
+   {txt}diet con {c |}
+      trung {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         57       37.25       37.25
+{txt}         co {c |}{res}         96       62.75      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb7  
+
+   {txt}diet con {c |}
+      trung {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         58       37.91       37.91
+{txt}         co {c |}{res}         95       62.09      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung7  
+
+    {txt}bchung7 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         55       35.95       35.95
+{txt}          1 {c |}{res}         98       64.05      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       40          25{txt}  {c |}  {res}       65       0.6154
+        {txt}Controls {c |} {res}       58          30{txt}  {c |}  {res}       88       0.6591
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       98          55{txt}  {c |}  {res}      153       0.6405
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .8275862{txt}{col 43}{c |}   {res} .4034923    1.703839{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .1724138{txt}{col 43}{c |}   {res}-.7038386    .5965077{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .1136364{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.31{txt}  Pr>chi2 ={res} 0.5776
+
+-> tabulation of bvnc9  
+
+ {txt}nhang muoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        146       95.42       95.42
+{txt}         co {c |}{res}          7        4.58      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm9  
+
+ {txt}nhang muoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        145       95.39       95.39
+{txt}         co {c |}{res}          7        4.61      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        152      100.00
+
+-> tabulation of btkh9  
+
+ {txt}nhang muoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        146       95.42       95.42
+{txt}         co {c |}{res}          7        4.58      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb9  
+
+ {txt}nhang muoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        146       95.42       95.42
+{txt}         co {c |}{res}          7        4.58      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung9  
+
+    {txt}bchung9 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        145       94.77       94.77
+{txt}          1 {c |}{res}          8        5.23      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}        2          63{txt}  {c |}  {res}       65       0.0308
+        {txt}Controls {c |} {res}        6          82{txt}  {c |}  {res}       88       0.0682
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}        8         145{txt}  {c |}  {res}      153       0.0523
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .4338624{txt}{col 43}{c |}   {res} .0417028    2.544581{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .5661376{txt}{col 43}{c |}   {res}-1.544581    .9582972{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0386003{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     1.06{txt}  Pr>chi2 ={res} 0.3041
+
+-> tabulation of bvnc10  
+
+ {txt}ngay trong {c |}
+ tuan nhang {c |}
+       muoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        146       95.42       95.42
+{txt}          1 {c |}{res}          4        2.61       98.04
+{txt}          7 {c |}{res}          3        1.96      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm10  
+
+ {txt}ngay trong {c |}
+ tuan nhang {c |}
+       muoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        145       95.39       95.39
+{txt}          1 {c |}{res}          4        2.63       98.03
+{txt}          7 {c |}{res}          3        1.97      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        152      100.00
+
+-> tabulation of btkh10  
+
+ {txt}ngay trong {c |}
+ tuan nhang {c |}
+       muoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        146       95.42       95.42
+{txt}          1 {c |}{res}          4        2.61       98.04
+{txt}          7 {c |}{res}          3        1.96      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb10  
+
+ {txt}ngay trong {c |}
+ tuan nhang {c |}
+       muoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        146       95.42       95.42
+{txt}          1 {c |}{res}          4        2.61       98.04
+{txt}          7 {c |}{res}          3        1.96      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung10  
+
+   {txt}bchung10 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        145       94.77       94.77
+{txt}          1 {c |}{res}          8        5.23      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}        2          63{txt}  {c |}  {res}       65       0.0308
+        {txt}Controls {c |} {res}        6          82{txt}  {c |}  {res}       88       0.0682
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}        8         145{txt}  {c |}  {res}      153       0.0523
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .4338624{txt}{col 43}{c |}   {res} .0417028    2.544581{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .5661376{txt}{col 43}{c |}   {res}-1.544581    .9582972{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0386003{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     1.06{txt}  Pr>chi2 ={res} 0.3041
+
+-> tabulation of bvnc11  
+
+ {txt}thap nhang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         31       20.26       20.26
+{txt}         co {c |}{res}        122       79.74      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm11  
+
+ {txt}thap nhang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         31       20.39       20.39
+{txt}         co {c |}{res}        121       79.61      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        152      100.00
+
+-> tabulation of btkh11  
+
+ {txt}thap nhang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         31       20.26       20.26
+{txt}         co {c |}{res}        122       79.74      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb11  
+
+ {txt}thap nhang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         31       20.26       20.26
+{txt}         co {c |}{res}        122       79.74      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung11  
+
+   {txt}bchung11 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         31       20.26       20.26
+{txt}          1 {c |}{res}        122       79.74      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       56           9{txt}  {c |}  {res}       65       0.8615
+        {txt}Controls {c |} {res}       66          22{txt}  {c |}  {res}       88       0.7500
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      122          31{txt}  {c |}  {res}      153       0.7974
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 2.074074{txt}{col 43}{c |}   {res} .8311773    5.528169{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .5178571{txt}{col 43}{c |}   {res}-.2031127    .8191083{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .4461538{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     2.88{txt}  Pr>chi2 ={res} 0.0898
+
+-> tabulation of bvnc12  
+
+ {txt}ngay trong {c |}
+  tuan thap {c |}
+      nhang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         31       20.26       20.26
+{txt}          1 {c |}{res}         33       21.57       41.83
+{txt}          3 {c |}{res}          2        1.31       43.14
+{txt}          7 {c |}{res}         87       56.86      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm12  
+
+ {txt}ngay trong {c |}
+  tuan thap {c |}
+      nhang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         31       20.39       20.39
+{txt}          1 {c |}{res}         32       21.05       41.45
+{txt}          3 {c |}{res}          2        1.32       42.76
+{txt}          7 {c |}{res}         87       57.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        152      100.00
+
+-> tabulation of btkh12  
+
+ {txt}ngay trong {c |}
+  tuan thap {c |}
+      nhang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         31       20.26       20.26
+{txt}          1 {c |}{res}         33       21.57       41.83
+{txt}          3 {c |}{res}          2        1.31       43.14
+{txt}          7 {c |}{res}         87       56.86      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb12  
+
+ {txt}ngay trong {c |}
+  tuan thap {c |}
+      nhang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         31       20.26       20.26
+{txt}          1 {c |}{res}         32       20.92       41.18
+{txt}          3 {c |}{res}          2        1.31       42.48
+{txt}          7 {c |}{res}         88       57.52      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung12  
+
+   {txt}bchung12 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         31       20.26       20.26
+{txt}          1 {c |}{res}        122       79.74      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       56           9{txt}  {c |}  {res}       65       0.8615
+        {txt}Controls {c |} {res}       66          22{txt}  {c |}  {res}       88       0.7500
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      122          31{txt}  {c |}  {res}      153       0.7974
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 2.074074{txt}{col 43}{c |}   {res} .8311773    5.528169{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .5178571{txt}{col 43}{c |}   {res}-.2031127    .8191083{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .4461538{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     2.88{txt}  Pr>chi2 ={res} 0.0898
+
+-> tabulation of bvnc13  
+
+   {txt}khoi bui {c |}
+        nha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        119       77.78       77.78
+{txt}         co {c |}{res}         34       22.22      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm13  
+
+   {txt}khoi bui {c |}
+        nha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        119       78.29       78.29
+{txt}         co {c |}{res}         33       21.71      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        152      100.00
+
+-> tabulation of btkh13  
+
+   {txt}khoi bui {c |}
+        nha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        121       79.08       79.08
+{txt}         co {c |}{res}         32       20.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb13  
+
+   {txt}khoi bui {c |}
+        nha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        121       79.08       79.08
+{txt}         co {c |}{res}         32       20.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung13  
+
+   {txt}bchung13 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        118       77.12       77.12
+{txt}          1 {c |}{res}         35       22.88      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       17          48{txt}  {c |}  {res}       65       0.2615
+        {txt}Controls {c |} {res}       18          70{txt}  {c |}  {res}       88       0.2045
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       35         118{txt}  {c |}  {res}      153       0.2288
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.377315{txt}{col 43}{c |}   {res} .5992654    3.146087{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .2739496{txt}{col 43}{c |}   {res}-.6687098    .6821449{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .0716484{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.69{txt}  Pr>chi2 ={res} 0.4067
+
+-> tabulation of bvnc15  
+
+  {txt}thuoc tru {c |}
+        sau {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        143       93.46       93.46
+{txt}         co {c |}{res}         10        6.54      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm15  
+
+  {txt}thuoc tru {c |}
+        sau {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        142       93.42       93.42
+{txt}         co {c |}{res}         10        6.58      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        152      100.00
+
+-> tabulation of btkh15  
+
+  {txt}thuoc tru {c |}
+        sau {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        143       93.46       93.46
+{txt}         co {c |}{res}         10        6.54      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb15  
+
+  {txt}thuoc tru {c |}
+        sau {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        143       93.46       93.46
+{txt}         co {c |}{res}         10        6.54      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung15  
+
+   {txt}bchung15 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        141       92.16       92.16
+{txt}          1 {c |}{res}         12        7.84      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}        4          61{txt}  {c |}  {res}       65       0.0615
+        {txt}Controls {c |} {res}        8          80{txt}  {c |}  {res}       88       0.0909
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       12         141{txt}  {c |}  {res}      153       0.0784
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .6557377{txt}{col 43}{c |}   {res} .1383738    2.591876{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .3442623{txt}{col 43}{c |}   {res}-1.591876    .8616262{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0312966{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.45{txt}  Pr>chi2 ={res} 0.5042
+
+-> tabulation of bvnc17  
+
+ {txt}duong quoc {c |}
+         lo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        111       72.55       72.55
+{txt}         co {c |}{res}         42       27.45      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm17  
+
+ {txt}duong quoc {c |}
+         lo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        111       73.03       73.03
+{txt}         co {c |}{res}         41       26.97      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        152      100.00
+
+-> tabulation of btkh17  
+
+ {txt}duong quoc {c |}
+         lo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        112       73.20       73.20
+{txt}         co {c |}{res}         41       26.80      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb17  
+
+ {txt}duong quoc {c |}
+         lo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        112       73.20       73.20
+{txt}         co {c |}{res}         41       26.80      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung17  
+
+   {txt}bchung17 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        110       71.90       71.90
+{txt}          1 {c |}{res}         43       28.10      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       16          49{txt}  {c |}  {res}       65       0.2462
+        {txt}Controls {c |} {res}       27          61{txt}  {c |}  {res}       88       0.3068
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       43         110{txt}  {c |}  {res}      153       0.2810
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .7377173{txt}{col 43}{c |}   {res} .3320497    1.608692{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .2622827{txt}{col 43}{c |}   {res}-.6086922    .6679503{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0804731{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.68{txt}  Pr>chi2 ={res} 0.4093
+
+-> tabulation of bvnc18  
+
+  {txt}duong sua {c |}
+       chua {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        121       79.08       79.08
+{txt}         co {c |}{res}         32       20.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm18  
+
+  {txt}duong sua {c |}
+       chua {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        120       78.95       78.95
+{txt}         co {c |}{res}         32       21.05      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        152      100.00
+
+-> tabulation of btkh18  
+
+  {txt}duong sua {c |}
+       chua {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        121       79.08       79.08
+{txt}         co {c |}{res}         32       20.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb18  
+
+  {txt}duong sua {c |}
+       chua {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        121       79.08       79.08
+{txt}         co {c |}{res}         32       20.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung18  
+
+   {txt}bchung18 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        120       78.43       78.43
+{txt}          1 {c |}{res}         33       21.57      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       13          52{txt}  {c |}  {res}       65       0.2000
+        {txt}Controls {c |} {res}       20          68{txt}  {c |}  {res}       88       0.2273
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       33         120{txt}  {c |}  {res}      153       0.2157
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27}      .85{txt}{col 43}{c |}   {res} .3537432      1.9917{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27}      .15{txt}{col 43}{c |}   {res}-.9917004    .6462568{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0340909{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.16{txt}  Pr>chi2 ={res} 0.6852
+
+-> tabulation of bvnc19  
+
+   {txt}khu cong {c |}
+     nghiep {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        117       76.47       76.47
+{txt}         co {c |}{res}         36       23.53      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm19  
+
+   {txt}khu cong {c |}
+     nghiep {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        117       76.97       76.97
+{txt}         co {c |}{res}         35       23.03      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        152      100.00
+
+-> tabulation of btkh19  
+
+   {txt}khu cong {c |}
+     nghiep {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        118       77.12       77.12
+{txt}         co {c |}{res}         35       22.88      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb19  
+
+   {txt}khu cong {c |}
+     nghiep {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        117       76.47       76.47
+{txt}         co {c |}{res}         36       23.53      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung19  
+
+   {txt}bchung19 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        117       76.47       76.47
+{txt}          1 {c |}{res}         36       23.53      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       12          53{txt}  {c |}  {res}       65       0.1846
+        {txt}Controls {c |} {res}       24          64{txt}  {c |}  {res}       88       0.2727
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       36         117{txt}  {c |}  {res}      153       0.2353
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .6037736{txt}{col 43}{c |}   {res} .2508136    1.402249{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .3962264{txt}{col 43}{c |}   {res}-.4022486    .7491864{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .1080617{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     1.61{txt}  Pr>chi2 ={res} 0.2041
+
+-> tabulation of bvnc20  
+
+    {txt}nha tre {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         30       19.61       19.61
+{txt}         co {c |}{res}        123       80.39      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkm20  
+
+    {txt}nha tre {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         30       19.74       19.74
+{txt}         co {c |}{res}        122       80.26      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        152      100.00
+
+-> tabulation of btkh20  
+
+    {txt}nha tre {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         30       19.61       19.61
+{txt}         co {c |}{res}        123       80.39      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of btkb20  
+
+    {txt}nha tre {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         30       19.61       19.61
+{txt}         co {c |}{res}        123       80.39      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bchung20  
+
+   {txt}bchung20 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         30       19.61       19.61
+{txt}          1 {c |}{res}        123       80.39      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       56           9{txt}  {c |}  {res}       65       0.8615
+        {txt}Controls {c |} {res}       67          21{txt}  {c |}  {res}       88       0.7614
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      123          30{txt}  {c |}  {res}      153       0.8039
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.950249{txt}{col 43}{c |}   {res} .7768509     5.22242{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .4872449{txt}{col 43}{c |}   {res}-.2872483    .8085179{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .4197802{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     2.38{txt}  Pr>chi2 ={res} 0.1229
+
+-> tabulation of bvnc22  
+
+     {txt}xe dap {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        123      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of btkm22  
+
+     {txt}xe dap {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        122      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        122      100.00
+
+-> tabulation of btkh22  
+
+     {txt}xe dap {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        123      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of btkb22  
+
+     {txt}xe dap {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        123      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of bchung22  
+
+   {txt}bchung22 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        122       79.74       79.74
+{txt}          1 {c |}{res}         31       20.26      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}        9          56{txt}  {c |}  {res}       65       0.1385
+        {txt}Controls {c |} {res}       22          66{txt}  {c |}  {res}       88       0.2500
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       31         122{txt}  {c |}  {res}      153       0.2026
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .4821429{txt}{col 43}{c |}   {res} .1808875    1.203084{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .5178571{txt}{col 43}{c |}   {res}-.2030839    .8191125{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .1294643{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     2.88{txt}  Pr>chi2 ={res} 0.0898
+
+-> tabulation of bvnc24  
+
+ {txt}xe gan may {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         12        9.76        9.76
+{txt}         co {c |}{res}        111       90.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of btkm24  
+
+ {txt}xe gan may {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         12        9.84        9.84
+{txt}         co {c |}{res}        110       90.16      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        122      100.00
+
+-> tabulation of btkh24  
+
+ {txt}xe gan may {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         11        8.94        8.94
+{txt}         co {c |}{res}        112       91.06      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of btkb24  
+
+ {txt}xe gan may {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         11        8.94        8.94
+{txt}         co {c |}{res}        112       91.06      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of bchung24  
+
+   {txt}bchung24 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         11        7.19        7.19
+{txt}          1 {c |}{res}        142       92.81      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       63           2{txt}  {c |}  {res}       65       0.9692
+        {txt}Controls {c |} {res}       79           9{txt}  {c |}  {res}       88       0.8977
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      142          11{txt}  {c |}  {res}      153       0.9281
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 3.588608{txt}{col 43}{c |}   {res}   .70168    35.04928{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .7213404{txt}{col 43}{c |}   {res}-.4251511    .9714687{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .6991453{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     2.86{txt}  Pr>chi2 ={res} 0.0905
+
+-> tabulation of bvnc26  
+
+     {txt}xe hoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        119       96.75       96.75
+{txt}         co {c |}{res}          4        3.25      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of btkm26  
+
+     {txt}xe hoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        119       96.75       96.75
+{txt}         co {c |}{res}          4        3.25      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of btkh26  
+
+     {txt}xe hoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        119       96.75       96.75
+{txt}         co {c |}{res}          4        3.25      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of btkb26  
+
+     {txt}xe hoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        119       96.75       96.75
+{txt}         co {c |}{res}          4        3.25      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of bchung26  
+
+   {txt}bchung26 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        119       77.78       77.78
+{txt}          1 {c |}{res}         34       22.22      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       10          55{txt}  {c |}  {res}       65       0.1538
+        {txt}Controls {c |} {res}       24          64{txt}  {c |}  {res}       88       0.2727
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       34         119{txt}  {c |}  {res}      153       0.2222
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .4848485{txt}{col 43}{c |}   {res} .1903761     1.16854{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .5151515{txt}{col 43}{c |}   {res}-.1685403    .8096239{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .1404959{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     3.06{txt}  Pr>chi2 ={res} 0.0804
+
+{com}. 
+. 
+. 
+. di "1.3. NHA TRE"
+{res}1.3. NHA TRE
+
+{com}. 
+. capture drop cchung*
+
+. 
+. foreach stt of numlist 1 2 4/6 {c -(}
+{txt}  2{com}. 
+. gen cchung`stt'=cvnc`stt' | ctkm`stt' | ctkh`stt' | ctkb`stt'
+{txt}  3{com}. 
+. tab1 cvnc`stt'  ctkm`stt'  ctkh`stt'  ctkb`stt' cchung`stt' 
+{txt}  4{com}. 
+. cc outcome cchung`stt'
+{txt}  5{com}. 
+. {c )-}
+
+{res}-> tabulation of cvnc1  
+
+     {txt}nt lon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         24       19.51       19.51
+{txt}         co {c |}{res}         99       80.49      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkm1  
+
+     {txt}nt lon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         24       19.51       19.51
+{txt}         co {c |}{res}         99       80.49      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkh1  
+
+     {txt}nt lon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         24       19.51       19.51
+{txt}         co {c |}{res}         99       80.49      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkb1  
+
+     {txt}nt lon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         24       19.51       19.51
+{txt}         co {c |}{res}         99       80.49      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of cchung1  
+
+    {txt}cchung1 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         24       15.69       15.69
+{txt}          1 {c |}{res}        129       84.31      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       56           9{txt}  {c |}  {res}       65       0.8615
+        {txt}Controls {c |} {res}       73          15{txt}  {c |}  {res}       88       0.8295
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      129          24{txt}  {c |}  {res}      153       0.8431
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.278539{txt}{col 43}{c |}   {res} .4816898    3.566549{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .2178571{txt}{col 43}{c |}   {res}-1.076025    .7196169{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .1876923{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.29{txt}  Pr>chi2 ={res} 0.5906
+
+-> tabulation of cvnc2  
+
+{txt}nt thu nuoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        116       94.31       94.31
+{txt}         co {c |}{res}          7        5.69      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkm2  
+
+{txt}nt thu nuoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        116       94.31       94.31
+{txt}         co {c |}{res}          7        5.69      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkh2  
+
+{txt}nt thu nuoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        116       94.31       94.31
+{txt}         co {c |}{res}          7        5.69      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkb2  
+
+{txt}nt thu nuoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        116       94.31       94.31
+{txt}         co {c |}{res}          7        5.69      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of cchung2  
+
+    {txt}cchung2 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        116       75.82       75.82
+{txt}          1 {c |}{res}         37       24.18      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       13          52{txt}  {c |}  {res}       65       0.2000
+        {txt}Controls {c |} {res}       24          64{txt}  {c |}  {res}       88       0.2727
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       37         116{txt}  {c |}  {res}      153       0.2418
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .6666667{txt}{col 43}{c |}   {res} .2829545    1.524894{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .3333333{txt}{col 43}{c |}   {res}-.5248943    .7170455{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0909091{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     1.08{txt}  Pr>chi2 ={res} 0.2990
+
+-> tabulation of cvnc4  
+
+     {txt}nt hut {c |}
+      thuoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        113       91.87       91.87
+{txt}         co {c |}{res}         10        8.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkm4  
+
+     {txt}nt hut {c |}
+      thuoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        113       91.87       91.87
+{txt}         co {c |}{res}         10        8.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkh4  
+
+     {txt}nt hut {c |}
+      thuoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        113       91.87       91.87
+{txt}         co {c |}{res}         10        8.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkb4  
+
+     {txt}nt hut {c |}
+      thuoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        113       91.87       91.87
+{txt}         co {c |}{res}         10        8.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of cchung4  
+
+    {txt}cchung4 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        113       73.86       73.86
+{txt}          1 {c |}{res}         40       26.14      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       11          54{txt}  {c |}  {res}       65       0.1692
+        {txt}Controls {c |} {res}       29          59{txt}  {c |}  {res}       88       0.3295
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       40         113{txt}  {c |}  {res}      153       0.2614
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .4144317{txt}{col 43}{c |}   {res} .1704814    .9603173{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .5855683{txt}{col 43}{c |}   {res} .0396827    .8295186{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .1929714{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     4.98{txt}  Pr>chi2 ={res} 0.0257
+
+-> tabulation of cvnc5  
+
+   {txt}nt duong {c |}
+    quoc lo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         69       56.10       56.10
+{txt}         co {c |}{res}         54       43.90      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkm5  
+
+   {txt}nt duong {c |}
+    quoc lo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         69       56.10       56.10
+{txt}         co {c |}{res}         54       43.90      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkh5  
+
+   {txt}nt duong {c |}
+    quoc lo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         69       56.10       56.10
+{txt}         co {c |}{res}         54       43.90      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkb5  
+
+   {txt}nt duong {c |}
+    quoc lo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         70       56.91       56.91
+{txt}         co {c |}{res}         53       43.09      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of cchung5  
+
+    {txt}cchung5 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         68       44.44       44.44
+{txt}          1 {c |}{res}         85       55.56      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       38          27{txt}  {c |}  {res}       65       0.5846
+        {txt}Controls {c |} {res}       47          41{txt}  {c |}  {res}       88       0.5341
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       85          68{txt}  {c |}  {res}      153       0.5556
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.227738{txt}{col 43}{c |}   {res} .6119531    2.471347{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .1854942{txt}{col 43}{c |}   {res}-.6341121    .5953623{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .1084428{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.39{txt}  Pr>chi2 ={res} 0.5341
+
+-> tabulation of cvnc6  
+
+   {txt}nt duong {c |}
+   sua chua {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        103       83.74       83.74
+{txt}         co {c |}{res}         20       16.26      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkm6  
+
+   {txt}nt duong {c |}
+   sua chua {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        105       85.37       85.37
+{txt}         co {c |}{res}         18       14.63      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkh6  
+
+   {txt}nt duong {c |}
+   sua chua {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        106       86.18       86.18
+{txt}         co {c |}{res}         17       13.82      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of ctkb6  
+
+   {txt}nt duong {c |}
+   sua chua {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        105       85.37       85.37
+{txt}         co {c |}{res}         18       14.63      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of cchung6  
+
+    {txt}cchung6 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        102       66.67       66.67
+{txt}          1 {c |}{res}         51       33.33      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       19          46{txt}  {c |}  {res}       65       0.2923
+        {txt}Controls {c |} {res}       32          56{txt}  {c |}  {res}       88       0.3636
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       51         102{txt}  {c |}  {res}      153       0.3333
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .7228261{txt}{col 43}{c |}   {res} .3402485    1.516382{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .2771739{txt}{col 43}{c |}   {res}-.5163823    .6597515{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .1007905{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.86{txt}  Pr>chi2 ={res} 0.3549
+
+{com}. 
+. 
+. 
+. di "1.3. PHAN TICH ve dieu tri"
+{res}1.3. PHAN TICH ve dieu tri
+
+{com}. 
+. capture drop kchung*
+
+. 
+. gen kchung6= (ktkm6>1) | (ktkh6>1) | (ktkb6>1)
+
+. 
+. tab1 ktkm6 ktkh6 ktkb6 kchung6
+
+{res}-> tabulation of ktkm6  
+
+   {txt}hen quen {c |}
+thuoc phong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     0 ngay {c |}{res}        138       90.20       90.20
+{txt}   1-2 ngay {c |}{res}          7        4.58       94.77
+{txt}   >=3 ngay {c |}{res}          8        5.23      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of ktkh6  
+
+   {txt}hen quen {c |}
+thuoc phong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     0 ngay {c |}{res}        141       92.16       92.16
+{txt}   1-2 ngay {c |}{res}          8        5.23       97.39
+{txt}   >=3 ngay {c |}{res}          4        2.61      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of ktkb6  
+
+   {txt}hen quen {c |}
+thuoc phong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     0 ngay {c |}{res}        142       92.81       92.81
+{txt}   1-2 ngay {c |}{res}          7        4.58       97.39
+{txt}   >=3 ngay {c |}{res}          4        2.61      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of kchung6  
+
+    {txt}kchung6 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        124       81.05       81.05
+{txt}          1 {c |}{res}         29       18.95      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+{com}. 
+. cc outcome kchung6
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       22          43{txt}  {c |}  {res}       65       0.3385
+        {txt}Controls {c |} {res}        7          81{txt}  {c |}  {res}       88       0.0795
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       29         124{txt}  {c |}  {res}      153       0.1895
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 5.920266{txt}{col 43}{c |}   {res} 2.195249    17.55831{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .8310887{txt}{col 43}{c |}   {res} .5444708    .9430469{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .2812915{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    16.31{txt}  Pr>chi2 ={res} 0.0001
+
+{com}. 
+. 
+. 
+. foreach stt of numlist 7/8 {c -(}
+{txt}  2{com}. 
+. gen kchung`stt'= ktkm`stt' | ktkh`stt' | ktkb`stt'
+{txt}  3{com}. 
+. tab1 ktkm`stt'  ktkh`stt'  ktkb`stt' kchung`stt' 
+{txt}  4{com}. 
+. cc outcome kchung`stt'
+{txt}  5{com}. 
+. {c )-}
+
+{res}-> tabulation of ktkm7  
+
+      {txt}hen tai kham {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+                 0 {c |}{res}         34       22.22       22.22
+{txt}      thuong xuyen {c |}{res}        119       77.78      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+
+-> tabulation of ktkh7  
+
+      {txt}hen tai kham {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+                 0 {c |}{res}         48       31.37       31.37
+{txt}      thuong xuyen {c |}{res}        105       68.63      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+
+-> tabulation of ktkb7  
+
+      {txt}hen tai kham {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+                 0 {c |}{res}         47       30.72       30.72
+{txt}      thuong xuyen {c |}{res}        106       69.28      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+
+-> tabulation of kchung7  
+
+    {txt}kchung7 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         22       14.38       14.38
+{txt}          1 {c |}{res}        131       85.62      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       55          10{txt}  {c |}  {res}       65       0.8462
+        {txt}Controls {c |} {res}       76          12{txt}  {c |}  {res}       88       0.8636
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      131          22{txt}  {c |}  {res}      153       0.8562
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .8684211{txt}{col 43}{c |}   {res} .3181467    2.421694{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .1315789{txt}{col 43}{c |}   {res}-1.421694    .6818533{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .1136364{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.09{txt}  Pr>chi2 ={res} 0.7606
+
+-> tabulation of ktkm8  
+
+     {txt}hen ky {c |}
+      thuat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          5        3.27        3.27
+{txt}       dung {c |}{res}        148       96.73      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of ktkh8  
+
+     {txt}hen ky {c |}
+      thuat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          5        3.27        3.27
+{txt}       dung {c |}{res}        148       96.73      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of ktkb8  
+
+     {txt}hen ky {c |}
+      thuat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          2        1.31        1.31
+{txt}       dung {c |}{res}        151       98.69      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of kchung8  
+
+    {txt}kchung8 {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          2        1.31        1.31
+{txt}          1 {c |}{res}        151       98.69      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+{col 18}{txt}{c |} kchung8{col 43}{c |}             Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       63           2{txt}  {c |}  {res}       65       0.9692
+        {txt}Controls {c |} {res}       88           0{txt}  {c |}  {res}       88       1.0000
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      151           2{txt}  {c |}  {res}      153       0.9869
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c |}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27}        0{txt}{col 43}{c |}   {res}        0    1.406866{txt} (Cornfield)
+ Prev. frac. ex. {c |} {res}{col 27}        1{txt}{col 43}{c |}   {res}-.4068663           1{txt} (Cornfield)
+ Prev. frac. pop {c |} {res}{col 27}        1{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 22}          chi2(1) ={res}     2.74{txt}  Pr>chi2 ={res} 0.0976
+
+ {txt}Note: exact confidence levels not possible with zero count cells
+
+{com}. 
+. 
+. 
+. di "2. PHAN TICH DA BIEN"
+{res}2. PHAN TICH DA BIEN
+
+{com}. 
+. logistic outcome achung3 achung6 achung12 achung17 achung19 kchung6 kchung8
+
+{txt}note: kchung8 != 1 predicts success perfectly
+      kchung8 dropped and 2 obs not used
+
+
+Logistic regression                               Number of obs   = {res}       151
+                                                  {txt}LR chi2({res}6{txt})      = {res}     25.55
+                                                  {txt}Prob > chi2     = {res}    0.0003
+{txt}Log likelihood = {res}-89.809512                       {txt}Pseudo R2       = {res}    0.1245
+
+{txt}{hline 13}{c TT}{hline 64}
+     outcome {c |} Odds Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+{hline 13}{c +}{hline 64}
+     achung3 {c |}  {res} .4462417    .213978    -1.68   0.092     .1743449    1.142171
+     {txt}achung6 {c |}  {res} 4.945051   3.195218     2.47   0.013     1.393707    17.54567
+    {txt}achung12 {c |}  {res} .9670653   .3676247    -0.09   0.930      .459067    2.037209
+    {txt}achung17 {c |}  {res} 1.133614   .4276892     0.33   0.740     .5411583    2.374685
+    {txt}achung19 {c |}  {res} 1.110087   .4494458     0.26   0.796     .5020272    2.454634
+     {txt}kchung6 {c |}  {res} 7.112519   3.771195     3.70   0.000     2.515938    20.10699
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. 
+. logistic outcome bchung1 bchung5 bchung7 bchung11 kchung6 kchung8
+
+{txt}note: kchung8 != 1 predicts success perfectly
+      kchung8 dropped and 2 obs not used
+
+
+Logistic regression                               Number of obs   = {res}       151
+                                                  {txt}LR chi2({res}5{txt})      = {res}     18.44
+                                                  {txt}Prob > chi2     = {res}    0.0024
+{txt}Log likelihood = {res} -93.36555                       {txt}Pseudo R2       = {res}    0.0899
+
+{txt}{hline 13}{c TT}{hline 64}
+     outcome {c |} Odds Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+{hline 13}{c +}{hline 64}
+     bchung1 {c |}  {res}  .734996   .2662289    -0.85   0.395     .3613802    1.494877
+     {txt}bchung5 {c |}  {res} 1.192593   1.191907     0.18   0.860     .1681821    8.456765
+     {txt}bchung7 {c |}  {res}   1.1716    .451746     0.41   0.681     .5502659    2.494514
+    {txt}bchung11 {c |}  {res} 1.808903   .8527015     1.26   0.209     .7180692    4.556847
+     {txt}kchung6 {c |}  {res} 5.805416   2.882616     3.54   0.000     2.193706    15.36343
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. 
+. logistic outcome cchung4 kchung6 kchung8
+
+{txt}note: kchung8 != 1 predicts success perfectly
+      kchung8 dropped and 2 obs not used
+
+
+Logistic regression                               Number of obs   = {res}       151
+                                                  {txt}LR chi2({res}2{txt})      = {res}     19.31
+                                                  {txt}Prob > chi2     = {res}    0.0001
+{txt}Log likelihood = {res}-92.931526                       {txt}Pseudo R2       = {res}    0.0941
+
+{txt}{hline 13}{c TT}{hline 64}
+     outcome {c |} Odds Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+{hline 13}{c +}{hline 64}
+     cchung4 {c |}  {res} .4614341   .1942552    -1.84   0.066     .2021946    1.053052
+     {txt}kchung6 {c |}  {res} 5.558962   2.674055     3.57   0.000     2.165389     14.2709
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. exit, clear

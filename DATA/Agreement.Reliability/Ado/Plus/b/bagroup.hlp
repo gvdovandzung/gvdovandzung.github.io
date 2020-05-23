@@ -1,0 +1,60 @@
+.-
+help for ^bagroup^                                                (STB-55: sbe33)
+.-
+
+Modified Bland-Altman plots
+---------------------------
+
+        ^bagroup^ varlist [^if^ exp] [^in^ range] [^,^ ^format(^str^)^ ^rows(^#^)^
+                ^avlab(^str^)^ ^difflab(^str^)^ ^title(^str^)^ ^obs(^#^)^
+                ^listwise^ graph_options ]
+
+
+Description
+-----------
+
+^bagroup^ produces modified Bland-Altman plots.
+
+
+Options
+-------
+
+^format(^str^)^ sets the format for display of results.
+
+^rows(^#^)^ specifies the number of rows of graphs to be shown.
+
+^avlab(^str^)^ gives a variable label to the average before plotting the graph.
+
+^difflab(^str^)^ gives a variable label to the difference before plotting the
+    graph.
+
+^title(^str^)^ adds a single title to the block of graphs.
+
+^obs(^#^)^ specifies the minimum number of nonmissing values per observations 
+    needed for a point to be plotted.
+
+^listwise^ specifies listwise deletion of missing data.  Default is pairwise.
+    Only observations with no missing values are used.
+
+graph_options are any of the options allowed with ^graph, twoway^.
+
+
+Example
+-------
+
+ . ^use tan_part^
+ . ^bagroup pct_*^
+
+
+Author
+------
+        Paul Seed
+        GKT School of Medicine
+        King's London, UK
+        email: paul.seed@@kcl.ac.uk
+
+
+Also see
+--------
+
+    STB: STB-55 sbe33

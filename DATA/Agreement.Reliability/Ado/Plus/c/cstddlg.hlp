@@ -1,0 +1,54 @@
+.-
+help for ^Standard calculator^                                   Menu: Calculator
+.-
+
+This is a standard calculator.
+
+The other calculator "^RPN calculator^" is a Reverse Polish Notation calculator.
+
+@crpndlg!Click here for help on the RPN calculator.@
+
+
+^Evaluation^
+^----------^
+
+Whenever ^-^, ^+^, ^x^, ^/^, or ^=^ is clicked, the previously entered expression
+is evaluated.
+
+Input ^1^, click ^+^, input ^2^, click ^x^, input ^3^, click ^=^
+
+= (1 + 2)*3 = 9,
+
+not 1 + 2*3 = 7.
+
+
+^Example^
+^-------^
+
+To compute 2.12 + 1.96*3.67/sqrt(56)
+
+Input ^1.96^
+
+Click ^x^
+
+Input ^3.67^
+
+Click ^/^
+
+Input ^56^
+
+Click ^sqrt^
+
+Click ^+^
+
+Input ^2.12^
+
+Click ^=^
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@crpndlg!RPN calculator@

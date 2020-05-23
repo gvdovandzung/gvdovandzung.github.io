@@ -1,0 +1,187 @@
+.-
+help for ^Recode^                                    Menu: Data--Generate/Replace
+.-
+
+Topics covered
+--------------
+
+^1. Description^
+^2. How to fill in the dialog boxes^
+^3. Examples^
+^4. Rules for variable names^
+
+
+^1. Description^
+^--------------^
+
+This command will recode the values of an existing variable and put the
+result in a new variable (and leave the original variable unchanged).
+
+For example, suppose you have a variable that takes on the values 1 and 2
+and you instead want them to be 0 and 1.
+
+You have a continuous variable ^x^ that takes on values from 0.45 to 16.2.
+Suppose you want to create a new variable ^y^ such that ^y^ = 1 when ^x^ < 5,
+^y^ = 2 when 5 <= ^x^ < 10, and ^y^ = 3 when ^x^ >= 10.
+
+
+^2. How to fill in the dialog boxes^
+^----------------------------------^
+
+First dialog box
+----------------
+
+First, select the name of the existing variable whose values you wish to
+recode.
+
+Click on the name of the variable (you may have to scroll the list box to
+see it).  Or type in the name of the variable after "Recode values of".
+
+Second, fill in "into ___ values (or classes)".  The number that you fill
+in here should be the number of values you will have in the recoded variable.
+See ^3. Examples^ below.
+
+Third, fill in the "New variable name".
+(See ^4. Rules for variable names^ below for allowed names.)
+
+Click ^OK^.
+
+Then the second dialog box will appear.
+
+Second dialog box
+-----------------
+
+Fill in the "Value range" for the values in the existing variable that
+you want changed into the first recoded value.
+
+Fill in "Recode value".
+
+E.g., if you want the values 0-10 mapped into 1, fill in ^0^ and ^10^
+for the "Value range" and 1 for the "Recoded value".
+
+E.g., if you want 0 mapped into 1, fill in ^0^ for "Value range" (just 
+leave the second edit box for "Value range" blank).  Fill in ^1^ for
+"Recoded value".
+
+Click on ^Next^.
+
+Repeat.  Fill in the "Value range" and "Recoded value" for the next
+value range that needs to be recoded.
+
+Click on ^Next^.
+
+Repeat.  Fill in the "Value range" and "Recoded value" ....
+
+Continue until you have filled in the "Value range" and "Recoded value"
+for every one of the values/classes that you want to recode.
+
+E.g., if you filled in ^3^ for "into ___ values (or classes)" in the 
+first dialog box, then you will have to fill in "Value range" and 
+"Recoded value", 3 times.
+
+You can review and change what you have done by
+
+	- click on ^First^ to review/change the first    recode
+	- click on ^Prev^  "        "        "  previous   "
+	- click on ^Last^  "        "        "  last       "
+
+Click on ^OK^ when you are finished.
+
+
+^3. Examples^
+^-----------^
+
+Example 1
+---------
+
+Old variable  New variable 
+   values        values
+------------  ------------
+
+      1     ->     0
+      2     ->     1
+
+Enter ^2^ for "into ___ values (or classes)" in the first dialog box.
+
+Fill in ^1^ for "Value range" (leave the second box for "Value range" blank).
+
+Fill in ^0^ for "Recoded value".
+
+Click ^Next^.
+
+Fill in ^2^ for "Value range" (leave the second box for "Value range" blank).
+
+Fill in ^1^ for "Recoded value".
+
+If you want to check want you did, click ^Prev^ then ^Next^, or ^First^ then ^Last^.
+
+Click ^OK^.
+
+
+Example 2
+---------
+
+You have a continuous variable ^x^ that takes on values from 0.45 to 16.2.
+Suppose you want to create a new variable ^y^ such that ^y^ = 1 when ^x^ < 5,
+^y^ = 2 when 5 <= ^x^ < 10, and ^y^ = 3 when ^x^ >= 10.
+
+Old variable  New variable 
+   values        values
+------------  ------------
+
+-inf -   5   ->    1
+   5 -  10   ->    2
+  10 - +inf  ->    3
+
+Enter ^3^ for "into ___ values (or classes)" in the first dialog box.
+
+Fill in ^0^ and ^5^ for "Value range" (the first value should be any number less
+than or equal to the minimum of the old variable).
+
+Fill in ^1^ for "Recoded value".
+
+Click ^Next^.
+
+Fill in ^5^ and ^10^ for "Value range".
+
+Fill in ^2^ for "Recoded value".
+
+Fill in ^10^ and ^20^ for "Value range" (the second value should be any number
+greater than or equal to the maximum of the old variable).
+
+Fill in ^3^ for "Recoded value".
+
+If you want to check want you did, click ^Prev^ then ^Next^, or ^First^ then ^Last^.
+
+Click ^OK^.
+
+
+^4. Rules for variable names^
+^---------------------------^
+
+A variable name must
+
+	- be 1 to 8 characters long
+
+        - consist of lowercase or uppercase letters (a-z, A-Z) or numbers (0-9)
+
+	- have a letter as the first character
+
+	- not use any other characters
+
+Examples: ^x^, ^x1^, ^X^, ^group^, ^Group^, ^GROUP^, ^dum06^
+
+Note: Stata is case sensitive.  ^group^, ^Group^, and ^GROUP^ are three 
+different variables.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@formdlg!Formula -- generating new variables@
+@seqdlg!Sequence -- generating sequences@
+@rnddlg!Random numbers -- generating random numbers@
+
+@editr_sq!Using the spreadsheet editor to view and change data@

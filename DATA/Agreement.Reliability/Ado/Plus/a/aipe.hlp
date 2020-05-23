@@ -1,0 +1,58 @@
+{smcl}
+{* 4oct2006}{...}
+{hline}
+help for {hi:aipe}
+{hline}
+
+{title:Accuracy in Parameter Estimation}
+
+{p 8 14}{cmd:aipe} {cmd:,} {cmd:r2(}{it:value}{cmd:)} {cmd:r2xx(}{it:value}{cmd:)} 
+{cmd:w(}{it:value}{cmd:)} {cmd:p(}{it:value}{cmd:)} [ {cmd:quan(}{it:value}{cmd:)} 
+{cmd:alpha(}{it:value}{cmd:)} ]
+
+
+{title:Description}
+
+{p}{cmd:aipe}: estimates sample size for arbitrary width confidence intervals
+for OLS regression coefficients using the accuracy in parameter estimation process.
+For the sample size estimates N there is approximately only a 50% chance that the 
+interval will be no larger than the specified 2*w.  By selecting a chi-square quantile
+of .8, there is approximately an 80% that the interval will be no larger than specified
+when using sample size Nm.
+
+{title:aipe Options}
+
+{p 0 4}{cmdab:r2:} R-squared for the full model.
+
+{p 0 4}{cmdab:r2xx:} R-squared for target predictor with remaining predictors.
+
+{p 0 4}{cmdab:w:} half-width of confidence interval.
+
+{p 0 4}{cmdab:p:} number of predictors in the full model.
+
+{p 0 4}{cmdab:quan:} quantile of the chi-square distribution (default = .8).
+
+{p 0 4}{cmdab:alpha:} the alpha level for confidence interval (default = .05).
+
+
+
+{title:Examples}
+
+{p 1 5}{inp:. aipe, r2(.17) r2xx(.29) w(.15) p(5)}{p_end}
+{p 1 5}{inp:. aipe, r2(.17) r2xx(.29) w(.15) p(5) quan(.8)}{p_end}
+
+{title:Author}
+
+{p 5 5}
+Philip B. Ender{break}
+UCLA Academic Technology Services{break}
+ender@ucla.edu 
+
+{title:Reference}
+
+{p 5 10}
+Kelley, K. & Maxwell, S.E. 2003. Sample size for multiple regression: Obtaining 
+regression coefficients that are accurate, not simply significant. {it:Psychological Methods}, 
+{it:8}(3), 305-321.
+
+{p_end}

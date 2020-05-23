@@ -1,0 +1,37 @@
+.-
+help for ^Label dataset^                                        Menu: Data--Label
+.-
+
+^Description^
+^-----------^
+
+You can create a dataset label that will be displayed in the Results window
+when you open a Stata data file (which you do by choosing ^Open^ from the
+^File^ menu).
+
+You will also see the dataset label when you choose ^Describe variables^
+from the ^Summaries^ menu.
+
+
+^How to fill in the dialog box^
+^-----------------------------^
+
+Type in any label consisting of 31 characters or less (blanks are allowed).
+
+Example: ^This is my data set^
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@dinfo_sq!Dataset info@
+
+@varldlg!Label variable@
+@vlabdlg!Label values@
+@stldlg!Strings to labels@
+@stldlg!Labels to strings@
+
+@editr_sq!Using the spreadsheet editor (variable labels can also be entered@
+@editr_sq!in the editor)@

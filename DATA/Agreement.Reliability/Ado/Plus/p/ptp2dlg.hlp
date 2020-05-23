@@ -1,0 +1,147 @@
+.-
+help for ^2-sample test of proportions^        Menu: Statistics--Parametric tests
+.-
+
+^Topics covered^
+^--------------^
+
+^1. Note on calculator version of command^
+^2. Description of the test^
+^3. Examples (how to choose the right option for your dataset arrangement)^
+
+
+^1. Note on calculator version of command^
+^----------------------------------------^
+
+The 2-sample test of proportions is a test that can be used to compare two
+samples where the observed outcomes have two possible values: "success" and
+"failure" (or "yes" and "no", etc.).
+
+If you have already counted the total number of successes in each sample, you
+can use the ^2-sample test of proportions^ command under the ^Calculator^ menu.
+
+@tp2dlg!Click here for help on the calculator version of the 2-sample test@
+@tp2dlg!of proportions.@
+
+Use this dataset version if you want StataQuest to count the number of
+successes in each sample using variables that you have created or read into
+StataQuest.
+
+
+^2. Description of the test^
+^--------------------------^
+
+This command performs a test of the equality of the proportion of successes
+for variable X1 compared with the proportion for variable X2.
+
+Both variables X1 and X2 must only take on the values 0 ("failure") or
+1 ("success").  
+
+Note: The values must be 0 or 1, NOT 1 or 2, etc.
+
+The sum of X1 has a Binomial(n1, p1) distribution, where n1 is the sample size
+and p1 is the probability of success for one trial.
+
+Similarly, the sum of X2 has a Binomial(n2, p2) distribution.
+
+The null hypothesis is
+
+	Ho: p1 = p2
+
+Note that the expected value of the sum of X1 is n1*p1 and that the expected
+value of mean(X1) is p1.  Thus, mean(X1) provides an estimate of p1.
+Similarly, mean(X2) provides an estimate of p2.
+  
+
+^3. Examples (how to choose the right option for your dataset arrangement)^
+^--------------------------------------------------------------------------^
+
+In this example, we illustrate the choice of options
+
+	^1 data variable, 1 group variable^
+	^2 independent data variables^
+
+We wish to test whether the proportion of women answering "yes" ("yes" = 1,
+"no" = 0) to a certain question is the same as the proportion of men answering
+"yes".  So we randomly sample 6 women and 7 men and ask them the question:
+
+Women:   no, yes, yes, yes, yes, yes
+Men:     no,  no,  no,  no,  no, yes, yes
+
+The data can be entered in two ways @input_sq!(click here for help on inputting data)@:
+
+^Data Arrangement:  1 data variable, 1 group variable^
+
+We create two variables: ^answer^ and ^group^.
+^group^ = 1 for women, and ^group^ = 2 for men.
+
+Note that ^answer^ must be a 0/1 variable.
+
+After we enter the data, we list them by selecting ^List data^ under the
+^Summaries^ menu:
+
+. list answer group in 1/13                                                     
+                                                                                
+       answer     group                                                         
+  1.        0         1                                                         
+  2.        1         1                                                         
+  3.        1         1                                                         
+  4.        1         1                                                         
+  5.        1         1                                                         
+  6.        1         1                                                         
+  7.        0         2                                                         
+  8.        0         2                                                         
+  9.        0         2                                                         
+ 10.        0         2                                                         
+ 11.        0         2                                                         
+ 12.        1         2                                                         
+ 13.        1         2                                                         
+                                                                                 
+For this data arrangement, we must choose the "1 data variable, 1 group
+variable" option in the first dialog box. 
+
+In the second dialog box, we choose ^answer^ for the "Data variable (0/1)"
+and ^group^ for the "Group var. (2 groups)".
+
+Note that only variables that take on the values 0 or 1 will appear in the
+list box for "Data variable (0/1)".  And only variables that take on two
+values will appear in the list box for "Binary group var."
+
+^Data Arrangement: 2 independent data variables^
+
+We create two variables: ^women^ and ^men^.
+^women^ contains the answers of the women, and
+^men^ contains the answers of the men.
+
+Note that ^women^ and ^men^ must both be 0/1 variables.
+
+After we enter the data, we list them by selecting ^List data^ under the
+^Summaries^ menu:
+
+. list women men in 1/7                                                    
+                                                                                
+        women       men                                                         
+  1.        0         0                                                         
+  2.        1         0                                                         
+  3.        1         0                                                         
+  4.        1         0                                                         
+  5.        1         0                                                    
+  6.        1         1                                                         
+  7.        .         1                                                        
+ 
+For this data arrangement, we must choose the "2 independent data variables"
+option in the first dialog box. 
+
+In the second dialog box, we choose ^women^ for "Data var. #1 (0/1)" and
+^men^ for "Data var. #2 (0/1)".
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@tp2dlg!2-sample test of proportions (Calculator menu)@
+
+@pttpdlg!1-sample test of proportion@
+@tp1dlg!1-sample test of proportion  (Calculator menu)@

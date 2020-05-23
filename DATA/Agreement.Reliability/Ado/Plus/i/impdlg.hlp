@@ -1,0 +1,154 @@
+.-
+help for ^Import ASCII data files^                                     Menu: File
+.-
+
+^Description^
+^-----------^
+
+If you have a ASCII data file that was created by another application
+(e.g., a database program), you can use this command to read the ASCII
+data file into Stata.
+
+Note:  An ASCII file is the same thing as a plain text file.
+
+This command can read in ASCII files that are in either
+
+	1. Tab-separated format
+	
+	2. Comma-separated format
+
+In addition, if the first line of the file contains variable names,
+these will be read in and used as the variable names by Stata.
+
+
+^How to fill in the dialog box^
+^-----------------------------^
+
+In the first dialog box, select the file and click ^OK^.
+
+
+Auto-select file properties
+---------------------------
+
+In the second dialog box, the button "Auto-select file properties" will
+be selected.
+
+When "Auto-select file properties" is selected, you do not have to
+fill in anything else.
+
+So leave "Auto-select file properties" selected, and click ^OK^.
+
+Click on the ^Editor^ or ^Browse^ button to view your data.
+
+@editr_sq!(Click here for help on using the spreadsheet editor to view@
+@editr_sq!and change data.)@
+
+If your data did not get read in properly, try doing it again with the
+button "Use selected file properties" pushed.
+
+
+Use selected file properties
+----------------------------
+
+When "Use selected file properties" is selected, you must indicate
+whether the file is tab-separated format or comma-separated format
+and also whether the file contains variable names as the first line
+of the file.
+
+
+Example 1
+---------
+
+Suppose you have the following tab-separated ASCII data file created
+by a database program:
+
+a	b	c
+1	2	3
+4	5	6
+2.1	3	4.0
+
+The first line ^a b c^ indicates the variable names.
+
+Select the file, click ^OK^, select "Auto-select file properties", 
+click ^OK^, and the file will be read into memory.
+
+
+Example 2
+---------
+
+Suppose you have the following comma-separated ASCII data file:
+
+1,2,3
+4,5,6
+7,,8
+9,9,9
+
+Select the file, click ^OK^, select "Auto-select file properties", 
+click ^OK^, and the file will be read into memory.
+
+If you choose ^List data^ from the ^Summaries^ menu, you will see
+
+^. list v1 v2 v3 in 1/3^                                                         
+                                                                                
+           v1        v2        v3                                               
+  1.        1         2         3                                               
+  2.        4         5         6                                               
+  3.        7         .         8
+  4.        9         9         9                                               
+                                                                                
+If you want to rename your variables, enter the spreadsheet editor by
+clicking on the ^Editor^ button.  Then double-click anywhere on the
+column of a variable to bring up a dialog box where you can change the
+name of the variable. 
+
+
+Example 3
+---------
+
+"Auto-select file properties" works in almost all cases.
+
+But here is a case where it doesn't.  Suppose your data is
+
+Name	Grade
+John	B
+Mary	A
+Fred	C
+Ernie	A
+Sally	F
+
+If you import it using "Auto-select file properties", the data in
+StataQuest will be
+
+^. list v1 v2 in 1/6^                                                             
+                                                                                
+            v1         v2                                                       
+  1.      Name      Grade                                                       
+  2.      John          B                                                       
+  3.      Mary          A                                                       
+  4.      Fred          C                                                       
+  5.     Ernie          A                                                       
+  6.     Sally          F
+
+It failed to interpret the first line as variable names.
+
+Let's try it again.  This time choose "Use selected file properties".
+Set "tab separated" as the "Field delimiter" and check "file has
+variable names".
+
+This time it works perfectly.                                                   
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@expdlg!Exporting an ASCII data file@ 
+
+@input_sq!Inputting data using the spreadsheet editor@
+
+@editr_sq!Using the spreadsheet editor to view and change data@
+
+@stkdlg!Stack variables (transform data to 1 data variable, 1 group variable)@
+
+@mem_sq!Limits on dataset size@

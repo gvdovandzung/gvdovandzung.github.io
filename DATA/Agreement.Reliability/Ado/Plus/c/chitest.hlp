@@ -1,0 +1,61 @@
+.-
+help for ^chitest^
+.-
+
+Chi-square test for univariate frequency distributions
+------------------------------------------------------
+
+    ^chitest^ obsfreq [ expfreq ] [^if^ exp] [^in^ range] [ ^,^ ^nfit(#)^ ]
+
+Description
+-----------
+
+^chitest^ works on either one or two variables. The first is taken to be
+observed frequencies, which must be zeros or positive integers. The
+second, if specified, is taken to be expected frequencies under some
+hypothesis, which must be positive. If the second variable is not
+specified, the expected frequencies are taken to be equal, i.e. equal to
+the mean of the observed frequencies.
+
+The display includes the Pearson chi-square statistic and its P-value
+for a test of the hypothesis, the likelihood-ratio chi-square statistic
+and its P-value, observed frequencies, expected frequencies, classic
+residuals (observed - expected), and Pearson residuals, defined as
+(observed - expected)/sqrt(expected).
+
+Any cells with expected frequencies less than 5 are flagged.
+
+Option
+------
+
+^nfit^ indicates the number of parameters that have been estimated from
+    the data. This number will be subtracted from (number of cells - 1)
+    to give the number of degrees of freedom. The default is 0.
+
+Example
+-------
+
+        . ^chitest count Poisson, nfit(1)^
+
+Saved values
+------------
+
+    S_1      number of classes in distribution
+    S_2      degrees of freedom
+    S_3      Pearson chi-square
+    S_4      P-value of Pearson chi-square
+    S_5      likelihood-ratio chi-square
+    S_6      P-value of likelihood-ratio chi-square
+    S_7      mean expected frequency
+
+Author
+------
+         Nicholas J. Cox, University of Durham, U.K.
+         n.j.cox@@durham.ac.uk
+
+Also see
+--------
+
+ Manual:  [4] immediate
+On-line:  help for @chitesti@
+

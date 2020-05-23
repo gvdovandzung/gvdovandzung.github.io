@@ -1,0 +1,50 @@
+{smcl}
+{p 0 4}
+{bf:{help vgsg:A Visual Guide to Stata Graphics}}
+{bind:> Cross Reference}
+{p_end}
+{hline}
+
+{p 1 1 1}
+This help file is organized using the chapters and sections
+from {it: A Visual Guide to Stata Graphics} showing
+cross references to the related Stata help files. 
+I hope this will help you easily find more detailed information
+within the {help graph:online help for graph} by presenting
+the cross references organized according to the chapters and sections
+of the book.
+
+{p 4 8 4}
+{bf:{help vgsg_ref_intro:Introduction}}{break}
+
+{p 4 8 4}
+{bf:{help vgsg_ref_twoway:Twoway}}{break}
+
+{p 4 8 4}
+{bf:{help vgsg_ref_matrix:Matrix}}{break}
+
+{p 4 8 4}
+{bf:{help vgsg_ref_bar:Bar}}{break}
+
+{p 4 8 4}
+{bf:{help vgsg_ref_box:Box}}{break}
+
+{p 4 8 4}
+{bf:{help vgsg_ref_dot:Dot}}{break}
+
+{p 4 8 4}
+{bf:{help vgsg_ref_pie:Pie}}{break}
+
+{p 4 8 4}
+{bf:{help vgsg_ref_options:Options}}{break}
+
+{p 4 8 4}
+{bf:{help vgsg_ref_stdopts:Standard Options}}{break}
+
+{p 4 8 4}
+{bf:{help vgsg_ref_styles:Styles}}{break}
+
+{p 4 8 4}
+{bf:{help vgsg_ref_appendix:Appendix}}{break}
+
+{hline}

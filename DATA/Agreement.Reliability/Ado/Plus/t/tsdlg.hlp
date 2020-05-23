@@ -1,0 +1,133 @@
+.-
+help for ^Time-series graphs^                                        Menu: Graphs
+.-
+
+Topics covered
+--------------
+
+^1. Plot Y vs. X^
+^2. Plot Y vs. observation number^
+^3. Plot more than one Y vs. X^
+^4. Plot more than one Y vs. observation number^
+
+Note:  Click the ^Dialog^  button to bring the dialog box      to the front.
+         "    "  ^Results^   "    "    "    "  ^Results^ window  "   "    "
+         "    "  ^Graph^     "    "    "    "  ^Graph^   window  "   "    "
+
+
+^1. Plot Y vs. X^
+^---------------^
+
+Produces a graph of Y vs. X with lines connecting the points.
+
+Enter the Y-axis variable by clicking on its name in the list box.
+Or type it in.  Ditto for the X-axis variable.
+
+Click ^Draw^ to draw the graph while keeping the dialog box open to draw more.
+Click ^OK^   to draw the graph and close the dialog box.
+
+If you want to plot Y vs. X without connecting the points, choose ^Scatterplots^
+from the ^Graph^ menu and select ^Plot Y vs. X^.
+
+@spdlg!Click here for help on Scatterplots.@
+
+@graph_sq!Click here for help on saving, viewing, and printing your graph.@
+
+
+^2. Plot Y vs. observation number^
+^--------------------------------^
+
+Plots Y1 at 1, Y2 at 2,..., Yn at n, where Y1 is the first observation,
+Y2 the second, etc.
+
+Example:  Suppose your data are yearly income for a company (in millions $):
+
+^. list income in 1/8^                                                           
+                                                                                
+       income                                                                   
+  1.       27                                                                   
+  2.       23                                                                   
+  3.       56                                                                   
+  4.       63                                                                   
+  5.       40                                                                   
+  6.       51                                                                   
+  7.       67                                                                   
+  8.       60                                                                   
+
+^income^ will be plotted in this order.
+
+Note:  If the order of your data changes, the plot will be different.  Other
+commands in StataQuest may change the order of your data.
+
+If you want to be able to plot ^income^ vs. time and you know the times, you
+should enter the time variable in the ^Editor^ and then use ^Plot Y vs. X^ under
+^Time series^ to produce the graph.
+
+If you want to plot ^income^ in ascending order; i.e., in the order
+
+^. list income in 1/8^                                                            
+                                                                                
+       income                                                                   
+  1.       23                                                                   
+  2.       27                                                                   
+  3.       56                                                                   
+  4.       63                                                                   
+  5.       40                                                                   
+  6.       51                                                                   
+  7.       60                                                                   
+  8.       67                                                                   
+
+then click on the ^Editor^ button, click on the ^income^ column, and click the
+^Sort^ button.  Close the ^Editor^ and then create the graph.
+
+@editr_eq!Click here for help on using the Editor to change data.@
+
+
+^3. Plot more than one Y vs. X^
+^-----------------------------^
+
+Same as ^Plot Y vs. X^ only more than one Y-axis variable can be plotted.
+
+To enter the Y-axis variables, simply click on their names in the list box. 
+
+Only one X-axis variable is allowed.
+
+If you leave the "Scale variables to 100%" box unchecked, the Y-axis will be
+scaled to the combined Y-axis variables.
+
+The Y-axis will run from the minimum of all the Y-axis variables combined to
+the maximum of all the variables.
+
+Example:  If ^y1^ is 1, 2,..., 10 and ^y2^ is 100, 200,..., 1000, then the Y-axis
+will run from 1 to 1000.
+
+Since ^y1^ is so small relative to ^y2^, the values of ^y1^ will not be visible
+on this graph.
+
+But if you check the "Scale variables to 100%" box, each of the Y-axis
+variables will be scaled to run from 0 (0%) to 1 (100%).
+
+
+^4. Plot more than one Y vs. observation number^
+^----------------------------------------------^
+
+Same as ^3. Plot more than one Y vs. X^ only the Y-axis variables are all
+plotted against observation number.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@histdlg!Histograms@
+@boxdlg!Box plots@
+@stemdlg!Stem-and-leaf plot@
+@dpldlg!Dotplots@
+@qnormdlg!Normal quantile plot@
+@bardlg!Bar charts@
+
+@spdlg!Scatterplots@
+@qcdlg!Quality-control charts@
+
+@graph_sq!Printing, saving, and viewing graphs@

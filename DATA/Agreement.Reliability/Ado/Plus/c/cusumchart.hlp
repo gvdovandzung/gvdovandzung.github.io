@@ -1,0 +1,57 @@
+.-
+help for ^cusumchart^ - Author: ^Thai Thanh Truc^ - Version: 1.0.1 (Brisbane, 19/March/2010)
+.-
+
+^Introduction:^
+	This command was written in order to make it convenient to test
+quality control process using CUSUM chart. The author ^Thai Thanh Truc^
+came up with this command when studying Clinical Biostatistics course
+on BCA network.
+	This command is for free download and installed. If you have any
+questions/queries about this command, please feel free to ask the author
+at ^thaithanhtruc@gmail.com^ or ^thaithanhtruc@fphhcm.edu.vn^. Any comments or
+contribution to this command are welcome and appreciated.
+
+.-
+
+Syntax:
+----------------------------------------------------
+
+	^cusumchart^ count casenumber rate1 rate2 h, [data] [chart] [test]
+
+Where:
+       * ^count^       : binary variable determining whether an event happened or not
+       * ^casenumber^  : case number
+       * ^rate1^       : satisfacory rate
+       * ^rate2^       : unsatisfactory rate
+       * ^h^           : constant
+
+Option:
+       * ^data^    : generate the data for further analysis
+       * ^chart^   : generate a Cusum chart
+       * ^test^    : generate a Cusum test chart
+
+
+^Example:^
+	cusumchart long_stay case rate1 rate2 h, data
+.-	
+	cusumchart long_stay case rate1 rate2 h, chart
+.-	
+	cusumchart long_stay case rate1 rate2 h, test
+
+^Note^: User should input 5 variables (no more or less). If in any cases,
+users do not have have such a variable such as ^h^, please generate it
+manually using ^gen^ command. For example: gen h = 3  or gen rate1 = 0.075
+or gen rate2 = 0.15
+
+.-
+ ---------------------------------------------------------------------
+|                             ^Author:^                                |
+ ---------------------------------------------------------------------
+|    Thai Thanh Truc - University of Medicine and Pharmacy            |
+|                     Ho Chi Minh city, Vietnam                       |
+|       Masters student at Queensland University of Technology        |
+|                        Brisbane, Australia                          |
+|                  Email: thaithanhtruc@gmail.com                     |
+ ---------------------------------------------------------------------
+

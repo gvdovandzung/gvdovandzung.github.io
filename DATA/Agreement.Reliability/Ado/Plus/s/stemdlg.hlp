@@ -1,0 +1,378 @@
+.-
+help for ^Stem-and-leaf plot^                          Menu: Graphs--One variable
+.-
+
+Topics covered
+--------------
+
+^1. Printing stem-and-leaf plots^
+^2. Description^
+^3. How to fill in the dialog box^
+^4. Options^
+^4a. Lines^
+^4b. Digits per leaf^
+^4c. Prune empty stems^
+^4d. Round^
+^5. Note on overflows^
+
+
+^1. Printing stem-and-leaf plots^
+^-------------------------------^
+
+Stem-and-leaf plots appear in the ^Results^ window (unlike other graphs that
+appear in the ^Graph^ window).
+
+Stem-and-leaf plots are just plain text, so they can be saved in a log file
+and printed along with other text output.
+
+@log_sq!Click here for help on creating and printing a log -- the Log button.@
+
+
+^2. Description^
+^--------------^
+
+Suppose your data are 1, 2, 2, 3, 3, 3, 7, 8, 8, 9, 12.
+
+A stem-and-leaf plot for this data is
+
+^. stem x^
+
+Stem-and-leaf plot for x                                                        
+                                                                                
+  0* | 1                                                                        
+  0t | 22333                                                                    
+  0f |                                                                          
+  0s | 7                                                                        
+  0. | 889                                                                      
+  1* |                                                                          
+  1t | 2                                                                        
+ 
+Each line is a ^stem^; each number to the right of the vertical line is a ^leaf^.
+
+This plot is a 5-line stem-and-leaf plot since there are 5 lines per every
+10 units of data.
+
+The symbols to the left of the vertical line (^*^, ^t^, ^f^, ^s^, and ^.^) label the
+stems.
+
+Stems that contain zeros  and ones   are indicated by ^*^
+  "    "      "    ^t^wos    "  ^t^hrees  "      "     "  ^t^  
+  "    "      "    ^f^ours   "  ^f^ives   "      "     "  ^f^  
+  "    "      "    ^s^ixes   "  ^s^evens  "      "     "  ^s^  
+  "    "      "    eights  "  nines   "      "     "  ^.^
+
+Pretty cute, eh?
+
+You can also make 2-line stem-and-leaf plots.  Enter ^2^ for "Lines" in the
+dialog box, and you get
+
+^. stem x, lines(2)^                                                              
+                                                                                
+Stem-and-leaf plot for x                                                        
+                                                                                
+  0* | 122333                                                                   
+  0. | 7889                                                                     
+  1* | 2                                                                        
+ 
+For 2-line plots, stems that contain the digits 0-4 are indicated by ^*^
+and those that contain 5-9 are indicated by ^.^
+
+See ^4. Options^ below for details. 
+
+
+^3. How to fill in the dialog box^
+^--------------------------------^ 
+
+Enter a variable by clicking on its name in the list box.  Or type it in.
+
+Only one variable can entered.  You may have to scroll the list box to
+see all your variables.
+
+You can leave the ^Options^ blank.
+
+Click ^OK^.  The plot will appear in the ^Stata Results^ window.
+
+
+^4. Options^
+^----------^
+
+If you do not fill in any of the options, the command will try to produce a
+plot that looks good for your data.
+
+But you may be able to get a better plot by setting the options yourself.
+
+Here is the plot that the command makes by default for ^mpg^ (miles per gallon)
+data for 74 cars:
+
+^. stem mpg^                                                                      
+                                                                                
+Stem-and-leaf plot for mpg (Mileage (mpg))                                      
+                                                                                
+  1t | 22                                                                       
+  1f | 44444455                                                                 
+  1s | 66667777                                                                 
+  1. | 88888888899999999                                                        
+  2* | 00011111                                                                 
+  2t | 22222333                                                                 
+  2f | 444455555                                                                
+  2s | 666                                                                      
+  2. | 8889                                                                     
+  3* | 001                                                                      
+  3t |                                                                          
+  3f | 455                                                                      
+  3s |                                                                          
+  3. |                                                                          
+  4* | 1                                                                        
+ 
+Thus, we see that there are
+
+	2 cars that get 12 MPG
+	6  "    "    "  14  "
+	2  "    "    "  15  "
+	4  "    "    "  16  "
+	          .
+	          .
+	          .
+	2  "    "    "  35  "
+	1  "    "    "  41  "
+
+The stems are 12-13, 14-15, ..., 40-41.
+
+There are 5 stems per 10 units of the data so this is a 5-line stem-and-leaf
+plot.
+
+
+^4a. Lines^
+^---------^
+
+Let's enter ^2^ for "Lines" with the ^mpg^ data to make a 2-line stem-and-leaf
+plot.
+
+^. stem mpg, lines(2)^                                                            
+                                                                                
+Stem-and-leaf plot for mpg (Mileage (mpg))                                      
+                                                                                
+  1* | 22444444                                                                 
+  1. | 556666777788888888899999999                                              
+  2* | 00011111222223334444                                                     
+  2. | 555556668889                                                             
+  3* | 0014                                                                     
+  3. | 55                                                                       
+  4* | 1                                                                        
+
+"Lines" is the number of stems per 10 units of data (if "Digits per leaf"
+is 1 or blank).
+
+The value of "Lines" must divide 10 (if "Digits per leaf" is 1 or blank).
+
+So you must use 1, 2, 5, or 10 for "Lines" (if "Digits per leaf" is 1 or
+blank).
+
+In general, "Lines" is the number of stems per 10^^d units of data, where
+d = "Digits per leaf".
+
+If you set "Digits per leaf" to 2, then "Lines" must divide  100
+"   "   "     "     "    "   "  3   "      "     "     "    1000
+"   "   "     "     "    "   "  4   "      "     "     "   10000
+etc.
+
+
+^4b. Digits per leaf^
+^-------------------^
+
+Here is the stem-and-leaf plot produced with data on the prices (in 1978!)
+of 30 cars:
+
+^. stem price^
+
+Stem-and-leaf plot for price (Price)
+
+   3*** | 299,667,748,829
+   4*** | 010,099,296,424,499,504,589,647,697
+   5*** | 379,719,788,798,886,899
+   6*** | 165,229,295,303,486,850
+   7*** | 
+   8*** | 
+   9*** | 735
+  10*** | 372
+  11*** | 385
+  12*** | 990
+  13*** | 594
+
+Thus, we see that the prices are 3299, 3667, 3748,..., 13594.
+
+For this plot, the stem-and-leaf command decided to use ^3 digits per leaf^.
+
+Let's try the plot again, entering ^2^ for "Digits per leaf":
+
+^. stem price, digits(2)^
+
+Stem-and-leaf plot for price (Price)
+
+   32** | 99
+   33** | 
+   34** | 
+   35** | 
+   36** | 67
+   37** | 48
+   38** | 29
+   39** | 
+   40** | 10,99
+   41** | 
+   42** | 96
+   43** | 
+   44** | 24,99
+   45** | 04,89
+   46** | 47,97
+   47** | 
+   48** | 
+   49** | 
+   50** | 
+    ^.^
+    ^.^               ^[output omitted]^
+    ^.^
+  133** | 
+  134** | 
+  135** | 94
+
+This plot has lots of empty stems.  See the next option to get rid of them!
+
+
+^4c. Prune empty stems^
+^---------------------^
+
+Check this option with the previous plot ("Digits per leaf" = 2) and you get
+
+^. stem price, digits(2) prune^
+
+Stem-and-leaf plot for price (Price)
+
+   32** | 99
+   36** | 67
+   37** | 48
+   38** | 29
+   40** | 10,99
+   42** | 96
+   44** | 24,99
+   45** | 04,89
+   46** | 47,97
+   53** | 79
+   57** | 19,88,98
+   58** | 86,99
+   61** | 65
+   62** | 29,95
+   63** | 03
+   64** | 86
+   68** | 50
+   97** | 35
+  103** | 72
+  113** | 85
+  129** | 90
+  135** | 94
+
+
+^4d. Round^
+^---------^
+
+If you want to round your data and then produce a stem-and-leaf plot,
+fill in the round option.
+
+For example, if you want to see the above car prices rounded to thousands
+of dollars, enter ^1000^ for "Round".  The result is
+
+^. stem price, round(1000)^                                                       
+                                                                                
+Stem-and-leaf plot for price (Price)                                            
+                                                                                
+price rounded to nearest multiple of 1000                                       
+plot in units of 1000                                                           
+                                                                                
+  0t | 3                                                                        
+  0f | 4444444455555                                                            
+  0s | 66666666667                                                              
+  0. |                                                                          
+  1* | 001                                                                      
+  1t | 3                                                                        
+  1f | 4                                                                        
+ 
+Note: Once you round your data, a stem-and-leaf plot loses information.
+So you may prefer to do a dotplot or histogram in this case.
+
+
+Automatic rounding
+------------------
+
+The stem-and-leaf command will automatically round noninteger data.
+(It will not automatically round integer data.)
+
+For example, if your data are 2.0464, 2.0753, 2.0871,..., 2.9763,
+the command will decide how to round it:
+
+^. stem x^                                                                        
+                                                                                
+Stem-and-leaf plot for x                                                        
+                                                                                
+x rounded to nearest multiple of .001                                           
+plot in units of .001                                                           
+                                                                                
+  20** | 46,75,87                                                               
+  21** | 91,97,97                                                               
+  22** | 13,25,27,54,83,91                                                      
+  23** | 69,84                                                                  
+  24** | 12,15,85                                                               
+  25** | 05,42,57                                                               
+  26** | 12,27                                                                  
+  27** | 15,39                                                                  
+  28** | 09,60,95,95                                                            
+  29** | 38,76                                                                  
+
+If you want to control the rounding for noninteger data, simply fill in
+the "Round" option.
+
+
+^5. Note on overflows^
+^--------------------^
+
+There may be too many leaves to display on one line.  For example:
+
+^. stem price, digits(3) lines(1)^                                            
+                                                                                
+Stem-and-leaf plot for price (Price)                                            
+                                                                                
+   3*** | 291,299,667,748,798,799,829,895,955,984,995                           
+   4*** | 010,060,082,099,172,181,187,195,296,389,424,425,453,482,499, ... (26) 
+   5*** | 079,104,172,189,222,379,397,705,719,788,798,799,886,899               
+   6*** | 165,229,295,303,342,486,850                                           
+   7*** | 140,827                                                               
+   8*** | 129,814                                                               
+   9*** | 690,735                                                               
+  10*** | 371,372                                                               
+  11*** | 385,497,995                                                           
+  12*** | 990                                                                   
+  13*** | 466,594                                                               
+  14*** | 500                                                                   
+  15*** | 906                                                                   
+                                                                                
+Note the ^... (26)^.  There were too many leaves on that stem to fit on a page.
+Some were cut off.  The ^... (26)^ tells you that there should be a total of
+26 leaves (data points) on this stem.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@histdlg!Histograms@
+@boxdlg!Box plots@
+@dpldlg!Dotplots@
+@qnormdlg!Normal quantile plot@
+@bardlg!Bar charts@
+
+@spdlg!Scatterplots@
+@tsdlg!Time-series graphs@
+@qcdlg!Quality-control charts@
+
+@log_sq!Creating and printing a log -- the Log button@
+
+@stem!For command-line version, see help for stem.@

@@ -1,0 +1,80 @@
+.-
+help for ^qsturng^                                (STB-46: dm64)
+.-
+
+Approximate a studentized range quantile
+----------------------------------------
+
+   ^qsturng^ r nu p
+
+
+Description
+-----------
+
+^qsturng^ computes an approximation to the ^p^-th quantile of the studentized range
+distribution for ^r^ means and ^nu^ degrees of freedom, q_p(r, nu).  The studentiz-
+ed range is the difference between the maximum and the minimum of ^r^ independent
+and identically distributed Gaussian variables, divided by an independent esti-
+mate of their standard deviation having ^nu^ degrees of freedom.  The probability
+that this statistic exceeds q_p(r, nu) is 1-p.
+
+Studentized range upper quantile points are required by the Tukey wsd multiple
+comparison method, among several other techniques.  ^qsturng^ calculates approxi-
+mate quantiles for such uses; the approximation error is rarely larger than one
+unit in the fourth significant digit, accuracy comparable to the best available
+tables of the studentized range distribution.
+
+
+Parameters
+----------
+
+^r^  the number of independent normal variates --- means, in the Tukey wsd method
+   (2 <= r <= 100).  Extrapolations to r = 200 give errors no larger than about
+   one unit in the third significant digit.
+
+^nu^  the degrees of freedom for the scale estimator used to studentize the range
+   (nu >= 1).  Fractional degrees of freedom are acceptable.
+
+^p^  the area in the studentized range distribution to the left of the quantile
+   computed (0.5 <= p <= 0.999).  Extrapolation to p = 0.9999 is about as accu-
+   rate as extrapolation to r = 200.  Extrapolation to p < 0.5 is permitted but
+   not encouraged.
+
+
+Notes
+-----
+
+^qsturng^ relies on 8 accessory subroutines to create needed constants.
+^qsturng^ uses them to create matrices with names of the form ^StuRng10^, ^StuRng11^,
+etc.  In most cases, only one such matrix will be created.
+
+qsturng saves its approximation to q_p(r, nu) in global macro ^S_1^.
+
+
+Examples
+--------
+
+ . ^qsturng 5 20 0.95^        [display q_0.95(5, 20)]
+
+ . ^qsturng 5 . 0.95^         [display q_0.95(5, Infinity)]
+
+ . ^qsturng 7 43.7 0.99^      [display q_0.99(7, 43.7)]
+
+ . ^qui qsturng 7 43.7 0.99^
+ . ^di $S_1^                  [display q_0.99(7, 43.7) to greater accuracy]
+
+
+Author
+------
+
+       John R. Gleason
+       Syracuse University
+       loesljrg@@ican.net
+
+
+Also see
+--------
+
+    STB: dm64 (STB-46) 
+ Manual: ^[U] 20 Functions and expressions^
+On-line: help for @functions@

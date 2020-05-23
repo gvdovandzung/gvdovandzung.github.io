@@ -1,0 +1,54 @@
+.-
+help for ^Confidence intervals^                                   Menu: Summaries
+.-
+
+^Description^
+^-----------^
+
+This command computes a confidence interval for the population mean m_p of a
+variable X.
+
+It assumes that X is normal in the population.
+
+If the sample size is n, the sample mean is m_s, and the sample deviation is s,
+then a 95% confidence interval for the population mean m_p is
+
+	[ m_s - t*s/sqrt(n), m_s + t*s/sqrt(n) ]
+
+where t is the 97.5% percentile of Student's t distribution with n - 1 degrees
+of freedom.
+
+The standard error of the mean is s/sqrt(n).  
+
+
+^How to fill in the dialog box^
+^-----------------------------^
+
+You can enter none, one, or several variables.
+
+If you enter nothing and just click ^OK^, confidence intervals for all the
+variables in your data set will be computed (except for string variables).
+
+If you want to select the variables, click on the ones you want in the
+list box.  Or type the variable names.
+
+You can scroll the list box, if necessary, to see all your variables.
+
+String variables will not appear in the list box.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@scidlg!Confidence interval for mean  (Calculator menu)@
+
+@ptt1dlg!1-sample t test@
+@ptt2pdlg!Paired t test@
+@pttpdlg!1-sample test of proportion@
+
+@bcidlg!Binomial confidence interval  (Calculator menu)@
+@poidlg!Poisson  confidence interval  (Calculator menu)@
+
+@ci!For the command-line version, see help for ci.@

@@ -1,0 +1,43 @@
+.-
+help for ^buitest^                                       (Brisbane, ngay 27/7/2009)
+.-
+
+Gioi thieu: Tu truoc den nay (7/2009), moi lan thuc hien kiem dinh t test
+thi nguoi dung phai qua 1 buoc trung gian la kiem dinh phuong sai. Neu phuong
+sai bang nhau thi thuc hien kiem dinh t test voi phuong sai bang nhau, nguoc 
+lai phai su dung t test voi phuong sai khong bang nhau. Dieu nay co ve hoi phuc tap
+voi nguoi dung khong quen.
+
+Chinh vi the, toi da xay dung dong lenh nay de chuong trinh co tu tien hanh
+kiem dinh phuong sai, dong thoi tu dong dua vao ket qua co duoc ma lua chon
+se su dung t test bat cap hay t test khong bat cap.
+
+Cau lenh nay duoc thuc hien la de tang cho ^Bui Thi Hy Han^ vi nhu cau phan tich.
+Chinh vi vay, viec sao chep cau lenh ma khong co su dong y cua ^Bui Thi Hy Han^
+la vi pham ban quyen.
+
+Cau lenh:
+----------------------------------------------------
+
+   ^buitest^ bienphuthuoc biendoclap
+
+Trong do:
+       * ^bien phu thuoc^: la bien dinh luong
+       * ^bien doc lap^: la bien dinh tinh chi co 2 nhom gia tri
+
+^Vi du:^
+	buitest tuoithai gioi
+
+Cau lenh tren se tien hanh phan tich phuong sai cua ^tuoithai^ o 2 nhom gioi tinh
+Sau khi co ket qua phan tich phuong sai, cau lenh se tu dong thuc thi lenh 
+t test tuong ung de xem trung binh ^tuoithai^ o 2 nhom gioi tinh co su khac 
+biet hay khong.
+
+Tac gia:
+-------------------------------------------------------------
+	Thai Thanh Truc - Khoa Y te cong cong, Dai hoc Y duoc TP.HCM
+		Email: thaithanhtruc@gmail.com
+	Bui Thi Hy Han - Khoa Suc khoe cong dong, 
+                       Vien Ve sinh y te cong cong TP.HCM
+		Email: buithihyhan@gmail.com
+

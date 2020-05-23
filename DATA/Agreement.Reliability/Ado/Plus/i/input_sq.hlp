@@ -1,0 +1,166 @@
+.-
+help for ^Inputting data in StataQuest^
+.-
+                            			        Button: Editor
+						         Menus: File--New
+                                                                Data--Edit data
+
+Topics covered
+--------------
+
+^1. Inputting data in StataQuest^
+^2. How to input data with the spreadsheet editor^
+^3. How to name a variable^
+^4. Missing values^
+
+
+^1. Inputting data in StataQuest^
+^-------------------------------^
+
+There are 3 ways to input data in StataQuest:
+
+  1. Use the spreadsheet editor -- pull down the ^File^ menu and choose ^New^,
+     or click on the ^Editor^ button.
+     
+     This is the best way to enter a small data set from scratch.
+     This help file describes how to do this in detail.
+     
+     @editr_sq!Click here to learn about using the spreadsheet editor to view@
+     @editr_sq!and change data.@
+
+  2. To load a (previously created) Stata data set, choose ^Open^ under the
+     ^File^ menu.
+
+     You create a Stata data set by choosing ^Save^.  
+
+     @save_sq!Click here for details on creating, saving, and loading Stata data files.@
+
+  3. StataQuest can read in an ASCII (text) file of data created by another
+     application (e.g., a database program).
+     
+     @impdlg!Click here for information on importing an ASCII data file.@
+
+
+^2. How to input data with the spreadsheet editor^
+^------------------------------------------------^
+
+Enter the editor:	    Either:
+
+                            1. Choose ^New^ from the ^File^ menu.
+			       (This will clear any data already in memory.)
+			       
+                            2. Click on the ^Editor^ button.
+
+                            3. Choose ^Edit data^ from the ^Data^ menu. 
+
+In the editor:		    Columns correspond to variables and
+			    rows to observations.
+
+The first time you type in
+  a new row:		    A new observation is created.
+  a new column:		    A new variable is created.  (See below how to
+			    rename variables.)
+
+You can enter numbers:      0, 1, 2, 5.7, 1.1e-4
+  
+  or strings:		    female
+			    John Doe
+
+Advice:			    It is better to use numbers whenever possible.
+
+Example:		    Enter the numbers 0 for female and 1 for male,
+			    rather than the strings "female" and "male".
+			    
+			    @stldlg!You can convert string variables into numeric@
+                            @stldlg!variables; click here for help.@
+
+Details
+-------
+
+To enter data:		    Click on a cell.
+			    Type in the value.
+			    Press ^Enter^ or ^Tab^.
+
+If you press ^Enter^:	      You are automatically moved down to the
+			    next cell in the column.
+
+If you press ^Tab^:	      You are automatically moved right to the
+			    next cell in the row.
+
+So press ^Enter^ after typing a value to input data ^one variable at a time^.
+
+Or press ^Tab^ after typing a value to input data ^one observation at a time^.
+
+When you get to the end
+  of the column or row:	    Use the mouse to click on the first cell of 
+			    the next column or row.
+
+When you are finished:      Click on the ^Close^ button to exit the ^Editor^.
+
+Important:  Changes made in the editor are not saved to disk until you exit
+the editor and choose ^Save^ under the ^File^ menu.
+
+@save_sq!Click here for details on creating, saving, and loading Stata data files.@
+
+
+^3. How to name a variable^
+^-------------------------^
+
+The editor initially:	    Names variables ^var1^, ^var2^, ....
+
+These names are temporary:  You should rename them.
+
+To rename a variable:	    Double-click anywhere in the variable's column.
+			    This brings up the ^Variable Information Box^.
+			    Enter the new name of the variable.
+
+Details
+-------
+
+A variable name must be:    1 to 8 characters long, consisting of
+			    letters ^A^-^Z^, ^a^-^z^ or digits ^0^-^9^ or ^_^
+
+			    And it must begin with a letter.
+
+			    No spaces or other characters are allowed.
+
+Examples:		    ^x^  ^x2^  ^weight^  ^distance^  ^x_y^  ^My_Name1^
+
+IMPORTANT:		    Stata is case sensitive.
+			    ^myvar^, ^Myvar^, and ^MYVAR^ are 3 different names.
+
+WE STRONGLY RECOMMEND:      Use only lowercase letters and numbers. 
+
+
+^4. Missing values^
+^-----------------^  
+
+To input a missing value:   Just press ^Enter^ or ^Tab^.
+
+Missing values for numeric variables are recorded as ^.^ (a period).
+Missing values for string variables are just empty strings (i.e., nothing).
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@editr_sq!Using the spreadsheet editor to view and change data@
+
+@save_sq!Creating, saving, and loading Stata data files@
+
+@impdlg!Importing an ASCII data file@
+
+@mem_sq!Limits on dataset size@ 
+
+@stkdlg!Stack variables (transform data to 1 data variable, 1 group variable)@
+
+Labeling datasets, variables, and values of variables:
+
+	@dinfo_sq!Dataset info@
+	@dslabdlg!Label dataset@
+	@varldlg!Label variable@
+	@vlabdlg!Label values@
+	@stldlg!Strings to labels (converts strings to numeric variables)@
+	@stldlg!Labels to strings@

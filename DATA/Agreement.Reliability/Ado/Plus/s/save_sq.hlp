@@ -1,0 +1,80 @@
+.-
+help for ^Creating, saving, and loading Stata data files^
+.-
+                                                Menu: File--Open, Save, Save As
+
+^Saving data as a Stata data file^
+^--------------------------------^
+
+To save new data (or old data under a new name):
+
+	- Pull down the ^File^ menu
+	- Choose ^Save As^
+        - Type in a name
+
+Note: Stata data files are named filename^.dta^.
+
+When saving or opening data files, the extension ^.dta^ is 
+automatically added when an extension is not specified.
+
+Example: You type in the name "problem1".  The full name of the file
+is ^problem1.dta^.
+
+To resave data that has been changed
+(and overwrite the original data file):
+
+	- Pull down the ^File^ menu
+	- Choose ^Save^
+
+
+^Loading Stata data files^
+^------------------------^
+
+To load a Stata data file:
+
+	- Pull down the ^File^ menu
+	- Choose ^Open^
+
+Note: When loading data, any data currently in memory is discarded.
+
+Either save the current data first, or allow it to be discarded.
+
+
+^Creating new files^
+^------------------^
+
+If you choose ^New^ from the ^File^ menu, it will clear the current
+data from memory and take you into the spreadsheet editor where you
+can enter a new dataset.
+
+@input_sq!Click here for help on inputting data.@
+
+
+^Important note^
+^--------------^
+
+Changes to your dataset in Stata are not permanent until you save them.
+You work with a copy of the data in memory, not with the data file itself.
+
+
+^Loading data files created by Professional Stata^
+^------------------------------------------------^
+
+You make run into difficulties loading a data file created by Professional Stata
+because the data file is too big for StataQuest.
+
+@mem_sq!Click here for help on limits on dataset size.@
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@input_sq!Inputting data using the spreadsheet editor@
+
+@editr_sq!Using the spreadsheet editor to view and change data@
+
+@impdlg!Importing an ASCII data file@ 
+
+@mem_sq!Limits on dataset size.@

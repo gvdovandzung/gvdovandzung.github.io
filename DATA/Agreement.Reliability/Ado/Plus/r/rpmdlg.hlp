@@ -1,0 +1,134 @@
+.-
+help for ^Repeated-measures ANOVA^                        Menu: Statistics--ANOVA
+.-
+
+Topics covered
+--------------
+
+^1. Description of the test^
+^2. How to fill in the dialog box^
+^3. Example (how your data should be arranged)^
+
+
+^1. Description of the test^
+^--------------------------^
+
+This command performs repeated-measures ANOVA in which each subject is
+measured under all levels of an categorical variable.
+
+
+^2. How to fill in the dialog box^
+^--------------------------------^
+
+Dependent var.:	   This is the variable that contains the ^measurement^
+		   of interest.
+
+Subject ID:	   This variable must contain subject id ^numbers^.
+
+Categorical var.:  This variable must contain ^numbers^ that represent
+	           different levels of an independent variable.
+
+
+^3. Example (how your data should be arranged)^
+^---------------------------------------------^
+
+Suppose you wish to test the effectiveness of 3 different teaching methods:
+Method A, Method B, and Method C.  You have 7 subjects and each subject is
+tested after being exposed to each teaching method.  The outcome of the test
+is a score from 1 to 10.  The data are
+
+                    Test score          
+          ------------------------------
+Subject   Method A   Method B   Method C
+-------   --------   --------   --------
+  01          2          5          3  
+  02          7          9          9
+  03          5          5          7
+  04          8         10          9
+  05          4          8          6
+  06          6          9          5
+  07          6          7          7
+
+A data set should be created containing three variables:
+
+	^id^     -- subject id number
+
+	^method^ -- a number representing the method:
+                    1 = Method A
+		    2 = Method B
+                    3 = Method C
+
+	^score^  -- containing the test score for that subject and method               
+
+Each observation consists of one set of ^id^, ^method^, and ^score^.
+Since each subject has a test score for 3 methods, the data set will
+have 7 * 3 = 21 observations.
+
+The data can be input using the ^Editor^ (see help for @Editor@). 
+If you then list the data by selecting ^List data^ under the ^Summaries^ 
+menu, they will look like
+
+^. list id method score in 1/21^                                            
+                                                                                
+            id     method     score                                             
+  1.         1          1         2                                             
+  2.         1          2         5                                             
+  3.         1          3         3                                             
+  4.         2          1         7                                             
+  5.         2          2         9                                             
+  6.         2          3         9                                             
+  7.         3          1         5                                             
+  8.         3          2         5                                             
+  9.         3          3         7                                             
+ 10.         4          1         8                                             
+ 11.         4          2        10                                             
+ 12.         4          3         9                                             
+ 13.         5          1         4                                             
+ 14.         5          2         8                                             
+ 15.         5          3         6                                             
+ 16.         6          1         6                                             
+ 17.         6          2         9                                             
+ 18.         6          3         5                                             
+ 19.         7          1         6                                             
+ 20.         7          2         7                                             
+ 21.         7          3         7                                             
+
+Note that the methods must be entered as 1, 2, 3, rather than A, B, C.
+For this command, all variables must be numeric (i.e., numbers only);
+they cannot contain strings (i.e., letters, etc.).
+
+
+With this data:   Enter ^score^  for "Dependent var."
+		  Enter ^id^     for "Subject ID".
+		  Enter ^method^ for "Categorical var."
+
+Output is
+                                                                                
+^. anova score id method^                                                         
+                                                                                
+                           Number of obs =      21     R-squared     =  0.8549  
+                           Root MSE      = 1.05032     Adj R-squared =  0.7582  
+                                                                                
+                  Source |  Partial SS    df       MS           F     Prob > F  
+              -----------+----------------------------------------------------  
+                   Model |       78.00     8        9.75       8.84     0.0005  
+                         |                                                      
+                      id |  61.9047619     6  10.3174603       9.35     0.0006  
+                  method |  16.0952381     2  8.04761905       7.29     0.0084  
+                         |                                                      
+                Residual |  13.2380952    12   1.1031746                        
+              -----------+----------------------------------------------------  
+                   Total |  91.2380952    20  4.56190476                        
+                                                                                
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@kwaldlg!One-way nonparametric ANOVA (Kruskal-Wallis test)@ 
+@onewdlg!One-way ANOVA (parametric)@
+@onegdlg!One-way ANOVA plots@
+@twowdlg!Two-way ANOVA@
+@aovmdlg!Two-way ANOVA plots@
+@aovcdlg!N-factor ANOVA & ANOCOVA@

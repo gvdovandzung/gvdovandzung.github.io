@@ -1,0 +1,29 @@
+input var1 kg_anlt phat
+2 1 1
+145 1 0
+22 0 0
+end
+expand var1
+cs kg_anlt phat
+expoisson kg_anlt phat, irr
+expoisson, irr
+poisson kg_anlt phat, irr
+poisson kg_anlt phat, robust irr
+
+
+
+
+clear
+input var1 kg_anlt phat
+50 1 1
+36 1 0
+30 0 1
+15 0 0
+end
+expand var1
+cs kg_anlt phat
+expoisson kg_anlt phat, irr
+expoisson, irr
+poisson kg_anlt phat, irr
+poisson kg_anlt phat, robust irr
+

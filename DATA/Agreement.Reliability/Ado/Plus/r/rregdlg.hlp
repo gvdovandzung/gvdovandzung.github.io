@@ -1,0 +1,45 @@
+.-
+help for ^Robust regression^                                     Menu: Statistics
+.-
+
+^Description^
+^-----------^
+
+This command computes one version of robust regression of Y on X1, X2,...,Xk.
+
+First, gross outliers are removed from consideration.  "Gross outliers" are
+those points with Cook's D > 1.
+
+Then a regression is performed using Huber iterations followed by biweight
+iterations. 
+
+For more details, see the Reference Manual for Professional Stata.
+
+
+^Diagnostics menu^
+^----------------^
+
+If the "Show diagnostics menu" box is checked, you will get a menu of
+post-regression commands after you run the regression.
+
+The diagnostics menu has the following choices:
+
+	- Plot actual Y vs. prediction
+	- Plot residual vs. prediction
+	- Plot residual vs. an X
+	- Normal quantile plot of residuals
+	- Save YHAT as a variable
+	- Save residuals as a variable
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@pregmenu!Post-regression diagnostics@
+
+@sregdlg!Simple regression (only one independent variable)@
+@mregdlg!Multiple regression (one or more independent variables)@
+
+@rreg!For the command-line version, see help for rreg.@

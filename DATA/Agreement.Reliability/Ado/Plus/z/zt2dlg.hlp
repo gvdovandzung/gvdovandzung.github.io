@@ -1,0 +1,57 @@
+.-
+help for ^2-sample normal test^                                  Menu: Calculator
+.-
+
+^Description of the test^
+^-----------------------^
+
+This command performs a test of whether the mean m1 of variable X1 measured
+in population 1 is equal the mean m2 of X2 measured in population 2.
+
+The null hypothesis is Ho: m1 = m2, where m1 is the true mean of X1 and m2 is
+the true mean of X2.
+
+The command assumes that X1 is normal in the population 1 and that X2 is
+normal in population 2.
+
+It also assumes that the true standard deviation (sigma1) of X1 ^in^
+^population 1^ and the true standard deviation (sigma2) of X2 ^in population 2^
+are known.  Note: these are not the same as the standard deviations ^of^
+^sample 1^ and ^sample 2^.
+
+The 2-sample t test does not assume that the population standard deviations
+are known, so use that test if you do not want to make this assumption.  
+@tt2dlg!Click here for help on the calculator 2-sample t test.@
+
+
+^Example^
+^-------^
+
+Suppose you have two samples:
+
+Sample 1 (from Population 1) has a sample mean of 3.5 and n = 25 observations.
+Sample 2 (from Population 2) has a sample mean of 4.6 and n = 32 observations.
+
+You assume that the true standard deviation of Population 1 is 2
+and that the true standard deviation of Population 2 is 4.
+
+Enter the values for Sample 1 in the first column and the values
+for Sample 2 in the second column. 
+
+This command also produces confidence intervals for the difference of
+the means.  If you want to change the confidence level for the interval,
+fill in "Confidence level" (in percent).
+
+                
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@zt1dlg!1-sample normal test  (Calculator menu)@
+
+@tt1dlg!1-sample t test       (Calculator menu)@
+@tt2dlg!2-sample t test       (Calculator menu)@
+
+@ptt1dlg!1-sample t test       (Statistics--Parametric tests)@
+@ptt2dlg!2-sample t test       (Statistics--Parametric tests)@

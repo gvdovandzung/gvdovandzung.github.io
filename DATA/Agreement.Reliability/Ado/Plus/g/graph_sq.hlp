@@ -1,0 +1,127 @@
+.-
+help for ^Printing, saving, and viewing graphs^
+.-
+                                           Menu: File--Save Graph & Print Graph
+
+Topics covered
+--------------
+
+^1. The Graph button^
+^2. Printing graphs^
+^3. Copying graphs to the clipboard^
+^4. Saving graphs^
+^5. Viewing graphs previously saved as Stata Graph Files^
+
+
+^1. The Graph button^
+^-------------------^
+
+If your graph becomes covered by other windows and you want to see it again,
+click on the ^Graph^ button to bring the Graph window to the top.
+
+Note: Once you close the Graph window, the only way to bring the graph back
+is to draw the graph again by rerunning the command.  So you may wish to
+print or save the graph before closing the Graph window.
+
+
+^2. Printing graphs^
+^------------------^
+
+To print a graph:
+
+	- The Graph window must be open (though it need not be in front).
+
+	- Choose ^Print Graph^ from the ^File^ menu.
+
+	- A "Graph name" dialog box will appear.  You can enter any text you
+          wish to identify the graph, or you can leave it blank.
+
+	- Click ^OK^.
+
+	- A standard Windows print dialog will appear.
+
+
+^3. Copying graphs to the clipboard^
+^----------------------------------^
+
+To copy your graph to the clipboard so you can import it into another Windows
+application:
+
+	- Click on the title bar of the Stata Graph window.
+
+	- Choose ^Copy^ from the ^Edit^ menu.
+
+	- In the other Windows application, you can then choose ^Paste^ from
+          the ^Edit^ menu.
+
+Note: If your application would rather import a file, see ^4. Saving graphs^
+below.
+
+
+Windows Metafile or bitmap format
+---------------------------------
+
+You can copy the graph to the clipboard in either the Windows Metafile format
+or the Windows bitmap format.
+
+The graph will look better in the Windows Metafile format so you should use
+this format if possible.  This format is the default.
+
+If you want to change the format, choose ^Graph Copy Options^ from the ^Edit^
+menu and choose the format.
+
+
+^4. Saving graphs^
+^----------------^
+
+You can save your graph as either
+
+	- a Windows Metafile (for importing into other applications)
+
+	or
+
+	- a Stata Graph File (for loading into Stata at a future date)
+
+To save your graph:
+
+	- The Graph window must be open (though it need not be in front).
+
+	- Choose ^Save Graph^ from the ^File^ menu.
+
+	- A standard Windows file dialog will appear.
+
+	- The default file type is Windows Metafile.
+
+	- If you want to change the file type to a Stata Graph File:
+
+		- Press the button under "Save File as Type" in the lower
+		  left of the dialog.
+
+		- Choose "Stata Graph File".   
+
+		- Name the file ^filename.gph^ -- you MUST type the extension
+		  ^.gph^ or it will not be saved as a Stata Graph File.
+
+
+^5. Viewing graphs previously saved as Stata Graph Files^
+^-------------------------------------------------------^
+
+To view a graph previously saved as a "Stata Graph File":
+
+	- Choose ^View saved graphs^ from the ^Graph^ menu.
+
+	- Select the Stata graph file (it should have the extension ^.gph^).
+
+	- The graph will appear in the Graph window.
+
+	- You can print the graph, copy it to the clipboard, or save it as
+	  a Windows Metafile.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@save_sq!Creating, saving, and loading Stata data files@
+@log_sq!Creating and printing a log -- the Log button@

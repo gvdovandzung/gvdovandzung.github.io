@@ -1,0 +1,526 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}D:\DATA\phan tich ket qua misoprostol.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}20 Mar 2012, 11:20:04
+{txt}
+{com}. summ
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+         stt {c |}{res}      1620       810.5     467.798          1       1620
+        {txt}tuoi {c |}{res}      1620    23.25247     3.19799         15         34
+  {txt}hemoglobin {c |}{res}      1620    95.89568    8.913882         63        123
+      {txt}kcsinh {c |}{res}      1147    2.813426     1.33423          2         15
+    {txt}tienthai {c |}{res}      1620    .8185185    .6080805          0          2
+{txt}{hline 13}{c +}{hline 56}
+     bietchu {c |}{res}      1620    .6308642    .4827198          0          1
+    {txt}khamthai {c |}{res}      1620    .8814815    .3233209          0          1
+  {txt}sinhtainha {c |}{res}      1620    .4598765    .4985414          0          1
+     {txt}sinhnon {c |}{res}      1620    .2185185    .4133687          0          1
+ {txt}rachsinhmon {c |}{res}      1620    .1006173    .3009142          0          1
+{txt}{hline 13}{c +}{hline 56}
+        gioi {c |}{res}      1620    .5104938    .5000442          0          1
+    {txt}tlsosinh {c |}{res}      1620    3.900617    .4695808          1          5
+        {txt}bhss {c |}{res}      1620    .0919753    .2890803          0          1
+    {txt}bhssnang {c |}{res}      1620    .0074074    .0857734          0          1
+  {txt}chuyenvien {c |}{res}      1620    .0098765    .0989193          0          1
+{txt}{hline 13}{c +}{hline 56}
+   truyenmau {c |}{res}      1620    .0049383    .0701208          0          1
+{txt}sansocdacb~t {c |}{res}      1620    .0024691    .0496443          0          1
+ {txt}ctngoaikhoa {c |}{res}      1620    .0055556    .0743512          0          1
+   {txt}ttnoikhoa {c |}{res}      1620    .0006173    .0248452          0          1
+     {txt}nhanhct {c |}{res}      1620    .5012346    .5001529          0          1
+{txt}{hline 13}{c +}{hline 56}
+      maumat {c |}{res}      1619    238.2749    177.8699         18       1547
+{txt}
+{com}. tab1  nhanhct
+
+{res}-> tabulation of nhanhct  
+
+      {txt}Nhanh {c |}
+Misoprostol {c |}
+   vs nhanh {c |}
+    Placebo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    Placebo {c |}{res}        808       49.88       49.88
+{txt}Misoprostol {c |}{res}        812       50.12      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      1,620      100.00
+{txt}
+{com}. recode nhanhct (1=1 "Misoprostol") (0=2 "Placebo"), gen(canthiep)
+{txt}(808 differences between nhanhct and canthiep)
+
+{com}. tab1 canthiep
+
+{res}-> tabulation of canthiep  
+
+  {txt}RECODE of {c |}
+    nhanhct {c |}
+     (Nhanh {c |}
+Misoprostol {c |}
+   vs nhanh {c |}
+   Placebo) {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+Misoprostol {c |}{res}        812       50.12       50.12
+{txt}    Placebo {c |}{res}        808       49.88      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      1,620      100.00
+{txt}
+{com}. di "BANG 1"
+{res}BANG 1
+{txt}
+{com}. ttest tuoi, by(canthiep)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+Misopros {c |}{res}{col 12}    812{col 22} 23.28941{col 34} .1154211{col 46} 3.288996{col 58} 23.06285{col 70} 23.51597
+ {txt}Placebo {c |}{res}{col 12}    808{col 22} 23.21535{col 34} .1092491{col 46} 3.105443{col 58}  23.0009{col 70} 23.42979
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}   1620{col 22} 23.25247{col 34} .0794547{col 46}  3.19799{col 58} 23.09662{col 70} 23.40831
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .0740623{col 34} .1589483{col 58}-.2377039{col 70} .3858285
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}Misopros{txt}) - mean({res}Placebo{txt})                         t = {res}  0.4660
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1618
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.6793         {txt}Pr(|T| > |t|) = {res}0.6413          {txt}Pr(T > t) = {res}0.3207
+{txt}
+{com}. ttest hemoglobin, by(canthiep)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+Misopros {c |}{res}{col 12}    812{col 22} 95.93103{col 34} .3125203{col 46} 8.905459{col 58} 95.31759{col 70} 96.54448
+ {txt}Placebo {c |}{res}{col 12}    808{col 22} 95.86015{col 34} .3140759{col 46} 8.927714{col 58} 95.24365{col 70} 96.47665
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}   1620{col 22} 95.89568{col 34} .2214672{col 46} 8.913882{col 58} 95.46129{col 70} 96.33007
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}  .070886{col 34} .4430691{col 58}-.7981636{col 70} .9399355
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}Misopros{txt}) - mean({res}Placebo{txt})                         t = {res}  0.1600
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1618
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.5635         {txt}Pr(|T| > |t|) = {res}0.8729          {txt}Pr(T > t) = {res}0.4365
+{txt}
+{com}. ttest kcsinh, by(canthiep)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+Misopros {c |}{res}{col 12}    564{col 22}  2.83156{col 34} .0541478{col 46} 1.285939{col 58} 2.725204{col 70} 2.937917
+ {txt}Placebo {c |}{res}{col 12}    583{col 22} 2.795883{col 34} .0571628{col 46} 1.380217{col 58} 2.683613{col 70} 2.908154
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}   1147{col 22} 2.813426{col 34} .0393957{col 46}  1.33423{col 58} 2.736131{col 70} 2.890722
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .0356769{col 34} .0788296{col 58}-.1189897{col 70} .1903435
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}Misopros{txt}) - mean({res}Placebo{txt})                         t = {res}  0.4526
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1145
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.6745         {txt}Pr(|T| > |t|) = {res}0.6509          {txt}Pr(T > t) = {res}0.3255
+{txt}
+{com}. tabulate tienthai canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+              {c |}   RECODE of nhanhct
+              {c |} (Nhanh Misoprostol vs
+ tien can san {c |}    nhanh Placebo)
+         khoa {c |} Misoprost    Placebo {c |}     Total
+{hline 14}{c +}{hline 22}{c +}{hline 10}
+  Sinh con so {c |}{res}       248        225 {txt}{c |}{res}       473 
+              {txt}{c |}{res}     30.54      27.85 {txt}{c |}{res}     29.20 
+{txt}{hline 14}{c +}{hline 22}{c +}{hline 10}
+Da co 1-2 con {c |}{res}       472        496 {txt}{c |}{res}       968 
+              {txt}{c |}{res}     58.13      61.39 {txt}{c |}{res}     59.75 
+{txt}{hline 14}{c +}{hline 22}{c +}{hline 10}
+   Co >=3 con {c |}{res}        92         87 {txt}{c |}{res}       179 
+              {txt}{c |}{res}     11.33      10.77 {txt}{c |}{res}     11.05 
+{txt}{hline 14}{c +}{hline 22}{c +}{hline 10}
+        Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+              {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}2{txt}) = {res}  1.8432  {txt} Pr = {res}0.398
+{txt}
+{com}. tabulate bietchu canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}   RECODE of nhanhct
+           {c |} (Nhanh Misoprostol vs
+  biet doc {c |}    nhanh Placebo)
+ biet viet {c |} Misoprost    Placebo {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+    Mu chu {c |}{res}       301        297 {txt}{c |}{res}       598 
+           {txt}{c |}{res}     37.07      36.76 {txt}{c |}{res}     36.91 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+ Co di hoc {c |}{res}       511        511 {txt}{c |}{res}     1,022 
+           {txt}{c |}{res}     62.93      63.24 {txt}{c |}{res}     63.09 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.0169  {txt} Pr = {res}0.897
+{txt}
+{com}. tabulate khamthai canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+                  {c |}   RECODE of nhanhct
+                  {c |} (Nhanh Misoprostol vs
+                  {c |}    nhanh Placebo)
+ so lan kham thai {c |} Misoprost    Placebo {c |}     Total
+{hline 18}{c +}{hline 22}{c +}{hline 10}
+ <3 lan kham thai {c |}{res}       100         92 {txt}{c |}{res}       192 
+                  {txt}{c |}{res}     12.32      11.39 {txt}{c |}{res}     11.85 
+{txt}{hline 18}{c +}{hline 22}{c +}{hline 10}
+>=3 lan kham thai {c |}{res}       712        716 {txt}{c |}{res}     1,428 
+                  {txt}{c |}{res}     87.68      88.61 {txt}{c |}{res}     88.15 
+{txt}{hline 18}{c +}{hline 22}{c +}{hline 10}
+            Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+                  {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.3347  {txt} Pr = {res}0.563
+{txt}
+{com}. tabulate sinhtainha canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+                  {c |}   RECODE of nhanhct
+                  {c |} (Nhanh Misoprostol vs
+                  {c |}    nhanh Placebo)
+     sinh tai nha {c |} Misoprost    Placebo {c |}     Total
+{hline 18}{c +}{hline 22}{c +}{hline 10}
+Sinh con tai tram {c |}{res}       432        443 {txt}{c |}{res}       875 
+                  {txt}{c |}{res}     53.20      54.83 {txt}{c |}{res}     54.01 
+{txt}{hline 18}{c +}{hline 22}{c +}{hline 10}
+   Sinh con o nha {c |}{res}       380        365 {txt}{c |}{res}       745 
+                  {txt}{c |}{res}     46.80      45.17 {txt}{c |}{res}     45.99 
+{txt}{hline 18}{c +}{hline 22}{c +}{hline 10}
+            Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+                  {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.4304  {txt} Pr = {res}0.512
+{txt}
+{com}. tabulate sinhnon canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+            {c |}   RECODE of nhanhct
+sinh non vs {c |} (Nhanh Misoprostol vs
+    sinh du {c |}    nhanh Placebo)
+      thang {c |} Misoprost    Placebo {c |}     Total
+{hline 12}{c +}{hline 22}{c +}{hline 10}
+   Du thang {c |}{res}       639        627 {txt}{c |}{res}     1,266 
+            {txt}{c |}{res}     78.69      77.60 {txt}{c |}{res}     78.15 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+Thieu thang {c |}{res}       173        181 {txt}{c |}{res}       354 
+            {txt}{c |}{res}     21.31      22.40 {txt}{c |}{res}     21.85 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+      Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+            {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.2847  {txt} Pr = {res}0.594
+{txt}
+{com}. tabulate rachsinhmon canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}   RECODE of nhanhct
+           {c |} (Nhanh Misoprostol vs
+ rach tang {c |}    nhanh Placebo)
+  sinh mon {c |} Misoprost    Placebo {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Khong {c |}{res}       733        724 {txt}{c |}{res}     1,457 
+           {txt}{c |}{res}     90.27      89.60 {txt}{c |}{res}     89.94 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+        Co {c |}{res}        79         84 {txt}{c |}{res}       163 
+           {txt}{c |}{res}      9.73      10.40 {txt}{c |}{res}     10.06 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.1991  {txt} Pr = {res}0.655
+{txt}
+{com}. tabulate gioi canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}   RECODE of nhanhct
+           {c |} (Nhanh Misoprostol vs
+           {c |}    nhanh Placebo)
+      gioi {c |} Misoprost    Placebo {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+        Nu {c |}{res}       379        414 {txt}{c |}{res}       793 
+           {txt}{c |}{res}     46.67      51.24 {txt}{c |}{res}     48.95 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+       Nam {c |}{res}       433        394 {txt}{c |}{res}       827 
+           {txt}{c |}{res}     53.33      48.76 {txt}{c |}{res}     51.05 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  3.3741  {txt} Pr = {res}0.066
+{txt}
+{com}. tabulate tlsosinh canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+            {c |}   RECODE of nhanhct
+            {c |} (Nhanh Misoprostol vs
+trong luong {c |}    nhanh Placebo)
+    so sinh {c |} Misoprost    Placebo {c |}     Total
+{hline 12}{c +}{hline 22}{c +}{hline 10}
+    <1500 g {c |}{res}         0          1 {txt}{c |}{res}         1 
+            {txt}{c |}{res}      0.00       0.12 {txt}{c |}{res}      0.06 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+1500-1999 g {c |}{res}        10          4 {txt}{c |}{res}        14 
+            {txt}{c |}{res}      1.23       0.50 {txt}{c |}{res}      0.86 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+2000-2499 g {c |}{res}       103        116 {txt}{c |}{res}       219 
+            {txt}{c |}{res}     12.68      14.36 {txt}{c |}{res}     13.52 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+3000-3499 g {c |}{res}       659        638 {txt}{c |}{res}     1,297 
+            {txt}{c |}{res}     81.16      78.96 {txt}{c |}{res}     80.06 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+    >3500 g {c |}{res}        40         49 {txt}{c |}{res}        89 
+            {txt}{c |}{res}      4.93       6.06 {txt}{c |}{res}      5.49 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+      Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+            {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}4{txt}) = {res}  5.5834  {txt} Pr = {res}0.232
+{txt}
+{com}. cs bhss nhanhct
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}       52          97{txt}  {c |}  {res}      149
+        {txt}Noncases {c |} {res}      760         711{txt}  {c |}  {res}     1471
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0640394    .1200495{txt}  {c |}  {res} .0919753
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0560101{txt}{col 43}{c |}   {res}-.0840421   -.0279781{txt} 
+      Risk ratio {c |} {res}{col 27} .5334417{txt}{col 43}{c |}   {res} .3863997    .7364396{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .4665583{txt}{col 43}{c |}   {res} .2635604    .6136003{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .2338552{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 22}          chi2(1) ={res}    15.21{txt}  Pr>chi2 ={res} 0.0001
+{txt}
+{com}. cs bhssnang nhanhct, exact
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        2          10{txt}  {c |}  {res}       12
+        {txt}Noncases {c |} {res}      810         798{txt}  {c |}  {res}     1608
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0024631    .0123762{txt}  {c |}  {res} .0074074
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0099132{txt}{col 43}{c |}   {res} -.018264   -.0015624{txt} 
+      Risk ratio {c |} {res}{col 27} .1990148{txt}{col 43}{c |}   {res} .0437427    .9054514{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .8009852{txt}{col 43}{c |}   {res} .0945486    .9562573{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .4014815{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 35}1-sided Fisher's exact P ={res} 0.0185
+{txt}{col 35}2-sided Fisher's exact P ={res} 0.0217
+{txt}
+{com}. ttest maumat, by(canthiep)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+Misopros {c |}{res}{col 12}    811{col 22}  214.307{col 34} 5.078463{col 46} 144.6248{col 58} 204.3385{col 70} 224.2755
+ {txt}Placebo {c |}{res}{col 12}    808{col 22} 262.3317{col 34} 7.147786{col 46} 203.1782{col 58} 248.3012{col 70} 276.3621
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}   1619{col 22} 238.2749{col 34} 4.420578{col 46} 177.8699{col 58} 229.6042{col 70} 246.9455
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-48.02465{col 34} 8.762895{col 58}-65.21248{col 70}-30.83683
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}Misopros{txt}) - mean({res}Placebo{txt})                         t = {res} -5.4805
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1617
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. cs chuyenvien nhanhct, exact
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        4          12{txt}  {c |}  {res}       16
+        {txt}Noncases {c |} {res}      808         796{txt}  {c |}  {res}     1604
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0049261    .0148515{txt}  {c |}  {res} .0098765
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0099254{txt}{col 43}{c |}   {res} -.019556   -.0002947{txt} 
+      Risk ratio {c |} {res}{col 27} .3316913{txt}{col 43}{c |}   {res} .1074277    1.024123{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .6683087{txt}{col 43}{c |}   {res}-.0241226    .8925723{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .3349794{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 35}1-sided Fisher's exact P ={res} 0.0369
+{txt}{col 35}2-sided Fisher's exact P ={res} 0.0475
+{txt}
+{com}. cs truyenmau nhanhct, exact
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        1           7{txt}  {c |}  {res}        8
+        {txt}Noncases {c |} {res}      811         801{txt}  {c |}  {res}     1612
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0012315    .0086634{txt}  {c |}  {res} .0049383
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0074318{txt}{col 43}{c |}   {res}-.0142619   -.0006017{txt} 
+      Risk ratio {c |} {res}{col 27} .1421534{txt}{col 43}{c |}   {res} .0175294     1.15278{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .8578466{txt}{col 43}{c |}   {res}-.1527801    .9824706{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .4299824{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 35}1-sided Fisher's exact P ={res} 0.0343
+{txt}{col 35}2-sided Fisher's exact P ={res} 0.0382
+{txt}
+{com}. cs sansocdacbiet nhanhct, exact
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        2           2{txt}  {c |}  {res}        4
+        {txt}Noncases {c |} {res}      810         806{txt}  {c |}  {res}     1616
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0024631    .0024752{txt}  {c |}  {res} .0024691
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0000122{txt}{col 43}{c |}   {res}-.0048457    .0048213{txt} 
+      Risk ratio {c |} {res}{col 27} .9950739{txt}{col 43}{c |}   {res} .1405094    7.047018{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .0049261{txt}{col 43}{c |}   {res}-6.047018    .8594906{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .0024691{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 35}1-sided Fisher's exact P ={res} 0.6859
+{txt}{col 35}2-sided Fisher's exact P ={res} 1.0000
+{txt}
+{com}. cs ctngoaikhoa nhanhct, exact
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        1           8{txt}  {c |}  {res}        9
+        {txt}Noncases {c |} {res}      811         800{txt}  {c |}  {res}     1611
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0012315     .009901{txt}  {c |}  {res} .0055556
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0086695{txt}{col 43}{c |}   {res}  -.01591   -.0014289{txt} 
+      Risk ratio {c |} {res}{col 27} .1243842{txt}{col 43}{c |}   {res} .0155927    .9922237{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .8756158{txt}{col 43}{c |}   {res} .0077763    .9844073{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .4388889{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 35}1-sided Fisher's exact P ={res} 0.0189
+{txt}{col 35}2-sided Fisher's exact P ={res} 0.0209
+{txt}
+{com}. cs ttnoikhoa nhanhct, exact
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        0           1{txt}  {c |}  {res}        1
+        {txt}Noncases {c |} {res}      812         807{txt}  {c |}  {res}     1619
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res}        0    .0012376{txt}  {c |}  {res} .0006173
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0012376{txt}{col 43}{c |}   {res}-.0036618    .0011866{txt} 
+      Risk ratio {c |} {res}{col 27}        0{txt}{col 43}{c |}   {res}        .           .{txt} 
+ Prev. frac. ex. {c |} {res}{col 27}        1{txt}{col 43}{c |}   {res}        .           .{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .5012346{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 35}1-sided Fisher's exact P ={res} 0.4988
+{txt}{col 35}2-sided Fisher's exact P ={res} 0.4988
+{txt}
+{com}. graph box maumat, over(canthiep)
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. exit, clear

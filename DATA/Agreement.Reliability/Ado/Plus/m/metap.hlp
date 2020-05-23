@@ -1,0 +1,82 @@
+.-
+help for ^metap^                                 (STB-49: sbe28; STB-56: sbe28.1)
+.-
+
+Meta-analysis of p-values
+-------------------------
+
+	^metap^ pvar [^if^ exp] [^in^ range] [^, ^m^ethod^(^#^)^]
+
+
+Description
+-----------
+
+^metap^ provides combination of p-values from each study. The user provides the 
+one-tail p-values as ^pvar^. 
+
+If you have a dataset which contains data for all studies, then the @byvar@
+command (STB-27) can be used to derive the p-values for the individual studies.
+For example:
+
+   . ^sort study^
+   . ^byvar study, coef(group) se(group) generate:^
+   . ^quietly poisson cases group, e(pyrs)^
+   . ^sort study^
+   . ^qui by study: keep if _n==1^
+   . ^rename _C_1 logrr^
+   . ^rename _S_1 se^
+   . ^generate pvar=norprob(-logrr/se)^
+   . ^metap p^
+
+Alternatively, the @collapse@ or @for@ commands may be useful.
+
+
+Options
+-------
+
+^method(^#^)^ combines the p-values three using different available: 
+
+^f^: Fisher's method to combine pvalues. 
+^ea^: Edgington's additive method based on the sum of probabilities (Edgington
+    1972a), this method is suggested to combine a small number of studies, 
+    producing similar results as Fisher's method. 
+^en^: Edgington's normal curve method, based on the contrast of the p-value 
+    average (Edgington 1972b), this method is suggested to combine a large 
+    number of studies. By default Fisher's method is used.
+
+
+References
+----------
+
+Edgington, E.S. (1972a). An additive method for combining probability values 
+from independent experiments. Journal of Psychology, 80; 351-363.
+
+Edgington, E.S. (1972b). A normal curve method for combining probability values
+from independent experiments. Journal of Psychology, 82; 85-89.
+
+Fisher, R.A. (1932). Statistical Methods for Research Workers (4th ed.) London:
+Oliver&Boyd.
+
+
+Examples
+--------
+
+   . ^metap pvar^
+   . ^metap pvar, method(ea)^
+   . ^metap pvar, method(en)^
+
+
+Author
+------
+
+       Aurelio Tobias
+       Universidad Miguel Hernandez, Alicante, Spain
+       email: bledatobias@@ctv.es
+
+
+Also see
+--------
+
+On-line:  help for @graph@, @byvar@, @collapse@, @for@, @meta@ (if installed), 
+@metareg@ (if installed), @metabias@ (if installed), @metacum@ (if installed), 
+@galbr@ (if installed), @metainf@ (if installed) 

@@ -1,0 +1,58 @@
+.-
+help for ^1-sample normal test^                                  Menu: Calculator
+.-
+
+^Description of the test^
+^-----------------------^
+
+This command performs a test of whether the mean m of variable X measured in
+a certain population is equal to a specified value m0.
+
+The null hypothesis is Ho: m = m0, where m is the true mean of X and m0 is the
+hypothesized value of the mean.
+
+The command assumes that X is normal in the population and that the true 
+standard deviation (sigma) of X ^in the population^ is known.  Note: this is
+not the same as the standard deviation ^of the sample^.
+
+The 1-sample t test does not assume that the population standard deviation is
+known, so use that test if you do not want to make this assumption.  
+@tt1dlg!Click here for help on the calculator 1-sample t test.@
+
+
+^Example^
+^-------^
+
+Suppose you have the following sample:
+
+1, 2, 5, 6, 9, 10
+
+The number of observations in the sample is n = 6.
+Enter ^6^ for "No. of observations".
+
+The mean of the sample is (1 + 2 + 5 + 6 + 9 + 10)/6 = 33/6 = 5.5.
+Enter ^5.5^ for "Sample mean". 
+
+You assume that the true population standard deviation is 2.
+Enter ^2^ for "Population std. dev.".
+
+You wish to test the hypothesis that the population mean is 5.
+Enter ^5^ for "Hypothesized mean".
+
+This command also produces confidence intervals for the mean.
+If you want to change the confidence level for the interval,
+fill in "Confidence level" (in percent).
+
+                   
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@zt2dlg!2-sample normal test  (Calculator menu)@
+
+@tt1dlg!1-sample t test       (Calculator menu)@
+@tt2dlg!2-sample t test       (Calculator menu)@
+
+@ptt1dlg!1-sample t test       (Statistics--Parametric tests)@
+@ptt2dlg!2-sample t test       (Statistics--Parametric tests)@

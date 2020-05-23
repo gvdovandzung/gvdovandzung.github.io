@@ -1,0 +1,27 @@
+{smcl}
+{p 0 4}
+{bf:{help vgsg:A Visual Guide to Stata Graphics}}
+{bind:> Additional Programs}
+{p_end}
+{hline}
+
+{p 1 1 1}
+There are two additional add-on programs used in 
+{it:A Visual Guide to Stata Graphics}.
+
+{p 1 1 1}
+The first is {cmd:vguse} and this allows you to read any of the data files
+referenced in the book over the internet. If you are connected to the
+internet, you can simply type, for example, {cmd:vguse} {cmd:allstates} and it
+will use {it:allstates.dta} over the internet. You can then run whatever graph
+commands you wish using that data file.  You can find out more about this
+program by seeing {help vguse}.
+
+{p 1 1 1}
+The second program is called {cmd:vgcolormap} and is used to show the
+different colors available in Stata. If you are viewing this help file on your
+computer then this implies you have downloaded this program and could run it
+by typing {cmd:vgcolormap}.  You can find out more about this program by
+seeing {help vgcolormap}.
+
+{hline}

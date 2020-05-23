@@ -1,0 +1,49 @@
+{smcl}
+{p 0 4}
+{bf:{help vgsg:A Visual Guide to Stata Graphics}} > {bf:{help vgsg_ref:Cross Reference}} > {bf:Bar}
+{p_end}
+{hline}
+
+{title:Bar}: {bf:{help graph_bar}}
+
+{p 4 8 4}
+Y Variables{break}
+{bf:{help graph_bar}} (see {it:yvar_options} section)
+
+{p 4 8 4}
+Over{break}
+{bf:{help graph_bar}} (see {it:group_options} section)
+
+{p 4 8 4}
+Over Options{break}
+{bf:{help graph_bar}} (see {it:over_subopts} section)
+
+{p 4 8 4}
+Cat Axes{break}
+{bf:{help graph_bar}} (see {it:over_subopts} section){break}
+{bf:{help cat_axis_label_options}}
+
+{p 4 8 4}
+Legend{break}
+{bf:{help graph_bar}} (see {it:legending_options} section){break}
+{bf:{help legend_option}}{break}
+{bf:{help blabel_option}}
+
+{p 4 8 4}
+Axis Options{break}
+{bf:{help graph_bar}} (see {it:axis_options} section){break}
+{bf:{help axis_title_options}}{break}
+{bf:{help axis_label_options}}{break}
+{bf:{help axis_scale_options}}{break}
+{bf:{help added_line_options}}{break}
+
+{p 4 8 4}
+Lookofbar Options{break}
+{bf:{help graph_bar}} (see {it:lookofbar_options} section){break}
+{bf:{help barlook_options}}
+
+{p 4 8 4}
+By{break}
+{bf:{help by_option}}
+
+{hline}

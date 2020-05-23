@@ -1,0 +1,186 @@
+.-
+help for ^Customizing the look of your StataQuest^                    Menu: Prefs
+.-
+
+Topics covered
+--------------
+
+^1. Default, Load, and Save Windowing Preferences^
+^2. Results window^
+^3. Fonts^
+^4. Graph preferences^
+^5. Editor preferences^
+
+
+^1. Default, Load, and Save Windowing Preferences^
+^------------------------------------------------^
+
+You can set the 
+
+	- position of windows
+
+	- size of windows
+
+	- fonts (in most windows)
+
+	- colors and pen thicknesses in graphs
+
+	- colors of text and background in Results window
+
+Once you have everything the way you want it,
+
+	- Choose ^Save Windowing Preferences^ from the ^Prefs^ menu.
+
+	- In future StataQuest sessions, StataQuest will come up looking
+	  this way.
+
+If you make further changes (and do not save them), you can return to
+your saved windowing preferences at any time (in any StataQuest session):
+
+	- Choose ^Load Windowing Preferences^ from the ^Prefs^ menu.
+
+If you want to return to the default factory settings:
+
+	- Choose ^Defaulting Windowing^ from the ^Prefs^ menu.
+
+	- This does not change your saved windowing preferences.
+
+	- You can go back and forth between ^Defaulting Windowing^ and
+          ^Load Windowing Preferences^.
+
+	- Choose ^Load Windowing Preferences^ to return to your saved
+          preferences.
+
+Note: Any changes to the windows that are not saved will be lost when you
+exit StataQuest.
+
+
+^2. Results window^
+^-----------------^
+
+You can set the colors of
+
+	- Pen 1 (default: yellow) writes numerical output.
+
+	- Pen 2 (default: red)    writes error messages.
+
+	- Pen 3 (default: blue)   writes informational messages.
+
+	- Pen 4 (default: green)  writes text output.
+
+	- Pen 5 (default: white)  writes commands.
+
+	- Background (default: dark blue).
+
+If you want to save the colors that you spent 3 hours choosing instead of
+doing your homework:
+
+	- Choose ^Save Windowing Preferences^ from the ^Prefs^ menu.
+
+	- If you don't save them, the changes will be lost when you exit Stata.
+
+
+^3. Fonts^
+^--------^
+
+You can change fonts in the following windows:
+
+	- Results	(fixed-width fonts only)
+	- Editor	(fixed-width fonts only)
+	- Help		(fixed-width fonts only)
+	- Review	(any font)
+	- Variables	(any font)
+
+(Fixed-width fonts are "typewriter" fonts like Courier.)
+
+To change the font for a window:
+
+	- Click once on the window's control-menu box (the little
+	  box with the minus sign in the upper left corner of the 
+	  window).
+
+	- Choose ^Font^ and a standard Window's font dialog appears.
+
+	- Select the font.
+
+If you want to save your font selections for future StataQuest sessions,
+
+	- Choose ^Save Windowing Preferences^ from the ^Prefs^ menu.
+
+	- If you don't save them, the changes will be lost when you exit Stata.
+
+
+^4. Graph preferences^
+^--------------------^
+
+Line Thicknesses
+----------------
+
+This opens a dialog box where you can set the thickness for each of the pens
+that are used to draw a graph.
+
+Magnifications
+--------------
+
+This allows you to set the magnification (overall, horizontal, and vertical)
+for printing a graph.  You can also set the magnification of the symbols 
+that Stata uses on the graphs.
+
+Colors
+------
+
+This opens a dialog box where you can set the color for the background and
+for each of the pens.  You can choose colors regardless of whether your 
+printer supports colors since the Windows printer driver will translate
+all colors except the background to shades of gray.
+
+Display Thicknesses on Screen
+-----------------------------
+
+This option allows you to check or uncheck whether the thicknesses of the pens
+are displayed on the screen.  (Selected thicknesses always appear on printed
+output.)
+
+Recommended setting: unchecked.
+
+Ignore Pen Colors on Print
+--------------------------
+
+Recommended setting: checked   for monochrome printers,
+                     unchecked for color      printer.
+
+Ignore Back Color on Print
+--------------------------
+
+Recommended setting: checked   for monochrome printers,
+                     unchecked for color      printer.
+
+Include Logo on Print
+---------------------
+
+Recommended setting: checked!
+
+Load and Save Graph Preferences
+-------------------------------
+
+These only work in Professional Stata.
+
+In StataQuest, your graph preferences are saved when you choose
+^Save Windowing Preferences^.
+
+
+^5. Editor preferences^
+^---------------------^
+
+This is a feature of Professional Stata.  StataQuest users should leave 
+^Auto-Preserve^ checked.
+
+
+^Where to go for more help^
+^-------------------------^
+
+See the manuals for Professional Stata:
+
+	- Getting Started with Stata for Windows
+
+	- Stata Reference Manual

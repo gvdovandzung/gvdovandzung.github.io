@@ -1,0 +1,183 @@
+.-
+help for ^Scatterplots^                                              Menu: Graphs
+.-
+
+Topics covered
+--------------
+
+^1. Plot Y vs. X^
+^2. Plot Y vs. X, naming points^
+^3. Plot Y vs. X, with regression line^
+^4. Plot Y vs. X, scale symbols to Z^
+^5. Plot Y vs. X, by group^
+^6. Scatterplot matrix^
+
+Note:  Click the ^Dialog^  button to bring the dialog box      to the front.
+         "    "  ^Results^   "    "    "    "  ^Results^ window  "   "    "
+         "    "  ^Graph^     "    "    "    "  ^Graph^   window  "   "    "
+
+
+^1. Plot Y vs. X^
+^---------------^
+
+Produces a simple scatterplot of Y vs. X.
+
+Enter the Y-axis variable by clicking on its name in the list box.
+Or type it in.  Ditto for the X-axis variable.
+
+Click ^Draw^ to draw the graph while keeping the dialog box open to draw more.
+Click ^OK^   to draw the graph and close the dialog box.
+
+If you want to connect the points on the graph, choose ^Times series^ from the
+^Graph^ menu and select ^Plot Y vs. X^.
+
+@tsdlg!Click here for help on Time series graphs.@
+
+@graph_sq!Click here for help on saving, viewing, and printing your graph.@
+
+
+^2. Plot Y vs. X, naming points^
+^------------------------------^
+
+Produces a scatterplot of Y vs. X, but rather than using circles for the
+plotting symbol, it uses letters, words, or numbers from another variable
+to label the points.
+
+Note:  The "Labeling variable" can be either a string variable or a numeric
+variable.
+
+Example:  Suppose your data is the following (listed using ^List data^ from
+the ^Summaries^ menu):
+
+^. list name weight height in 1/7^                                               
+                                                                                
+          name    weight    height                                              
+  1.      Fred       178        71                                              
+  2.      Mary       121        62                                              
+  3.      John       159        65                                              
+  4.       Sam       199        68                                              
+  5.     Sally       145        71                                              
+  6.      Dick       149        67                                              
+  7.      Jane       103        63                                              
+ 
+To fill in the dialog box:
+
+Click on the button to the right of "Y-axis variable" edit box.  A list box
+appears.  Click on the variable ^weight^.  (Or type it in.)
+
+Repeat for the "X-axis variable".  Click on the variable ^height^.
+
+Repeat for the "Labeling variable".  Click on the variable ^name^.
+
+Click ^Draw^ to draw the graph while keeping the dialog box open to draw more.
+Click ^OK^   to draw the graph and close the dialog box.
+
+You will get a graph of ^weight^ vs. ^height^ with the points labeled ^Fred^,
+^Mary^, ^John^, ^Sam^, ^Sally^, ^Dick^, and ^Jane^.
+
+
+^3. Plot Y vs. X, with regression line^
+^-------------------------------------^
+
+Same as the simple ^Plot Y vs. X^ except the regression line is also plotted.
+
+@sregdlg!Click here for help on simple regression.@
+
+
+^4. Plot Y vs. X, scale symbols to Z^
+^-----------------------------------^
+
+A plot of Y vs. X is produced with the size of the plotting symbols made
+proportional to Z.
+
+To be precise, the area of the circles used as plotting symbols are made
+proportional to Z.
+
+Note:  If the minimum of Z is not very different from the maximum of Z,
+you will not notice the variation in the size of the plotting symbols.
+
+Click on the button to the right of "Y-axis variable" edit box.  A list box 
+appears.  Click on a variable to enter it.  (Or type it in.)
+
+Repeat for the "X-axis variable".
+
+Repeat for the "Variable to scale points" (Z).
+
+
+^5. Plot Y vs. X, by group^
+^-------------------------^
+
+Plots of Y vs. X are produced for each group.
+
+Example:  Suppose your data is the following (listed using ^List data^ from
+the ^Summaries^ menu):
+
+^. list name weight height gender in 1/7^                                         
+                                                                                
+          name    weight    height    gender                                    
+  1.      Fred       178        71         1                                    
+  2.      Mary       121        62         0                                    
+  3.      John       159        65         1                                    
+  4.       Sam       199        68         1                                    
+  5.     Sally       145        71         0                                    
+  6.      Dick       149        67         1                                    
+  7.      Jane       103        63         0                                    
+ 
+To produce separate plots of ^weight^ vs. ^height^ for males (^gender^ = 1)
+and female (^gender^ = 0):
+
+Click on the button (with the down arrow) to the right of "Y-axis variable"
+edit box.  A list box appears.  Click on the variable ^weight^.  (Or simply
+type in the variable name.)
+
+Repeat for the "X-axis variable".  Click on the variable ^height^.
+
+Repeat for "By group".  Click on the variable ^gender^.
+
+Click ^Draw^ to draw the graph while keeping the dialog box open to draw more.
+Click ^OK^   to draw the graph and close the dialog box.
+
+Two plots will appear in the ^Graph^ window.  One of ^weight^ vs. ^height^ for
+females, and a second of ^weight^ vs. ^height^ for males.
+
+If you check the box "Include plot of total", a third plot will be drawn
+showing ^weight^ vs. ^height^ for the combined groups.
+
+
+^6. Scatterplot matrix^
+^---------------------^
+
+Produces a scatterplot matrix for two or more variables.
+
+A scatterplot matrix is a matrix containing all the possible scatterplots
+of pairs of the variables.
+
+To enter the variables, simply click on their names in the list box.  
+
+For example, if you enter ^x1^, ^x2^, and ^x3^, the scatterplot matrix will
+consist of six plots:
+
+	^x1^ vs. ^x2^
+	^x1^ vs. ^x3^
+	^x2^ vs. ^x1^
+	^x2^ vs. ^x3^
+	^x3^ vs. ^x1^
+	^x3^ vs. ^x2^
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@histdlg!Histograms@
+@boxdlg!Box plots@
+@stemdlg!Stem-and-leaf plot@
+@dpldlg!Dotplots@
+@qnormdlg!Normal quantile plot@
+@bardlg!Bar charts@
+
+@tsdlg!Time-series graphs@
+@qcdlg!Quality-control charts@
+
+@graph_sq!Printing, saving, and viewing graphs@

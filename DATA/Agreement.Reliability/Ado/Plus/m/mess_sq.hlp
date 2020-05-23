@@ -1,0 +1,40 @@
+.-
+help for ^Restore default windowing^
+.-
+
+^Default Windowing^
+^-----------------^
+
+If you (or someone else) has played around with the StataQuest windows
+and it is now a big mess, simply go to the ^Prefs^ menu and choose
+^Default Windowing^.
+
+This will restore the StataQuest windows to their original factory
+settings: positions, sizes, colors, fonts, etc.
+
+
+^Save Windowing Preferences^
+^--------------------------^
+
+If you are happy with the way you have played around with the
+StataQuest windows, you can save your own personal setting:
+choose ^Save Windowing Preferences^ from the ^Prefs^ menu.
+
+The next time StataQuest comes up, it will come up according to
+your saved preferences.
+
+
+^Load Windowing Preferences^
+^--------------------------^
+
+If you have already saved your windowing preferences and your
+windows become messed up, you can return to the saved preferences
+by selecting ^Load Windowing Preferences^.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@prefs_sq!Customizing the look of your StataQuest -- the Prefs menu@

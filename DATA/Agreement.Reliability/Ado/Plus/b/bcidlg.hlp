@@ -1,0 +1,51 @@
+.-
+help for ^Binomial confidence interval (Calculator version)^     Menu: Calculator
+.-
+
+^Note on dataset version of command^
+^----------------------------------^
+
+A binomial confidence interval can be calculated for a variable that has
+two possible values: "success" and "failure" (or "yes" and "no", etc.).
+
+This command computes a binomial confidence interval when you have already
+counted the total number of successes in a sample.
+
+Use the ^1-sample test of proportion^ command under the ^Parametric tests^
+section of the ^Statistics^ menu if you wish to have StataQuest count the
+number of successes, and then compute a confidence interval.
+
+@pttpdlg!Click here for help on the dataset version of the 1-sample test@
+@pttpdlg!of proportion.@
+
+
+^Description^
+^-----------^
+
+This command computes an exact binomial confidence interval for the
+proportion of successes p for a variable with two possible outcomes
+("success" and "failure").
+
+The total number of successes has a Binomial(n, p) distribution, where n
+is the sample size and p is the probability of success for one trial.
+
+Note:  For a random sample, the probability that a single observation is
+a success is the same as the population proportion of successes.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@tp1dlg!1-sample test of proportion   (Calculator menu)@
+@tp2dlg!2-sample test of proportions  (Calculator menu)@
+
+@pttpdlg!1-sample test of proportion   (Statistics--Parametric tests)@
+@ptp2dlg!2-sample test of proportions  (Statistics--Parametric tests)@
+
+@ccidlg!Confidence interval for mean  (Calculator menu)@
+@scidlg!Confidence intervals          (Summaries menu)@
+@poidlg!Poisson confidence interval   (Calculator menu)@
+
+@cii!For the command-line version for exact confidence intervals, see help for cii.@

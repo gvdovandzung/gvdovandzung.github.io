@@ -1,0 +1,47 @@
+.-
+help for ^Professional Stata and StataQuest^
+.-
+
+Programming menus in StataQuest and Professional Stata
+------------------------------------------------------
+
+Did you know that the menus in StataQuest are not hard-coded into the
+software?
+
+They are programmed via plain ASCII files that come with StataQuest.
+
+This means that users can add or change menu items and dialog box
+features once they have learned to write programs using Stata's
+programming language.
+
+If you want to learn how to program in Stata, you should obtain
+a copy of Professional Stata.
+
+The first step is to become familiar with Stata's simple, yet powerful,
+command-line syntax.  Then practice with it and build up your Stata
+programming skills.
+
+
+Professional Stata for Professors
+---------------------------------
+
+We recommend that professors obtain a copy of Professional Stata to
+prepare datasets for their students.  StataQuest has limitations
+on dataset size that Professional Stata does not have.
+
+With Professional Stata, you can input a large dataset and then
+extract a portion of it for your students to use.
+
+
+For more information about Stata, contact
+
+	Stata Corporation
+	702 University Drive East
+	College Station, TX 77840
+	
+	email:  stata@@stata.com
+	Phone:  409-696-4600
+	FAX:	409-696-4601
+
+	Sales only: 800-782-8272 (USA)
+		    800-248-8272 (Canada)

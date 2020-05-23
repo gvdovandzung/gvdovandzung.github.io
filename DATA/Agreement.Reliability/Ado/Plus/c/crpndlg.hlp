@@ -1,0 +1,41 @@
+.-
+help for ^RPN calculator^                                        Menu: Calculator
+.-
+
+This is a Reverse Polish Notation calculator.
+
+The other calculator is a standard calculator.
+
+@cstddlg!Click here for help on the Standard calculator.@
+
+
+^Example^
+^-------^
+
+To compute 2.12 + 1.96*3.67/sqrt(56)
+
+Input ^1.96^
+
+Click ^Enter^
+
+Input ^3.67^
+
+Click ^x^
+
+Input ^56^
+
+Click ^sqrt^
+
+Click ^/^
+
+Input ^2.12^
+
+Click ^+^
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@cstddlg!Standard calculator@

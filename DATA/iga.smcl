@@ -1,0 +1,183 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}D:\DATA\iga.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}26 Mar 2012, 16:05:18
+
+{com}. local znonpara "cltc clscrp clsgamma"
+
+. 
+. di "MO TA DON BIEN"
+{res}MO TA DON BIEN
+
+{com}. 
+. zmedian `znonpara'
+{txt}    Variable |       Obs       Mean     Std. Dev.     Median [Min-Max]    
+-------------+----------------------------------------------------------
+        {res}cltc {txt}|        {res}30      323.6     118.5622      298.5 [199-792]
+      clscrp {txt}|         {res}8     5.4375     5.887259        3.1 [.6-17.9]
+    clsgamma {txt}|        {res}28   9.207143     3.603694        8.7 [3.3-15.5]
+
+{com}. 
+. 
+. 
+. di "PHAN TICH SO SANH VIEM CAU THAN IGA VA LOAI VCT KHAC"
+{res}PHAN TICH SO SANH VIEM CAU THAN IGA VA LOAI VCT KHAC
+
+{com}. 
+. foreach X of varlist `znonpara' {c -(}
+{txt}  2{com}. 
+. des `X'
+{txt}  3{com}. 
+. zmedian `X' if vct_iga==0
+{txt}  4{com}. 
+. di
+{txt}  5{com}. 
+. zmedian `X' if vct_iga==1
+{txt}  6{com}. 
+. di
+{txt}  7{com}. 
+. ranksum `X', by(vct_iga)
+{txt}  8{com}. 
+. {c )-}
+
+              {txt}storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}cltc           {txt} int    %3.0f                  {res}Tieu cau
+{txt}    Variable |       Obs       Mean     Std. Dev.     Median [Min-Max]    
+-------------+----------------------------------------------------------
+        {res}cltc {txt}|         {res}0          .            .          . [.-.]
+
+{txt}    Variable |       Obs       Mean     Std. Dev.     Median [Min-Max]    
+-------------+----------------------------------------------------------
+        {res}cltc {txt}|        {res}30      323.6     118.5622      298.5 [199-792]
+
+{err}1 group found, 2 required
+{txt}{search r(499):r(499);}
+
+{com}. 
+. 
+. 
+. keep if vct_iga==1
+{txt}(0 observations deleted)
+
+{com}. 
+. 
+. 
+. di "SO SANH TRONG NOI BO IGA TANG"
+{res}SO SANH TRONG NOI BO IGA TANG
+
+{com}. 
+. foreach X of varlist `znonpara' {c -(}
+{txt}  2{com}. 
+. des `X'
+{txt}  3{com}. 
+. zmedian `X' if gfr_thap==0
+{txt}  4{com}. 
+. di
+{txt}  5{com}. 
+. zmedian `X' if gfr_thap==1
+{txt}  6{com}. 
+. di
+{txt}  7{com}. 
+. ranksum `X', by(gfr_thap)
+{txt}  8{com}. 
+. {c )-}
+
+              {txt}storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}cltc           {txt} int    %3.0f                  {res}Tieu cau
+{txt}    Variable |       Obs       Mean     Std. Dev.     Median [Min-Max]    
+-------------+----------------------------------------------------------
+        {res}cltc {txt}|        {res}24   335.0833     129.0999      302.5 [199-792]
+
+{txt}    Variable |       Obs       Mean     Std. Dev.     Median [Min-Max]    
+-------------+----------------------------------------------------------
+        {res}cltc {txt}|         {res}6   277.6667     41.21488        297 [208-309]
+
+
+{txt}Two-sample Wilcoxon rank-sum (Mann-Whitney) test
+
+    gfr_thap {c |}      obs    rank sum    expected
+{hline 13}{c +}{hline 33}
+     GFR>=60 {c |}{res}{col 17}     24{col 26}       392{col 38}       372
+     {txt}GRF <60 {c |}{res}{col 17}      6{col 26}        73{col 38}        93
+{txt}{hline 13}{c +}{hline 33}
+    combined {c |}{res}{col 17}     30{col 26}       465{col 38}       465
+
+{txt}unadjusted variance{col 22}{res}    372.00
+{txt}adjustment for ties{col 22}{res}     -0.17
+{txt}{col 22}{hline 10}
+adjusted variance{col 22}{res}    371.83
+
+{txt}Ho: cltc(gfr_thap==GFR>=60) = cltc(gfr_thap==GRF <60)
+{col 14}z = {res}  1.037
+{txt}{col 5}Prob > |z| = {res}  0.2997
+
+              {txt}storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}clscrp         {txt} double %4.1f                  {res}CRP
+{txt}    Variable |       Obs       Mean     Std. Dev.     Median [Min-Max]    
+-------------+----------------------------------------------------------
+      {res}clscrp {txt}|         {res}6   3.216667     3.375451          2 [.6-9.7]
+
+{txt}    Variable |       Obs       Mean     Std. Dev.     Median [Min-Max]    
+-------------+----------------------------------------------------------
+      {res}clscrp {txt}|         {res}2       12.1     8.202439       12.1 [6.3-17.9]
+
+
+{txt}Two-sample Wilcoxon rank-sum (Mann-Whitney) test
+
+    gfr_thap {c |}      obs    rank sum    expected
+{hline 13}{c +}{hline 33}
+     GFR>=60 {c |}{res}{col 17}      6{col 26}        22{col 38}        27
+     {txt}GRF <60 {c |}{res}{col 17}      2{col 26}        14{col 38}         9
+{txt}{hline 13}{c +}{hline 33}
+    combined {c |}{res}{col 17}      8{col 26}        36{col 38}        36
+
+{txt}unadjusted variance{col 22}{res}      9.00
+{txt}adjustment for ties{col 22}{res}      0.00
+{txt}{col 22}{hline 10}
+adjusted variance{col 22}{res}      9.00
+
+{txt}Ho: clscrp(gfr_thap==GFR>=60) = clscrp(gfr_thap==GRF <60)
+{col 14}z = {res} -1.667
+{txt}{col 5}Prob > |z| = {res}  0.0956
+
+              {txt}storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}clsgamma       {txt} double %4.1f                  {res}gamma
+{txt}    Variable |       Obs       Mean     Std. Dev.     Median [Min-Max]    
+-------------+----------------------------------------------------------
+    {res}clsgamma {txt}|        {res}23    9.46087     3.661189        9.9 [3.3-15.5]
+
+{txt}    Variable |       Obs       Mean     Std. Dev.     Median [Min-Max]    
+-------------+----------------------------------------------------------
+    {res}clsgamma {txt}|         {res}5       8.04     3.444271        8.2 [4-13.1]
+
+
+{txt}Two-sample Wilcoxon rank-sum (Mann-Whitney) test
+
+    gfr_thap {c |}      obs    rank sum    expected
+{hline 13}{c +}{hline 33}
+     GFR>=60 {c |}{res}{col 17}     23{col 26}       345{col 38}     333.5
+     {txt}GRF <60 {c |}{res}{col 17}      5{col 26}        61{col 38}      72.5
+{txt}{hline 13}{c +}{hline 33}
+    combined {c |}{res}{col 17}     28{col 26}       406{col 38}       406
+
+{txt}unadjusted variance{col 22}{res}    277.92
+{txt}adjustment for ties{col 22}{res}     -0.23
+{txt}{col 22}{hline 10}
+adjusted variance{col 22}{res}    277.69
+
+{txt}Ho: clsgamma(gfr_thap==GFR>=60) = clsgamma(gfr_thap==GRF <60)
+{col 14}z = {res}  0.690
+{txt}{col 5}Prob > |z| = {res}  0.4901
+
+{com}. capture log close
+{smcl}
+{com}{sf}{ul off}

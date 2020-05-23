@@ -1,0 +1,64 @@
+.-
+help for ^Logistic regression^                                   Menu: Statistics
+.-
+
+^Description^
+^-----------^
+
+This command computes logistic regression of Y on X using maximum
+likelihood estimation.
+
+Here the dependent variable Y is a binary variable; i.e., Y = 0 or 1.
+The value Y = 1 can be considered a "success" and the value Y = 0 a
+"failure".
+
+The independent variable X can be a binary or continuous variable.
+Only one independent variable can be selected with this StataQuest
+command.
+
+The logistic model is
+
+	Pr(Y = 1 | X) = F(b*X + c)
+
+where F is the cumulative logistic distribution:
+
+	F(u) = exp(u)/[1 + exp(u)]
+
+
+^How your data should be arranged^
+^--------------------------------^
+
+Your dependent variable Y must be a 0/1 variable.  Only variables that are
+0/1 will appear in the list box for the dependent variable.
+
+
+^Odds ratio option^
+^-----------------^
+
+If you check the option "Display odds ratios ratio rather than coefs.",
+the odds ratio of the odds of success for X = 1 over the odds of success
+for X = 0 is displayed rather than coefficient estimate b.
+
+The odds ratio (OR) is given by the formula:
+
+	OR = Odds(Y = 1 | X = 1)/Odds(Y = 1 | X = 0)
+
+	     Pr(Y = 1 | X = 1)/[1 - Pr(Y = 1 | X = 1)]
+	   = -----------------------------------------
+	     Pr(Y = 1 | X = 0)/[1 - Pr(Y = 1 | X = 0)]
+
+	   = exp(b)
+
+Note that the odds ratio is computed the same way for a continuous
+variable.  For a continuous variable, the interpretation of the odds
+ratio is that it is the ratio of the odds for a unit difference in the
+continuous X variable.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@twodlg!Two-way tables@
+@ptp2dlg!2-sample test of proportions@

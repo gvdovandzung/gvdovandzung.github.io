@@ -1,0 +1,516 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}d:\data\ketqua banghuyetss.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}23 Apr 2012, 20:34:34
+{txt}
+{com}. describe
+
+{txt}Contains data from {res}D:\DATA\banghuyetss miso.dta
+{txt}  obs:{res}           600                          
+{txt} vars:{res}            21                          25 Dec 2008 13:45
+{txt} size:{res}        52,800{txt} (99.5% of memory free)
+{hline 79}
+              storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}stt            {txt} float  %9.0g                  {res}
+tuoi           {txt} float  %9.0g                  {res}
+hemoglobin     {txt} float  %9.0g                  {res}
+kcsinh         {txt} float  %9.0g                  {res}khoang cach giua lan sinh truoc
+                                                va lan sinh nay
+tienthai       {txt} float  %9.0g       parity     {res}tien can san khoa
+bietchu        {txt} float  %9.0g       literacy   {res}biet doc biet viet
+khamthai       {txt} float  %9.0g       visit      {res}so lan kham thai
+sinhtainha     {txt} float  %9.0g       home       {res}sinh tai nha
+sinhnon        {txt} float  %9.0g       preterm    {res}sinh non vs sinh du thang
+rachsinhmon    {txt} float  %9.0g       yesno      {res}rach tang sinh mon
+gioi           {txt} float  %9.0g       sex        {res}gioi
+tlsosinh       {txt} float  %9.0g       bweight    {res}trong luong so sinh
+bhss           {txt} float  %9.0g       yesno      {res}bang huyet sau sinh
+bhssnang       {txt} float  %9.0g       yesno      {res}bang huyet sau sinh nang
+chuyenvien     {txt} float  %9.0g       yesno      {res}chuyen vien
+truyenmau      {txt} float  %9.0g       yesno      {res}can truyen mau
+sansocdacbiet  {txt} float  %9.0g       yesno      {res}dieu tri o ICU
+ctngoaikhoa    {txt} float  %9.0g       yesno      {res}can thiep ngoai khoa
+ttnoikhoa      {txt} float  %9.0g       yesno      {res}thu thuat noi khoa
+nhanhct        {txt} float  %9.0g       treatment
+                                              {res}Nhanh Misoprostol vs nhanh
+                                                Placebo
+maumat         {txt} float  %9.0g                  {res}luong mau mat (ml)
+{txt}{hline 79}
+Sorted by:  {res}nhanhct
+     Note:  dataset has changed since last saved
+{txt}
+{com}. browse
+{txt}
+{com}. summ
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+         stt {c |}{res}       600      788.11    466.8597          1       1619
+        {txt}tuoi {c |}{res}       600       23.16    3.069218         15         33
+  {txt}hemoglobin {c |}{res}       600    95.71167    9.032044         68        121
+      {txt}kcsinh {c |}{res}       428    2.810748    1.467581          2         15
+    {txt}tienthai {c |}{res}       600        .825    .6068955          0          2
+{txt}{hline 13}{c +}{hline 56}
+     bietchu {c |}{res}       600    .6383333    .4808839          0          1
+    {txt}khamthai {c |}{res}       600         .88    .3252327          0          1
+  {txt}sinhtainha {c |}{res}       600        .445    .4973805          0          1
+     {txt}sinhnon {c |}{res}       600         .23    .4211836          0          1
+ {txt}rachsinhmon {c |}{res}       600        .105    .3068092          0          1
+{txt}{hline 13}{c +}{hline 56}
+        gioi {c |}{res}       600    .4833333    .5001391          0          1
+    {txt}tlsosinh {c |}{res}       600        3.91    .4643196          1          5
+        {txt}bhss {c |}{res}       600    .1616667    .3684519          0          1
+    {txt}bhssnang {c |}{res}       600    .0166667    .1281259          0          1
+  {txt}chuyenvien {c |}{res}       600         .02    .1401168          0          1
+{txt}{hline 13}{c +}{hline 56}
+   truyenmau {c |}{res}       600    .0116667      .10747          0          1
+{txt}sansocdacb~t {c |}{res}       600    .0033333    .0576868          0          1
+ {txt}ctngoaikhoa {c |}{res}       600    .0133333    .1147934          0          1
+   {txt}ttnoikhoa {c |}{res}       600    .0016667    .0408248          0          1
+     {txt}nhanhct {c |}{res}       600           0           0          0          0
+{txt}{hline 13}{c +}{hline 56}
+      maumat {c |}{res}       600    317.8717    208.7545        117       1547
+{txt}
+{com}. describe
+
+{txt}Contains data from {res}D:\DATA\banghuyetss miso.dta
+{txt}  obs:{res}           600                          
+{txt} vars:{res}            21                          25 Dec 2008 13:45
+{txt} size:{res}        52,800{txt} (99.5% of memory free)
+{hline 79}
+              storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}stt            {txt} float  %9.0g                  {res}
+tuoi           {txt} float  %9.0g                  {res}
+hemoglobin     {txt} float  %9.0g                  {res}
+kcsinh         {txt} float  %9.0g                  {res}khoang cach giua lan sinh truoc
+                                                va lan sinh nay
+tienthai       {txt} float  %9.0g       parity     {res}tien can san khoa
+bietchu        {txt} float  %9.0g       literacy   {res}biet doc biet viet
+khamthai       {txt} float  %9.0g       visit      {res}so lan kham thai
+sinhtainha     {txt} float  %9.0g       home       {res}sinh tai nha
+sinhnon        {txt} float  %9.0g       preterm    {res}sinh non vs sinh du thang
+rachsinhmon    {txt} float  %9.0g       yesno      {res}rach tang sinh mon
+gioi           {txt} float  %9.0g       sex        {res}gioi
+tlsosinh       {txt} float  %9.0g       bweight    {res}trong luong so sinh
+bhss           {txt} float  %9.0g       yesno      {res}bang huyet sau sinh
+bhssnang       {txt} float  %9.0g       yesno      {res}bang huyet sau sinh nang
+chuyenvien     {txt} float  %9.0g       yesno      {res}chuyen vien
+truyenmau      {txt} float  %9.0g       yesno      {res}can truyen mau
+sansocdacbiet  {txt} float  %9.0g       yesno      {res}dieu tri o ICU
+ctngoaikhoa    {txt} float  %9.0g       yesno      {res}can thiep ngoai khoa
+ttnoikhoa      {txt} float  %9.0g       yesno      {res}thu thuat noi khoa
+nhanhct        {txt} float  %9.0g       treatment
+                                              {res}Nhanh Misoprostol vs nhanh
+                                                Placebo
+maumat         {txt} float  %9.0g                  {res}luong mau mat (ml)
+{txt}{hline 79}
+Sorted by:  {res}nhanhct
+     Note:  dataset has changed since last saved
+{txt}
+{com}. di "MO TA DAC DIEM DAN SO"
+{res}MO TA DAC DIEM DAN SO
+{txt}
+{com}. sum  tuoi hemoglobin kcsinh
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+        tuoi {c |}{res}       600       23.16    3.069218         15         33
+  {txt}hemoglobin {c |}{res}       600    95.71167    9.032044         68        121
+      {txt}kcsinh {c |}{res}       428    2.810748    1.467581          2         15
+{txt}
+{com}. tab1  tienthai bietchu khamthai sinhtainha sinhnon rachsinhmon gioi tlsosinh
+
+{res}-> tabulation of tienthai  
+
+ {txt}tien can san {c |}
+         khoa {c |}      Freq.     Percent        Cum.
+{hline 14}{c +}{hline 35}
+  Sinh con so {c |}{res}        172       28.67       28.67
+{txt}Da co 1-2 con {c |}{res}        361       60.17       88.83
+{txt}   Co >=3 con {c |}{res}         67       11.17      100.00
+{txt}{hline 14}{c +}{hline 35}
+        Total {c |}{res}        600      100.00
+
+-> tabulation of bietchu  
+
+   {txt}biet doc {c |}
+  biet viet {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     Mu chu {c |}{res}        217       36.17       36.17
+{txt}  Co di hoc {c |}{res}        383       63.83      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        600      100.00
+
+-> tabulation of khamthai  
+
+ {txt}so lan kham thai {c |}      Freq.     Percent        Cum.
+{hline 18}{c +}{hline 35}
+ <3 lan kham thai {c |}{res}         72       12.00       12.00
+{txt}>=3 lan kham thai {c |}{res}        528       88.00      100.00
+{txt}{hline 18}{c +}{hline 35}
+            Total {c |}{res}        600      100.00
+
+-> tabulation of sinhtainha  
+
+     {txt}sinh tai nha {c |}      Freq.     Percent        Cum.
+{hline 18}{c +}{hline 35}
+Sinh con tai tram {c |}{res}        333       55.50       55.50
+{txt}   Sinh con o nha {c |}{res}        267       44.50      100.00
+{txt}{hline 18}{c +}{hline 35}
+            Total {c |}{res}        600      100.00
+
+-> tabulation of sinhnon  
+
+{txt}sinh non vs {c |}
+    sinh du {c |}
+      thang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   Du thang {c |}{res}        462       77.00       77.00
+{txt}Thieu thang {c |}{res}        138       23.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        600      100.00
+
+-> tabulation of rachsinhmon  
+
+  {txt}rach tang {c |}
+   sinh mon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      Khong {c |}{res}        537       89.50       89.50
+{txt}         Co {c |}{res}         63       10.50      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        600      100.00
+
+-> tabulation of gioi  
+
+       {txt}gioi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         Nu {c |}{res}        310       51.67       51.67
+{txt}        Nam {c |}{res}        290       48.33      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        600      100.00
+
+-> tabulation of tlsosinh  
+
+{txt}trong luong {c |}
+    so sinh {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    <1500 g {c |}{res}          1        0.17        0.17
+{txt}1500-1999 g {c |}{res}          2        0.33        0.50
+{txt}2000-2499 g {c |}{res}         82       13.67       14.17
+{txt}3000-3499 g {c |}{res}        480       80.00       94.17
+{txt}    >3500 g {c |}{res}         35        5.83      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        600      100.00
+{txt}
+{com}. bysort  nhanhct: sum  tuoi hemoglobin kcsinh
+
+{txt}{hline}
+-> nhanhct = Placebo
+
+    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+        tuoi {c |}{res}       600       23.16    3.069218         15         33
+  {txt}hemoglobin {c |}{res}       600    95.71167    9.032044         68        121
+      {txt}kcsinh {c |}{res}       428    2.810748    1.467581          2         15
+
+{txt}
+{com}. bysort nhanhct: tab1  tienthai bietchu khamthai sinhtainha sinhnon rachsinhmon gioi tlsosinh
+
+{txt}{hline}
+-> nhanhct = Placebo
+
+{res}-> tabulation of tienthai  
+
+ {txt}tien can san {c |}
+         khoa {c |}      Freq.     Percent        Cum.
+{hline 14}{c +}{hline 35}
+  Sinh con so {c |}{res}        172       28.67       28.67
+{txt}Da co 1-2 con {c |}{res}        361       60.17       88.83
+{txt}   Co >=3 con {c |}{res}         67       11.17      100.00
+{txt}{hline 14}{c +}{hline 35}
+        Total {c |}{res}        600      100.00
+
+-> tabulation of bietchu  
+
+   {txt}biet doc {c |}
+  biet viet {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     Mu chu {c |}{res}        217       36.17       36.17
+{txt}  Co di hoc {c |}{res}        383       63.83      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        600      100.00
+
+-> tabulation of khamthai  
+
+ {txt}so lan kham thai {c |}      Freq.     Percent        Cum.
+{hline 18}{c +}{hline 35}
+ <3 lan kham thai {c |}{res}         72       12.00       12.00
+{txt}>=3 lan kham thai {c |}{res}        528       88.00      100.00
+{txt}{hline 18}{c +}{hline 35}
+            Total {c |}{res}        600      100.00
+
+-> tabulation of sinhtainha  
+
+     {txt}sinh tai nha {c |}      Freq.     Percent        Cum.
+{hline 18}{c +}{hline 35}
+Sinh con tai tram {c |}{res}        333       55.50       55.50
+{txt}   Sinh con o nha {c |}{res}        267       44.50      100.00
+{txt}{hline 18}{c +}{hline 35}
+            Total {c |}{res}        600      100.00
+
+-> tabulation of sinhnon  
+
+{txt}sinh non vs {c |}
+    sinh du {c |}
+      thang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   Du thang {c |}{res}        462       77.00       77.00
+{txt}Thieu thang {c |}{res}        138       23.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        600      100.00
+
+-> tabulation of rachsinhmon  
+
+  {txt}rach tang {c |}
+   sinh mon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      Khong {c |}{res}        537       89.50       89.50
+{txt}         Co {c |}{res}         63       10.50      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        600      100.00
+
+-> tabulation of gioi  
+
+       {txt}gioi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         Nu {c |}{res}        310       51.67       51.67
+{txt}        Nam {c |}{res}        290       48.33      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        600      100.00
+
+-> tabulation of tlsosinh  
+
+{txt}trong luong {c |}
+    so sinh {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    <1500 g {c |}{res}          1        0.17        0.17
+{txt}1500-1999 g {c |}{res}          2        0.33        0.50
+{txt}2000-2499 g {c |}{res}         82       13.67       14.17
+{txt}3000-3499 g {c |}{res}        480       80.00       94.17
+{txt}    >3500 g {c |}{res}         35        5.83      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        600      100.00
+{txt}
+{com}. di "MO TA KET CUOC"
+{res}MO TA KET CUOC
+{txt}
+{com}. tab1  bhss bhssnang
+
+{res}-> tabulation of bhss  
+
+ {txt}bang huyet {c |}
+   sau sinh {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      Khong {c |}{res}        503       83.83       83.83
+{txt}         Co {c |}{res}         97       16.17      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        600      100.00
+
+-> tabulation of bhssnang  
+
+ {txt}bang huyet {c |}
+   sau sinh {c |}
+       nang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      Khong {c |}{res}        590       98.33       98.33
+{txt}         Co {c |}{res}         10        1.67      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        600      100.00
+{txt}
+{com}. di "THONG KE PHAN TICH"
+{res}THONG KE PHAN TICH
+{txt}
+{com}. tabulate bhss nhanhct, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}   Nhanh
+           {c |} Misoprosto
+           {c |} l vs nhanh
+bang huyet {c |}  Placebo
+  sau sinh {c |}   Placebo {c |}     Total
+{hline 11}{c +}{hline 11}{c +}{hline 10}
+     Khong {c |}{res}       503 {txt}{c |}{res}       503 
+           {txt}{c |}{res}     83.83 {txt}{c |}{res}     83.83 
+{txt}{hline 11}{c +}{hline 11}{c +}{hline 10}
+        Co {c |}{res}        97 {txt}{c |}{res}        97 
+           {txt}{c |}{res}     16.17 {txt}{c |}{res}     16.17 
+{txt}{hline 11}{c +}{hline 11}{c +}{hline 10}
+     Total {c |}{res}       600 {txt}{c |}{res}       600 
+           {txt}{c |}{res}    100.00 {txt}{c |}{res}    100.00 
+
+{txt}
+{com}. tabulate bhssnang nhanhct, chi2 column exact
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}   Nhanh
+           {c |} Misoprosto
+bang huyet {c |} l vs nhanh
+  sau sinh {c |}  Placebo
+      nang {c |}   Placebo {c |}     Total
+{hline 11}{c +}{hline 11}{c +}{hline 10}
+     Khong {c |}{res}       590 {txt}{c |}{res}       590 
+           {txt}{c |}{res}     98.33 {txt}{c |}{res}     98.33 
+{txt}{hline 11}{c +}{hline 11}{c +}{hline 10}
+        Co {c |}{res}        10 {txt}{c |}{res}        10 
+           {txt}{c |}{res}      1.67 {txt}{c |}{res}      1.67 
+{txt}{hline 11}{c +}{hline 11}{c +}{hline 10}
+     Total {c |}{res}       600 {txt}{c |}{res}       600 
+           {txt}{c |}{res}    100.00 {txt}{c |}{res}    100.00 
+
+{txt}
+{com}. tabulate chuyenvien nhanhct, chi2 column exact
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}   Nhanh
+           {c |} Misoprosto
+           {c |} l vs nhanh
+    chuyen {c |}  Placebo
+      vien {c |}   Placebo {c |}     Total
+{hline 11}{c +}{hline 11}{c +}{hline 10}
+     Khong {c |}{res}       588 {txt}{c |}{res}       588 
+           {txt}{c |}{res}     98.00 {txt}{c |}{res}     98.00 
+{txt}{hline 11}{c +}{hline 11}{c +}{hline 10}
+        Co {c |}{res}        12 {txt}{c |}{res}        12 
+           {txt}{c |}{res}      2.00 {txt}{c |}{res}      2.00 
+{txt}{hline 11}{c +}{hline 11}{c +}{hline 10}
+     Total {c |}{res}       600 {txt}{c |}{res}       600 
+           {txt}{c |}{res}    100.00 {txt}{c |}{res}    100.00 
+
+{txt}
+{com}. tabulate truyenmau nhanhct, chi2 column exact
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}   Nhanh
+           {c |} Misoprosto
+           {c |} l vs nhanh
+can truyen {c |}  Placebo
+       mau {c |}   Placebo {c |}     Total
+{hline 11}{c +}{hline 11}{c +}{hline 10}
+     Khong {c |}{res}       593 {txt}{c |}{res}       593 
+           {txt}{c |}{res}     98.83 {txt}{c |}{res}     98.83 
+{txt}{hline 11}{c +}{hline 11}{c +}{hline 10}
+        Co {c |}{res}         7 {txt}{c |}{res}         7 
+           {txt}{c |}{res}      1.17 {txt}{c |}{res}      1.17 
+{txt}{hline 11}{c +}{hline 11}{c +}{hline 10}
+     Total {c |}{res}       600 {txt}{c |}{res}       600 
+           {txt}{c |}{res}    100.00 {txt}{c |}{res}    100.00 
+
+{txt}
+{com}. tabulate sansocdacbiet nhanhct, chi2 column exact
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}   Nhanh
+           {c |} Misoprosto
+           {c |} l vs nhanh
+dieu tri o {c |}  Placebo
+       ICU {c |}   Placebo {c |}     Total
+{hline 11}{c +}{hline 11}{c +}{hline 10}
+     Khong {c |}{res}       598 {txt}{c |}{res}       598 
+           {txt}{c |}{res}     99.67 {txt}{c |}{res}     99.67 
+{txt}{hline 11}{c +}{hline 11}{c +}{hline 10}
+        Co {c |}{res}         2 {txt}{c |}{res}         2 
+           {txt}{c |}{res}      0.33 {txt}{c |}{res}      0.33 
+{txt}{hline 11}{c +}{hline 11}{c +}{hline 10}
+     Total {c |}{res}       600 {txt}{c |}{res}       600 
+           {txt}{c |}{res}    100.00 {txt}{c |}{res}    100.00 
+
+{txt}
+{com}. tabulate ctngoaikhoa nhanhct, chi2 column exact
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}   Nhanh
+           {c |} Misoprosto
+           {c |} l vs nhanh
+ can thiep {c |}  Placebo
+ngoai khoa {c |}   Placebo {c |}     Total
+{hline 11}{c +}{hline 11}{c +}{hline 10}
+     Khong {c |}{res}       592 {txt}{c |}{res}       592 
+           {txt}{c |}{res}     98.67 {txt}{c |}{res}     98.67 
+{txt}{hline 11}{c +}{hline 11}{c +}{hline 10}
+        Co {c |}{res}         8 {txt}{c |}{res}         8 
+           {txt}{c |}{res}      1.33 {txt}{c |}{res}      1.33 
+{txt}{hline 11}{c +}{hline 11}{c +}{hline 10}
+     Total {c |}{res}       600 {txt}{c |}{res}       600 
+           {txt}{c |}{res}    100.00 {txt}{c |}{res}    100.00 
+
+{txt}
+{com}. tabulate ttnoikhoa nhanhct, chi2 column exact
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}   Nhanh
+           {c |} Misoprosto
+           {c |} l vs nhanh
+ thu thuat {c |}  Placebo
+  noi khoa {c |}   Placebo {c |}     Total
+{hline 11}{c +}{hline 11}{c +}{hline 10}
+     Khong {c |}{res}       599 {txt}{c |}{res}       599 
+           {txt}{c |}{res}     99.83 {txt}{c |}{res}     99.83 
+{txt}{hline 11}{c +}{hline 11}{c +}{hline 10}
+        Co {c |}{res}         1 {txt}{c |}{res}         1 
+           {txt}{c |}{res}      0.17 {txt}{c |}{res}      0.17 
+{txt}{hline 11}{c +}{hline 11}{c +}{hline 10}
+     Total {c |}{res}       600 {txt}{c |}{res}       600 
+           {txt}{c |}{res}    100.00 {txt}{c |}{res}    100.00 
+
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. exit, clear

@@ -1,0 +1,114 @@
+.-
+help for ^2-sample test of variance^           Menu: Statistics--Parametric tests
+.-
+
+^Description of the test^
+^-----------------------^
+
+This command performs the variance ratio test, which tests whether the
+variance sigma_1^^2 of population 1 equals the variance sigma_2^^2 of
+population 2.
+
+That is, it tests the null hypothesis Ho: sigma_1^^2 = sigma_2^^2.
+
+The test statistic VR is the ratio of the standard deviation squared sd_1^^2
+for sample 1 to the standard deviation squared sd_2^^2 for sample 2;
+i.e., VR = (sd_1^^2)/(sd_2^^2). 
+
+If population 1 and population 2 are both normal, then VR has an F distribution
+with n1 - 1 numerator degrees of freedom and n2 - 1 denominator degrees of
+freedom, where n1 and n2 are the sizes of samples 1 and 2, respectively.
+
+
+^Examples (how to choose the right option for your dataset arrangement)^
+^----------------------------------------------------------------------^
+
+In this example, we illustrate the choice of options
+
+	^1 data variable, 1 group variable^
+	^2 independent data variables^
+
+We wish to test whether the mean height of male college seniors is the same
+as the mean height of male college freshmen.  So we randomly sample 6 male
+seniors and 7 freshmen and measure their heights (in inches):
+
+Seniors:   65, 67, 70, 71, 74, 75
+Freshmen:  68, 69, 71, 71, 72, 73, 76
+
+The data can be entered in two ways @input_sq!(click here for help on inputting data)@:
+
+^Data Arrangement:  1 data variable, 1 group variable^
+
+We create two variables: ^height^ and ^group^.
+^group^ = 1 for seniors, and ^group^ = 2 for freshmen.
+
+After we enter the data, we list them by selecting ^List data^ under the
+^Summaries^ menu:
+
+^. list height group in 1/13^                                                     
+                                                                                
+       height     group                                                         
+  1.       65         1                                                         
+  2.       67         1                                                         
+  3.       70         1                                                         
+  4.       71         1                                                         
+  5.       74         1                                                         
+  6.       75         1                                                         
+  7.       68         2                                                         
+  8.       69         2                                                         
+  9.       71         2                                                         
+ 10.       71         2                                                         
+ 11.       72         2                                                         
+ 12.       73         2                                                         
+ 13.       76         2                                                         
+ 
+For this data arrangement, we must choose the "1 data variable, 1 group
+variable" option in the first dialog box. 
+
+In the second dialog box, we choose ^height^ for the "Data variable" and
+^group^ for the "Group var. (2 groups)".
+
+
+^Data Arrangement: 2 independent data variables^
+
+We create two variables: ^hsenior^ and ^hfresh^.
+^hsenior^ contains the heights of the seniors, and
+^hfresh^ contains the heights of the freshmen.
+
+After we enter the data, we list them by selecting ^List data^ under the
+^Summaries^ menu:
+
+. list hsenior hfresh in 1/7                                                    
+                                                                                
+      hsenior    hfresh                                                         
+  1.       65        68                                                         
+  2.       67        69                                                         
+  3.       70        71                                                         
+  4.       71        71                                                         
+  5.       74        72                                                         
+  6.       75        73                                                         
+  7.        .        76                                                         
+ 
+For this data arrangement, we must choose the "2 independent data variables"
+option in the first dialog box. 
+
+In the second dialog box, we choose ^hsenior^ for "Data variable #1" and
+^hfresh^ for "Data variable #2".
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@ptev1dlg!1-sample test of variance  (Statistics--Parametric tests)@
+
+@sdt1dlg!1-sample test of variance  (Calculator menu)@
+@sdtdlg!2-sample test of variance  (Calculator menu)@
+
+@ptntdlg!Normality test@
+@ptt2dlg!2-sample t test (note unequal variances option)@
+@rsumdlg!Mann-Whitney (Wilcoxon rank-sum) test (nonparametric 2-sample test)@
+@ksmdlg!Kolmogorov-Smirnov test (test for equality of distributions)@
+
+@sdtest!For the command-line version, see help for sdtest.@

@@ -1,0 +1,37 @@
+{smcl}
+{* 16mar2004}{...}
+{hline}
+help for {hi:vguse}
+{hline}
+
+{title:Use VGSG datasets}
+
+{p 8 16 2}
+{cmd:vguse}
+[{cmd:"}]{it:filename}[{cmd:"}]
+[{cmd:,}
+{cmd:clear}
+]
+
+
+{title:Description}
+
+{p 4 4 2}
+{cmd:vguse} {it:filename} loads the specified Stata-format dataset from the
+web site for {it:A Visual Guide to Stata Graphics}.
+If {it:filename} is specified without a suffix, {cmd:.dta} is assumed.
+
+
+{title:Options}
+
+{p 4 8 2}
+{cmd:clear} permits the data to be loaded even if there is a dataset already
+    in memory and even if that dataset has changed since the data were last
+    saved.
+
+
+{title:Also see}
+
+{p 4 13 2}
+Online:  help for {help vgsg}; {help use}, {help sysuse}, {help webuse}
+{p_end}

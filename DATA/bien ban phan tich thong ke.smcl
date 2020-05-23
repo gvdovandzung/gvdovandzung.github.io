@@ -1,0 +1,1262 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}C:\DATA\bien ban phan tich thong ke.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}10 Aug 2009, 19:20:47
+
+{com}. describe
+
+{txt}Contains data from {res}C:\DATA\ivf_v.dta
+{txt}  obs:{res}           641                          
+{txt} vars:{res}             7                          15 Aug 2006 15:40
+{txt} size:{res}        20,512{txt} (99.8% of memory free)
+{hline 79}
+              storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}maso           {txt} float  %9.0g                  {res}ma so
+tuoime         {txt} float  %9.0g                  {res}tuoi me (nam)
+tang_ha        {txt} float  %9.0g                  {res}tang huyet ap thai ki - 1=tang
+                                                ha, 0=khong tang ha
+tuoithai       {txt} float  %9.0g                  {res}tuoi thai (tuan)
+gioi           {txt} float  %9.0g                  {res}gioi tinh tre - 1=trai, 0=gai
+tlsosinh       {txt} float  %9.0g                  {res}trong luong so sinh (gram)
+nghenghiep     {txt} float  %9.0g                  {res}nghe nghiep me - 1=tu do,
+                                                2=cong nhan, 3=vien chuc
+{txt}{hline 79}
+Sorted by:  {res}maso
+
+{com}. sum
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+        maso {c |}{res}       641         321     185.185          1        641
+      {txt}tuoime {c |}{res}       641    33.97192     3.87046         23         43
+     {txt}tang_ha {c |}{res}       641    .1388456    .3460553          0          1
+    {txt}tuoithai {c |}{res}       641    38.68725    2.329931      24.69      42.35
+        {txt}gioi {c |}{res}       641    .5085803    .5003168          0          1
+{txt}{hline 13}{c +}{hline 56}
+    tlsosinh {c |}{res}       641    3129.137    652.7827        630       4650
+  {txt}nghenghiep {c |}{res}       641    2.304212    .7328014          1          3
+
+{com}. edit
+{txt}- preserve
+
+{com}. {txt}- label define tang_ha 0 "khong tang ha"
+- label define tang_ha 1 "tang huyet ap", add
+- label define gioi 0 "nu"
+- label define gioi 1 "nam", add
+- label define nghenghiep 1 "tu do"
+- label define nghenghiep 2 "cong nhan", add
+- label define nghenghiep 3 "vien chuc", add
+{com}label values nghenghiep nghenghiep
+
+. label values gioi gioi
+
+. label values tang_ha tang_ha
+
+. label values tang_ha tang_ha
+
+. edit
+{txt}- preserve
+
+{com}. sum  tuoime tuoithai tlsosinh
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+      tuoime {c |}{res}       641    33.97192     3.87046         23         43
+    {txt}tuoithai {c |}{res}       641    38.68725    2.329931      24.69      42.35
+    {txt}tlsosinh {c |}{res}       641    3129.137    652.7827        630       4650
+
+{com}. tab1  tang_ha gioi nghenghiep
+
+{res}-> tabulation of tang_ha  
+
+{txt}tang huyet ap {c |}
+    thai ki - {c |}
+   1=tang ha, {c |}
+ 0=khong tang {c |}
+           ha {c |}      Freq.     Percent        Cum.
+{hline 14}{c +}{hline 35}
+khong tang ha {c |}{res}        552       86.12       86.12
+{txt}tang huyet ap {c |}{res}         89       13.88      100.00
+{txt}{hline 14}{c +}{hline 35}
+        Total {c |}{res}        641      100.00
+
+-> tabulation of gioi  
+
+  {txt}gioi tinh {c |}
+      tre - {c |}
+    1=trai, {c |}
+      0=gai {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         nu {c |}{res}        315       49.14       49.14
+{txt}        nam {c |}{res}        326       50.86      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        641      100.00
+
+-> tabulation of nghenghiep  
+
+{txt}nghe nghiep {c |}
+  me - 1=tu {c |}
+ do, 2=cong {c |}
+      nhan, {c |}
+3=vien chuc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      tu do {c |}{res}        104       16.22       16.22
+{txt}  cong nhan {c |}{res}        238       37.13       53.35
+{txt}  vien chuc {c |}{res}        299       46.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        641      100.00
+
+{com}. graph box tlsosinh, over(gioi) over(tang_ha)
+{res}
+{com}. sdtest tlsosinh, by(gioi)
+
+{txt}Variance ratio test
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+      nu {c |}{res}{col 12}    315{col 22} 3044.127{col 34}   35.421{col 46} 628.6603{col 58} 2974.434{col 70} 3113.819
+     {txt}nam {c |}{res}{col 12}    326{col 22} 3211.279{col 34} 36.88521{col 46} 665.9798{col 58} 3138.715{col 70} 3283.843
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 3129.137{col 34} 25.78336{col 46} 652.7827{col 58} 3078.507{col 70} 3179.767
+{txt}{hline 9}{c BT}{hline 68}
+    ratio = sd({res}nu{txt}) / sd({res}nam{txt})                                      f = {res}  0.8911
+{txt}Ho: ratio = 1                                    degrees of freedom = {res}314, 325
+
+    {txt}Ha: ratio < 1               Ha: ratio != 1                 Ha: ratio > 1
+  Pr(F < f) = {res}0.1518         {txt}2*Pr(F < f) = {res}0.3037        {txt}   Pr(F > f) = {res}0.8482
+
+{com}. ttest tlsosinh, by(gioi)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+      nu {c |}{res}{col 12}    315{col 22} 3044.127{col 34}   35.421{col 46} 628.6603{col 58} 2974.434{col 70} 3113.819
+     {txt}nam {c |}{res}{col 12}    326{col 22} 3211.279{col 34} 36.88521{col 46} 665.9798{col 58} 3138.715{col 70} 3283.843
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 3129.137{col 34} 25.78336{col 46} 652.7827{col 58} 3078.507{col 70} 3179.767
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-167.1522{col 34} 51.18935{col 58}-267.6718{col 70}-66.63249
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}nu{txt}) - mean({res}nam{txt})                                   t = {res} -3.2654
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     639
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0006         {txt}Pr(|T| > |t|) = {res}0.0012          {txt}Pr(T > t) = {res}0.9994
+
+{com}. sdtest tlsosinh, by(tang_ha)
+
+{txt}Variance ratio test
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+khong ta {c |}{res}{col 12}    552{col 22} 3191.531{col 34} 25.58435{col 46} 601.0962{col 58} 3141.276{col 70} 3241.786
+{txt}tang huy {c |}{res}{col 12}     89{col 22} 2742.157{col 34} 86.17222{col 46} 812.9471{col 58} 2570.908{col 70} 2913.406
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 3129.137{col 34} 25.78336{col 46} 652.7827{col 58} 3078.507{col 70} 3179.767
+{txt}{hline 9}{c BT}{hline 68}
+    ratio = sd({res}khong ta{txt}) / sd({res}tang huy{txt})                           f = {res}  0.5467
+{txt}Ho: ratio = 1                                    degrees of freedom =  {res}551, 88
+
+    {txt}Ha: ratio < 1               Ha: ratio != 1                 Ha: ratio > 1
+  Pr(F < f) = {res}0.0000         {txt}2*Pr(F < f) = {res}0.0001        {txt}   Pr(F > f) = {res}1.0000
+
+{com}. ttest tlsosinh, by(tang_ha) unequal
+
+{txt}Two-sample t test with unequal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+khong ta {c |}{res}{col 12}    552{col 22} 3191.531{col 34} 25.58435{col 46} 601.0962{col 58} 3141.276{col 70} 3241.786
+{txt}tang huy {c |}{res}{col 12}     89{col 22} 2742.157{col 34} 86.17222{col 46} 812.9471{col 58} 2570.908{col 70} 2913.406
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 3129.137{col 34} 25.78336{col 46} 652.7827{col 58} 3078.507{col 70} 3179.767
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} 449.3735{col 34} 89.88999{col 58} 271.1197{col 70} 627.6273
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}khong ta{txt}) - mean({res}tang huy{txt})                        t = {res}  4.9991
+{txt}Ho: diff = 0                     Satterthwaite's degrees of freedom = {res} 104.069
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}1.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}0.0000
+
+{com}. ttest tlsosinh, by(tang_ha) unequal welch
+
+{txt}Two-sample t test with unequal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+khong ta {c |}{res}{col 12}    552{col 22} 3191.531{col 34} 25.58435{col 46} 601.0962{col 58} 3141.276{col 70} 3241.786
+{txt}tang huy {c |}{res}{col 12}     89{col 22} 2742.157{col 34} 86.17222{col 46} 812.9471{col 58} 2570.908{col 70} 2913.406
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 3129.137{col 34} 25.78336{col 46} 652.7827{col 58} 3078.507{col 70} 3179.767
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} 449.3735{col 34} 89.88999{col 58} 271.1269{col 70}   627.62
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}khong ta{txt}) - mean({res}tang huy{txt})                        t = {res}  4.9991
+{txt}Ho: diff = 0                             Welch's degrees of freedom = {res} 104.431
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}1.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}0.0000
+
+{com}. ttest tlsosinh, by(tang_ha) unequal
+
+{txt}Two-sample t test with unequal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+khong ta {c |}{res}{col 12}    552{col 22} 3191.531{col 34} 25.58435{col 46} 601.0962{col 58} 3141.276{col 70} 3241.786
+{txt}tang huy {c |}{res}{col 12}     89{col 22} 2742.157{col 34} 86.17222{col 46} 812.9471{col 58} 2570.908{col 70} 2913.406
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 3129.137{col 34} 25.78336{col 46} 652.7827{col 58} 3078.507{col 70} 3179.767
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} 449.3735{col 34} 89.88999{col 58} 271.1197{col 70} 627.6273
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}khong ta{txt}) - mean({res}tang huy{txt})                        t = {res}  4.9991
+{txt}Ho: diff = 0                     Satterthwaite's degrees of freedom = {res} 104.069
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}1.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}0.0000
+
+{com}. zqnttest tlsosinh, by(gioi)
+==============================================================================
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    tlsosinh {c |}{res}       641    3129.137    652.7827        630       4650
+==============================================================================
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+      nu {c |}{res}{col 12}    315{col 22} 3044.127{col 34}   35.421{col 46} 628.6603{col 58} 2974.434{col 70} 3113.819
+     {txt}nam {c |}{res}{col 12}    326{col 22} 3211.279{col 34} 36.88521{col 46} 665.9798{col 58} 3138.715{col 70} 3283.843
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 3129.137{col 34} 25.78336{col 46} 652.7827{col 58} 3078.507{col 70} 3179.767
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-167.1522{col 34} 51.18935{col 58}-267.6718{col 70}-66.63249
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}nu{txt}) - mean({res}nam{txt})                                   t = {res} -3.2654
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     639
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0006         {txt}Pr(|T| > |t|) = {res}0.0012          {txt}Pr(T > t) = {res}0.9994
+==============================================================================
+
+{com}. zqnttest tlsosinh, by(tang_ha)
+==============================================================================
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    tlsosinh {c |}{res}       641    3129.137    652.7827        630       4650
+==============================================================================
+
+{txt}Two-sample t test with unequal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+khong ta {c |}{res}{col 12}    552{col 22} 3191.531{col 34} 25.58435{col 46} 601.0962{col 58} 3141.276{col 70} 3241.786
+{txt}tang huy {c |}{res}{col 12}     89{col 22} 2742.157{col 34} 86.17222{col 46} 812.9471{col 58} 2570.908{col 70} 2913.406
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 3129.137{col 34} 25.78336{col 46} 652.7827{col 58} 3078.507{col 70} 3179.767
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} 449.3735{col 34} 89.88999{col 58} 271.1197{col 70} 627.6273
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}khong ta{txt}) - mean({res}tang huy{txt})                        t = {res}  4.9991
+{txt}Ho: diff = 0                     Satterthwaite's degrees of freedom = {res} 104.069
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}1.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}0.0000
+..............................................................................
+
+{txt}Two-sample Wilcoxon rank-sum (Mann-Whitney) test
+
+     tang_ha {c |}      obs    rank sum    expected
+{hline 13}{c +}{hline 33}
+khong tang h {c |}{res}{col 17}    552{col 26}    185203{col 38}    177192
+{txt}tang huyet a {c |}{res}{col 17}     89{col 26}     20558{col 38}     28569
+{txt}{hline 13}{c +}{hline 33}
+    combined {c |}{res}{col 17}    641{col 26}    205761{col 38}    205761
+
+{txt}unadjusted variance{col 22}{res}2628348.00
+{txt}adjustment for ties{col 22}{res}   -144.78
+{txt}{col 22}{hline 10}
+adjusted variance{col 22}{res}2628203.22
+
+{txt}Ho: tlsosinh(tang_ha==khong tang ha) = tlsosinh(tang_ha==tang huyet ap)
+{col 14}z = {res}  4.941
+{txt}{col 5}Prob > |z| = {res}  0.0000
+==============================================================================
+
+{com}. oneway tlsosinh nghenghiep, scheffe tabulate
+
+{txt}nghe nghiep {c |}
+  me - 1=tu {c |}
+ do, 2=cong {c |}   Summary of trong luong so sinh
+      nhan, {c |}               (gram)
+3=vien chuc {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+      tu do {c |}  {res} 2981.4135   643.76283         104
+  {txt}cong nhan {c |}  {res}  3118.084   646.69338         238
+  {txt}vien chuc {c |}  {res} 3189.3177   654.19649         299
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 3129.1373   652.78265         641
+
+                        {txt}Analysis of Variance
+    Source              SS         df      MS            F     Prob > F
+{hline 72}
+Between groups     {res} 3381483.56      2   1690741.78      4.00     0.0187
+{txt} Within groups     {res}  269338638    638   422160.875
+{txt}{hline 72}
+    Total          {res}  272720122    640    426125.19
+
+{txt}Bartlett's test for equal variances:  chi2({res}2{txt}) = {res}  0.0558{txt}  Prob>chi2 = {res}0.973
+
+                   {txt}Comparison of trong luong so sinh (gram)
+            by nghe nghiep me - 1=tu do, 2=cong nhan, 3=vien chuc
+                                  (Scheffe)
+Row Mean-{c |}
+Col Mean {c |}      tu do   cong nha
+{hline 9}{c +}{hline 22}
+cong nha {c |}   {res} 136.671
+         {txt}{c |}  {res}    0.202
+         {txt}{c |}
+vien chu {c |}   {res} 207.904    71.2337
+         {txt}{c |}  {res}    0.020      0.451
+
+{com}. zqnttest tlsosinh, by(gioi)
+==============================================================================
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    tlsosinh {c |}{res}       641    3129.137    652.7827        630       4650
+==============================================================================
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+      nu {c |}{res}{col 12}    315{col 22} 3044.127{col 34}   35.421{col 46} 628.6603{col 58} 2974.434{col 70} 3113.819
+     {txt}nam {c |}{res}{col 12}    326{col 22} 3211.279{col 34} 36.88521{col 46} 665.9798{col 58} 3138.715{col 70} 3283.843
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 3129.137{col 34} 25.78336{col 46} 652.7827{col 58} 3078.507{col 70} 3179.767
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-167.1522{col 34} 51.18935{col 58}-267.6718{col 70}-66.63249
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}nu{txt}) - mean({res}nam{txt})                                   t = {res} -3.2654
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     639
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0006         {txt}Pr(|T| > |t|) = {res}0.0012          {txt}Pr(T > t) = {res}0.9994
+==============================================================================
+
+{com}. zqnttest tlsosinh, by(nghenghiep)
+==============================================================================
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    tlsosinh {c |}{res}       641    3129.137    652.7827        630       4650
+==============================================================================
+
+{txt}nghe nghiep {c |}
+  me - 1=tu {c |}
+ do, 2=cong {c |}   Summary of trong luong so sinh
+      nhan, {c |}               (gram)
+3=vien chuc {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+      tu do {c |}  {res} 2981.4135   643.76283         104
+  {txt}cong nhan {c |}  {res}  3118.084   646.69338         238
+  {txt}vien chuc {c |}  {res} 3189.3177   654.19649         299
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 3129.1373   652.78265         641
+
+                        {txt}Analysis of Variance
+    Source              SS         df      MS            F     Prob > F
+{hline 72}
+Between groups     {res} 3381483.56      2   1690741.78      4.00     0.0187
+{txt} Within groups     {res}  269338638    638   422160.875
+{txt}{hline 72}
+    Total          {res}  272720122    640    426125.19
+
+{txt}Bartlett's test for equal variances:  chi2({res}2{txt}) = {res}  0.0558{txt}  Prob>chi2 = {res}0.973
+
+                   {txt}Comparison of trong luong so sinh (gram)
+            by nghe nghiep me - 1=tu do, 2=cong nhan, 3=vien chuc
+                                  (Scheffe)
+Row Mean-{c |}
+Col Mean {c |}      tu do   cong nha
+{hline 9}{c +}{hline 22}
+cong nha {c |}   {res} 136.671
+         {txt}{c |}  {res}    0.202
+         {txt}{c |}
+vien chu {c |}   {res} 207.904    71.2337
+         {txt}{c |}  {res}    0.020      0.451
+==============================================================================
+
+{com}. anova tlsosinh nghenghiep, partial
+
+                           {txt}Number of obs ={res}     641     {txt}R-squared     ={res}  0.0124
+                           {txt}Root MSE      ={res} 649.739     {txt}Adj R-squared ={res}  0.0093
+
+                  {txt}Source {c |}  Partial SS    df       MS           F     Prob > F
+              {hline 11}{c +}{hline 52}
+                   Model {c |} {res} 3381483.56     2  1690741.78       4.00     0.0187
+                         {txt}{c |}
+              nghenghiep {c |} {res} 3381483.56     2  1690741.78       4.00     0.0187
+                         {txt}{c |}
+                Residual {c |} {res}  269338638   638  422160.875   
+              {txt}{hline 11}{c +}{hline 52}
+                   Total {c |} {res}  272720122   640   426125.19   
+
+{com}. help test
+
+. twoway (scatter tlsosinh tuoithai)
+{res}
+{com}. twoway (scatter tlsosinh tuoithai) (lfit tlsosinh tuoithai)
+{res}
+{com}. regress tlsosinh tuoithai
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     641
+{txt}{hline 13}{char +}{hline 30}           F(  1,   639) ={res}  762.25
+    {txt}   Model {char |} {res}  148354317     1   148354317           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res}  124365805   639  194625.673           {txt}R-squared     = {res} 0.5440
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.5433
+    {txt}   Total {char |} {res}  272720122   640   426125.19           {txt}Root MSE      = {res} 441.16
+
+{txt}{hline 13}{c TT}{hline 64}
+    tlsosinh {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{char +}{hline 64}
+    tuoithai {c |}  {res} 206.6412   7.484572    27.61   0.000     191.9439    221.3386
+{txt}       _cons {c |}  {res}-4865.245   290.0814   -16.77   0.000    -5434.873   -4295.617
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. exit, clear
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}C:\DATA\bien ban phan tich thong ke.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}12 Aug 2009, 17:32:28
+
+{com}. use "C:\DATA\ivf_v2.dta", clear
+
+. use "C:\DATA\ivf_v.dta", clear
+
+. twoway (scatter tlsosinh tuoithai)
+{res}
+{com}. twoway (scatter tlsosinh tuoithai) (lfit tlsosinh tuoithai), ytitle(Troïng löôïng sô sinh) xtitle(Tuoåi thai) xlabel(20(4)44)
+{res}
+{com}. regress tlsosinh tuoithai
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     641
+{txt}{hline 13}{char +}{hline 30}           F(  1,   639) ={res}  762.25
+    {txt}   Model {char |} {res}  148354317     1   148354317           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res}  124365805   639  194625.673           {txt}R-squared     = {res} 0.5440
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.5433
+    {txt}   Total {char |} {res}  272720122   640   426125.19           {txt}Root MSE      = {res} 441.16
+
+{txt}{hline 13}{c TT}{hline 64}
+    tlsosinh {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{char +}{hline 64}
+    tuoithai {c |}  {res} 206.6412   7.484572    27.61   0.000     191.9439    221.3386
+{txt}       _cons {c |}  {res}-4865.245   290.0814   -16.77   0.000    -5434.873   -4295.617
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. sum  tlsosinh tlsosinh
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    tlsosinh {c |}{res}       641    3129.137    652.7827        630       4650
+    {txt}tlsosinh {c |}{res}       641    3129.137    652.7827        630       4650
+
+{com}. di 641  *  3129.137^2
+{res}6.276e+09
+
+{com}. di %10.0f 640    * 652.7827^2
+{res} 272720162
+
+{com}. di 148354317/272720122
+{res}.54398009
+
+{com}. di  652.7827^2
+{res}426125.25
+
+{com}. pwcorr tlsosinh tuoithai
+
+             {txt}{c |} tlsosinh tuoithai
+{hline 13}{c +}{hline 18}
+    tlsosinh {c |} {res}  1.0000 
+    {txt}tuoithai {c |} {res}  0.7376   1.0000 
+
+{com}. di 0.7376 ^2
+{res}.54405376
+
+{com}. regress tlsosinh tuoithai
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     641
+{txt}{hline 13}{char +}{hline 30}           F(  1,   639) ={res}  762.25
+    {txt}   Model {char |} {res}  148354317     1   148354317           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res}  124365805   639  194625.673           {txt}R-squared     = {res} 0.5440
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.5433
+    {txt}   Total {char |} {res}  272720122   640   426125.19           {txt}Root MSE      = {res} 441.16
+
+{txt}{hline 13}{c TT}{hline 64}
+    tlsosinh {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{char +}{hline 64}
+    tuoithai {c |}  {res} 206.6412   7.484572    27.61   0.000     191.9439    221.3386
+{txt}       _cons {c |}  {res}-4865.245   290.0814   -16.77   0.000    -5434.873   -4295.617
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. di 1- 124365805 / 272720122
+{res}.54398009
+
+{com}. di 1- (124365805/639) / (272720122/640)
+{res}.54326645
+
+{com}. use "C:\DATA\gfr.dta", clear
+
+. twoway (scatter gfr cr)
+{res}
+{com}. gen reci_cr=1/cr
+
+. regress gfr reci_cr, noconstant
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}      60
+{txt}{hline 13}{char +}{hline 30}           F(  1,    59) ={res}  485.24
+    {txt}   Model {char |} {res}  261199.82     1   261199.82           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res} 31759.3804    59  538.294583           {txt}R-squared     = {res} 0.8916
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.8898
+    {txt}   Total {char |} {res}   292959.2    60  4882.65333           {txt}Root MSE      = {res} 23.201
+
+{txt}{hline 13}{c TT}{hline 64}
+         gfr {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{char +}{hline 64}
+     reci_cr {c |}  {res} 74.68295   3.390354    22.03   0.000     67.89887    81.46703
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. twoway (scatter reci_cr gfr)
+{res}
+{com}. twoway (scatter reci_cr gfr) (lfit reci_cr gfr)
+{res}
+{com}. use "C:\DATA\ivf_v2.dta", clear
+
+. zqnttest tlsosinh, by(gioi)
+==============================================================================
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    tlsosinh {c |}{res}       641    3129.137    652.7827        630       4650
+==============================================================================
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+     gai {c |}{res}{col 12}    315{col 22} 3044.127{col 34}   35.421{col 46} 628.6603{col 58} 2974.434{col 70} 3113.819
+    {txt}trai {c |}{res}{col 12}    326{col 22} 3211.279{col 34} 36.88521{col 46} 665.9798{col 58} 3138.715{col 70} 3283.843
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 3129.137{col 34} 25.78336{col 46} 652.7827{col 58} 3078.507{col 70} 3179.767
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-167.1522{col 34} 51.18935{col 58}-267.6718{col 70}-66.63249
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}gai{txt}) - mean({res}trai{txt})                                 t = {res} -3.2654
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     639
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0006         {txt}Pr(|T| > |t|) = {res}0.0012          {txt}Pr(T > t) = {res}0.9994
+==============================================================================
+
+{com}. regress tlsosinh gioi
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     641
+{txt}{hline 13}{char +}{hline 30}           F(  1,   639) ={res}   10.66
+    {txt}   Model {char |} {res}  4476041.4     1   4476041.4           {txt}Prob > F      = {res} 0.0012
+    {txt}Residual {char |} {res}  268244081   639  419787.293           {txt}R-squared     = {res} 0.0164
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0149
+    {txt}   Total {char |} {res}  272720122   640   426125.19           {txt}Root MSE      = {res} 647.91
+
+{txt}{hline 13}{c TT}{hline 64}
+    tlsosinh {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{char +}{hline 64}
+        gioi {c |}  {res} 167.1522   51.18935     3.27   0.001     66.63249    267.6718
+{txt}       _cons {c |}  {res} 3044.127   36.50559    83.39   0.000     2972.442    3115.812
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. regress tlsosinh tuoithai gioi tang_ha
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     641
+{txt}{hline 13}{char +}{hline 30}           F(  3,   637) ={res}  275.43
+    {txt}   Model {char |} {res}  153998584     3  51332861.4           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res}  118721538   637   186376.04           {txt}R-squared     = {res} 0.5647
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.5626
+    {txt}   Total {char |} {res}  272720122   640   426125.19           {txt}Root MSE      = {res} 431.71
+
+{txt}{hline 13}{c TT}{hline 64}
+    tlsosinh {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{char +}{hline 64}
+    tuoithai {c |}  {res} 201.4248   7.541441    26.71   0.000     186.6157    216.2339
+{txt}        gioi {c |}  {res} 167.8167   34.17884     4.91   0.000     100.6999    234.9335
+{txt}     tang_ha {c |}  {res}  -142.14    50.8685    -2.79   0.005    -242.0302   -42.24979
+{txt}       _cons {c |}  {res}-4729.048   294.1447   -16.08   0.000    -5306.659   -4151.438
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. regress tlsosinh tang_ha
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     641
+{txt}{hline 13}{char +}{hline 30}           F(  1,   639) ={res}   38.45
+    {txt}   Model {char |} {res} 15476970.6     1  15476970.6           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res}  257243151   639  402571.442           {txt}R-squared     = {res} 0.0568
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0553
+    {txt}   Total {char |} {res}  272720122   640   426125.19           {txt}Root MSE      = {res} 634.49
+
+{txt}{hline 13}{c TT}{hline 64}
+    tlsosinh {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{char +}{hline 64}
+     tang_ha {c |}  {res}-449.3735   72.47462    -6.20   0.000    -591.6907   -307.0563
+{txt}       _cons {c |}  {res} 3191.531   27.00548   118.18   0.000     3138.501    3244.561
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. regress tlsosinh tuoithai
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}     641
+{txt}{hline 13}{char +}{hline 30}           F(  1,   639) ={res}  762.25
+    {txt}   Model {char |} {res}  148354317     1   148354317           {txt}Prob > F      = {res} 0.0000
+    {txt}Residual {char |} {res}  124365805   639  194625.673           {txt}R-squared     = {res} 0.5440
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.5433
+    {txt}   Total {char |} {res}  272720122   640   426125.19           {txt}Root MSE      = {res} 441.16
+
+{txt}{hline 13}{c TT}{hline 64}
+    tlsosinh {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{char +}{hline 64}
+    tuoithai {c |}  {res} 206.6412   7.484572    27.61   0.000     191.9439    221.3386
+{txt}       _cons {c |}  {res}-4865.245   290.0814   -16.77   0.000    -5434.873   -4295.617
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. zqnttest tuoithai, by(tang_ha)
+==============================================================================
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    tuoithai {c |}{res}       641    38.68725    2.329931      24.69      42.35
+==============================================================================
+
+{txt}Two-sample t test with unequal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+   ha bt {c |}{res}{col 12}    552{col 22}  38.9092{col 34}   .08882{col 46} 2.086797{col 58} 38.73474{col 70} 39.08367
+ {txt}ha tang {c |}{res}{col 12}     89{col 22} 37.31067{col 34} .3350094{col 46} 3.160472{col 58} 36.64491{col 70} 37.97644
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 38.68725{col 34} .0920267{col 46} 2.329931{col 58} 38.50654{col 70} 38.86797
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} 1.598529{col 34} .3465837{col 58} .9109774{col 70}  2.28608
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}ha bt{txt}) - mean({res}ha tang{txt})                            t = {res}  4.6122
+{txt}Ho: diff = 0                     Satterthwaite's degrees of freedom = {res} 100.727
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}1.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}0.0000
+..............................................................................
+
+{txt}Two-sample Wilcoxon rank-sum (Mann-Whitney) test
+
+     tang_ha {c |}      obs    rank sum    expected
+{hline 13}{c +}{hline 33}
+       ha bt {c |}{res}{col 17}    552{col 26}    186162{col 38}    177192
+     {txt}ha tang {c |}{res}{col 17}     89{col 26}     19599{col 38}     28569
+{txt}{hline 13}{c +}{hline 33}
+    combined {c |}{res}{col 17}    641{col 26}    205761{col 38}    205761
+
+{txt}unadjusted variance{col 22}{res}2628348.00
+{txt}adjustment for ties{col 22}{res}   -843.61
+{txt}{col 22}{hline 10}
+adjusted variance{col 22}{res}2627504.39
+
+{txt}Ho: tuoithai(tang_ha==ha bt) = tuoithai(tang_ha==ha tang)
+{col 14}z = {res}  5.534
+{txt}{col 5}Prob > |z| = {res}  0.0000
+==============================================================================
+
+{com}. use "C:\DATA\height rural.dta", clear
+
+. describe
+
+{txt}Contains data from {res}C:\DATA\height rural.dta
+{txt}  obs:{res}            32                          
+{txt} vars:{res}             4                          28 Jun 2006 13:19
+{txt} size:{res}           512{txt} (99.9% of memory free)
+{hline 79}
+              storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}stt            {txt} byte   %8.0g                  {res}
+tuoi           {txt} int    %8.0g                  {res}tuoi (thang tuoi)
+chieucao       {txt} double %10.0g                 {res}chieu cao (cm)
+diadu          {txt} byte   %10.0g      diadu      {res}thanh thi hay nong thon
+{txt}{hline 79}
+Sorted by:  
+
+{com}. tab1  diadu
+
+{res}-> tabulation of diadu  
+
+  {txt}thanh thi {c |}
+   hay nong {c |}
+       thon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  nong thon {c |}{res}         14       43.75       43.75
+{txt} thanh thi  {c |}{res}         18       56.25      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         32      100.00
+
+{com}. regress chieucao diadu
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}      32
+{txt}{hline 13}{char +}{hline 30}           F(  1,    30) ={res}    1.12
+    {txt}   Model {char |} {res} 65.0019841     1  65.0019841           {txt}Prob > F      = {res} 0.2982
+    {txt}Residual {char |} {res} 1740.25302    30  58.0084339           {txt}R-squared     = {res} 0.0360
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0039
+    {txt}   Total {char |} {res}   1805.255    31  58.2340323           {txt}Root MSE      = {res} 7.6163
+
+{txt}{hline 13}{c TT}{hline 64}
+    chieucao {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{char +}{hline 64}
+       diadu {c |}  {res} 2.873016   2.714065     1.06   0.298    -2.669845    8.415877
+{txt}       _cons {c |}  {res} 141.6714   2.035549    69.60   0.000     137.5143    145.8286
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. regress chieucao diadu  tuoi
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}      32
+{txt}{hline 13}{char +}{hline 30}           F(  2,    29) ={res}    5.06
+    {txt}   Model {char |} {res} 467.238191     2  233.619095           {txt}Prob > F      = {res} 0.0130
+    {txt}Residual {char |} {res} 1338.01681    29  46.1385107           {txt}R-squared     = {res} 0.2588
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2077
+    {txt}   Total {char |} {res}   1805.255    31  58.2340323           {txt}Root MSE      = {res} 6.7925
+
+{txt}{hline 13}{c TT}{hline 64}
+    chieucao {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{char +}{hline 64}
+       diadu {c |}  {res} 5.466326   2.574933     2.12   0.042     .1999967    10.73265
+{txt}        tuoi {c |}  {res} .4157214   .1407971     2.95   0.006     .1277591    .7036838
+{txt}       _cons {c |}  {res} 86.35079   18.82381     4.59   0.000     47.85177    124.8498
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. regress tuoi diadu
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}      32
+{txt}{hline 13}{char +}{hline 30}           F(  1,    30) ={res}    3.95
+    {txt}   Model {char |} {res} 306.446429     1  306.446429           {txt}Prob > F      = {res} 0.0561
+    {txt}Residual {char |} {res} 2327.42857    30  77.5809524           {txt}R-squared     = {res} 0.1163
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.0869
+    {txt}   Total {char |} {res}   2633.875    31  84.9637097           {txt}Root MSE      = {res}  8.808
+
+{txt}{hline 13}{c TT}{hline 64}
+        tuoi {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{char +}{hline 64}
+       diadu {c |}  {res}-6.238095   3.138718    -1.99   0.056    -12.64821    .1720217
+{txt}       _cons {c |}  {res} 133.0714   2.354038    56.53   0.000     128.2638     137.879
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. bysort  diadu: sum tuoi chieucao
+
+{txt}{hline}
+-> diadu = nong thon
+
+    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+        tuoi {c |}{res}        14    133.0714    6.545278        121        140
+    {txt}chieucao {c |}{res}        14    141.6714    6.120511        131      149.5
+
+{txt}{hline}
+-> diadu = thanh thi
+
+    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+        tuoi {c |}{res}        18    126.8333    10.20525        109        142
+    {txt}chieucao {c |}{res}        18    144.5444    8.586119      132.7      165.3
+
+
+{com}. use "C:\DATA\antithyr.dta", clear
+{txt}(Nhip tim truoc va sau dieu tri )
+
+{com}. describe
+
+{txt}Contains data from {res}C:\DATA\antithyr.dta
+{txt}  obs:{res}            12                          Nhip tim truoc va sau dieu tri 
+{txt} vars:{res}             3                          16 Jul 2002 22:01
+{txt} size:{res}           192{txt} (99.9% of memory free)
+{hline 79}
+              storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}id             {txt} float  %9.0g                  {res}
+hrate1         {txt} float  %9.0g                  {res}nhip tim truoc dieu tri
+hrate2         {txt} float  %9.0g                  {res}nhip tim sau dieu tri
+{txt}{hline 79}
+Sorted by:  
+
+{com}. edit
+{txt}- preserve
+
+{com}. ttest hrate1 == hrate2
+
+{txt}Paired t test
+{hline 9}{c TT}{hline 68}
+Variable{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+  hrate1 {c |}{res}{col 12}     12{col 22}   108.75{col 34}  2.95964{col 46} 10.25249{col 58} 102.2359{col 70} 115.2641
+  {txt}hrate2 {c |}{res}{col 12}     12{col 22} 96.66667{col 34} 1.421338{col 46}  4.92366{col 58} 93.53832{col 70} 99.79501
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 12}     12{col 22} 12.08333{col 34} 2.916667{col 46} 10.10363{col 58} 5.663793{col 70} 18.50287
+{txt}{hline 9}{c BT}{hline 68}
+     mean(diff) = mean({res}hrate1{txt} - {res}hrate2{txt})                           t = {res}  4.1429
+{txt} Ho: mean(diff) = 0                              degrees of freedom = {res}      11
+
+ {txt}Ha: mean(diff) < 0           Ha: mean(diff) != 0           Ha: mean(diff) > 0
+ Pr(T < t) = {res}0.9992         {txt}Pr(|T| > |t|) = {res}0.0016          {txt}Pr(T > t) = {res}0.0008
+
+{com}. signrank hrate1 = hrate2
+
+{txt}Wilcoxon signed-rank test
+
+        sign {c |}      obs   sum ranks    expected
+{hline 13}{c +}{hline 33}
+    positive {c |}{res}{col 17}     10{col 26}      72.5{col 38}      38.5
+    {txt}negative {c |}{res}{col 17}      1{col 26}       4.5{col 38}      38.5
+        {txt}zero {c |}{res}{col 17}      1{col 26}         1{col 38}         1
+{txt}{hline 13}{c +}{hline 33}
+         all {c |}{res}{col 17}     12{col 26}        78{col 38}        78
+
+{txt}unadjusted variance{col 22}{res}    162.50
+{txt}adjustment for ties{col 22}{res}     -2.50
+{txt}adjustment for zeros{col 22}{res}     -0.25
+{txt}{col 22}{hline 10}
+adjusted variance{col 22}{res}    159.75
+
+{txt}Ho: hrate1 = hrate2
+{col 14}z = {res}  2.690
+{txt}{col 5}Prob > |z| = {res}  0.0071
+
+{com}. use "C:\DATA\dot tu SIDS_vaccine.dta", clear
+
+. describe
+
+{txt}Contains data from {res}C:\DATA\dot tu SIDS_vaccine.dta
+{txt}  obs:{res}         1,537                          
+{txt} vars:{res}            18                          2 Jul 2009 21:46
+{txt} size:{res}       116,812{txt} (98.9% of memory free)
+{hline 79}
+              storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}id             {txt} float  %9.0g                  {res}
+benhchung      {txt} float  %11.0g      caco       {res}
+vacxin         {txt} float  %17.0g      vacc       {res}have vaccinated
+nhomtuoi       {txt} float  %11.0g      age        {res}
+nghenghiep     {txt} float  %29.0g      socio      {res}
+chuyennha      {txt} float  %21.0g      moved      {res}moved
+ntuoime        {txt} float  %10.0g      matage     {res}
+sotre          {txt} float  %15.0g      chidren    {res}
+tlsosinh       {txt} float  %11.0g      bweigth    {res}
+tuoithai       {txt} float  %10.0g      gestage    {res}
+csdacbiet      {txt} float  %9.0g       special    {res}special care baby unit
+nhapvien       {txt} float  %9.0g       special    {res}admitted to hospital
+apgar          {txt} float  %9.0g       apgar      {res}
+dedoacs        {txt} float  %25.0g      life       {res}Apparent life threatening event
+traigiuong     {txt} float  %9.0g       special    {res}bedclothes over the head
+namxap         {txt} float  %9.0g       prone      {res}
+gtnntuvong     {txt} float  %22.0g      explained
+                                              {res}
+chet48g        {txt} float  %9.0g       special    {res}died withinn 48h of vaccination
+{txt}{hline 79}
+Sorted by:  
+
+{com}. tab1  benhchung vacxin
+
+{res}-> tabulation of benhchung  
+
+  {txt}benhchung {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+ nhom chung {c |}{res}      1,234       80.29       80.29
+{txt}nhom dot tu {c |}{res}        303       19.71      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      1,537      100.00
+
+-> tabulation of vacxin  
+
+  {txt}have vaccinated {c |}      Freq.     Percent        Cum.
+{hline 18}{c +}{hline 35}
+khong tiem vaccin {c |}{res}        566       36.82       36.82
+{txt}      tiem vaccin {c |}{res}        971       63.18      100.00
+{txt}{hline 18}{c +}{hline 35}
+            Total {c |}{res}      1,537      100.00
+
+{com}. tabulate vacxin benhchung, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+                  {c |}       benhchung
+  have vaccinated {c |} nhom chun  nhom dot  {c |}     Total
+{hline 18}{c +}{hline 22}{c +}{hline 10}
+khong tiem vaccin {c |}{res}       412        154 {txt}{c |}{res}       566 
+                  {txt}{c |}{res}     33.39      50.83 {txt}{c |}{res}     36.82 
+{txt}{hline 18}{c +}{hline 22}{c +}{hline 10}
+      tiem vaccin {c |}{res}       822        149 {txt}{c |}{res}       971 
+                  {txt}{c |}{res}     66.61      49.17 {txt}{c |}{res}     63.18 
+{txt}{hline 18}{c +}{hline 22}{c +}{hline 10}
+            Total {c |}{res}     1,234        303 {txt}{c |}{res}     1,537 
+                  {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res} 31.7962  {txt} Pr = {res}0.000
+
+{com}. di 149*412/(822*154)
+{res}.48494328
+
+{com}. cc benhchung vacxin
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}      149         154{txt}  {c |}  {res}      303       0.4917
+        {txt}Controls {c |} {res}      822         412{txt}  {c |}  {res}     1234       0.6661
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      971         566{txt}  {c |}  {res}     1537       0.6318
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .4849433{txt}{col 43}{c |}   {res} .3730065    .6307832{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .5150567{txt}{col 43}{c |}   {res} .3692168    .6269935{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3430929{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    31.80{txt}  Pr>chi2 ={res} 0.0000
+
+{com}. bysort nhomtuoi: cc benhchung vacxin
+
+{txt}{hline}
+-> nhomtuoi = <91 ngay
+                                                         Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       33         124{txt}  {c |}  {res}      157       0.2102
+        {txt}Controls {c |} {res}      184         362{txt}  {c |}  {res}      546       0.3370
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      217         486{txt}  {c |}  {res}      703       0.3087
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .5235799{txt}{col 43}{c |}   {res} .3319959      .81016{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .4764201{txt}{col 43}{c |}   {res}   .18984    .6680041{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .1605518{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     9.19{txt}  Pr>chi2 ={res} 0.0024
+
+{txt}{hline}
+-> nhomtuoi = 91-120 ngay
+                                                         Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       36          10{txt}  {c |}  {res}       46       0.7826
+        {txt}Controls {c |} {res}      177          23{txt}  {c |}  {res}      200       0.8850
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      213          33{txt}  {c |}  {res}      246       0.8659
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .4677966{txt}{col 43}{c |}   {res} .1941578    1.203304{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .5322034{txt}{col 43}{c |}   {res}-.2033036    .8058422{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27}     .471{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     3.38{txt}  Pr>chi2 ={res} 0.0662
+
+{txt}{hline}
+-> nhomtuoi = >120 ngay
+                                                         Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       80          20{txt}  {c |}  {res}      100       0.8000
+        {txt}Controls {c |} {res}      461          27{txt}  {c |}  {res}      488       0.9447
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      541          47{txt}  {c |}  {res}      588       0.9201
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2342733{txt}{col 43}{c |}   {res} .1203512    .4647453{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7657267{txt}{col 43}{c |}   {res} .5352547    .8796488{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .7233607{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    23.62{txt}  Pr>chi2 ={res} 0.0000
+
+{com}. cc benhchung vacxin, by(nhomtuoi)
+
+        {txt}nhomtuoi {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+        <91 ngay {c |}  {res} .5235799      .3319959     .81016     32.45519{txt} (exact)
+     91-120 ngay {c |}  {res} .4677966      .1941578   1.203304     7.195122{txt} (exact)
+       >120 ngay {c |}  {res} .2342733      .1203512   .4647453     15.68027{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .4849433      .3730065   .6307832{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .4343386      .3123005   .6040657{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}2{txt}) = {res}    4.53{txt}  Pr>chi2 = {res}0.1039
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     26.81
+                                                {txt}Pr>chi2 ={res}    0.0000
+
+{com}. di (.4849433-.4343386)/.4343386
+{res}.11650979
+
+{com}. zcc benhchung vacxin, by(nhomtuoi)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}      149         154{txt}  {c |}  {res}      303       0.4917
+        {txt}Controls {c |} {res}      822         412{txt}  {c |}  {res}     1234       0.6661
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      971         566{txt}  {c |}  {res}     1537       0.6318
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .4849433{txt}{col 43}{c |}   {res} .3730065    .6307832{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .5150567{txt}{col 43}{c |}   {res} .3692168    .6269935{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3430929{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    31.80{txt}  Pr>chi2 ={res} 0.0000
+
+        {txt}nhomtuoi {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+        <91 ngay {c |}  {res} .5235799      .3319959     .81016     32.45519{txt} (exact)
+     91-120 ngay {c |}  {res} .4677966      .1941578   1.203304     7.195122{txt} (exact)
+       >120 ngay {c |}  {res} .2342733      .1203512   .4647453     15.68027{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .4849433      .3730065   .6307832{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .4343386      .3123005   .6040657{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}2{txt}) = {res}    4.53{txt}  Pr>chi2 = {res}0.1039
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     26.81
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien nhomtuoi khong tuong tac len moi quan he giua bien vacxin va bien benhchung
+       Ti so OR tho / OR hieu chinh cho bien so nhomtuoi  =1.12
+       Chenh lech giua OR tho va OR hieu chinh cho bien so nhomtuoi  =11.7%
+Bien nhomtuoi co gay nhieu len moi quan he giua bien vacxin va bien benhchung
+
+{com}. zcc benhchung vacxin, by(nhomtuoi)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}      149         154{txt}  {c |}  {res}      303       0.4917
+        {txt}Controls {c |} {res}      822         412{txt}  {c |}  {res}     1234       0.6661
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      971         566{txt}  {c |}  {res}     1537       0.6318
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .4849433{txt}{col 43}{c |}   {res} .3730065    .6307832{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .5150567{txt}{col 43}{c |}   {res} .3692168    .6269935{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3430929{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    31.80{txt}  Pr>chi2 ={res} 0.0000
+
+        {txt}nhomtuoi {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+        <91 ngay {c |}  {res} .5235799      .3319959     .81016     32.45519{txt} (exact)
+     91-120 ngay {c |}  {res} .4677966      .1941578   1.203304     7.195122{txt} (exact)
+       >120 ngay {c |}  {res} .2342733      .1203512   .4647453     15.68027{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .4849433      .3730065   .6307832{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .4343386      .3123005   .6040657{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}2{txt}) = {res}    4.53{txt}  Pr>chi2 = {res}0.1039
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     26.81
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien nhomtuoi khong tuong tac len moi quan he giua bien vacxin va bien benhchung
+       Ti so OR tho / OR hieu chinh cho bien so nhomtuoi  =1.12
+       Chenh lech giua OR tho va OR hieu chinh cho bien so nhomtuoi  =11.7%
+Bien nhomtuoi co gay nhieu len moi quan he giua bien vacxin va bien benhchung
+
+{com}. zcc benhchung vacxin, by( nghenghiep\)
+{err}\ invalid name
+in option by()
+{txt}{search r(198):r(198);}
+
+{com}. zcc benhchung vacxin, by( nghenghiep)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}      149         154{txt}  {c |}  {res}      303       0.4917
+        {txt}Controls {c |} {res}      822         412{txt}  {c |}  {res}     1234       0.6661
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      971         566{txt}  {c |}  {res}     1537       0.6318
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .4849433{txt}{col 43}{c |}   {res} .3730065    .6307832{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .5150567{txt}{col 43}{c |}   {res} .3692168    .6269935{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3430929{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    31.80{txt}  Pr>chi2 ={res} 0.0000
+
+      {txt}nghenghiep {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+I va II (Bac si  {c |}  {res} .3805714      .1893753   .7538743       14.862{txt} (exact)
+ III (nhan vien) {c |}  {res} .5886776      .3485695   1.001156     19.44946{txt} (exact)
+III (CN lanh ngh {c |}  {res} .5839793      .3706263   .9224101     26.26697{txt} (exact)
+V va that nghiep {c |}  {res}    .3375      .1650383    .687825     15.06494{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .4849433      .3730065   .6307832{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .4961347      .3809059   .6462217{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}3{txt}) = {res}    2.97{txt}  Pr>chi2 = {res}0.3962
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     27.46
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien nghenghiep khong tuong tac len moi quan he giua bien vacxin va bien benhchung
+       Ti so OR tho / OR hieu chinh cho bien so nghenghiep  =0.98
+       Chenh lech giua OR tho va OR hieu chinh cho bien so nghenghiep  =-2.3%
+Bien nghenghiep khong gay nhieu len moi quan he giua bien vacxin va bien benhchung
+
+{com}. bysort nghenghiep: cc benhchung vacxin
+
+{txt}{hline}
+-> nghenghiep = I va II (Bac si ki su)
+                                                         Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       18          25{txt}  {c |}  {res}       43       0.4186
+        {txt}Controls {c |} {res}      280         148{txt}  {c |}  {res}      428       0.6542
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      298         173{txt}  {c |}  {res}      471       0.6327
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .3805714{txt}{col 43}{c |}   {res} .1893753    .7538743{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .6194286{txt}{col 43}{c |}   {res} .2461257    .8106247{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .4052336{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     9.33{txt}  Pr>chi2 ={res} 0.0023
+
+{txt}{hline}
+-> nghenghiep = III (nhan vien)
+                                                         Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       44          34{txt}  {c |}  {res}       78       0.5641
+        {txt}Controls {c |} {res}      266         121{txt}  {c |}  {res}      387       0.6873
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      310         155{txt}  {c |}  {res}      465       0.6667
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .5886776{txt}{col 43}{c |}   {res} .3485695    1.001156{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .4113224{txt}{col 43}{c |}   {res}-.0011563    .6514305{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .2827177{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     4.44{txt}  Pr>chi2 ={res} 0.0352
+
+{txt}{hline}
+-> nghenghiep = III (CN lanh nghe) va IV (CN)
+                                                         Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       60          54{txt}  {c |}  {res}      114       0.5263
+        {txt}Controls {c |} {res}      215         113{txt}  {c |}  {res}      328       0.6555
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      275         167{txt}  {c |}  {res}      442       0.6222
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .5839793{txt}{col 43}{c |}   {res} .3706263    .9224101{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .4160207{txt}{col 43}{c |}   {res} .0775899    .6293737{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .2726965{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     6.00{txt}  Pr>chi2 ={res} 0.0143
+
+{txt}{hline}
+-> nghenghiep = V va that nghiep
+                                                         Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       27          40{txt}  {c |}  {res}       67       0.4030
+        {txt}Controls {c |} {res}       58          29{txt}  {c |}  {res}       87       0.6667
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       85          69{txt}  {c |}  {res}      154       0.5519
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27}    .3375{txt}{col 43}{c |}   {res} .1650383     .687825{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27}    .6625{txt}{col 43}{c |}   {res}  .312175    .8349617{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .4416667{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    10.64{txt}  Pr>chi2 ={res} 0.0011
+
+{txt}{hline}
+-> nghenghiep = .
+
+{col 18}{c |} have vaccinated{col 43}{c |}             Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}        0           1{txt}  {c |}  {res}        1       0.0000
+        {txt}Controls {c |} {res}        3           1{txt}  {c |}  {res}        4       0.7500
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}        3           2{txt}  {c |}  {res}        5       0.6000
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c |}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27}        0{txt}{col 43}{c |}   {res}        0           .{txt} (Cornfield)
+ Prev. frac. ex. {c |} {res}{col 27}        1{txt}{col 43}{c |}   {res}        .           1{txt} (Cornfield)
+ Prev. frac. pop {c |} {res}{col 27}        .{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 22}          chi2(1) ={res}     1.88{txt}  Pr>chi2 ={res} 0.1709
+
+ {txt}Note: exact confidence levels not possible with zero count cells
+
+{com}. zcc benhchung vacxin, by(nhomtuoi)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}      149         154{txt}  {c |}  {res}      303       0.4917
+        {txt}Controls {c |} {res}      822         412{txt}  {c |}  {res}     1234       0.6661
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      971         566{txt}  {c |}  {res}     1537       0.6318
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .4849433{txt}{col 43}{c |}   {res} .3730065    .6307832{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .5150567{txt}{col 43}{c |}   {res} .3692168    .6269935{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3430929{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    31.80{txt}  Pr>chi2 ={res} 0.0000
+
+        {txt}nhomtuoi {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+        <91 ngay {c |}  {res} .5235799      .3319959     .81016     32.45519{txt} (exact)
+     91-120 ngay {c |}  {res} .4677966      .1941578   1.203304     7.195122{txt} (exact)
+       >120 ngay {c |}  {res} .2342733      .1203512   .4647453     15.68027{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .4849433      .3730065   .6307832{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .4343386      .3123005   .6040657{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}2{txt}) = {res}    4.53{txt}  Pr>chi2 = {res}0.1039
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     26.81
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien nhomtuoi khong tuong tac len moi quan he giua bien vacxin va bien benhchung
+       Ti so OR tho / OR hieu chinh cho bien so nhomtuoi  =1.12
+       Chenh lech giua OR tho va OR hieu chinh cho bien so nhomtuoi  =11.7%
+Bien nhomtuoi co gay nhieu len moi quan he giua bien vacxin va bien benhchung
+
+{com}. exit, clear

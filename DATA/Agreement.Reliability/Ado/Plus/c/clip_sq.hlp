@@ -1,0 +1,99 @@
+.-
+help for ^Copying to the Windows clipboard^                            Menu: Edit
+.-
+
+Topics covered
+--------------
+
+^1. Copying from the Results window^
+^2. Copying from the Log window^
+^3. Copying graphs to the clipboard^
+
+
+^1. Copying from the Results window^
+^----------------------------------^
+
+You can copy from the Stata Results window.
+
+And you can paste into
+
+	- edit boxes in dialogs
+
+	- word processors or text editors (e.g., Notepad)
+
+	- the Command window @cmd_sq!(click here for help on command mode)@
+
+To copy text:
+
+	- Use the mouse to highlight the text that you want to copy.
+
+	- Choose ^Copy Text^ from the ^Edit^ menu (or press Ctrl-C).
+
+To paste text:
+
+	- Use the mouse to position the cursor where you want to paste text.
+
+	- Choose ^Paste^ from the ^Edit^ menu (or press Ctrl-V).
+
+
+^2. Copying from the Log window^
+^------------------------------^
+
+If you start a log file, you will be able copy any or all of your output 
+(from the point you started the log).
+
+Bring the Log window to the front by clicking on the ^Log...^ button and 
+select ^Bring log window to top^.
+
+Use the mouse to select text, then choose ^Copy Text^ from the ^Edit^ menu
+(or press Ctrl-C).
+
+You can paste into
+
+	- word processors or text editors (e.g., Notepad)
+
+	- edit boxes in dialogs
+
+	- the Command window @cmd_sq!(click here for help on command mode)@
+
+@log_sq!Click here for help on creating and printing a log -- the Log button.@
+
+
+^3. Copying graphs to the clipboard^
+^----------------------------------^
+
+To copy your graph to the clipboard so you can import it into another Windows
+application:
+
+	- Click on the title bar of the Stata Graph window.
+
+	- Choose ^Copy^ from the ^Edit^ menu (or press Ctrl-C).
+
+	- In the other Windows application, you can then choose ^Paste^ from
+          the ^Edit^ menu.
+
+Note: If your application would rather import a file, @graph_sq!click here for help@
+@graph_sq!on saving graphs as Windows Metafiles.@
+
+
+Windows Metafile or bitmap format
+---------------------------------
+
+You can copy the graph to the clipboard in either the Windows Metafile format
+or the Windows bitmap format.
+
+The graph will look better in the Windows Metafile format so you should use
+this format if possible.  This format is the default.
+
+If you want to change the format, choose ^Graph Copy Options^ from the ^Edit^
+menu and choose the format.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@log_sq!Creating and printing a log -- the Log button@
+@graph_sq!Printing, saving, and viewing graphs@
+@save_sq!Creating, saving, and loading Stata data files@

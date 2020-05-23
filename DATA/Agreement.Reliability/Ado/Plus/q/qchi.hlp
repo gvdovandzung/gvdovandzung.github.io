@@ -1,0 +1,67 @@
+.-
+help for ^qchi^                                                 (STB-29: sg47)
+.-
+
+Chi-square Q-Q plot
+-------------------
+
+    ^qchi^ var [^if^ exp] [^in^ range] ^,^ ^d^f^(^#^)^ ^tra^nsform [ graph_options ]
+
+
+Description
+-----------
+
+^qchi^ produces a chi-square quantile-quantile (Q-Q) plot of var.
+
+
+Options
+-------
+
+^df()^ is not optional, and specifies the degrees of freedom for the chi-square
+    variable
+
+^transform^ transforms the values on both axes to their cube roots, which
+    transforms a chi-square variable to approximate Normality.  Since the
+    straggly upper tail is suppressed, the graph may be easier to interpret.
+
+graph_options are any of the options allowed with ^graph, twoway^; see help
+    @graph@
+
+
+Remarks
+-------
+
+If var has an approximate chi-square distribution with ^df()^ degrees of freedom,
+the resulting plot will be roughly linear, with a greater concentration of
+points in the lower left quadrant of the diagram than in the upper right. The
+values in the upper right quadrant will be very variable and may not appear to
+lie on the `ideal' line even if the var really does follow a chi-square dist-
+ribution.
+
+The slope in the lower left quadrant indicates whether the ^df()^ are about
+right or not.  If ^df()^ is too low, the slope will be >1 and the points will
+form a curve above the line.  If ^df()^ is too high, the slope will be <1 and
+the points will mostly fall below the line.
+
+
+Examples
+--------
+
+ . ^set obs 200^
+ . ^gen chi = invnorm(uniform())^^2^
+ . ^qchi chi, df(1) xlabel ylabel^
+
+
+Author
+------
+
+        Patrick Royston
+        Royal Postgraduate Medical School, London
+        FAX:  (011)-44-181-740-3119
+
+
+Also see
+--------
+
+    STB:  STB-29  sg47
+On-line:  help for @diagplots@

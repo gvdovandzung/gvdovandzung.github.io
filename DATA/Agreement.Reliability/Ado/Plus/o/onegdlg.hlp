@@ -1,0 +1,59 @@
+.-
+help for ^One-way ANOVA plots^                         Dialog after One-way ANOVA
+.-
+
+^Description^
+^-----------^
+
+After you run a one-way (parametric) ANOVA you will be asked if you want to
+see some graphs.
+
+You can see either
+
+	- an error bar plot
+
+	- a graph of means
+
+To see the plot, select the plot you want, and click ^Run^.
+
+If you do not want to see any plots, click ^Cancel^.
+
+
+^Error bar plot^
+^--------------^
+
+This plot shows the group means with error bars.
+
+The error bars for a group mean indicate a 95% confidence interval
+for the mean.
+
+The horizontal line shows the overall mean.
+
+
+^Graph of means^
+^--------------^
+
+This plot shows group means.  The horizontal line indicates the overall
+mean.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@onewdlg!One-way ANOVA (parametric)@
+@kwaldlg!One-way nonparametric ANOVA (Kruskal-Wallis test)@ 
+@rpmdlg!Repeated-measures ANOVA@
+@twowdlg!Two-way ANOVA@
+@aovmdlg!Two-way ANOVA plots@
+@aovcdlg!N-factor ANOVA & ANOCOVA@
+
+@sumbydlg!Means and SDs by group@
+
+@boxdlg!Box plots@
+@graph_sq!Printing, saving, and viewing graphs@
+
+
+
+

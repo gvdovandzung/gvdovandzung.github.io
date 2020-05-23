@@ -1,0 +1,1666 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}D:\DATA\lan anh.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}20 Mar 2012, 11:26:07
+
+{com}. describe
+
+{txt}Contains data from {res}D:\DATA\banghuyetss miso.dta
+{txt}  obs:{res}         1,620                          
+{txt} vars:{res}            21                          25 Dec 2008 13:45
+{txt} size:{res}       142,560{txt} (98.6% of memory free)
+{hline 79}
+              storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}stt            {txt} float  %9.0g                  {res}
+tuoi           {txt} float  %9.0g                  {res}
+hemoglobin     {txt} float  %9.0g                  {res}
+kcsinh         {txt} float  %9.0g                  {res}khoang cach giua lan sinh truoc
+                                                va lan sinh nay
+tienthai       {txt} float  %9.0g       parity     {res}tien can san khoa
+bietchu        {txt} float  %9.0g       literacy   {res}biet doc biet viet
+khamthai       {txt} float  %9.0g       visit      {res}so lan kham thai
+sinhtainha     {txt} float  %9.0g       home       {res}sinh tai nha
+sinhnon        {txt} float  %9.0g       preterm    {res}sinh non vs sinh du thang
+rachsinhmon    {txt} float  %9.0g       yesno      {res}rach tang sinh mon
+gioi           {txt} float  %9.0g       sex        {res}gioi
+tlsosinh       {txt} float  %9.0g       bweight    {res}trong luong so sinh
+bhss           {txt} float  %9.0g       yesno      {res}bang huyet sau sinh
+bhssnang       {txt} float  %9.0g       yesno      {res}bang huyet sau sinh nang
+chuyenvien     {txt} float  %9.0g       yesno      {res}chuyen vien
+truyenmau      {txt} float  %9.0g       yesno      {res}can truyen mau
+sansocdacbiet  {txt} float  %9.0g       yesno      {res}dieu tri o ICU
+ctngoaikhoa    {txt} float  %9.0g       yesno      {res}can thiep ngoai khoa
+ttnoikhoa      {txt} float  %9.0g       yesno      {res}thu thuat noi khoa
+nhanhct        {txt} float  %9.0g       treatment
+                                              {res}Nhanh Misoprostol vs nhanh
+                                                Placebo
+maumat         {txt} float  %9.0g                  {res}luong mau mat (ml)
+{txt}{hline 79}
+Sorted by:  {res}nhanhct
+
+{com}. summ
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+         stt {c |}{res}      1620       810.5     467.798          1       1620
+        {txt}tuoi {c |}{res}      1620    23.25247     3.19799         15         34
+  {txt}hemoglobin {c |}{res}      1620    95.89568    8.913882         63        123
+      {txt}kcsinh {c |}{res}      1147    2.813426     1.33423          2         15
+    {txt}tienthai {c |}{res}      1620    .8185185    .6080805          0          2
+{txt}{hline 13}{c +}{hline 56}
+     bietchu {c |}{res}      1620    .6308642    .4827198          0          1
+    {txt}khamthai {c |}{res}      1620    .8814815    .3233209          0          1
+  {txt}sinhtainha {c |}{res}      1620    .4598765    .4985414          0          1
+     {txt}sinhnon {c |}{res}      1620    .2185185    .4133687          0          1
+ {txt}rachsinhmon {c |}{res}      1620    .1006173    .3009142          0          1
+{txt}{hline 13}{c +}{hline 56}
+        gioi {c |}{res}      1620    .5104938    .5000442          0          1
+    {txt}tlsosinh {c |}{res}      1620    3.900617    .4695808          1          5
+        {txt}bhss {c |}{res}      1620    .0919753    .2890803          0          1
+    {txt}bhssnang {c |}{res}      1620    .0074074    .0857734          0          1
+  {txt}chuyenvien {c |}{res}      1620    .0098765    .0989193          0          1
+{txt}{hline 13}{c +}{hline 56}
+   truyenmau {c |}{res}      1620    .0049383    .0701208          0          1
+{txt}sansocdacb~t {c |}{res}      1620    .0024691    .0496443          0          1
+ {txt}ctngoaikhoa {c |}{res}      1620    .0055556    .0743512          0          1
+   {txt}ttnoikhoa {c |}{res}      1620    .0006173    .0248452          0          1
+     {txt}nhanhct {c |}{res}      1620    .5012346    .5001529          0          1
+{txt}{hline 13}{c +}{hline 56}
+      maumat {c |}{res}      1619    238.2749    177.8699         18       1547
+
+{com}. tab1 nhanhct
+
+{res}-> tabulation of nhanhct  
+
+      {txt}Nhanh {c |}
+Misoprostol {c |}
+   vs nhanh {c |}
+    Placebo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    Placebo {c |}{res}        808       49.88       49.88
+{txt}Misoprostol {c |}{res}        812       50.12      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      1,620      100.00
+
+{com}. recode nhanhct (1=1 "Misoprostol") (0=2 "Placebo"), gen(canthiep)
+{txt}(808 differences between nhanhct and canthiep)
+
+{com}. di "BANG 1. So sanh dac diem dan so, thai nghen va chu sinh o hai nhom"\
+{res}BANG 1. So sanh dac diem dan so, thai nghen va chu sinh o hai nhom{err}\ invalid name
+{txt}{search r(198):r(198);}
+
+{com}. di "BANG 1. So sanh dac diem dan so, thai nghen va chu sinh o hai nhom"
+{res}BANG 1. So sanh dac diem dan so, thai nghen va chu sinh o hai nhom
+
+{com}. ttest tuoi, by(canthiep)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+Misopros {c |}{res}{col 12}    812{col 22} 23.28941{col 34} .1154211{col 46} 3.288996{col 58} 23.06285{col 70} 23.51597
+ {txt}Placebo {c |}{res}{col 12}    808{col 22} 23.21535{col 34} .1092491{col 46} 3.105443{col 58}  23.0009{col 70} 23.42979
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}   1620{col 22} 23.25247{col 34} .0794547{col 46}  3.19799{col 58} 23.09662{col 70} 23.40831
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .0740623{col 34} .1589483{col 58}-.2377039{col 70} .3858285
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}Misopros{txt}) - mean({res}Placebo{txt})                         t = {res}  0.4660
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1618
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.6793         {txt}Pr(|T| > |t|) = {res}0.6413          {txt}Pr(T > t) = {res}0.3207
+
+{com}. ttest hemoglobin, by(canthiep)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+Misopros {c |}{res}{col 12}    812{col 22} 95.93103{col 34} .3125203{col 46} 8.905459{col 58} 95.31759{col 70} 96.54448
+ {txt}Placebo {c |}{res}{col 12}    808{col 22} 95.86015{col 34} .3140759{col 46} 8.927714{col 58} 95.24365{col 70} 96.47665
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}   1620{col 22} 95.89568{col 34} .2214672{col 46} 8.913882{col 58} 95.46129{col 70} 96.33007
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}  .070886{col 34} .4430691{col 58}-.7981636{col 70} .9399355
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}Misopros{txt}) - mean({res}Placebo{txt})                         t = {res}  0.1600
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1618
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.5635         {txt}Pr(|T| > |t|) = {res}0.8729          {txt}Pr(T > t) = {res}0.4365
+
+{com}. ttest kcsinh, by(canthiep)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+Misopros {c |}{res}{col 12}    564{col 22}  2.83156{col 34} .0541478{col 46} 1.285939{col 58} 2.725204{col 70} 2.937917
+ {txt}Placebo {c |}{res}{col 12}    583{col 22} 2.795883{col 34} .0571628{col 46} 1.380217{col 58} 2.683613{col 70} 2.908154
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}   1147{col 22} 2.813426{col 34} .0393957{col 46}  1.33423{col 58} 2.736131{col 70} 2.890722
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} .0356769{col 34} .0788296{col 58}-.1189897{col 70} .1903435
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}Misopros{txt}) - mean({res}Placebo{txt})                         t = {res}  0.4526
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1145
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.6745         {txt}Pr(|T| > |t|) = {res}0.6509          {txt}Pr(T > t) = {res}0.3255
+
+{com}. tabulate tienthai canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+              {c |}   RECODE of nhanhct
+              {c |} (Nhanh Misoprostol vs
+ tien can san {c |}    nhanh Placebo)
+         khoa {c |} Misoprost    Placebo {c |}     Total
+{hline 14}{c +}{hline 22}{c +}{hline 10}
+  Sinh con so {c |}{res}       248        225 {txt}{c |}{res}       473 
+              {txt}{c |}{res}     30.54      27.85 {txt}{c |}{res}     29.20 
+{txt}{hline 14}{c +}{hline 22}{c +}{hline 10}
+Da co 1-2 con {c |}{res}       472        496 {txt}{c |}{res}       968 
+              {txt}{c |}{res}     58.13      61.39 {txt}{c |}{res}     59.75 
+{txt}{hline 14}{c +}{hline 22}{c +}{hline 10}
+   Co >=3 con {c |}{res}        92         87 {txt}{c |}{res}       179 
+              {txt}{c |}{res}     11.33      10.77 {txt}{c |}{res}     11.05 
+{txt}{hline 14}{c +}{hline 22}{c +}{hline 10}
+        Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+              {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}2{txt}) = {res}  1.8432  {txt} Pr = {res}0.398
+
+{com}. tabulate bietchu canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}   RECODE of nhanhct
+           {c |} (Nhanh Misoprostol vs
+  biet doc {c |}    nhanh Placebo)
+ biet viet {c |} Misoprost    Placebo {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+    Mu chu {c |}{res}       301        297 {txt}{c |}{res}       598 
+           {txt}{c |}{res}     37.07      36.76 {txt}{c |}{res}     36.91 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+ Co di hoc {c |}{res}       511        511 {txt}{c |}{res}     1,022 
+           {txt}{c |}{res}     62.93      63.24 {txt}{c |}{res}     63.09 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.0169  {txt} Pr = {res}0.897
+
+{com}. tabulate khamthai canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+                  {c |}   RECODE of nhanhct
+                  {c |} (Nhanh Misoprostol vs
+                  {c |}    nhanh Placebo)
+ so lan kham thai {c |} Misoprost    Placebo {c |}     Total
+{hline 18}{c +}{hline 22}{c +}{hline 10}
+ <3 lan kham thai {c |}{res}       100         92 {txt}{c |}{res}       192 
+                  {txt}{c |}{res}     12.32      11.39 {txt}{c |}{res}     11.85 
+{txt}{hline 18}{c +}{hline 22}{c +}{hline 10}
+>=3 lan kham thai {c |}{res}       712        716 {txt}{c |}{res}     1,428 
+                  {txt}{c |}{res}     87.68      88.61 {txt}{c |}{res}     88.15 
+{txt}{hline 18}{c +}{hline 22}{c +}{hline 10}
+            Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+                  {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.3347  {txt} Pr = {res}0.563
+
+{com}. tabulate sinhtainha canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+                  {c |}   RECODE of nhanhct
+                  {c |} (Nhanh Misoprostol vs
+                  {c |}    nhanh Placebo)
+     sinh tai nha {c |} Misoprost    Placebo {c |}     Total
+{hline 18}{c +}{hline 22}{c +}{hline 10}
+Sinh con tai tram {c |}{res}       432        443 {txt}{c |}{res}       875 
+                  {txt}{c |}{res}     53.20      54.83 {txt}{c |}{res}     54.01 
+{txt}{hline 18}{c +}{hline 22}{c +}{hline 10}
+   Sinh con o nha {c |}{res}       380        365 {txt}{c |}{res}       745 
+                  {txt}{c |}{res}     46.80      45.17 {txt}{c |}{res}     45.99 
+{txt}{hline 18}{c +}{hline 22}{c +}{hline 10}
+            Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+                  {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.4304  {txt} Pr = {res}0.512
+
+{com}. tabulate sinhnon canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+            {c |}   RECODE of nhanhct
+sinh non vs {c |} (Nhanh Misoprostol vs
+    sinh du {c |}    nhanh Placebo)
+      thang {c |} Misoprost    Placebo {c |}     Total
+{hline 12}{c +}{hline 22}{c +}{hline 10}
+   Du thang {c |}{res}       639        627 {txt}{c |}{res}     1,266 
+            {txt}{c |}{res}     78.69      77.60 {txt}{c |}{res}     78.15 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+Thieu thang {c |}{res}       173        181 {txt}{c |}{res}       354 
+            {txt}{c |}{res}     21.31      22.40 {txt}{c |}{res}     21.85 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+      Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+            {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.2847  {txt} Pr = {res}0.594
+
+{com}. tabulate rachsinhmon canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}   RECODE of nhanhct
+           {c |} (Nhanh Misoprostol vs
+ rach tang {c |}    nhanh Placebo)
+  sinh mon {c |} Misoprost    Placebo {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Khong {c |}{res}       733        724 {txt}{c |}{res}     1,457 
+           {txt}{c |}{res}     90.27      89.60 {txt}{c |}{res}     89.94 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+        Co {c |}{res}        79         84 {txt}{c |}{res}       163 
+           {txt}{c |}{res}      9.73      10.40 {txt}{c |}{res}     10.06 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.1991  {txt} Pr = {res}0.655
+
+{com}. tabulate gioi canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}   RECODE of nhanhct
+           {c |} (Nhanh Misoprostol vs
+           {c |}    nhanh Placebo)
+      gioi {c |} Misoprost    Placebo {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+        Nu {c |}{res}       379        414 {txt}{c |}{res}       793 
+           {txt}{c |}{res}     46.67      51.24 {txt}{c |}{res}     48.95 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+       Nam {c |}{res}       433        394 {txt}{c |}{res}       827 
+           {txt}{c |}{res}     53.33      48.76 {txt}{c |}{res}     51.05 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  3.3741  {txt} Pr = {res}0.066
+
+{com}. tabulate tlsosinh canthiep, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+            {c |}   RECODE of nhanhct
+            {c |} (Nhanh Misoprostol vs
+trong luong {c |}    nhanh Placebo)
+    so sinh {c |} Misoprost    Placebo {c |}     Total
+{hline 12}{c +}{hline 22}{c +}{hline 10}
+    <1500 g {c |}{res}         0          1 {txt}{c |}{res}         1 
+            {txt}{c |}{res}      0.00       0.12 {txt}{c |}{res}      0.06 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+1500-1999 g {c |}{res}        10          4 {txt}{c |}{res}        14 
+            {txt}{c |}{res}      1.23       0.50 {txt}{c |}{res}      0.86 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+2000-2499 g {c |}{res}       103        116 {txt}{c |}{res}       219 
+            {txt}{c |}{res}     12.68      14.36 {txt}{c |}{res}     13.52 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+3000-3499 g {c |}{res}       659        638 {txt}{c |}{res}     1,297 
+            {txt}{c |}{res}     81.16      78.96 {txt}{c |}{res}     80.06 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+    >3500 g {c |}{res}        40         49 {txt}{c |}{res}        89 
+            {txt}{c |}{res}      4.93       6.06 {txt}{c |}{res}      5.49 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+      Total {c |}{res}       812        808 {txt}{c |}{res}     1,620 
+            {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}4{txt}) = {res}  5.5834  {txt} Pr = {res}0.232
+
+{com}. di "BANG 2. Phan tich ket cuoc giua 2 nhom"
+{res}BANG 2. Phan tich ket cuoc giua 2 nhom
+
+{com}. cs bhss nhanhct
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}       52          97{txt}  {c |}  {res}      149
+        {txt}Noncases {c |} {res}      760         711{txt}  {c |}  {res}     1471
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0640394    .1200495{txt}  {c |}  {res} .0919753
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0560101{txt}{col 43}{c |}   {res}-.0840421   -.0279781{txt} 
+      Risk ratio {c |} {res}{col 27} .5334417{txt}{col 43}{c |}   {res} .3863997    .7364396{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .4665583{txt}{col 43}{c |}   {res} .2635604    .6136003{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .2338552{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 22}          chi2(1) ={res}    15.21{txt}  Pr>chi2 ={res} 0.0001
+
+{com}. cs bhssnang nhanhct, exact
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        2          10{txt}  {c |}  {res}       12
+        {txt}Noncases {c |} {res}      810         798{txt}  {c |}  {res}     1608
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0024631    .0123762{txt}  {c |}  {res} .0074074
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0099132{txt}{col 43}{c |}   {res} -.018264   -.0015624{txt} 
+      Risk ratio {c |} {res}{col 27} .1990148{txt}{col 43}{c |}   {res} .0437427    .9054514{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .8009852{txt}{col 43}{c |}   {res} .0945486    .9562573{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .4014815{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 35}1-sided Fisher's exact P ={res} 0.0185
+{txt}{col 35}2-sided Fisher's exact P ={res} 0.0217
+
+{com}. ttest maumat, by(canthiep)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+Misopros {c |}{res}{col 12}    811{col 22}  214.307{col 34} 5.078463{col 46} 144.6248{col 58} 204.3385{col 70} 224.2755
+ {txt}Placebo {c |}{res}{col 12}    808{col 22} 262.3317{col 34} 7.147786{col 46} 203.1782{col 58} 248.3012{col 70} 276.3621
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}   1619{col 22} 238.2749{col 34} 4.420578{col 46} 177.8699{col 58} 229.6042{col 70} 246.9455
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-48.02465{col 34} 8.762895{col 58}-65.21248{col 70}-30.83683
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}Misopros{txt}) - mean({res}Placebo{txt})                         t = {res} -5.4805
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1617
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+
+{com}. di "BANG 2A. So sanh cham soc y te giua 2 nhom"
+{res}BANG 2A. So sanh cham soc y te giua 2 nhom
+
+{com}. cs chuyenvien nhanhct, exact
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        4          12{txt}  {c |}  {res}       16
+        {txt}Noncases {c |} {res}      808         796{txt}  {c |}  {res}     1604
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0049261    .0148515{txt}  {c |}  {res} .0098765
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0099254{txt}{col 43}{c |}   {res} -.019556   -.0002947{txt} 
+      Risk ratio {c |} {res}{col 27} .3316913{txt}{col 43}{c |}   {res} .1074277    1.024123{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .6683087{txt}{col 43}{c |}   {res}-.0241226    .8925723{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .3349794{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 35}1-sided Fisher's exact P ={res} 0.0369
+{txt}{col 35}2-sided Fisher's exact P ={res} 0.0475
+
+{com}. cs truyenmau nhanhct, exact
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        1           7{txt}  {c |}  {res}        8
+        {txt}Noncases {c |} {res}      811         801{txt}  {c |}  {res}     1612
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0012315    .0086634{txt}  {c |}  {res} .0049383
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0074318{txt}{col 43}{c |}   {res}-.0142619   -.0006017{txt} 
+      Risk ratio {c |} {res}{col 27} .1421534{txt}{col 43}{c |}   {res} .0175294     1.15278{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .8578466{txt}{col 43}{c |}   {res}-.1527801    .9824706{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .4299824{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 35}1-sided Fisher's exact P ={res} 0.0343
+{txt}{col 35}2-sided Fisher's exact P ={res} 0.0382
+
+{com}. cs sansocdacbiet nhanhct, exact
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        2           2{txt}  {c |}  {res}        4
+        {txt}Noncases {c |} {res}      810         806{txt}  {c |}  {res}     1616
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0024631    .0024752{txt}  {c |}  {res} .0024691
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0000122{txt}{col 43}{c |}   {res}-.0048457    .0048213{txt} 
+      Risk ratio {c |} {res}{col 27} .9950739{txt}{col 43}{c |}   {res} .1405094    7.047018{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .0049261{txt}{col 43}{c |}   {res}-6.047018    .8594906{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .0024691{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 35}1-sided Fisher's exact P ={res} 0.6859
+{txt}{col 35}2-sided Fisher's exact P ={res} 1.0000
+
+{com}. cs ctngoaikhoa nhanhct, exact
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        1           8{txt}  {c |}  {res}        9
+        {txt}Noncases {c |} {res}      811         800{txt}  {c |}  {res}     1611
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0012315     .009901{txt}  {c |}  {res} .0055556
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0086695{txt}{col 43}{c |}   {res}  -.01591   -.0014289{txt} 
+      Risk ratio {c |} {res}{col 27} .1243842{txt}{col 43}{c |}   {res} .0155927    .9922237{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .8756158{txt}{col 43}{c |}   {res} .0077763    .9844073{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .4388889{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 35}1-sided Fisher's exact P ={res} 0.0189
+{txt}{col 35}2-sided Fisher's exact P ={res} 0.0209
+
+{com}. cs ttnoikhoa nhanhct, exact
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        0           1{txt}  {c |}  {res}        1
+        {txt}Noncases {c |} {res}      812         807{txt}  {c |}  {res}     1619
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res}        0    .0012376{txt}  {c |}  {res} .0006173
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0012376{txt}{col 43}{c |}   {res}-.0036618    .0011866{txt} 
+      Risk ratio {c |} {res}{col 27}        0{txt}{col 43}{c |}   {res}        .           .{txt} 
+ Prev. frac. ex. {c |} {res}{col 27}        1{txt}{col 43}{c |}   {res}        .           .{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .5012346{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 35}1-sided Fisher's exact P ={res} 0.4988
+{txt}{col 35}2-sided Fisher's exact P ={res} 0.4988
+
+{com}. graph box maumat, over(canthiep)
+{res}
+{com}. use "D:\DATA\plasma.dta", clear
+{txt}(Thong ke co ban - Do Van Dung -)
+
+{com}. 
+. 
+. 
+. 
+. 
+. edit
+{txt}- preserve
+
+{com}. twoway (scatter plasma weight)
+{res}
+{com}. pwcorr weight plasma, star(5)
+
+             {txt}{c |}   weight   plasma
+{hline 13}{c +}{hline 18}
+      weight {c |} {res}  1.0000 
+      {txt}plasma {c |} {res}  0.7591*  1.0000 
+
+{com}. pwcorr weight plasma, sig
+
+             {txt}{c |}   weight   plasma
+{hline 13}{c +}{hline 18}
+      weight {c |} {res}  1.0000 
+             {txt}{c |}
+             {c |}
+      plasma {c |} {res}  0.7591   1.0000 
+             {txt}{c |}{res}   0.0289
+             {txt}{c |}
+
+{com}. di 0.7591^2
+{res}.57623281
+
+{com}. regress plasma weight
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}       8
+{txt}{hline 13}{char +}{hline 30}           F(  1,     6) ={res}    8.16
+    {txt}   Model {char |} {res} .390684335     1  .390684335           {txt}Prob > F      = {res} 0.0289
+    {txt}Residual {char |} {res} .287265681     6  .047877614           {txt}R-squared     = {res} 0.5763
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.5057
+    {txt}   Total {char |} {res} .677950016     7  .096850002           {txt}Root MSE      = {res} .21881
+
+{txt}{hline 13}{c TT}{hline 64}
+      plasma {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{char +}{hline 64}
+      weight {c |}  {res} .0436153   .0152684     2.86   0.029      .006255    .0809757
+{txt}       _cons {c |}  {res} .0857244   1.023998     0.08   0.936    -2.419909    2.591358
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. di .390684335/.677950016
+{res}.57627307
+
+{com}. use "D:\DATA\height rural.dta", clear
+
+. tab1  diadu
+
+{res}-> tabulation of diadu  
+
+  {txt}thanh thi {c |}
+   hay nong {c |}
+       thon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  nong thon {c |}{res}         14       43.75       43.75
+{txt} thanh thi  {c |}{res}         18       56.25      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         32      100.00
+
+{com}. regress chieucao diadu tuoi
+
+      {txt}Source {c |}       SS       df       MS              Number of obs ={res}      32
+{txt}{hline 13}{char +}{hline 30}           F(  2,    29) ={res}    5.06
+    {txt}   Model {char |} {res} 467.238191     2  233.619095           {txt}Prob > F      = {res} 0.0130
+    {txt}Residual {char |} {res} 1338.01681    29  46.1385107           {txt}R-squared     = {res} 0.2588
+{txt}{hline 13}{char +}{hline 30}           Adj R-squared = {res} 0.2077
+    {txt}   Total {char |} {res}   1805.255    31  58.2340323           {txt}Root MSE      = {res} 6.7925
+
+{txt}{hline 13}{c TT}{hline 64}
+    chieucao {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{char +}{hline 64}
+       diadu {c |}  {res} 5.466326   2.574933     2.12   0.042     .1999967    10.73265
+{txt}        tuoi {c |}  {res} .4157214   .1407971     2.95   0.006     .1277591    .7036838
+{txt}       _cons {c |}  {res} 86.35079   18.82381     4.59   0.000     47.85177    124.8498
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. tab1  diadu
+
+{res}-> tabulation of diadu  
+
+  {txt}thanh thi {c |}
+   hay nong {c |}
+       thon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  nong thon {c |}{res}         14       43.75       43.75
+{txt} thanh thi  {c |}{res}         18       56.25      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         32      100.00
+
+{com}. tab1  diadu, nol
+
+{res}-> tabulation of diadu  
+
+  {txt}thanh thi {c |}
+   hay nong {c |}
+       thon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         14       43.75       43.75
+{txt}          1 {c |}{res}         18       56.25      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         32      100.00
+
+{com}. use "D:\DATA\file so lieu 2-8.dta", clear
+{txt}(bs Dinh)
+
+{com}. tab1  a1
+
+{res}-> tabulation of a1  
+
+              {txt}xa {c |}      Freq.     Percent        Cum.
+{hline 17}{c +}{hline 35}
+          an phu {c |}{res}         55        6.88        6.88
+{txt}     an nhon tay {c |}{res}         60        7.51       14.39
+{txt}         hoa phu {c |}{res}         21        2.63       17.02
+{txt}       nhuan duc {c |}{res}         34        4.26       21.28
+{txt}      phuoc hiep {c |}{res}         52        6.51       27.78
+{txt}     phuoc thanh {c |}{res}         39        4.88       32.67
+{txt}   phuoc vinh an {c |}{res}          9        1.13       33.79
+{txt}    pham van coi {c |}{res}         22        2.75       36.55
+{txt}    phu hoa dong {c |}{res}         82       10.26       46.81
+{txt}     phu my hung {c |}{res}         22        2.75       49.56
+{txt}   tan phu trung {c |}{res}        142       17.77       67.33
+{txt}   tan thong hoi {c |}{res}         47        5.88       73.22
+{txt}      tan an hoi {c |}{res}         18        2.25       75.47
+{txt}   tan thanh tay {c |}{res}          3        0.38       75.84
+{txt}  tan thanh dong {c |}{res}        111       13.89       89.74
+{txt}    trung lap ha {c |}{res}         57        7.13       96.87
+{txt}trung lap thuong {c |}{res}          4        0.50       97.37
+{txt}        trung an {c |}{res}          3        0.38       97.75
+{txt}         thai my {c |}{res}          9        1.13       98.87
+{txt}        thi tran {c |}{res}          9        1.13      100.00
+{txt}{hline 17}{c +}{hline 35}
+           Total {c |}{res}        799      100.00
+
+{com}. label list
+{txt}epd1:
+{res}           1 an phu
+           2 an nhon tay
+           3 binh my
+           4 hoa phu
+           5 nhuan duc
+           6 phuoc hiep
+           7 phuoc thanh
+           8 phuoc vinh an
+           9 pham van coi
+          10 phu hoa dong
+          11 phu my hung
+          12 tan phu trung
+          13 tan thong hoi
+          14 tan an hoi
+          15 tan thanh tay
+          16 tan thanh dong
+          17 trung lap ha
+          18 trung lap thuong
+          19 trung an
+          20 thai my
+          21 thi tran
+{txt}epd2:
+{res}           1 mu chu
+           2 cap 1
+           3 cap 2
+           4 cap 3
+           5 > cap3
+{txt}epd3:
+{res}           1 cong nhan
+           2 nong dan
+           3 can bo,vien chuc
+           4 buon ban
+           5 hsinh,svien
+           6 noi tro
+           7 that nghiep
+           8 khac
+{txt}epd4:
+{res}           1 kinh
+           2 hoa
+           3 khmer
+           4 khac
+{txt}epd5:
+{res}           1 phat giao
+           2 thien chua giao
+           3 khong
+           4 khac
+{txt}epd6:
+{res}           1 ho ngheo
+           2 ho khong ngheo
+{txt}epd9:
+{res}           1 du thang
+           2 thieu thang
+{txt}epd10:
+{res}           1 co
+           2 khong
+{txt}epd11:
+{res}           1 co
+           2 khong
+{txt}epd12:
+{res}           1 1 thang
+           2 2-6 thang
+           3 6 thang tro len
+{txt}epd13:
+{res}           1 rong kinh
+           2 cuong kinh
+           3 bang huyet sau sinh
+           4 khong
+{txt}epd14:
+{res}           1 co
+           2 khong
+{txt}epd15:
+{res}           1 co
+           2 khong
+{txt}epd16:
+{res}           1 co
+           2 khong
+{txt}epd17:
+{res}           1 co
+           2 khong
+{txt}epd18:
+{res}           1 co
+           2 khong
+{err}{hline 2}Break{hline 2}
+{txt}{search r(1):r(1);}
+
+{com}. label list epd1
+{txt}epd1:
+{res}           1 an phu
+           2 an nhon tay
+           3 binh my
+           4 hoa phu
+           5 nhuan duc
+           6 phuoc hiep
+           7 phuoc thanh
+           8 phuoc vinh an
+           9 pham van coi
+          10 phu hoa dong
+          11 phu my hung
+          12 tan phu trung
+          13 tan thong hoi
+          14 tan an hoi
+          15 tan thanh tay
+          16 tan thanh dong
+          17 trung lap ha
+          18 trung lap thuong
+          19 trung an
+          20 thai my
+          21 thi tran
+
+{com}. tab1  a1
+
+{res}-> tabulation of a1  
+
+              {txt}xa {c |}      Freq.     Percent        Cum.
+{hline 17}{c +}{hline 35}
+          an phu {c |}{res}         55        6.88        6.88
+{txt}     an nhon tay {c |}{res}         60        7.51       14.39
+{txt}         hoa phu {c |}{res}         21        2.63       17.02
+{txt}       nhuan duc {c |}{res}         34        4.26       21.28
+{txt}      phuoc hiep {c |}{res}         52        6.51       27.78
+{txt}     phuoc thanh {c |}{res}         39        4.88       32.67
+{txt}   phuoc vinh an {c |}{res}          9        1.13       33.79
+{txt}    pham van coi {c |}{res}         22        2.75       36.55
+{txt}    phu hoa dong {c |}{res}         82       10.26       46.81
+{txt}     phu my hung {c |}{res}         22        2.75       49.56
+{txt}   tan phu trung {c |}{res}        142       17.77       67.33
+{txt}   tan thong hoi {c |}{res}         47        5.88       73.22
+{txt}      tan an hoi {c |}{res}         18        2.25       75.47
+{txt}   tan thanh tay {c |}{res}          3        0.38       75.84
+{txt}  tan thanh dong {c |}{res}        111       13.89       89.74
+{txt}    trung lap ha {c |}{res}         57        7.13       96.87
+{txt}trung lap thuong {c |}{res}          4        0.50       97.37
+{txt}        trung an {c |}{res}          3        0.38       97.75
+{txt}         thai my {c |}{res}          9        1.13       98.87
+{txt}        thi tran {c |}{res}          9        1.13      100.00
+{txt}{hline 17}{c +}{hline 35}
+           Total {c |}{res}        799      100.00
+
+{com}. use "D:\DATA\a1 xa.dta", clear
+
+. edit
+{txt}- preserve
+
+{com}. describe
+
+{txt}Contains data from {res}D:\DATA\a1 xa.dta
+{txt}  obs:{res}            14                          
+{txt} vars:{res}             5                          11 Dec 2011 21:38
+{txt} size:{res}           350{txt} (99.9% of memory free)
+{hline 79}
+              storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}a1             {txt} byte   %8.0g                  {res}STT
+xa             {txt} str14  %14s                   {res}
+bamemau        {txt} int    %8.0g                  {res}
+bamexa         {txt} int    %8.0g                  {res}
+tongbamehuyen  {txt} int    %8.0g                  {res}
+{txt}{hline 79}
+Sorted by:  {res}a1
+
+{com}. use "D:\DATA\file so lieu 2-8.dta", clear
+{txt}(bs Dinh)
+
+{com}. tab1 a1
+
+{res}-> tabulation of a1  
+
+              {txt}xa {c |}      Freq.     Percent        Cum.
+{hline 17}{c +}{hline 35}
+          an phu {c |}{res}         55        6.88        6.88
+{txt}     an nhon tay {c |}{res}         60        7.51       14.39
+{txt}         hoa phu {c |}{res}         21        2.63       17.02
+{txt}       nhuan duc {c |}{res}         34        4.26       21.28
+{txt}      phuoc hiep {c |}{res}         52        6.51       27.78
+{txt}     phuoc thanh {c |}{res}         39        4.88       32.67
+{txt}   phuoc vinh an {c |}{res}          9        1.13       33.79
+{txt}    pham van coi {c |}{res}         22        2.75       36.55
+{txt}    phu hoa dong {c |}{res}         82       10.26       46.81
+{txt}     phu my hung {c |}{res}         22        2.75       49.56
+{txt}   tan phu trung {c |}{res}        142       17.77       67.33
+{txt}   tan thong hoi {c |}{res}         47        5.88       73.22
+{txt}      tan an hoi {c |}{res}         18        2.25       75.47
+{txt}   tan thanh tay {c |}{res}          3        0.38       75.84
+{txt}  tan thanh dong {c |}{res}        111       13.89       89.74
+{txt}    trung lap ha {c |}{res}         57        7.13       96.87
+{txt}trung lap thuong {c |}{res}          4        0.50       97.37
+{txt}        trung an {c |}{res}          3        0.38       97.75
+{txt}         thai my {c |}{res}          9        1.13       98.87
+{txt}        thi tran {c |}{res}          9        1.13      100.00
+{txt}{hline 17}{c +}{hline 35}
+           Total {c |}{res}        799      100.00
+
+{com}. tab a1, nol
+
+         {txt}xa {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}         55        6.88        6.88
+{txt}          2 {c |}{res}         60        7.51       14.39
+{txt}          4 {c |}{res}         21        2.63       17.02
+{txt}          5 {c |}{res}         34        4.26       21.28
+{txt}          6 {c |}{res}         52        6.51       27.78
+{txt}          7 {c |}{res}         39        4.88       32.67
+{txt}          8 {c |}{res}          9        1.13       33.79
+{txt}          9 {c |}{res}         22        2.75       36.55
+{txt}         10 {c |}{res}         82       10.26       46.81
+{txt}         11 {c |}{res}         22        2.75       49.56
+{txt}         12 {c |}{res}        142       17.77       67.33
+{txt}         13 {c |}{res}         47        5.88       73.22
+{txt}         14 {c |}{res}         18        2.25       75.47
+{txt}         15 {c |}{res}          3        0.38       75.84
+{txt}         16 {c |}{res}        111       13.89       89.74
+{txt}         17 {c |}{res}         57        7.13       96.87
+{txt}         18 {c |}{res}          4        0.50       97.37
+{txt}         19 {c |}{res}          3        0.38       97.75
+{txt}         20 {c |}{res}          9        1.13       98.87
+{txt}         21 {c |}{res}          9        1.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        799      100.00
+
+{com}. drop if a1==15 | a1==18 | a1=19
+{err}=exp not allowed
+{txt}{search r(101):r(101);}
+
+{com}. drop if a1==15 | a1==18 | a1==19
+{txt}(10 observations deleted)
+
+{com}. sort a1
+
+. merge a1 using "D:\DATA\a1 xa.dta", uniqusing
+{txt}{p 0 4}
+variable{txt} a1
+does not uniquely identify observations in
+the master data
+{p_end}
+
+{com}. clear
+
+. use "D:\DATA\file so lieu 2-8.dta"
+{txt}(bs Dinh)
+
+{com}. drop if a1==15 | a1==18 | a1==19
+{txt}(10 observations deleted)
+
+{com}. merge a1 using "D:\DATA\a1 xa.dta", uniqusing
+{err}master data not sorted
+{txt}{search r(5):r(5);}
+
+{com}. sort a1
+
+. merge a1 using "D:\DATA\a1 xa.dta", uniqusing
+{txt}{p 0 4}
+variable{txt} a1
+does not uniquely identify observations in
+the master data
+{p_end}
+
+{com}. save "D:\DATA\So lieu PN thieu mau Cu Chi.dta"
+{txt}file D:\DATA\So lieu PN thieu mau Cu Chi.dta saved
+
+{com}. use "D:\Dung\Research\2011_Thieu mau cu chi\file so lieu 2-8.dta", clear
+{txt}(bs Dinh)
+
+{com}. 
+. drop if a1==8 | a1==15 | a1>=18
+{txt}(38 observations deleted)
+
+{com}. 
+. sort a1
+
+. 
+. merge a1 using "D:\Dung\Research\2011_Thieu mau cu chi\a1 xa.dta", uniqusing
+{txt}{p 0 4}
+variable{txt} a1
+does not uniquely identify observations in
+the master data
+{p_end}
+
+{com}. 
+. gen p1=21/14
+
+. 
+. * Chon ngau nhien 14 xa trong tong so 21 xa
+
+. 
+. gen p2= bamexa/ bamemau
+
+. 
+. gen pwt = p1*p2
+
+. 
+. gen fpc=21
+
+. 
+. 
+. 
+. recode nhiemgiun (0=0) (1/2=1), gen(nhiemgiunchung)
+{txt}(122 differences between nhiemgiun and nhiemgiunchung)
+
+{com}. 
+. gen agegr=.
+{txt}(762 missing values generated)
+
+{com}. 
+. replace agegr=0 if nhomtuoi==0
+{txt}(127 real changes made)
+
+{com}. 
+. replace agegr=1 if nhomtuoi==1|nhomtuoi==2
+{txt}(635 real changes made)
+
+{com}. 
+. label define agegr 0 "<=20" 1 ">20", modify
+
+. 
+. label value agegr agegr
+
+. 
+. 
+. 
+. recode MCV (min/79.9=1) (80/100=2) (100/max=3), gen (mcv)
+{txt}(762 differences between MCV and mcv)
+
+{com}. 
+. label define mcv 1 "<80" 2 "80-100" 3 ">100", modify
+
+. 
+. label value mcv mcv
+
+. 
+. 
+. 
+. 
+. 
+. gen mucdo=.
+{txt}(762 missing values generated)
+
+{com}. 
+. replace mucdo=0 if phandothieumau==0
+{txt}(550 real changes made)
+
+{com}. 
+. replace mucdo=1 if phandothieumau==1
+{txt}(161 real changes made)
+
+{com}. 
+. replace mucdo=2 if phandothieumau==2|phandothieumau==3|phandothieumau==4
+{txt}(51 real changes made)
+
+{com}. 
+. label define mucdo 0 binhthuong 1 nhe 2 trungnang, modify
+
+. 
+. label value mucdo mucdo
+
+. 
+. 
+. 
+. recode b5 (1/2=0 "<6 thang") (3=1 ">=6thang"), gen(b5a)
+{txt}(762 differences between b5 and b5a)
+
+{com}. 
+. recode a4 (1=1 "cong nhan") (6=6 "noi tro") (else=8 "khac"), gen(a4a)
+{txt}(99 differences between a4 and a4a)
+
+{com}. 
+. recode a3 (1/2=1 "mu chu/cap 1") (4/5=4 "cap 3+") (3=3 "cap 2"), gen(a3a)
+{txt}(140 differences between a3 and a3a)
+
+{com}. save "D:\DATA\So lieu PN thieu mau Cu Chi.dta", replace
+{txt}file D:\DATA\So lieu PN thieu mau Cu Chi.dta saved
+
+{com}. svyset a1 [pweight=pwt], fpc(fpc) vce(linearized) singleunit(missing)
+
+      {txt}pweight:{col 16}{res}pwt
+          {txt}VCE:{col 16}{res}linearized
+  {txt}Single unit:{col 16}{res}missing
+     {txt}Strata 1:{col 16}<one>
+         SU 1:{col 16}{res}a1
+        {txt}FPC 1:{col 16}{res}fpc
+{txt}{p2colreset}{...}
+
+{com}. svy linearized : proportion thieumau phandothieumau thieumauthieusat nhiemgiun
+{txt}(running proportion on estimation sample)
+
+Survey: Proportion estimation
+
+{col 1}Number of strata{col 18}= {res}      1{txt}{col 37}Number of obs{col 54}= {res}    762
+{txt}{col 1}Number of PSUs{col 18}= {res}     14{txt}{col 37}Population size{col 54}={res}    4695
+{txt}{col 37}Design df{col 54}= {res}     13
+
+      {txt}_prop_1: thieumau = {res}khong thieu mau
+      {txt}_prop_2: thieumau = {res}thieu mau
+      {txt}_prop_3: phandothieumau = {res}binh thuong
+      {txt}_prop_5: phandothieumau = {res}trung binh
+      {txt}_prop_9: nhiemgiun = {res}khong nhiem
+     {txt}_prop_10: nhiemgiun = {res}giun dua
+     {txt}_prop_11: nhiemgiun = {res}giun moc
+
+{col 1}{text}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{text}{c |}{col 26}  Linearized
+{col 14}{text}{c |} Proportion{col 26}   Std. Err.{col 37}     [95% Conf. Interval]
+{col 1}{text}{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 1}{result}thieumau    {col 14}{text}{c |}
+{col 1}{text}     _prop_1{col 14}{c |}{result}{space 2} .7318567{col 26}{space 2} .0135938{col 37}{space 5}  .702489{col 51}{space 3} .7612244
+{col 1}{text}     _prop_2{col 14}{c |}{result}{space 2} .2681433{col 26}{space 2} .0135938{col 37}{space 5} .2387756{col 51}{space 3}  .297511
+{col 1}{text}{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 1}{result}phandothie~u{col 14}{text}{c |}
+{col 1}{text}     _prop_3{col 14}{c |}{result}{space 2} .7318567{col 26}{space 2} .0135938{col 37}{space 5}  .702489{col 51}{space 3} .7612244
+{col 1}{text}         nhe{col 14}{c |}{result}{space 2}  .205092{col 26}{space 2} .0120872{col 37}{space 5} .1789793{col 51}{space 3} .2312048
+{col 1}{text}     _prop_5{col 14}{c |}{result}{space 2} .0622666{col 26}{space 2}   .00514{col 37}{space 5} .0511623{col 51}{space 3} .0733708
+{col 1}{text}        nang{col 14}{c |}{result}{space 2} .0007847{col 26}{space 2} .0004699{col 37}{space 5}-.0002305{col 51}{space 3} .0017999
+{col 1}{text}{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 1}{result}thieumauth~t{col 14}{text}{c |}
+{col 1}{text}       khong{col 14}{c |}{result}{space 2}  .822776{col 26}{space 2} .0103352{col 37}{space 5} .8004481{col 51}{space 3} .8451039
+{col 1}{text}          co{col 14}{c |}{result}{space 2}  .177224{col 26}{space 2} .0103352{col 37}{space 5} .1548961{col 51}{space 3} .1995519
+{col 1}{text}{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 1}{result}nhiemgiun   {col 14}{text}{c |}
+{col 1}{text}     _prop_9{col 14}{c |}{result}{space 2} .8053695{col 26}{space 2}  .014979{col 37}{space 5} .7730093{col 51}{space 3} .8377296
+{col 1}{text}    _prop_10{col 14}{c |}{result}{space 2}   .02591{col 26}{space 2} .0045909{col 37}{space 5}  .015992{col 51}{space 3} .0358279
+{col 1}{text}    _prop_11{col 14}{c |}{result}{space 2} .1687206{col 26}{space 2}   .01266{col 37}{space 5} .1413704{col 51}{space 3} .1960708
+{col 1}{text}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. svy linearized : proportion thieumau phandothieumau thieumauthieusat nhiemgiun
+{txt}(running proportion on estimation sample)
+
+Survey: Proportion estimation
+
+{col 1}Number of strata{col 18}= {res}      1{txt}{col 37}Number of obs{col 54}= {res}    762
+{txt}{col 1}Number of PSUs{col 18}= {res}     14{txt}{col 37}Population size{col 54}={res}    4695
+{txt}{col 37}Design df{col 54}= {res}     13
+
+      {txt}_prop_1: thieumau = {res}khong thieu mau
+      {txt}_prop_2: thieumau = {res}thieu mau
+      {txt}_prop_3: phandothieumau = {res}binh thuong
+      {txt}_prop_5: phandothieumau = {res}trung binh
+      {txt}_prop_9: nhiemgiun = {res}khong nhiem
+     {txt}_prop_10: nhiemgiun = {res}giun dua
+     {txt}_prop_11: nhiemgiun = {res}giun moc
+
+{col 1}{text}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{text}{c |}{col 26}  Linearized
+{col 14}{text}{c |} Proportion{col 26}   Std. Err.{col 37}     [95% Conf. Interval]
+{col 1}{text}{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 1}{result}thieumau    {col 14}{text}{c |}
+{col 1}{text}     _prop_1{col 14}{c |}{result}{space 2} .7318567{col 26}{space 2} .0135938{col 37}{space 5}  .702489{col 51}{space 3} .7612244
+{col 1}{text}     _prop_2{col 14}{c |}{result}{space 2} .2681433{col 26}{space 2} .0135938{col 37}{space 5} .2387756{col 51}{space 3}  .297511
+{col 1}{text}{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 1}{result}phandothie~u{col 14}{text}{c |}
+{col 1}{text}     _prop_3{col 14}{c |}{result}{space 2} .7318567{col 26}{space 2} .0135938{col 37}{space 5}  .702489{col 51}{space 3} .7612244
+{col 1}{text}         nhe{col 14}{c |}{result}{space 2}  .205092{col 26}{space 2} .0120872{col 37}{space 5} .1789793{col 51}{space 3} .2312048
+{col 1}{text}     _prop_5{col 14}{c |}{result}{space 2} .0622666{col 26}{space 2}   .00514{col 37}{space 5} .0511623{col 51}{space 3} .0733708
+{col 1}{text}        nang{col 14}{c |}{result}{space 2} .0007847{col 26}{space 2} .0004699{col 37}{space 5}-.0002305{col 51}{space 3} .0017999
+{col 1}{text}{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 1}{result}thieumauth~t{col 14}{text}{c |}
+{col 1}{text}       khong{col 14}{c |}{result}{space 2}  .822776{col 26}{space 2} .0103352{col 37}{space 5} .8004481{col 51}{space 3} .8451039
+{col 1}{text}          co{col 14}{c |}{result}{space 2}  .177224{col 26}{space 2} .0103352{col 37}{space 5} .1548961{col 51}{space 3} .1995519
+{col 1}{text}{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 1}{result}nhiemgiun   {col 14}{text}{c |}
+{col 1}{text}     _prop_9{col 14}{c |}{result}{space 2} .8053695{col 26}{space 2}  .014979{col 37}{space 5} .7730093{col 51}{space 3} .8377296
+{col 1}{text}    _prop_10{col 14}{c |}{result}{space 2}   .02591{col 26}{space 2} .0045909{col 37}{space 5}  .015992{col 51}{space 3} .0358279
+{col 1}{text}    _prop_11{col 14}{c |}{result}{space 2} .1687206{col 26}{space 2}   .01266{col 37}{space 5} .1413704{col 51}{space 3} .1960708
+{col 1}{text}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. use "D:\DATA\epi1.dta", clear
+
+. edit
+{txt}- preserve
+
+{com}. bysort cluster: tab1 vac
+
+{txt}{hline}
+-> cluster = 1
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          3       42.86       42.86
+{txt}          2 {c |}{res}          4       57.14      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 2
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          7      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 3
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          4       57.14       57.14
+{txt}          2 {c |}{res}          3       42.86      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 4
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          5       71.43       71.43
+{txt}          2 {c |}{res}          2       28.57      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 5
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          5       71.43       71.43
+{txt}          2 {c |}{res}          2       28.57      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 6
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          7      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 7
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          4       57.14       57.14
+{txt}          2 {c |}{res}          3       42.86      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 8
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          6       85.71       85.71
+{txt}          2 {c |}{res}          1       14.29      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 9
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          6       85.71       85.71
+{txt}          2 {c |}{res}          1       14.29      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 10
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          1       14.29       14.29
+{txt}          2 {c |}{res}          6       85.71      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 11
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          5       71.43       71.43
+{txt}          2 {c |}{res}          2       28.57      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 12
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          6       85.71       85.71
+{txt}          2 {c |}{res}          1       14.29      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 13
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          5       71.43       71.43
+{txt}          2 {c |}{res}          2       28.57      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 14
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          4       57.14       57.14
+{txt}          2 {c |}{res}          3       42.86      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 15
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          7      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 16
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          6       85.71       85.71
+{txt}          2 {c |}{res}          1       14.29      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 17
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          6       85.71       85.71
+{txt}          2 {c |}{res}          1       14.29      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 18
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          2       28.57       28.57
+{txt}          2 {c |}{res}          5       71.43      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 19
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          7      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 20
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          7      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 21
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          4       57.14       57.14
+{txt}          2 {c |}{res}          3       42.86      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 22
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          1       14.29       14.29
+{txt}          2 {c |}{res}          6       85.71      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 23
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          4       57.14       57.14
+{txt}          2 {c |}{res}          3       42.86      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 24
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          5       71.43       71.43
+{txt}          2 {c |}{res}          2       28.57      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 25
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          5       71.43       71.43
+{txt}          2 {c |}{res}          2       28.57      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 26
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          7      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 27
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          5       71.43       71.43
+{txt}          2 {c |}{res}          2       28.57      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 28
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          7      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 29
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          7      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{txt}{hline}
+-> cluster = 30
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}          7      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          7      100.00
+
+{com}. tab1 vac
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}        155       73.81       73.81
+{txt}          2 {c |}{res}         55       26.19      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        210      100.00
+
+{com}. ci vac
+
+{txt}    Variable {c |}        Obs        Mean    Std. Err.       [95% Conf. Interval]
+{hline 13}{c +}{hline 63}
+         vac {c |}{col 16}{res}       210{col 29}        1{col 41}        0{col 57}        1{col 69}        1{txt}
+
+{com}. ci vac==1
+{err}== invalid name
+{txt}{search r(198):r(198);}
+
+{com}. recode vac (1=1) (2=0)
+{txt}(vac: 55 changes made)
+
+{com}. ci vac
+
+{txt}    Variable {c |}        Obs        Mean    Std. Err.       [95% Conf. Interval]
+{hline 13}{c +}{hline 63}
+         vac {c |}{col 16}{res}       210{col 29}        1{col 41}        0{col 57}        1{col 69}        1{txt}
+
+{com}. tab1 vac
+
+{res}-> tabulation of vac  
+
+        {txt}vac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         55       26.19       26.19
+{txt}          1 {c |}{res}        155       73.81      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        210      100.00
+
+{com}. svyset cluster, vce(linearized) singleunit(missing)
+
+      {txt}pweight:{col 16}<none>
+          VCE:{col 16}{res}linearized
+  {txt}Single unit:{col 16}{res}missing
+     {txt}Strata 1:{col 16}<one>
+         SU 1:{col 16}{res}cluster
+        {txt}FPC 1:{col 16}<zero>
+{p2colreset}{...}
+
+{com}. svy linearized : proportion vac  prenatal
+{txt}(running proportion on estimation sample)
+
+Survey: Proportion estimation
+
+{col 1}Number of strata{col 18}= {res}      1{txt}{col 37}Number of obs{col 54}= {res}    210
+{txt}{col 1}Number of PSUs{col 18}= {res}     30{txt}{col 37}Population size{col 54}={res}     210
+{txt}{col 37}Design df{col 54}= {res}     29
+
+{col 1}{text}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{text}{c |}{col 26}  Linearized
+{col 14}{text}{c |} Proportion{col 26}   Std. Err.{col 37}     [95% Conf. Interval]
+{col 1}{text}{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 1}{result}vac         {col 14}{text}{c |}
+{col 1}{text}           0{col 14}{c |}{result}{space 2} .2619048{col 26}{space 2} .0459902{col 37}{space 5} .1678442{col 51}{space 3} .3559653
+{col 1}{text}           1{col 14}{c |}{result}{space 2} .7380952{col 26}{space 2} .0459902{col 37}{space 5} .6440347{col 51}{space 3} .8321558
+{col 1}{text}{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 1}{result}prenatal    {col 14}{text}{c |}
+{col 1}{text}           1{col 14}{c |}{result}{space 2} .4142857{col 26}{space 2} .0562116{col 37}{space 5}   .29932{col 51}{space 3} .5292514
+{col 1}{text}           2{col 14}{c |}{result}{space 2} .5857143{col 26}{space 2} .0562116{col 37}{space 5} .4707486{col 51}{space 3}   .70068
+{col 1}{text}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. svyset cluster, vce(linearized) singleunit(missing)
+
+      {txt}pweight:{col 16}<none>
+          VCE:{col 16}{res}linearized
+  {txt}Single unit:{col 16}{res}missing
+     {txt}Strata 1:{col 16}<one>
+         SU 1:{col 16}{res}cluster
+        {txt}FPC 1:{col 16}<zero>
+{p2colreset}{...}
+
+{com}. svy linearized : proportion vac  prenatal
+{txt}(running proportion on estimation sample)
+
+Survey: Proportion estimation
+
+{col 1}Number of strata{col 18}= {res}      1{txt}{col 37}Number of obs{col 54}= {res}    210
+{txt}{col 1}Number of PSUs{col 18}= {res}     30{txt}{col 37}Population size{col 54}={res}     210
+{txt}{col 37}Design df{col 54}= {res}     29
+
+{col 1}{text}{hline 13}{c TT}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 14}{text}{c |}{col 26}  Linearized
+{col 14}{text}{c |} Proportion{col 26}   Std. Err.{col 37}     [95% Conf. Interval]
+{col 1}{text}{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 1}{result}vac         {col 14}{text}{c |}
+{col 1}{text}           0{col 14}{c |}{result}{space 2} .2619048{col 26}{space 2} .0459902{col 37}{space 5} .1678442{col 51}{space 3} .3559653
+{col 1}{text}           1{col 14}{c |}{result}{space 2} .7380952{col 26}{space 2} .0459902{col 37}{space 5} .6440347{col 51}{space 3} .8321558
+{col 1}{text}{hline 13}{c +}{hline 11}{hline 11}{hline 14}{hline 12}
+{col 1}{result}prenatal    {col 14}{text}{c |}
+{col 1}{text}           1{col 14}{c |}{result}{space 2} .4142857{col 26}{space 2} .0562116{col 37}{space 5}   .29932{col 51}{space 3} .5292514
+{col 1}{text}           2{col 14}{c |}{result}{space 2} .5857143{col 26}{space 2} .0562116{col 37}{space 5} .4707486{col 51}{space 3}   .70068
+{col 1}{text}{hline 13}{c BT}{hline 11}{hline 11}{hline 14}{hline 12}
+
+{com}. svy linearized : tabulate vac prenatal
+{txt}(running tabulate on estimation sample)
+
+{col 1}Number of strata{col 20}= {res}        1{txt}{col 49}Number of obs{col 68}= {res}      210
+{txt}{col 1}Number of PSUs{col 20}= {res}       30{txt}{col 49}Population size{col 68}={res}       210
+{txt}{col 49}Design df{col 68}= {res}       29
+
+{txt}{hline 10}{c TT}{hline 20}
+          {c |}      prenatal      
+      vac {c |}     1      2  Total
+{hline 10}{c +}{hline 20}
+        0 {c |} {res}.0429   .219  .2619
+        {txt}1 {c |} {res}.3714  .3667  .7381
+          {txt}{c |} 
+    Total {c |} {res}.4143  .5857      1
+{txt}{hline 10}{c BT}{hline 20}
+  Key:  {col 1}{res}cell proportions
+
+{txt}  Pearson:
+{col 5}Uncorrected{col 19}chi2({res}1{txt}){col 35}= {res}  19.2929
+{txt}{col 5}Design-based{col 19}F({res}1{txt}, {res}29{txt}){col 35}= {res}  17.7431{col 51}{txt}P = {res}0.0002
+
+{com}. svy linearized : logistic vac prenatal
+{txt}(running logistic on estimation sample)
+
+Survey: Logistic regression
+
+{col 1}Number of strata{col 20}= {res}        1{txt}{col 49}Number of obs{col 68}= {res}      210
+{txt}{col 1}Number of PSUs{col 20}= {res}       30{txt}{col 49}Population size{col 68}={res}       210
+{txt}{col 49}Design df{col 68}= {res}       29
+{txt}{col 49}F({res}   1{txt},{res}     29{txt}){col 68}= {res}    15.67
+{txt}{col 49}Prob > F{col 68}= {res}   0.0004
+
+{col 1}{text}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 9}{hline 12}{hline 12}
+{col 14}{text}{c |}{col 26}  Linearized
+{col 1}{text}         vac{col 14}{c |} Odds Ratio{col 26}   Std. Err.{col 37}      t{col 46}   P>|t|{col 55}    [95% Conf. Interval]
+{col 1}{text}{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 9}{hline 12}{hline 12}
+{col 1}{text}    prenatal{col 14}{c |}{result}{space 2} .1931438{col 26}{space 2} .0802223{col 37}{space 1}   -3.96{col 46}{space 3}0.000{col 55}{space 3}  .082595{col 67}{space 3} .4516563
+{col 1}{text}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 9}{hline 12}{hline 12}
+
+{com}. exit, clear

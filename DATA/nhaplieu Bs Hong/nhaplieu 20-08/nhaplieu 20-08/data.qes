@@ -1,0 +1,399 @@
+id     <IDNUM>
+
+HANH CHANH
+v1     ma ho so #########
+q1     ten bn <A                             >
+q2     ngay sinh <dd/mm/yyyy>
+q3     gioi tinh #
+q4     dia chi <A                   >
+q5     ngay vao lo <dd/mm/yyyy>
+t      tuoi ##.##
+
+BENH SU
+q6     thuoc sd tuyen truoc <A                             >
+
+TIEN SU
+BAN THAN
+q7     para   ####
+q8     cnls   #.##
+q9     sanh   <A                   >
+q10a   lao    #        q10b vgb#       q10c bhhguvbl#        q10d soi#        q10e rota#        q10f hib#        q10g cum#        q10h vnnb#        q10k vga#        q10l khac#
+q10la  chung ngua khac <A                   >
+q11a   chieu cao ###.##        q11b can nang##.##
+dd     dinh duong #
+q12a   kk lan dau ##        q12b so lan kk###        q12c chan doan hen##        q12d thuoc dang sd<A                             >
+q13    benh khac <A                             >
+q14a   cham   #        q14b viem xoang#        q14c viem mui du#        q14d du thuc an#        q14e du thoi tiet#        q14f du khoi bui#        q14g du phan hoa#        q14h du khac#
+q14ha  di ung khac <A                             >
+GIA DINH
+q15a   gd benh #
+q15aa  gd benh ghi ro <A                                                 >       
+q15b   gd di ung #
+q15bb  gd du ghi ro <A                                                 >
+
+LAM SANG
+TONG TRANG
+q16a   mach   ###        q16b nhip tho##        q16c nhiet do##.#
+q17a   chieu cao ###.#        q17b can nang##.##
+HO HAP
+q18    co lom nguc #
+q19a   r ngay #        q19b r rit#        q19c r am#        q19d r no#
+q20    hc ba giam #
+q21    hc dong dac #
+
+CAN LAM SANG 
+c1     cls #
+c2     cls ghi ro <A                             >
+TEST DA
+v2     gio chich di nguyen <A         >        v3 gio doc ket qua <A         >
+
+v4a    not phong histamin dk nho ##    v4b not phong histamin dk lon ##
+v5a    not phong natriclorua dk nho ##    v5b not phong natriclorua dk lon ##
+v6a    not phong meo dk nho ##    v6b not phong meo dk lon ##
+v7a    not phong cho dk nho ##    v7b not phong cho dk lon ##
+v8a    not phong nam dk nho ##    v8b not phong nam dk lon ##
+v9a    not phong gian dk nho ##    v9b not phong gian dk lon ##
+v10a   not phong chuot dk nho ##    v10b not phong chuot dk lon ##
+v11a   not phong mat dk nho ##    v11b not phong mat dk lon ##
+
+v12a   not hong ban histamin dk nho ##    v12b not hong ban histamin dk lon ##
+v13a   not hong ban natriclorua dk nho ##    v13b not hong ban natriclorua dk lon ##
+v14a   not hong ban meo dk nho ##    v14b not hong ban meo dk lon ##
+v15a   not hong ban cho dk nho ##    v15b not hong ban cho dk lon ##
+v16a   not hong ban nam dk nho ##    v18b not hong ban nam dk lon ##
+v17a   not hong ban gian dk nho ##    v17b not hong ban gian dk lon ##
+v18a   not hong ban chuot dk nho ##    v16b not hong ban chuot dk lon ##
+v19a   not hong ban mat dk nho ##    v19b not hong ban mat dk lon ##
+
+nvnc   <dd/mm/yyyy>
+
+MOI TRUONG VNC
+
+DI NGUYEN
+avnc1  nha nem #
+avnc2  tham   #
+avnc3  tham nho #
+avnc4  do moi #
+avnc5  ghi ro do moi <A                             >
+avnc6  be nem #
+avnc7  chieu  #
+avnc8  goi gon #
+avnc9  nuoc dong #
+avnc10 ghi ro nuoc dong <A                             >
+avnc11 xit phong #
+avnc12 may lanh #
+avnc13 moc    #
+avnc14 mui moc #
+avnc15 cho    #
+avnc16 meo    #
+avnc17 trai chan nuoi #
+avnc18 ghi ro chan nuoi <A                             >
+avnc19 gian   #
+avnc20 chuot  #
+
+O NHIEM KHONG KHI
+bvnc1  hut thuoc #
+bvnc2  hut nha #
+bvnc3  so nguoi hut ##
+bvnc4  nau an #
+bvnc5  bep ga #
+bvnc6  hut khoi #
+bvnc7  diet con trung #
+bvnc8  ghi ro diet con trung <A                             >
+bvnc9  nhang muoi #
+bvnc10 ngay trong tuan nhang muoi #
+bvnc11 thap nhang #
+bvnc12 ngay trong tuan thap nhang #
+bvnc13 khoi bui nha #
+bvnc14 ghi ro khoi bui nha <A                             >
+bvnc15 thuoc tru sau #
+bvnc16 ghi ro thuoc tru sau <A                             >
+bvnc17 duong quoc lo #
+bvnc18 duong sua chua #
+bvnc19 khu cong nghiep #
+bvnc20 nha tre #
+bvnc21 ghi ro nha tre <A                                       >
+bvnc22 xe dap #
+bvnc23 ngay trong tuan xe dap <A                             >
+bvnc24 xe gan may #
+bvnc25 ngay trong tuan xe gan may <A                             >
+bvnc26 xe hoi #
+bvnc27 ngay trong tuan xe hoi <A                             >
+
+NHA TRE
+cvnc1  nt lon #
+cvnc2  nt thu nuoi #
+cvnc3  ghi ro nt thu nuoi <A                             >
+cvnc4  nt hut thuoc #
+cvnc5  nt duong quoc lo #
+cvnc6  nt duong sua chua #
+
+ntkm   <dd/mm/yyyy>
+
+MOI TRUONG TKM
+
+DI NGUYEN
+atkm1  nha nem #
+atkm2  tham   #
+atkm3  tham nho #
+atkm4  do moi #
+atkm5  ghi ro do moi <A                             >
+atkm6  be nem #
+atkm7  chieu  #
+atkm8  goi gon #
+atkm9  nuoc dong #
+atkm10 ghi ro nuoc dong <A                             >
+atkm11 xit phong #
+atkm12 may lanh #
+atkm13 moc    #
+atkm14 mui moc #
+atkm15 cho    #
+atkm16 meo    #
+atkm17 trai chan nuoi #
+atkm18 ghi ro chan nuoi <A                             >
+atkm19 gian   #
+atkm20 chuot  #
+
+O NHIEM KHONG KHI
+btkm1  hut thuoc #
+btkm2  hut nha #
+btkm3  so nguoi hut ##
+btkm4  nau an #
+btkm5  bep ga #
+btkm6  hut khoi #
+btkm7  diet con trung #
+btkm8  ghi ro diet con trung <A                             >
+btkm9  nhang muoi #
+btkm10 ngay trong tuan nhang muoi #
+btkm11 thap nhang #
+btkm12 ngay trong tuan thap nhang #
+btkm13 khoi bui nha #
+btkm14 ghi ro khoi bui nha <A                             >
+btkm15 thuoc tru sau #
+btkm16 ghi ro thuoc tru sau <A                             >
+btkm17 duong quoc lo #
+btkm18 duong sua chua #
+btkm19 khu cong nghiep #
+btkm20 nha tre #
+btkm21 ghi ro nha tre <A                                       >
+btkm22 xe dap #
+btkm23 ngay trong tuan xe dap <A                             >
+btkm24 xe gan may #
+btkm25 ngay trong tuan xe gan may <A                             >
+btkm26 xe hoi #
+btkm27 ngay trong tuan xe hoi <A                             >
+
+NHA TRE
+ctkm1  nt lon #
+ctkm2  nt thu nuoi #
+ctkm3  ghi ro nt thu nuoi <A                             >
+ctkm4  nt hut thuoc #
+ctkm5  nt duong quoc lo #
+ctkm6  nt duong sua chua #
+
+
+ntkh   <dd/mm/yyyy>
+
+MOI TRUONG TKH
+
+DI NGUYEN
+atkh1  nha nem #
+atkh2  tham   #
+atkh3  tham nho #
+atkh4  do moi #
+atkh5  ghi ro do moi <A                             >
+atkh6  be nem #
+atkh7  chieu  #
+atkh8  goi gon #
+atkh9  nuoc dong #
+atkh10 ghi ro nuoc dong <A                             >
+atkh11 xit phong #
+atkh12 may lanh #
+atkh13 moc    #
+atkh14 mui moc #
+atkh15 cho    #
+atkh16 meo    #
+atkh17 trai chan nuoi #
+atkh18 ghi ro chan nuoi <A                             >
+atkh19 gian   #
+atkh20 chuot  #
+
+O NHIEM KHONG KHI
+btkh1  hut thuoc #
+btkh2  hut nha #
+btkh3  so nguoi hut ##
+btkh4  nau an #
+btkh5  bep ga #
+btkh6  hut khoi #
+btkh7  diet con trung #
+btkh8  ghi ro diet con trung <A                             >
+btkh9  nhang muoi #
+btkh10 ngay trong tuan nhang muoi #
+btkh11 thap nhang #
+btkh12 ngay trong tuan thap nhang #
+btkh13 khoi bui nha #
+btkh14 ghi ro khoi bui nha <A                             >
+btkh15 thuoc tru sau #
+btkh16 ghi ro thuoc tru sau <A                             >
+btkh17 duong quoc lo #
+btkh18 duong sua chua #
+btkh19 khu cong nghiep #
+btkh20 nha tre #
+btkh21 ghi ro nha tre <A                                       >
+btkh22 xe dap #
+btkh23 ngay trong tuan xe dap <A                             >
+btkh24 xe gan may #
+btkh25 ngay trong tuan xe gan may <A                             >
+btkh26 xe hoi #
+btkh27 ngay trong tuan xe hoi <A                             >
+
+NHA TRE
+ctkh1  nt lon #
+ctkh2  nt thu nuoi #
+ctkh3  ghi ro nt thu nuoi <A                             >
+ctkh4  nt hut thuoc #
+ctkh5  nt duong quoc lo #
+ctkh6  nt duong sua chua #
+
+ntkb   <dd/mm/yyyy>
+
+MOI TRUONG TKB
+
+DI NGUYEN
+atkb1  nha nem #
+atkb2  tham   #
+atkb3  tham nho #
+atkb4  do moi #
+atkb5  ghi ro do moi <A                             >
+atkb6  be nem #
+atkb7  chieu  #
+atkb8  goi gon #
+atkb9  nuoc dong #
+atkb10 ghi ro nuoc dong <A                             >
+atkb11 xit phong #
+atkb12 may lanh #
+atkb13 moc    #
+atkb14 mui moc #
+atkb15 cho    #
+atkb16 meo    #
+atkb17 trai chan nuoi #
+atkb18 ghi ro chan nuoi <A                             >
+atkb19 gian   #
+atkb20 chuot  #
+
+O NHIEM KHONG KHI
+btkb1  hut thuoc #
+btkb2  hut nha #
+btkb3  so nguoi hut ##
+btkb4  nau an #
+btkb5  bep ga #
+btkb6  hut khoi #
+btkb7  diet con trung #
+btkb8  ghi ro diet con trung <A                             >
+btkb9  nhang muoi #
+btkb10 ngay trong tuan nhang muoi #
+btkb11 thap nhang #
+btkb12 ngay trong tuan thap nhang #
+btkb13 khoi bui nha #
+btkb14 ghi ro khoi bui nha <A                             >
+btkb15 thuoc tru sau #
+btkb16 ghi ro thuoc tru sau <A                             >
+btkb17 duong quoc lo #
+btkb18 duong sua chua #
+btkb19 khu cong nghiep #
+btkb20 nha tre #
+btkb21 ghi ro nha tre <A                                       >
+btkb22 xe dap #
+btkb23 ngay trong tuan xe dap <A                             >
+btkb24 xe gan may #
+btkb25 ngay trong tuan xe gan may <A                             >
+btkb26 xe hoi #
+btkb27 ngay trong tuan xe hoi <A                             >
+
+NHA TRE
+ctkb1  nt lon #
+ctkb2  nt thu nuoi #
+ctkb3  ghi ro nt thu nuoi <A                             >
+ctkb4  nt hut thuoc #
+ctkb5  nt duong quoc lo #
+ctkb6  nt duong sua chua #
+
+KIEM SOAT HEN VNC
+kvnc1  hen ngay #
+kvnc2  hen van dong #
+kvnc3  hen dem #
+kvnc4  hen thuoc cat #
+kvnc5  hen thuoc phong <A                                                 >
+kvnc6  hen quen thuoc phong #
+kvnc7  hen tai kham #
+kvnc8  hen ky thuat #
+kvnc9  hen phan loai #
+
+KIEM SOAT HEN TKM
+ktkm1  hen ngay #
+ktkm2  hen van dong #
+ktkm3  hen dem #
+ktkm4  hen thuoc cat #
+ktkm5  hen thuoc phong <A                                                 >
+ktkm6  hen quen thuoc phong #
+ktkm7  hen tai kham #
+ktkm8  hen ky thuat #
+ktkm9  hen phan loai #
+
+KIEM SOAT HEN TKH
+ktkh1  hen ngay #
+ktkh2  hen van dong #
+ktkh3  hen dem #
+ktkh4  hen thuoc cat #
+ktkh5  hen thuoc phong <A                                                 >
+ktkh6  hen quen thuoc phong #
+ktkh7  hen tai kham #
+ktkh8  hen ky thuat #
+ktkh9  hen phan loai #
+
+KIEM SOAT HEN TKB
+ktkb1  hen ngay #
+ktkb2  hen van dong #
+ktkb3  hen dem #
+ktkb4  hen thuoc cat #
+ktkb5  hen thuoc phong <A                                                 >
+ktkb6  hen quen thuoc phong #
+ktkb7  hen tai kham #
+ktkb8  hen ky thuat #
+ktkb9  hen phan loai #
+
+KIEM SOAT HEN CHUNG
+kshen  kiem soat hen #
+
+MOI TRUONG NHA
+n1a    biet thu #    n1b nha#    n1c chung cu#    n1d nha tam#    n1e nha khac#    n1ea ghi ro nha<A                             >
+n2     nha so huu #
+n3     nha duong quoc lo #
+n4     nha duong sua chua #
+n5     nha khu cong nghiep #
+n6     nha hut thuoc #
+n7     nha tx thu #
+n8     nha tx chat co mui #
+n9     nha vs may lanh #
+n10a   nha nem #    n10b nha sofa#    n10c nha chieu#    n10d nha vong#    n11e nha cho ngu khac#    n11ea ghi ro nha cho ngu<A                             >
+n11a   nha goi gon #    n11b nha goi rom#    n11c nha goi#    n11d nha chan#    n11e nha men#    n11f nha khan trai giuong#    n11g nha vat dung khac#    n11ga ghi ro nha vat dung<A                             >
+n12a   nha gach #    n12b nha ximang#    n12c nha gach vuong#    n12d nha tham#    n12e nha go#    n12f nha gia da#    n12g nha lot khac#    n12ga ghi ro nha lot<A                             >
+n13a   nha cs man #    n13b nha cs rem#    n13c nha cs manh#    n13d nha cs vai#    n13e nha cs khac#    n13ea ghi ro nha cs<A                             >
+n14a   nha gas #    n14b nha cui#    n14c nha than#    n14d nha than da#    n14e nha phan#    n14f nha rom#    n14g nha nau an khac#    n14ga ghi ro nha nau an<A                             >
+n15    nha hut khoi #
+n16    nha o nhiem #
+n17    nha nam moc #
+n18    nha nuoc dong #
+n19    nha gian chuot #
+n20    nha ong dan #
+
+
+
+
+
+
+
+
+
+
+

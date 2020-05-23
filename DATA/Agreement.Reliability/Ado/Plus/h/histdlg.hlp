@@ -1,0 +1,176 @@
+.-
+help for ^Histogram and Histograms by group (Continuous & Discrete)^
+.-
+                                            Menu: Graphs--One variable
+                                                  Graphs--One variable by group
+
+Topics covered
+--------------
+
+^1. One variable histogram -- Continuous variable^
+^2. One variable histogram -- Discrete variable^
+^3. Histograms by group -- Continuous variable^
+^4. Histograms by group -- Discrete variable^
+
+Note:  Click the ^Dialog^  button to bring the dialog box      to the front.
+         "    "  ^Results^   "    "    "    "  ^Results^ window  "   "    "
+         "    "  ^Graph^     "    "    "    "  ^Graph^   window  "   "    "
+
+
+^1. One variable histogram -- Continuous variable^
+^------------------------------------------------^
+
+Steps for making a continuous-variable histogram:
+
+1. Select one variable to be graphed.
+   
+   Click on the variable name in the list box.  Or type it in.
+
+2. Click ^Draw^ to see the graph.
+
+3. Click the ^Dialog^ button to bring the dialog box back to the top
+   (if necessary).  Or click on the title bar of the dialog box.
+   
+   You can also move the ^Stata Graph^ window out of the way.
+
+4. Set the options if you wish:
+
+	    ^Range^  You can change the minimum and maximum values for the
+                   x-axis.  Set them to nice round numbers.
+
+		   Note:  If you set the minimum to 0 and the maximum to 10, 
+                   for example, and if you have a point at 11, it will not
+                   be included in the histogram.
+
+		   To find out the minimum and maximum values of your
+                   data, use the ^Means and SDs^ command under the
+                   ^Summaries^ menu.
+
+^Histogram with __ bins^  You can set the number of bins or the width of bins.
+                   Press the button for the one you want to set.
+                   
+                   To change the number of bins, either type in the number,
+                   or click on the ^+^ button to increase it or click on the
+                   ^-^ button to decrease it.
+
+                   If you have the ^Auto-redraw^ box checked (see below) and
+                   already clicked the ^Draw^ button, you can see your histogram
+		   change as you click ^+^ or ^-^. 
+                   
+                   The number of bins must be between 2 and 50.
+
+ ^Bins of width __^  You must choose a width that produces between 2 and 50 bins.
+
+^Overlay normal curve^  This draws a normal curve based on the mean and
+                   standard deviation of your data.  If the data are normal,
+                   the curve and the histogram should roughly match.
+
+      ^Auto-redraw^  First, click the ^Draw^ button.  Now, check this option.
+                   Click the ^+^ or ^-^ button to change the number of bins.
+                   You will see the histogram change as you click the ^+^/^-^
+		   buttons.
+
+5. Click ^Draw^ as you adjust the options to what you want.  When you have
+   the graph as you like it, click ^OK^.
+
+6. @graph_sq!Click here for help on printing, saving, and viewing your graph.@
+
+
+^2. One variable histogram -- Discrete variable^
+^----------------------------------------------^
+
+Enter the "Data variable" by clicking on its name in the list box.  Or type
+it in.
+
+The "Data variable" must only have discrete values: It must only contain
+integers and the range of the variable must be < 50.
+
+Examples:  1, 2, 2, 15, 25, 30, 33 ^-> this data is OK^
+
+           1.5, 2, 2, 2.5, 3, 3    ^-> this data is not OK -- not all integers^
+
+           2, 3, 3, 3, 50, 51, 53  ^-> this data is not OK -- range is^
+                                                             ^53 - 2 = 51^
+
+Click ^Draw^ to draw the graph while keeping the dialog box open to draw more.
+Click ^OK^   to draw the graph and close the dialog box.
+
+
+^3. Histograms by group -- Continuous variable^
+^---------------------------------------------^
+
+Steps for making a continuous-variable histogram by group:
+
+1. Select "Data variable".  This is the variable that will be used to make
+   the histogram.
+
+   Select the "By group".  This is a group variable.
+   A histogram will be produced for each unique value of this variable.
+
+   Example:  Suppose you have a variable ^height^ and a variable ^gender^.
+
+   To get two histograms -- one of the heights for females (gender = 0)
+   and another of the heights for males (gender = 1) -- you enter ^height^
+   for "Data variable" and ^gender^ for "By group".
+   
+2. Click ^Draw^ to see the graph.
+
+3. Click the ^Dialog^ button to bring the dialog box back to the top
+   (if necessary).  Or click on the title bar of the dialog box.
+   
+   You can also move the ^Stata Graph^ window out of the way.
+
+4. Set the options:
+
+   ^Number of bins^  Type in a number or click the ^+^ or ^-^ buttons. 
+                   
+                   The number of bins must be between 2 and 50.
+
+    ^Overlay normal curve^  This draws a normal curve based on the mean
+                   and standard deviation in each subgroup.
+
+      ^Auto-redraw^  When this is checked, clicking the ^+^ or ^-^ buttons
+                   will automatically redraw the graph (once you have 
+                   clicked the ^Draw^ button).
+
+    ^Include histogram of totals^  Check this box if you also want a histogram
+                   of the combined groups. 
+
+5. When you have the graph as you want it, click ^OK^.
+
+6. @graph_sq!Click here for help on printing, saving, and viewing your graph.@
+
+
+^4. Histograms by group -- Discrete variable^
+^-------------------------------------------^
+
+Select "Data variable".  This is the variable that will be used to make the
+histogram.
+
+The "Data variable" must only have discrete values: It must only contain
+integers and the range of the variable must be < 50.
+
+Select the "By group".  This is a group variable.  A separate histogram
+will be produced for each unique value of this variable.
+
+Check the box "Include histogram of totals" if you also want a histogram of
+the combined groups.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@bardlg!Bar charts@
+
+@boxdlg!Box plots@
+@stemdlg!Stem-and-leaf plot@
+@dpldlg!Dotplots@
+@qnormdlg!Normal quantile plot@
+
+@spdlg!Scatterplots@
+@tsdlg!Time-series graphs@
+@qcdlg!Quality-control charts@
+
+@graph_sq!Printing, saving, and viewing graphs@

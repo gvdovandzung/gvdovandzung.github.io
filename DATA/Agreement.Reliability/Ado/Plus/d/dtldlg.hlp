@@ -1,0 +1,57 @@
+.-
+help for ^Median/Percentiles^                                     Menu: Summaries
+.-
+
+^Description^
+^-----------^
+
+This command computes
+
+	 1% percentile
+	 5% percentile
+	10% percentile
+	25% percentile
+
+	50% percentile (= median)
+
+	75% percentile
+	90% percentile
+	95% percentile
+	99% percentile
+
+	number of nonmissing observations
+	mean
+	standard deviation
+	variance
+
+	skewness
+	kurtosis
+
+
+^How to fill in the dialog box^
+^-----------------------------^
+
+You can enter only one variable.
+
+Click on the variable name in the list box.
+Or type the variable name.
+
+You can scroll the list box, if necessary, to see all your variables.
+
+String variables will not appear in the list box.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@summdlg!Means and SDs@
+@sumbydlg!Means and SDs by group@
+@scidlg!Confidence intervals@
+
+@stesdlg!Sign test@
+@srandlg!Wilcoxon signed-rank test@
+@rsumdlg!Mann-Whitney (Wilcoxon rank-sum) test@
+
+@ptntdlg!Normality test@

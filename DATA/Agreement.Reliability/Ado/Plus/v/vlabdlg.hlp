@@ -1,0 +1,116 @@
+.-
+help for ^Label values^                                         Menu: Data--Label
+.-
+
+^Description^
+^-----------^
+
+This command allows you to create labels for the values of a numeric variable.
+
+Note:  Labeling the values of a numeric variable does not change the variable.
+It is still a numeric (not a string) variable.
+
+
+^Example^
+^-------^
+
+Suppose you have a variable ^gender^ that takes on the value 0 for female
+and 1 for male.
+
+If you choose ^List data^ from the ^Summaries^ menu, your data looks like
+
+^. list gender in 1/100^                                                         
+                                                                                
+        gender                                                                  
+  1.         1                                                                  
+  2.         0                                                                  
+  3.         0                                                                  
+  4.         0                                                                  
+  5.         0                                                                  
+  6.         1                                                                  
+  7.         0                                                                  
+  8.         1                                                                  
+  etc.
+
+It is difficult to remember which is which, so you
+attach the value label "female" to 0 and "male" to 1.
+
+Now if you choose ^List data^ from the ^Summaries^ menu, your data looks like
+
+^. list gender in 1/100^                                                          
+                                                                                
+        gender                                                                  
+  1.      male                                                                  
+  2.    female                                                                  
+  3.    female                                                                  
+  4.    female                                                                  
+  5.    female                                                                  
+  6.      male                                                                  
+  7.    female                                                                  
+  8.      male                                                                  
+  etc.
+
+Note:  The variable ^gender^ is unchanged.  It is still a 0-1 numeric variable.
+
+Try choosing ^Means and SDs^ from the ^Summaries^ menu:
+
+^. summarize gender^                                                              
+                                                                                
+Variable |     Obs        Mean   Std. Dev.       Min        Max                 
+---------+-----------------------------------------------------                 
+  gender |     100         .54   .5009083          0          1                 
+ 
+
+But for other commands (e.g., ^List data^), you will see the labels "female" and
+"male" rather than the values 0, 1.
+
+Choose ^Tables^ from the ^Summaries^ menu and select ^One-way (frequency)^:
+
+^. tabulate gender^                                                               
+      gender|      Freq.     Percent        Cum.                                
+------------+-----------------------------------                                
+     female |         46       46.00       46.00                                
+       male |         54       54.00      100.00                                
+------------+-----------------------------------                                
+      Total |        100      100.00                                            
+ 
+It makes a much more understandable table when the values are labeled.
+
+
+^How to fill in the dialog boxes^
+^-------------------------------^
+
+In the first dialog box, enter the name of the variable you wish to label.
+
+In the second dialog box, type in the label that corresponds to the value
+you see under "Define".
+
+E.g., in the above example, we see the value 0, and we type in ^female^.
+
+Click on ^Next^.
+
+Repeat.  Type in the label that corresponds to the next value you see.
+
+E.g., in the above example, we see the value 1, and we type in ^male^.
+
+You can review and change what you have done by
+
+	- click on ^First^ to review/change the first    label
+	- click on ^Prev^  "        "        "  previous   "
+	- click on ^Last^  "        "        "  last       "
+
+Click on ^OK^ when you are finished.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@stldlg!Strings to labels@
+@stldlg!Labels to strings@
+@dslabdlg!Label dataset@
+@varldlg!Label variable@
+
+@editr_sq!Using the spreadsheet editor (variable labels can also be entered@
+@editr_sq!in the editor)@

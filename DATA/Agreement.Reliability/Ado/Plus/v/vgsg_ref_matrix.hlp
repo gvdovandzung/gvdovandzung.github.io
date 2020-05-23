@@ -1,0 +1,32 @@
+{smcl}
+{p 0 4}
+{bf:{help vgsg:A Visual Guide to Stata Graphics}} > {bf:{help vgsg_ref:Cross Reference}} > {bf:Matrix}
+{p_end}
+{hline}
+
+{title:Matrix}: {bf:{help graph_matrix:graph_matrix}}
+
+{p 4 8 4}
+Marker Options{break} 
+{bf:{help marker_options}}{break}
+{bf:{help marker_label_options}}
+{break}
+
+{p 4 8 4}
+Axes{break} 
+{bf:{help axis_label_options}}{break}
+{bf:{help axis_scale_options}}
+{break}
+
+{p 4 8 4}
+Matrix Options{break}
+{bf:{help graph_matrix}}
+{break}
+
+{p 4 8 4}
+by(){break}
+{bf:{help by_option}}
+{break}
+
+
+{hline}

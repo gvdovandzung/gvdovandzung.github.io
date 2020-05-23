@@ -1,0 +1,38 @@
+.-
+help for ^Export ASCII data files^                                     Menu: File
+.-
+
+^Description^
+^-----------^
+
+This command creates an ASCII data file that can be easily read by
+another application (e.g., a database program).
+
+Note:  An ASCII file is the same thing as a plain text file.
+
+
+^How to fill in the dialog box^
+^-----------------------------^
+
+In the first dialog box, type in the name of the file you wish to 
+create.
+
+In the second dialog box, choose the type of format -- either
+tab separated or comma separated.
+
+Check or uncheck other options.
+
+Consult the documentation for the application to which you are
+exporting to find out how the file should be formatted.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@impdlg!Importing an ASCII data file@ 
+
+@input_sq!Inputting data using the spreadsheet editor@
+
+@editr_sq!Using the spreadsheet editor to view and change data@

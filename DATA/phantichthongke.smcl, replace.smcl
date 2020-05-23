@@ -1,0 +1,13 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}D:\DATA\phantichthongke.smcl, replace.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}19 Apr 2012, 19:08:30
+
+{com}. log close
+       {txt}log:  {res}D:\DATA\phantichthongke.smcl, replace.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}19 Apr 2012, 19:08:38
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

@@ -1,0 +1,84 @@
+.-
+help for ^Pearson correlation^                      Menu: Statistics--Correlation
+.-
+
+^Description^
+^-----------^
+
+This command computes the Pearson product-moment correlation coefficient
+for the correlation of a variable X with a variable Y.
+
+This is the standard parametric correlation.
+
+
+^How to fill in the dialog box^
+^-----------------------------^
+
+Click once on a variable name to enter it.  Enter the X variable and the
+Y variable (order does not matter).
+
+You can enter more than two variables.  If you do, it computes all the
+possible pairwise correlations.
+
+
+^How to interpret the output^
+^---------------------------^
+
+Let's say you want to compute the correlation of variable ^x^ and variable ^y^.
+
+Enter ^x^ and ^y^ by clicking on their names.  Or type ^x^, a space, then ^y^.
+
+Click ^OK^.  The output is
+
+^. pwcorr  x y, sig^                                                              
+                                                                                
+          |        x        y                                                   
+----------+------------------                                                   
+        x |   1.0000                                                            
+          |                                                                     
+          |                                                                     
+        y |   0.2542   1.0000                                                   
+          |   0.0288                                                            
+          |                                                                     
+  
+The correlation is r = 0.2542.
+
+The p-value is displayed immediately below the correlation coefficient.
+
+In this case, the p-value is p = 0.0288.
+
+
+^More than two variables^
+^-----------------------^
+
+Let's say you enter ^x^, ^y^, and ^z^ as "Data variables".  The output is
+
+^. pwcorr  x y z, sig^                                                            
+                                                                                
+          |        x        y        z                                          
+----------+---------------------------                                          
+        x |   1.0000                                                            
+          |                                                                     
+          |                                                                     
+        y |   0.2542   1.0000                                                   
+          |   0.0288                                                            
+          |                                                                     
+        z |  -0.3612  -0.1841   1.0000                                          
+          |   0.0016   0.1164                                                   
+          |                                                                     
+
+Again, the p-value is displayed immediately below the correlation coefficient.
+   
+The correlation between ^x^ and ^y^ is r(xy) =  0.2542 and p-value is p = 0.0288
+ "       "         "    ^x^  "  ^z^ "  r(xz) = -0.3612  "     "    "  p = 0.0016
+ "       "         "    ^y^  "  ^z^ "  r(yz) = -0.1841  "     "    "  p = 0.1164
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@speardlg!Spearman rank correlation@
+
+@pwcorr!For the command-line version, see help for pwcorr.@

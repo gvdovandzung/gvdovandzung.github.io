@@ -1,0 +1,144 @@
+.-
+help for ^metacum^                                               (STB-42: sbe22)
+.-
+
+Cumlative meta-analysis, with graphics
+--------------------------------------
+
+	^metacum^ { theta | exp(theta) } { se_theta | var_theta | ll ul [cl] }
+		[^if^ exp] [^in^ range] [^, v^ar ^ci^ ^eff^ect^(f^|^r)^ ^efo^rm ^l^evel^(^#^)^
+		^gr^aph ^id(^strvar^)^ ^cl^ine ^fm^ult^(^#^)^ ^cs^ize^(^#^)^
+		^ltr^unc^(^#^)^ ^rtr^unc^(^#^)^]
+
+
+Description
+-----------
+
+^metacum^ provides cumulative pooled estimates, confidence limits, and a test
+that the true pooled effect is zero, obtained from fixed or random effects
+meta-analysis and, optionally, plots the cumulative pooled estimates
+in the style of Lau et al. (1992). 
+
+The user provides the effect estimate as ^theta^ (i.e., a log risk ratio,
+log odds ratio, or other measure of effect). Likewise, the user supplies a 
+measure of theta's variability (i.e., its standard error, ^se_theta^, or
+its variance, ^var_theta^). Alternatively,  the user provides ^exp(theta)^
+(e.g. a risk ratio or odds ratio) and its confidence interval, ^(ll, ul)^.
+
+Options
+-------
+
+^var^ means the user has specified a variable containing the variance of
+the effect estimate.  If this option is not included, the command assumes
+the standard error has been specified.
+
+^ci^ means the user has specified the lower and upper confidence limits of
+the effect estimate, which is assumed to be on the ratio scale (e.g. odds ratio
+or risk ratio).
+
+^effect(f^|^r)^ must be included. This specifies whether ^f^ixed or ^r^andom-effects
+esimates are used in the output and graph.
+
+^eform^ requests that the output is exponentiated. This is useful for effect
+measures such as log odds ratios which are derived from generalized linear
+models. If the ^eform^ and ^graph^ options are used, then the graph output is 
+exponentiated, with a log scale for the x axis.
+
+^level(^#^)^ specifies the level for the confidence intervals (default 95).
+
+^id(^strvar^)^ is a character variable which is used to label the studies.  If
+the data contains a labelled numeric variable then the @decode@ command can be
+used to create a character variable
+
+Options for graphing results
+----------------------------
+
+^graph^ requests a graph. Graph options are allowed, except for ^ylabel()^,
+^symbol()^, ^xlog^, ^ytick^ and ^gap^.
+
+^cline^ asks that a vertical dotted line be drawn at the combined estimate.
+
+^csize(^#^)^ gives the size of the circles used in the graph (default 180).
+
+^fmult(^#^)^ is a number greater than zero which can be used to scale 
+the font size for the study labels. The font size is automatically
+reduced if the maximum label length is greater than 8, or the number
+of studies is greater than 20. However it may be possible to increase
+it somewhat over the default size.
+
+^ltrunc(^#^)^ truncates the left side of the graph at ^#^. This is used to truncate
+very wide confidence intervals. However ^#^ must be less than each of the
+individual study estimates.
+
+^rtrunc(^#^)^ truncates the right side of the graph at ^#^, and must be greater than
+each of the individual study estimates.
+
+
+Required input variables
+------------------------
+
+  ^theta^        the effect estimate
+  ^se_theta^     the corresponding standard error
+
+ or
+
+  ^theta^        the effect estimate
+  ^var_theta^    the corresponding variance
+
+ or
+
+  ^exp(theta)^   the risk (or odds) ratio
+  ^ll^           the lower limit of the risk ratio's confidence interval
+  ^ul^           the upper limit of the risk ratio's confidence interval
+ [^cl^]          optional (see below)
+
+
+Optional input variable
+-----------------------
+
+^cl^ contains the confidence level of the confidence interval defined by
+^ll^ and ^ul^.  If ^cl^ is not provided, the procedure assumes that
+each confidence interval is at the 95% confidence level.  ^cl^ allows the
+user to provide the confidence level, by study, when the confidence interval
+is not at the default level.  ^cl^ can be specified with or without a 
+decimal point.  For example, .90 and 90 are equivalent and may be mixed 
+(i.e., 90, .95, 80, .90 etc.).
+
+
+Examples
+--------
+
+   . ^metacum logor selogor, effect(f) eform graph cline^
+              ^xline(1) id(trialnam) xlab^ 
+   . ^metacum meandiff vardiff, effect(r) var graph^ 
+   . ^metacum rr ll ul, ci effect(r) eform^
+
+
+Note
+----
+
+The command @meta@ must be installed before running @metacum@.
+
+
+Author
+------
+
+       Jonathan Sterne
+       United Medical and Dental Schools, UK
+       email: j.sterne@@umds.ac.uk
+
+
+Reference
+---------
+
+Lau J., E. M. Antman, J. Jimenez-Silva, et al. 1992.
+Cumulative meta-analysis of therapeutic trials for myocardial infarction.
+New England Journal of Medicine 327: 248-54.
+
+
+Also see
+--------
+
+    STB:  STB-42 sbe16.1, STB-38 sbe16
+On-line:  help for @meta@ (if installed), @metareg@ (if installed), 
+          @metabias@ (if installed)

@@ -1,0 +1,275 @@
+.-
+help for ^gllamm6^                                                [STB-53: sg129]
+.-
+
+Hierarchical generalized linear models
+--------------------------------------
+
+^gllamm6^  depvar [varlist] [^if^ exp] [^in^ range] ^,^ ^i(^varlist^)^
+            [  ^nr^f^(^#^,^...^,^#^)^ ^e^qs^(^eqnames^)^ ^nocor^rel ^nocon^stant 
+               ^o^ffset^(^varname^)^ ^w^eight^(^varname^)^ ^f^amily^(^family^)^
+               ^fv(^varname^)^ ^de^nom^(^varname^)^ ^l^ink^(^link^)^ 
+               ^lv(^varname^)^ ^s(^eqname^)^ ^ip(^string^)^ ^ni^p^(^#^,^...^,^#^)^
+               ^fr^om^(^matrix^)^ ^lf0(^#^ ^#^)^ ^g^ateaux^(^# # #^)^ ^se^arch^(^#^)^ 
+                maximize_options ^nodif^ficult ^l^evel^(^#^)^ ^eform^ ^allc^ 
+               ^tr^ace ^nolo^g ^noe^st 
+             
+         ]
+
+where family is                                  and link is
+		^bin^omial                                    ^id^entity 
+		^gau^ssian                                    ^log^
+		^gam^ma                                       ^logi^t
+		^poi^sson                                     ^rec^iprocal
+                                                              ^probit^
+
+^gllamm6^ shares the features of all estimation commands; see help @est@.
+
+^gllamm6^ typed without arguments redisplays previous results.
+
+
+Description
+-----------
+
+^gllamm6^ estimates Generalized Linear Latent and Mixed Models.
+These models include hierarchical (multi-level) models including random 
+coefficient models. Here random effects (intercepts and coefficients)
+are assumed to be correlated only within the same level, not across levels.
+
+Factor analysis type models may also be fitted.
+
+With the ^ip(^g^)^ option, the method is based on numerical integration 
+by Gaussian quadrature. With the ^ip(^f^)^ option, the masses and locations 
+are estimated freely.
+
+The program uses ml with the d0 method and may take a while to converge!
+
+
+Options
+--------
+
+(a) Specifying the structure of the model
+-----------------------------------------
+
+^i(^varlist^)^ gives the variables that define the hierarchical, nested
+    clusters, from the lowest level (finest clusters) to the highest level, 
+    e.g. i(pupil class school).
+
+^nrf(^#^,^...^,^#^)^ specifies the number of random effects for each level,
+     i.e., for each variable in ^i(^varlist^)^. The default is nrf(1,...,1).
+
+^eqs(^eqnames^)^ specifies equation names (defined before running gllamm6, 
+    see help @eq@) for the linear predictors multiplying the latent variables.
+    If required, constants should be explicitly included in the equation 
+    definitions using variables equal to 1. If the option is not used, the 
+    latent variables are assumed to be random intercepts and only one random
+    effect is allowed per level. The first lambda coefficient is set to one.
+    The other coefficients are estimated together with the (co)variance(s) of 
+    the random effect(s).  
+
+^nocorrel^ may be used to constrain all correlations to zero
+    if there are several random effects at any of the levels and if these are
+    modeled as multivariate normal. 
+
+^noconstant^ omits the constant term from the fixed effects equation.
+
+^offset(^varname^)^ specifies a variable to be added to the linear predictor
+    without estimating a corresponding regression coefficient (e.g. log 
+    exposure for Poisson regression).
+
+^weight(^varname^)^ specifies that variables wt1, wt2, et. contain frequency
+    weights. The suffixes determine at what level each weight applies. For 
+    example, if the level 1 units are subjects, the level 2 units are families,
+    and the result is binary, we can collapse dataset A into dataset B
+    as follows:
+
+         A                           B
+         family subject result       family subject result  wt1  wt2
+           1       1      0            1      1       0      2    1
+           1       2      0            2      3       1      1    2
+           2       3      1            2      4       0      1    2 
+           2       4      0
+           3       5      1
+           3       6      0
+
+    The level 1 weight, wt1, indicates that subject 1 in dataset B 
+    represents two subjects within family 1 in dataset A, whereas subjects 
+    3 and 4 in dataset B represent single subjects within family 2 in 
+    dataset A. The level 2 weight wt2 indicates that family 1 in dataset B 
+    represents one family and family 2 represents two families, i.e. all 
+    the data for family 2 are replicated once. Collapsing the data in this 
+    way can make gllamm run considerably faster.
+
+
+(b) Specifying densities and links
+----------------------------------
+
+^family(^families^)^ specifies the families to be used for the conditional 
+    densities. The default is ^family(^gauss^)^. Several families may be given 
+    in which case the variable allocating families to observations must be given 
+    using ^fv(^varname^)^.
+
+^fv(^varname^)^ is required if mixed responses requiring more than a single
+    family of conditional distributions are analyzed. The variable indicates 
+    which family applies to which observation. A value of one refers to the 
+    first family etc.
+
+^denom(^varname^)^ gives the variable containing the binomial denominator for 
+    the responses whose family is specified as binomial. The default denominator
+    is 1.
+
+^link(^link^)^ specifies the links to be used for the conditional densities. If 
+    a single family is specified, the default link is the canonical link. 
+    Several links may be given in which case the variable allocating links to 
+    observations must be given using ^lv(^varname^)^. Numerically feasible choices
+    of link depend upon the distributions of the covariates and choice of 
+    conditional error and random effects distributions. 
+
+^lv(^varname^)^ is the variable whose values indicate which link applies to 
+    which observation. 
+
+^s(^eqname^)^ specifies that the log of the standard deviation (or coefficient
+    of variation) at level 1 for normally (or gamma) distributed responses
+    should be given by the linear predictor defined by eqname. This is 
+    necessary if the level-1 variance is heteroscedastic. For example, if dummy 
+    variables for groups are used, different variances are estimated for different
+    groups. 
+
+^ip(^sting^)^ if string is g, Gaussian quadrature points are used and if string 
+    is f, the mass-points are freely estimated. The default is Gaussian quadrature.
+
+^nip(^#^,^...^,^#^)^ specifies the number of integration points or masses
+    to be used for each integral or summation. When quadrature is used, 
+    a value may be given for each random effect. When freely estimated masses
+    are used, a value may be given for each level of the model. If only one 
+    argument is given, the same number of integration points will be used for 
+    each summation.
+
+
+(c) Starting values
+-------------------
+
+^from(^matrix^)^ specifies the matrix to be used for the initial values. 
+    Note that the column-names and equation-names have to be correct 
+    (see help @matrname@, @matrix@). The matrix may be obtained from a previous estimation
+    command using e(b). This is useful if another explanatory variable needs 
+    to be added or the number of masses needs to be increased.
+
+^lf0(^# #^)^ gives the number of parameters and the log-likelihood for a 
+    likelihood ratio test to compare the model to be estimated with a simpler
+    model. A likelihood ratio chi-squared test is only performed if the 
+    ^lf0(^# #^)^ option is used.
+
+^gateaux(^min^,^max^,^n^)^ may  be used with method ip(f) to increase the 
+    number of mass-points by one from a previous solution with parameter 
+    estimates specified using from(matrix) and number of parameters and 
+    log-likelihood specified by lf0(# #). The program searches for the 
+    location of the new mass-point by placing a very small mass at the 
+    location given by the first argument and moving it to the second argument
+    in the number of steps specified by the third argument. (If there are 
+    several random effects, this search is done in each dimention resulting 
+    in a regular grid of search points.) If the maximum increase in likelihood
+    is greater than 0, the location corresponding to this maximum is used as 
+    the initial value of the new location, otherwise the program stops. When
+    this happens, it can be shown that for certain models the current solution
+    represents the non-parametric maximum likelihood estimate.
+
+^search(^#^)^ causes the program to search for initial values for the random
+    effects at level 2 (in range 0 to 3). The argument specifies the number 
+    of random searches. This option may only be used with ^ip(^g^)^ and when
+    ^fr^om^(^matrix^)^ is not used. 
+
+
+(d) Estimation and output options
+---------------------------------
+
+maximize_options control the maximization process; see ^[R] maximize^. One
+    useful option is ^iterate(^#^)^ since by default the program does not 
+    limit the number of iterations. The skip option can be used if the matrix
+    of initial parameter estimates specified in ^from(^matrix^)^ has extra 
+    parameters.
+
+^nodiff^icult causes ml not to use the difficult option, see ^[R] maximize^.
+
+^level(^#^)^ specifies the confidence level in percent for confidence 
+    intervals of the coefficients.
+
+^eform^ causes the expnentiated coefficients and confidence intervals to be 
+    displayed.
+
+^allc^ causes all estimated parameters to be displayed in a regression table
+    (including the raw parameters for the random effects) in addition to the 
+    usual output.
+
+^trace^ is one of the maximize_options; see ^[R] maximize^.  In addition to 
+    displaying the details of the maximum-likelihood iterations, it displays
+    details of the model being fitted.
+
+^nolog^ suppresses output for maximum likelihood iterations.
+
+^noest^ is used to prevent the program from carrying out the estimation. This 
+    may be used with the trace option to check that the model is correct and get 
+    the information needed to set up a matrix of initial values. Global macros
+    are available that are normally deleted. Particularly useful may be M_initf
+    and M_initr, matrices for the parameters (fixed part and random part 
+    respectively).
+
+
+Examples
+--------
+
+(a) 3-level random intercept model
+----------------------------------
+
+        . ^gllamm6 res x, link(iden) fam(gauss) i(id school) trace^
+
+
+(b) 2-level random coefficient model
+------------------------------------
+
+("resp" is repeated within subjects identified by "id". "cons" is a variable equal to 1
+ and "time" are the time-points for the repeated measurements )
+
+       . ^eq idc: cons^
+       . ^eq idt: time^
+       . ^gllamm6 resp time, link(logit) fam(binom) denom(five) /*^
+         ^ */ i(id) nrf(2) eqs(idc idt) ip(g) nip(6) trace ^
+
+
+(c) two-parameter probit item-response model 
+--------------------------------------------
+
+(variable "resp" contains responses to 5 items, indicated by dummy variables i1 to 
+i5 and the subject id is in variable "id"):
+
+        . ^eq id: i1 i2 i3 i4 i5^
+        . ^gllamm6 res i1 i2 i3 i4 i5, link(probit) fam(binom) nocons /*^
+          ^*/ i(id) eqs(id) ip(g) weight(wt) trace^
+
+
+(d) logistic regression with a mismeasured covariate
+----------------------------------------------------
+
+(see STB)
+
+        . ^eq f: diet^
+	. ^gen id2=id^
+        . ^gllamm6 resp diet chd aged agec, nocons i(id) eqs(id) /*^
+          ^ link(ident logit) fam(gauss binom) lv(var) fv(var)  /* ^
+	  ^ */ ip(f) nip(4) from(a) trace ^
+
+
+Author
+------
+Sophia Rabe-Hesketh (spaksrh@@iop.kcl.ac.uk)
+as part of a joint project with Andrew Pickles and Colin Taylor.
+
+
+Also see
+--------
+
+Manual:   ^[U] 23 Estimation and post-estimation commands^
+          ^[U] 29 Overview of model estimation in Stata^
+
+On-line:  help for @ml@, @glm@, @xtreg@, @xtlogit@, @xtpois@,
+          @quadchk@, @eq@, @test@, @vce@, 

@@ -1,0 +1,160 @@
+.-
+help for ^Box plot, Box plot & one-way, Box plots by group, Box plot comparison,^
+         ^and Box plot & one-way comparison^
+.-
+                                          Menu: Graphs--One variable
+                                                Graphs--One variable by group
+                                                Graphs--Comparison of variables
+
+Topics covered
+--------------
+
+^1. Description^
+^2. Box plot (One variable)^
+^3. Box plot & one-way (One variable)^
+^4. Box plots by group (One variable by group)^
+^5. Box plot comparison (Comparison of variables)^
+^6. Box plot & one-way comparison (Comparison of variables)^
+
+Note:  Click the ^Dialog^  button to bring the dialog box      to the front.
+         "    "  ^Results^   "    "    "    "  ^Results^ window  "   "    "
+         "    "  ^Graph^     "    "    "    "  ^Graph^   window  "   "    "
+
+
+^1. Description^
+^--------------^
+
+A box plot looks like
+
+
+            -----      ^-> upper adjacent value^
+              |
+              |
+              |
+        -------------  ^-> 75% percentile^     
+        |           |
+        |           |
+        -------------  ^-> 50% percentile (median)^
+        |           |
+        -------------  ^-> 25% percentile^
+              |
+              |
+              |
+              |
+              |
+            -----      ^-> lower adjacent value^       
+
+              o       ^}^
+              o       ^}-> outside values^
+                      ^}^
+              o       ^}^
+
+Definitions
+-----------
+
+Let x[25] = 25% percentile.
+Let x[75] = 75% percentile.
+Let IQ    = x[75] - x[25] be the interquartile range.
+
+Then ^upper adjacent value^ is the largest  data point <= x[75] + 1.5*IQ.
+
+Then ^lower adjacent value^ is the smallest data point >= x[25] - 1.5*IQ.
+
+^Outside values^ are any points more extreme then the upper and lower adjacent
+values.
+
+
+^2. Box plot (One variable)^
+^--------------------------^
+
+Note: To plot more than one variable see ^5. Box plot comparison^ below.
+
+Enter one variable to be graphed.
+
+Click on the variable name in the list box.  Or type it in.
+
+If necessary, you can scroll the list box to see all your variables.
+
+Click ^Draw^ to draw the graph while keeping the dialog box open to draw more.
+Click ^OK^   to draw the graph and close the dialog box.
+
+If the ^Stata Graph^ window covers the dialog box, just press the ^Dialog^ button
+to bring the dialog box to the top.
+
+If the dialog box covers the ^Stata Graph^ window and you want to see the graph,
+press the ^Graph^ button to bring the ^Graph^ window to the top.
+
+
+^3. Box plot & one-way (One variable)^
+^------------------------------------^
+
+Note: To plot more than one variable see ^6. Box plot & one-way comparison^
+below.
+
+This graphs adds a one-way scatterplot to a sideways box plot.
+
+Each short vertical line on the scatterplot represents one observation.
+
+
+^4. Box plots by group (One variable by group)^
+^---------------------------------------------^
+
+Select "Data variable".  This is the variable that will be used to make the
+box plot.
+
+Select "By group".  This is a group (categorical) variable.  A box plot
+will be produced for each unique value of this variable.
+
+Check the box "Include box plot of totals" if you also want a box plot of
+the combined groups.
+
+Example:  Suppose you have a variable ^height^ and a variable ^gender^.
+
+To get two box plots -- one of the heights for females (gender = 0)
+and another of the heights for males (gender = 1) -- you enter ^height^
+for "Data variable" and ^gender^ for "By group".
+
+
+^5. Box plot comparison (Comparison of variables)^
+^------------------------------------------------^
+
+This produces the same plot as ^Box plot (One variable)^ but allows more
+than one variable.
+
+Click on the names of the variables in the list box that you wish to plot.
+Or type them in.  Scroll the list box if necessary to view all your variables.
+
+Box plots will be plotted on the same y-axis.
+
+See ^6. Box plot & one-way comparison^ below for a scaled comparison.
+
+
+^6. Box plot & one-way comparison (Comparison of variables)^
+^----------------------------------------------------------^
+
+This produces the same plot as ^Box plot & one-way (One variable)^ but allows
+more than one variable.
+
+Click on the names of the variables in the list box that you wish to plot.
+Or type them in.  Scroll the list box if necessary to view all your variables.
+
+Checking the "Scale each variable" option produces plots scaled so that the
+minimums and maximums of the variables line up.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@histdlg!Histograms@
+@bardlg!Bar charts@
+@stemdlg!Stem-and-leaf plot@
+@dpldlg!Dotplots@
+@qnormdlg!Normal quantile plot@
+
+@spdlg!Scatterplots@
+@tsdlg!Time-series graphs@
+@qcdlg!Quality-control charts@
+
+@graph_sq!Printing, saving, and viewing graphs@

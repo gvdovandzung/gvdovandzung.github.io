@@ -1,0 +1,48 @@
+.-
+help for ^iclassr2^
+.-
+
+Intra-class correlation for paired measures                     [STB-35 sg65]
+-------------------------------------------
+
+   ^iclassr^ response_var1 response_var2 [^if^ exp] [^in^ range] [^, c^enter^(^Fpos^)^]
+
+
+Description
+-----------
+
+^iclassr2^ calculates the intra-class correlation for paired measurements or as-
+sessments stored in response_var1 and response_var2.  ^iclassr2^ also reports the
+reliability of the mean of the two measurements as estimated from the Spearman-
+Brown prophecy formula.  Missing values are handled by casewise deletion.
+
+@loneway@ also calculates intra-class correlations, but requires data in long,
+rather than wide format.  ^iclassr2^ is also much faster than ^loneway^, and offers
+a small sample adjustment to the intra-class r; see the option ^center^, below.
+
+
+Options
+-------
+
+^center^ chooses a reference point in the F distribution to center the observed
+    F statistic in estimating the intra-class correlation.  The argument Fpos
+    may be 1 (the default), or "med" or "mean" to choose the median or the mean
+    of the appropriate F distribution. This option has little effect unless the
+    number of pairs is small.
+
+
+Examples
+--------
+
+ . ^iclassr2 judge1 judge2^            (inter-judge reliability)
+ . ^iclassr2 judge1 judge2, c(med)^    (intra-judge reliability, center the ob-
+                                      served F on its median)
+
+
+Also see
+--------
+
+    STB:  sg65 (STB-35)
+ Manual:  ^[R] loneway^
+On-line:  help for @loneway@
+

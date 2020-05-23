@@ -1,0 +1,30 @@
+{smcl}
+{p 0 4}
+{bf:{help vgsg:A Visual Guide to Stata Graphics}}
+{bind:> Data Files}
+{p_end}
+{hline}
+
+{p 1 1 1}
+All of the data files used to create the graphs in
+{it:A Visual Guide to Stata Graphics} are available online
+so you can create the graphs for yourself. 
+
+{p 1 1 1}
+The description accompanying each graph concludes by saying the name of the
+data file that was used to create the graph.  You can read the data file over
+the internet by using the {cmd:vguse} command, a command included as part of
+this package to help you use these data files over the internet; see help
+{help vguse}. If you are connected to the internet, you can simply type, for
+example, {cmd:vguse} {cmd:allstates} and it will use {it:allstates.dta} over
+the internet. You can then run whatever graph commands you wish using that
+data file.
+
+{p 1 1 1}
+In addition, you can download all of the data files at once to
+your computer.  In fact, you may already have done so. If not, 
+you can visit the 
+{bf:{browse www.stata-press.com/books/vgsg.html:Web site for book}}
+to see how to download the data files.
+
+{hline}

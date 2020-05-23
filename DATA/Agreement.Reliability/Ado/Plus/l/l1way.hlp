@@ -1,0 +1,68 @@
+.-
+help for ^iclassr^, ^l1way^
+.-
+
+One-way ANOVA, random effects, and intra-class correlation    [STB-35 sg65]
+----------------------------------------------------------
+
+         ^iclassr^ response_var group_var [weight] [^if^ exp] [^in^ range]
+                  [^, c^enter^(^Fpos^) e^ms ^noi^sily]
+
+         ^l1way^ response_var group_var [weight] [^if^ exp] [^in^ range]
+                  [^, c^enter^(^Fpos^) e^ms]
+
+
+^aweight^s are allowed; see help @weights@.
+
+
+Description
+-----------
+
+^l1way^ and ^iclassr^ estimate one-way analysis of variance (ANOVA) models and use
+the random effects ANOVA model to estimate the intra-class (within group) cor-
+relation, and the reliability of group averages from the Spearman-Brown proph-
+ecy formula.
+
+^l1way^ and ^iclassr^ are replacements for @loneway@; ^iclassr^ is faster than ^l1way^
+but limited to fewer than 376 values of group_var. Both are substantially fast-
+er than ^loneway^, especially ^iclassr^, and both offer more accurate estimation of
+the intra-class correlation in unbalanced designs or in weighted analyses; see
+the option ^ems^, below.
+
+
+Options
+-------
+
+^center^ chooses a reference point in the F distribution to center the observed
+    F statistic in estimating the intra-class correlation.  The argument Fpos
+    may be 1 (the default), or "med" or "mean" to choose the median or the mean
+    of the appropriate F distribution.  This option has little effect except in
+    small samples.
+
+^ems^ uses the coefficient of the group variance in the expected value of the be-
+    tween group mean square to scale the estimated intra-class correlation. The
+    default, for compatibility with ^loneway^, is to use the average group size
+    instead.  This option is ^very^ strongly recommended unless the design is
+    nearly balanced.
+
+^noisily^ causes ^iclassr^ to display the ANOVA summary table.
+
+
+Examples
+--------
+
+ . ^iclassr rating stimulus^        (intra-stimulus r, < 376 stimuli, equal n's)
+ . ^l1way rating stimulus^          (intra-stimulus r, ANOVA table, equal n's)
+
+ . ^iclassr trait family, ems^      (intra-family r, < 376 families, unequal n's)
+ . ^l1way trait family, e c(med)^   (intra-family r, unequal n's, center the ob-
+                                   served F on the median of F)
+
+
+Also see
+--------
+
+    STB:  sg65 (STB-35)
+ Manual:  ^[R] loneway, oneway^
+On-line:  help for @loneway@, @oneway@
+

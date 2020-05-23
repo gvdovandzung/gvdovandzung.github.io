@@ -1,0 +1,233 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}C:\DATA\ivf_v.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}26 Jun 2009, 18:05:03
+
+{com}. sum
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+        maso {c |}{res}       641         321     185.185          1        641
+      {txt}tuoime {c |}{res}       641    33.97192     3.87046         23         43
+     {txt}tang_ha {c |}{res}       641    .1388456    .3460553          0          1
+    {txt}tuoithai {c |}{res}       641    38.68725    2.329931      24.69      42.35
+        {txt}gioi {c |}{res}       641    .5085803    .5003168          0          1
+{txt}{hline 13}{c +}{hline 56}
+    tlsosinh {c |}{res}       641    3129.137    652.7827        630       4650
+  {txt}nghenghiep {c |}{res}       641    2.304212    .7328014          1          3
+
+{com}. summarize tuoime tuoithai tlsosinh
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+      tuoime {c |}{res}       641    33.97192     3.87046         23         43
+    {txt}tuoithai {c |}{res}       641    38.68725    2.329931      24.69      42.35
+    {txt}tlsosinh {c |}{res}       641    3129.137    652.7827        630       4650
+
+{com}. tab1 tang_ha gioi nghenghiep
+
+{res}-> tabulation of tang_ha  
+
+ {txt}tang huyet {c |}
+ ap thai ki {c |}
+   - 1=tang {c |}
+ha, 0=khong {c |}
+    tang ha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        552       86.12       86.12
+{txt}          1 {c |}{res}         89       13.88      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        641      100.00
+
+-> tabulation of gioi  
+
+  {txt}gioi tinh {c |}
+      tre - {c |}
+    1=trai, {c |}
+      0=gai {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        315       49.14       49.14
+{txt}          1 {c |}{res}        326       50.86      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        641      100.00
+
+-> tabulation of nghenghiep  
+
+{txt}nghe nghiep {c |}
+  me - 1=tu {c |}
+ do, 2=cong {c |}
+      nhan, {c |}
+3=vien chuc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}        104       16.22       16.22
+{txt}          2 {c |}{res}        238       37.13       53.35
+{txt}          3 {c |}{res}        299       46.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        641      100.00
+
+{com}. edit
+{txt}- preserve
+
+{com}. {txt}- label define tang_ha 1 "tang huyet ap"
+- label define tang_ha 0 "huyet ap bt", add
+- label define gioi 0 "Nu"
+- label define gioi 1 "Nam", add
+- label define nghenghiep 1 "tu do"
+- label define nghenghiep 2 "cong nhan", add
+- label define nghenghiep 3 "vien chuc", add
+{com}label values nghenghiep nghenghiep
+
+. label values gioi gioi
+
+. label values tang_ha tang_ha
+
+. tab1 tang_ha gioi nghenghiep
+
+{res}-> tabulation of tang_ha  
+
+{txt}tang huyet ap {c |}
+    thai ki - {c |}
+   1=tang ha, {c |}
+ 0=khong tang {c |}
+           ha {c |}      Freq.     Percent        Cum.
+{hline 14}{c +}{hline 35}
+  huyet ap bt {c |}{res}        552       86.12       86.12
+{txt}tang huyet ap {c |}{res}         89       13.88      100.00
+{txt}{hline 14}{c +}{hline 35}
+        Total {c |}{res}        641      100.00
+
+-> tabulation of gioi  
+
+  {txt}gioi tinh {c |}
+      tre - {c |}
+    1=trai, {c |}
+      0=gai {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         Nu {c |}{res}        315       49.14       49.14
+{txt}        Nam {c |}{res}        326       50.86      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        641      100.00
+
+-> tabulation of nghenghiep  
+
+{txt}nghe nghiep {c |}
+  me - 1=tu {c |}
+ do, 2=cong {c |}
+      nhan, {c |}
+3=vien chuc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      tu do {c |}{res}        104       16.22       16.22
+{txt}  cong nhan {c |}{res}        238       37.13       53.35
+{txt}  vien chuc {c |}{res}        299       46.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        641      100.00
+
+{com}. graph box tlsosinh, over(gioi)
+{res}
+{com}. graph box tlsosinh, over(gioi) ytitle(Trong luong tre so sinh thu thai trong ong nghiem (gram))
+{res}
+{com}. {txt}- label define gioi 0 "Nöõ", modify
+{com}graph box tlsosinh, over(gioi) ytitle(Troïng löông treû sô sinh (gram))
+{res}
+{com}. graph box tlsosinh, over(gioi) ytitle(Troïng löông treû sô sinh (gram)) ytitle(, size(large))
+{res}
+{com}. graph box tlsosinh, over(gioi) ytitle(Troïng löông treû sô sinh (gram))
+{res}
+{com}. graph box tlsosinh, over(gioi) ytitle(Troïng löông treû sô sinh (gram))
+{res}
+{com}. graph box tlsosinh, over(gioi) ytitle(Troïng löông treû sô sinh (gram))
+{res}
+{com}. graph box tlsosinh, over(gioi) ytitle(Troïng löông treû sô sinh (gram))
+{res}
+{com}. graph box tlsosinh, over(gioi) ytitle(Troïng löông treû sô sinh (gram))
+{res}
+{com}. histogram tlsosinh, width(300) start(600) percent
+{txt}(bin={res}14{txt}, start={res}600{txt}, width={res}300{txt})
+{res}
+{com}. histogram tlsosinh, width(300) start(600) percent ytitle(Phaàn traêm) ylabel(0(10)30) xtitle(Troïng löôïng sô sinh (gram)) xlabel(600(600)4800)
+{txt}(bin={res}14{txt}, start={res}600{txt}, width={res}300{txt})
+{res}
+{com}. histogram tlsosinh, width(300) start(600) percent ytitle(Phaàn traêm) ylabel(0(10)30) xtitle(Troïng löôïng sô sinh (gram)) xtitle() xscale(titlegap(3)) xlabel(600(600)4800)
+{txt}(bin={res}14{txt}, start={res}600{txt}, width={res}300{txt})
+{res}
+{com}. histogram tlsosinh, width(300) start(600) percent ytitle(Phaàn traêm) ylabel(0(10)30) xtitle(Troïng löôïng sô sinh (gram)) xtitle() xscale(titlegap(6)) xlabel(600(600)4800)
+{txt}(bin={res}14{txt}, start={res}600{txt}, width={res}300{txt})
+{res}
+{com}. histogram tlsosinh, width(300) start(600) percent ytitle(Phaàn traêm) ylabel(0(10)30) xtitle(Troïng löôïng sô sinh (gram)) xtitle() xscale(titlegap(4)) xlabel(600(600)4800)
+{txt}(bin={res}14{txt}, start={res}600{txt}, width={res}300{txt})
+{res}
+{com}. histogram tlsosinh, width(300) start(600) percent ytitle(Phaàn traêm) ylabel(0(10)30) xtitle(Troïng löôïng sô sinh (gram)) xtitle(, size(large)) xscale(titlegap(4)) xlabel(600(600)4800)
+{txt}(bin={res}14{txt}, start={res}600{txt}, width={res}300{txt})
+{res}
+{com}. graph bar (count) nghenghiep
+{res}
+{com}. graph bar (count) maso, over(nghenghiep, relabel(1 "Töï do" 2 "Coâng nhaân" 3 "Vieân chöùc") descending)
+{res}
+{com}. graph bar (count) maso, over(nghenghiep, relabel(1 "Töï do" 2 "Coâng nhaân" 3 "Vieân chöùc") descending) ytitle(Soá phuï nöõ)
+{res}
+{com}. tab1  nghenghiep
+
+{res}-> tabulation of nghenghiep  
+
+{txt}nghe nghiep {c |}
+  me - 1=tu {c |}
+ do, 2=cong {c |}
+      nhan, {c |}
+3=vien chuc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      tu do {c |}{res}        104       16.22       16.22
+{txt}  cong nhan {c |}{res}        238       37.13       53.35
+{txt}  vien chuc {c |}{res}        299       46.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        641      100.00
+
+{com}. gen nhomtuoi=irecode( tuoime,29,34,39)
+
+. edit
+{txt}- preserve
+- label define nhomtuoi 0 "tuoi <30"
+- label define nhomtuoi 1 "30-34", add
+- label define nhomtuoi 2 "35-39", add
+- label define nhomtuoi 3 "40 tro len", add
+- label values nhomtuoi nhomtuoi
+
+{com}. tab1  nhomtuoi
+
+{res}-> tabulation of nhomtuoi  
+
+   {txt}nhomtuoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   tuoi <30 {c |}{res}         92       14.35       14.35
+{txt}      30-34 {c |}{res}        251       39.16       53.51
+{txt}      35-39 {c |}{res}        258       40.25       93.76
+{txt} 40 tro len {c |}{res}         40        6.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        641      100.00
+
+{com}. gen sinhnon= tuoithai<37
+
+. edit
+{txt}- preserve
+
+{com}. edit sinhnon
+{txt}- preserve
+- label define sinhnon 1 "sinh non"
+- label define sinhnon 0 "sinh du thang", add
+- label values sinhnon sinhnon
+
+{com}. tab1  sinhnon
+
+{res}-> tabulation of sinhnon  
+
+      {txt}sinhnon {c |}      Freq.     Percent        Cum.
+{hline 14}{c +}{hline 35}
+sinh du thang {c |}{res}        552       86.12       86.12
+{txt}     sinh non {c |}{res}         89       13.88      100.00
+{txt}{hline 14}{c +}{hline 35}
+        Total {c |}{res}        641      100.00
+
+{com}. save "C:\DATA\ivf_moi.dta"
+{txt}file C:\DATA\ivf_moi.dta saved
+
+{com}. exit, clear

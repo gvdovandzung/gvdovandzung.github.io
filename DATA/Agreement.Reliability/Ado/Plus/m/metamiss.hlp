@@ -1,0 +1,440 @@
+{smcl}
+{* 7sep2007}{...}
+{cmd:help metamiss}{right: ({browse "http://www.stata-journal.com/article.html?article=st0157":SJ9-1: st0157})}
+{hline}
+
+{title:Title}
+
+{p2colset 5 17 19 2}{...}
+{p2col :{hi:metamiss} {hline 2}}Meta-analysis with missing data{p_end}
+{p2colreset}{...}
+
+
+{title:Syntax}
+
+{pstd} {cmd:metamiss} requires six variables ({it:rE}, {it:fE}, {it:mE},
+{it:rC}, {it:fC}, and {it:mC}), which specify the number of successes,
+failures, and missing values in each group. The first group is considered to
+be the experimental group, and the second group is considered to be the
+control group, although applications outside randomized controlled trials are
+also possible. There are four syntaxes described below.
+
+Simple imputation
+
+{phang}
+   {cmd:metamiss} {it:rE fE mE rC fC mC}{cmd:,} {it:imputation_method}
+                      [{it:imor_option} {it:imputation_options}
+                      {it:meta_options}]
+   
+{phang}
+   where 
+
+{phang} {it:imputation_method} is one of the following: {cmd:aca}, {cmd:ica0},
+{cmd:ica1}, {cmd:icab}, {cmd:icaw}, {cmd:icape}, {cmd:icapc}, {cmd:icap}, and
+{cmd:icaimor}.
+
+{phang} {it:imor_option} can be either {cmd:imor(}{it:#}|{it:varname}
+[{it:#}|{it:varname}]{cmd:)} or
+{cmd:logimor(}{it:#}|{it:varname} [{it:#}|{it:varname}]{cmd:)}.
+
+{phang} {it:imputation_options} can be one of {cmd:w1}, {cmd:w2},
+{cmd:w3}, or {cmd:w4}, as well as any of {cmd:listnum}, {cmd:listall}, and {cmd:listp}.
+
+{phang} {it:meta_options} can be any of the following: {cmd:or}, {cmd:rr},
+{cmd:rd}, {cmd:log}, and {cmd:id(}{it:varname}{cmd:)}, as well as any valid option
+for {helpb metan}.
+
+
+Imputation using reasons
+
+{phang}
+   {cmd:metamiss} {it:rE fE mE rC fC mC}{cmd:,}
+   {it:imptype1}{cmd:(}{it:#}|{it:varname} [{it:#}|{it:varname}]{cmd:)}
+            {it:imptype2}{cmd:(}{it:#}|{it:varname}
+	    [{it:#}|{it:varname}]{cmd:)}
+	    [...]
+            [{it:imor_option} {it:imputation_options} {it:meta_options}] 
+
+{phang}
+   where 
+   
+{phang} {it:imptype1}, {it:imptype2}, etc., can be {cmd:ica0},
+{cmd:ica1}, {cmd:icape}, {cmd:icapc}, {cmd:icap}, or {cmd:icaimor}.
+
+{phang} {it:imor_option}, {it:imputation_options}, and {it:meta_options} are the
+same as documented above for a simple imputation.
+
+
+Bayesian analysis using priors
+
+{phang}
+   {cmd:metamiss} {it:rE fE mE rC fC mC}, 
+   {cmdab:sd:logimor(}{it:#}|{it:varname} [{it:#}|{it:varname}]{cmd:)}
+                      [{it:imor_option} {it:bayes_options} {it:meta_options}]
+
+{phang} where
+
+{phang} {it:imor_option} and {it:meta_options} are the same as documented
+above for a simple imputation.
+
+{phang} {it:bayes_options} can be any of the following: 
+{cmd:sdlogimor(}{it:#}|{it:varname} [{it:#}|{it:varname}]{cmd:)},
+{cmdab:corr:logimor(}{it:#}|{it:varname}{cmd:)},
+{cmd:method(gh}|{cmd:mc}|{cmd:taylor)}, {opt nip(#)}, {opt reps(#)},
+{cmdab:miss:prior(}{it:# #} [{it:# #}]{cmd:)},
+{cmdab:resp:prior(}{it:# #}{cmd:)}, and {cmd:nodots}.
+
+
+Gamble-Hollis analysis
+
+{phang}
+   {cmd:metamiss} {it:rE fE mE rC fC mC}, {cmdab:gamble:hollis} [{it:meta_options}]
+
+{phang} where
+
+{phang}{cmd:gamblehollis} specifies to use the Gamble-Hollis analysis.
+
+{phang} {it:meta_options} are the same as documented above for a simple
+imputation.
+
+
+{title:Description}
+
+{pstd}
+{cmd:metamiss} performs a meta-analysis of studies comparing a binary outcome
+between two groups (such as in a randomized controlled trial), where the
+outcome may be missing. Three methods are available:
+
+{pstd}
+1) Imputation methods as described in Higgins, White, and Wood (2008). Missing
+values can be imputed as failures, successes, same as control group, same as
+experimental group, same as own group, or using informative missingness odds
+ratios (IMORs). When reasons for missingness are known, a mixture of the
+methods can be used.
+
+{pstd}
+2) Methods allowing for uncertainty about how informative the missing data
+are, as in White, Higgins, and Wood (2008), based on Forster and Smith (1998).
+These methods use the following model for outcome Y, missingness M, and group X:
+{p_end}
+          M|X=i       ~ Bernoulli(alpha_i)
+          Y|M=0,X=i   ~ Bernoulli(pi_i)
+          OR(Y,M|X=i) = IMOR_i 
+
+{pstd} The values of log IMOR_i in the two groups can be specified exactly or
+through a normal prior distribution.
+
+{pstd}3) The "uncertainty method" of Gamble and Hollis (2005).
+
+{pstd}
+{cmd:metamiss} only prepares the data for each study, and then it calls
+{helpb metan} to perform the meta-analysis.  A note, "(Calling metan ...)", is
+printed at this point to help the user identify the source of any error
+messages.  We have tried to make {cmd:metamiss} compatible with all versions
+of {cmd:metan}.
+
+
+{title:imputation_method}
+
+{pstd}
+For simple imputation, specify one of the following options without
+arguments.  For imputation using reasons, specify two or more
+of the following options with arguments.  The abbreviations ACA,
+ICA-0, etc., are explained by Higgins, White, and Wood (2008).
+
+{phang}{cmd:aca}[{cmd:(}{it:#}|{it:varlist} [{it:#}|{it:varlist}]{cmd:)}]
+performs an available cases analysis (ACA).
+
+{phang}{cmd:ica0}[{cmd:(}{it:#}|{it:varlist} [{it:#}|{it:varlist}]{cmd:)}] imputes missing values as zeroes
+(ICA-0).
+
+{phang}{cmd:ica1}[{cmd:(}{it:#}|{it:varlist} [{it:#}|{it:varlist}]{cmd:)}] imputes missing values as
+ones(ICA-1).
+
+{phang}
+{cmd:icab} performs a best-case analysis (ICA-b), which imputes missing values
+as ones in the experimental group and zeroes in the control group (equivalent
+to {cmd:ica0(0 1)} {cmd:ica1(1 0)}).  If {it:rE} and {it:rC} count adverse
+events, not beneficial events, then {cmd:icab} will yield a worst-case
+analysis.
+
+{phang}
+{cmd:icaw} performs a worst-case analysis (ICA-w), which imputes missing values
+as zeroes in the experimental group and ones in the control group (equivalent
+to {cmd:ica0(1 0)} {cmd:ica1(0 1)}).  If {it:rE} and {it:rC} count beneficial
+events, not adverse events, then {cmd:icaw} will yield a best-case analysis.
+
+{phang}{cmd:icape}[{cmd:(}{it:#}|{it:varlist} [{it:#}|{it:varlist}]{cmd:)}] imputes missing values by using the observed probability in
+the experimental group (ICA-pE).
+
+{phang}
+{cmd:icapc}[{cmd:(}{it:#}|{it:varlist} [{it:#}|{it:varlist}]{cmd:)}] imputes missing values by using the observed probability in the
+control group (ICA-pC).
+
+{phang}
+{cmd:icap}[{cmd:(}{it:#}|{it:varlist} [{it:#}|{it:varlist}]{cmd:)}] imputes missing values by using the
+observed probability within groups (ICA-p).
+
+{phang}
+{cmd:icaimor}[{cmd:(}{it:#}|{it:varlist} [{it:#}|{it:varlist}]{cmd:)}] imputes missing values by using the IMORs specified by {cmd:imor()}
+or {cmd:logimor()} within groups (ICA-IMORs).
+
+{pstd}
+The default is {cmd:icaimor} if {cmd:imor()} or {cmd:logimor()} is specified;
+if no IMOR option is specified, the default is {cmd:aca}.
+
+    {title:Specifying arguments}
+
+{pstd}
+
+Used with arguments, these options specify the numbers of missing values to be
+imputed by each method.  For example, {cmd:ica0(mfE mfC) icap(mpE mpC)}
+indicates that {cmd:mfE} individuals in group E and {cmd:mfC} individuals in
+group C are imputed using ICA-0, while {cmd:mpE} individuals in group E and
+{cmd:mpC} individuals in group C are imputed using ICA-p.
+If the second argument is omitted, it is taken to be zero.
+If, for some group, the total over all reasons does not equal the number of
+missing observations (e.g., if {cmd:mfE} + {cmd:mpE} does not equal {cmd:mE}),
+then the missing observations are shared between imputation types in the given
+ratio.  If the total over all reasons is zero for some group, then the missing
+observations are shared between imputation types in the ratio formed by summing
+overall numbers of individuals for each reason across all studies.  If the
+total is zero for all studies in one or both groups, then an error is returned.
+Numerical values can also be given: e.g., {cmd:ica0(50 50) icap(50 50)}
+indicates that 50% of missing values in each group are imputed using ICA-0 and
+the rest are imputed using ICA-p.
+
+
+{title:imor_option}
+
+{phang} {cmd:imor(}{it:#}|{it:varname} [{it:#}|{it:varname}]{cmd:)} sets the
+IMORs or (if the Bayesian method is being used) the prior medians of the
+IMORs. If one value is given, it applies to both groups; if two values are
+given, they apply to the experimental and control groups, respectively. Both
+values default to 1. Only one of {cmd:imor()} or {cmd:logimor()} can be
+specified.
+
+{phang} {cmd:logimor(}{it:#}|{it:varname} [{it:#}|{it:varname}]{cmd:)} does
+the same as {cmd:imor()} but on the log scale.  Thus {cmd:imor(1 1)} is the
+same as {cmd:logimor(0 0)}.  Only one of {cmd:imor()} or {cmd:logimor()} can
+be specified.
+
+
+{title:imputation_options}
+
+{phang}
+{cmd:w1} specifies that standard errors be computed, treating the imputed
+values as if they were observed. This is included for didactic purposes and
+should not be used in real analyses.
+
+{phang}
+{cmd:w2} specifies that standard errors from the ACA
+should be used. This is useful in separating sensitivity to changes
+in point estimates from sensitivity to changes in standard errors.
+
+{phang}
+{cmd:w3} specifies that standard errors be computed by scaling the imputed
+data down to the number of available cases in each group and treating these
+data as if they were observed.
+
+{phang}
+{cmd:w4}, the default, specifies that standard errors be computed
+algebraically, conditional on the IMORs. Conditioning on the IMORs is not
+strictly correct for schemes including ICA-pE or ICA-pC, but the conditional
+standard errors appear to be more realistic than the unconditional standard
+errors in this setting.
+
+{phang} {cmd:listnum} lists the reason counts for each study implied by the
+imputation method option.
+
+{phang} {cmd:listall} lists the reason counts for each study after scaling to
+match the number of missing values and imputing missing values for studies with no
+reasons.
+
+{phang}
+{cmd:listp} lists the imputed probabilities for each study.
+
+
+{title:bayes_options}
+
+{phang} {cmd:sdlogimor(}{it:#}|{it:varname} [{it:#}|{it:varname}]{cmd:)} sets
+the prior standard deviation for log IMORs for the experimental and control
+groups, respectively. Both values default to 0.
+
+{phang} {cmd:corrlogimor(}{it:#}|{it:varname}{cmd:)} sets the prior correlation
+between log IMORs in the experimental and control groups. The default is
+{cmd:corrlogimor(0)}.
+
+{phang}
+{cmd:method(gh}|{cmd:mc}|{cmd:taylor)} determines the method used to integrate over the
+distribution of the IMORs. {cmd:method(gh)} uses 2-dimensional Gauss-Hermite
+quadrature and is the
+recommended method (and the default). {cmd: method(mc)} performs a full
+Bayesian analysis by sampling directly from the posterior. This is
+time-consuming, so dots display progress, and you can request more than one of
+the measures {cmd:or}, {cmd:rr}, and {cmd:rd}. {cmd: method(taylor)} uses a
+Taylor-series approximation, as in section 4 of Forster and Smith (1998), and is
+faster than the default but typically inaccurate for {cmd:sdlogimor()} larger than one
+or two.
+
+{phang}
+{opt nip(#)} specifies the number of integration points under
+{cmd:method(gh)}. The default is {cmd:nip(10)}.
+
+{phang}
+{opt reps(#)} specifies the number of Monte Carlo draws under {cmd:method(mc)}. The
+default is {cmd:rep(100)}.
+
+{phang} {cmd:missprior(}{it:# # }[{it:# #}]{cmd:)} and
+{cmd:respprior(}{it:# # }[{it:# #}]{cmd:)} specify beta({it:#,#}) priors for alpha and
+pi under {cmd:method(mc)}.  The third and fourth arguments, if present, apply to
+the control group; otherwise, the first and second arguments apply to both
+groups. The defaults are both beta(1,1).
+
+{phang}
+{cmd:nodots} suppresses the dots that are displayed to mark the number of
+Monte Carlo draws completed.
+
+
+{title:meta_options}
+
+{phang} {cmd:or}, {cmd:rr}, and {cmd:rd} specify the measures to be analyzed.
+Usually, only one measure can be specified; the default is {cmd:rr}.  However,
+when using {cmd:method(mc)}, all three measures can be obtained for no extra
+effort, so any combination is allowed. When more than one measure is
+specified, the formal meta-analysis is not performed, but measures and their
+standard errors are saved.
+
+{phang} {cmd:log} has the results reported on the log risk ratio or log
+odds-ratio scale.
+
+{phang}
+{opt id(varname)} specifies a study identifier for the results table and
+forest plot.
+
+{pstd}
+Most other options allowed with {helpb metan} are also allowed, including {cmd:by()}, {cmd:random}, and {cmd:nograph}.
+
+
+{title:Saved results}
+
+{pstd}{cmd:metamiss} saves results in the same way as {cmd:metan}: {cmd:_ES},
+{cmd:_selogES}, etc. The sample size, {cmd:_SS}, excludes the missing values,
+but an additional variable, {cmd:_SSmiss}, gives the total number of missing
+values.  When {cmd:method(mc)} is run, the {cmd:log} option is assumed for the
+measures {cmd:or} and {cmd:rr}, and the following variables are saved for each
+measure ({cmd:logor}, {cmd:logrr}, or {cmd:rd}): the ACA
+estimate, {cmd:ESTRAW_}{it:measure}; the ACA variance,
+{cmd:VARRAW_}{it:measure}; the corrected estimate, {cmd:ESTSTAR_}{it:measure};
+and the corrected variance, {cmd:VARSTAR_}{it:measure}.  If these variables
+already exist, then they are overwritten.
+
+
+{title:Data}
+
+{pstd}The main data consist of the variables {cmd:author} (the author);
+{cmd:r1}, {cmd:f1}, and {cmd:m1} (the counts of successes, failures, and
+missing observations in the intervention group); and {cmd:r2}, {cmd:f2}, and
+{cmd:m2} (the corresponding counts in the control group).
+
+
+{title:Examples}
+
+ACA (two equivalent commands)
+
+{phang}{cmd:. metan r1 f1 r2 f2, rr fixedi label(namevar=author)}
+
+{phang}{cmd:. metamiss r1 f1 m1 r2 f2 m2, aca rr id(author)}
+
+ICA-0, impute missing as zeroes (two equivalent commands)
+
+{phang}{cmd:. metamiss r1 f1 m1 r2 f2 m2, ica0 w4 rr id(author)}
+
+{phang}{cmd:. metamiss r1 f1 m1 r2 f2 m2, ica0(m1 m2) w4 rr id(author)}
+
+Impute using reasons for missingness
+
+{phang}{cmd:. metamiss r1 f1 m1 r2 f2 m2, ica0(df1 df2) ica1(ds1 ds2) icapc(dc1 dc2) icap(dg1 dg2) w4 fixed id(author)}
+
+Fixed equal IMORs (two equivalent commands)
+
+{phang}{cmd:. metamiss r1 f1 m1 r2 f2 m2, imor(2) rr id(author) nograph}
+
+{phang}{cmd:. metamiss r1 f1 m1 r2 f2 m2, logimor(log(2)) rr id(author) nograph}
+
+Fixed opposite IMORs
+
+{phang}{cmd:. metamiss r1 f1 m1 r2 f2 m2, imor(2 1/2) rr id(author) nograph}
+
+Random equal IMORs
+
+{phang}{cmd:. metamiss r1 f1 m1 r2 f2 m2, sdlogimor(1) logimor(0) corrlogimor(1) rr id(author)}
+
+Random uncorrelated IMORs
+
+{phang}{cmd:. metamiss r1 f1 m1 r2 f2 m2, sdlogimor(1) logimor(0) corrlogimor(0) rr id(author)}
+
+Possible ways to improve (unlikely to make much difference in practice)
+
+{phang}{cmd:. metamiss r1 f1 m1 r2 f2 m2, sdlogimor(1) logimor(0) corrlogimor(1) method(mc) reps(10000) rr id(author)}
+
+{phang}{cmd:. metamiss r1 f1 m1 r2 f2 m2, sdlogimor(1) logimor(0) corrlogimor(0) method(gh) nip(50) rr id(author)}
+
+
+{title:Note}
+
+{pstd}Different methods may give slightly different answers due to 
+different handling of zero cells. For example, 
+
+{phang}{cmd:. metamiss r1 f1 m1 r2 f2 m2, ica1 w4}
+
+{pstd}and 
+
+{phang}{cmd:. metamiss r1 f1 m1 r2 f2 m2, logimor(99) w4}
+
+{pstd} differ slightly in the haloperidol data: the {cmd:logimor(99)} analysis
+adds one half to {cmd:r1}, {cmd:f1}, {cmd:r2}, and {cmd:f2} for six studies
+with {cmd:r2} = 0, whereas the {cmd:ica1} analysis does this only for three
+studies with {cmd:r2} + {cmd:m2} = 0.
+
+
+{title:References}
+
+{phang}Forster, J. J., and P. W. F. Smith. 1998. Model-based inference for
+categorical survey data subject to non-ignorable non-response. 
+{it:Journal of the Royal Statistical Society, Series B (Statistical Methodology)} 60: 57-70.
+
+{phang}Gamble, C., and S. Hollis. 2005. Uncertainty method improved on
+best-worst case analysis in a binary meta-analysis.
+{it:Journal of Clinical Epidemiology} 58: 579-588.
+
+{phang}Higgins, J. P. T., I. R. White, and A. M. Wood. 2008. Imputation methods
+for missing outcome data in meta-analysis of clinical trials.
+{it:Clinical Trials} 5: 225-239.
+
+{phang}White, I. R., J. P. T. Higgins, and A. M. Wood. 2008. Allowing for
+uncertainty due to missing data in meta-analysis - Part 1: Two-stage methods.
+{it:Statistics in Medicine} 27: 711-727.
+
+
+{title:Authors}
+
+{pstd}Ian White{p_end}
+{pstd}MRC Biostatistics Unit{p_end}
+{pstd}Institute of Public Health{p_end}
+{pstd}Cambridge, UK{p_end}
+{pstd}ian.white@mrc-bsu.cam.ac.uk{p_end}
+
+{pstd}Julian Higgins{p_end}
+{pstd}MRC Biostatistics Unit{p_end}
+{pstd}Institute of Public Health{p_end}
+{pstd}Cambridge, UK{p_end}
+
+
+{title:See also}
+
+{psee}
+Article: {it:Stata Journal}, volume 9, number 1: {browse "http://www.stata-journal.com/article.html?article=st0157":st0157}
+
+{psee}
+Online: {helpb metan} (if installed){p_end}

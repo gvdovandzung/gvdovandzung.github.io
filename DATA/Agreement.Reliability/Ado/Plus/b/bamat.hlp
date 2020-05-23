@@ -1,0 +1,64 @@
+.-
+help for ^bamat^                                                  (STB-55: sbe33)
+.-
+
+Multiple Bland-Altman plots
+---------------------------
+
+        ^bamat^ varlist [^if^ exp] [^in^ range] [^, for^mat^(^str^)^ ^notable^
+                ^data^ ^avlab(^str^)^ ^difflab(^str^)^ ^obs(^#^)^
+                ^listwise^ ^ti^tle^(^str^)^ graph_options ]
+
+
+Description
+-----------
+
+^bamat^ produces a matrix of Bland-Altman plots for all possible pairs of 
+variables.
+
+
+Options
+-------
+
+^format(^str^)^ 
+sets the format for display of results.
+
+^notable^ suppresses display of results data list data used in plotting 
+    each graph.
+
+^avlab(^str^)^ gives a variable label to the average before plotting the graph.
+
+^difflab(^str^)^ gives a variable label to the difference before plotting 
+    the graph.
+
+^obs(^#^)^ specifies the minimum number of nonmissing values per observations 
+    needed for a point to be plotted. The default value is 2.
+
+^listwise^ specifies listwise deletion of missing data.  Default is
+    pairwise.  Only observations with no missing values are used.
+
+^title(^str^)^ adds a single title to the block of graphs.
+
+graph_options are any of the options allowed with ^graph, twoway^.
+
+
+Example
+-------
+ 
+   . ^use tan_part^
+   . ^bamat pct_*^
+
+
+Author
+------
+        Paul Seed
+        GKT School of Medicine
+        King's London, UK
+        email: paul.seed@@kcl.ac.uk
+
+
+Also see
+--------
+
+    STB: STB-55 sbe33
+

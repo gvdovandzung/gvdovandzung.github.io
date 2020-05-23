@@ -1,0 +1,77 @@
+.-
+help for ^Strings to labels^ and ^Labels to strings^              Menu: Data--Label
+.-
+
+^Description^
+^-----------^
+
+The ^Strings to labels^ command allows you to transform a string variable into
+a numeric variable with labeled values.
+
+(A string variable is a variable that contains characters.)
+
+The variable appears to be the same as it was (if you view it in the ^Editor^,
+or choose ^List data^ from the ^Summaries^ menu).  But it is now a numeric
+variable and can be used with the ^Statistics^ commands in Stata.
+
+The ^Labels to strings^ commands does the reverse.  It transforms a numeric
+variable with labeled values into a string variable.
+
+
+^Example: Strings to labels^
+^--------------------------^
+
+Suppose you have data on the heights (in inches) of females and males.
+
+You enter the data in the spreadsheet editor.  @editr_sq!(Click here for help on@
+@editr_sq!inputting data in the spreadsheet editor.)@
+
+You called the first variable ^height^ and typed in the heights.
+
+You called the second variable ^gender^ and typed the words "female" or "male".
+
+When you choose ^List data^ from the ^Summaries^ menu, your data looks like
+
+^. list height gender in 1/11^                                                   
+                                                                                
+       height     gender                                                        
+  1.       73     female                                                        
+  2.       61     female                                                        
+  3.       67     female                                                        
+  4.       62     female                                                        
+  5.       60     female                                                        
+  6.       69     female                                                        
+  7.       65       male                                                        
+  8.       68       male                                                        
+  9.       74       male                                                        
+ 10.       72       male                                                        
+ 11.       67       male                                                        
+ 
+You try to do a t test on this data set, and you see no variables in the
+"Group var." list box.
+
+"What gives?" you say.  "Where is my ^gender^ variable?"
+
+Because you typed in the words "female" and "male", ^gender^ is a string
+variable.  
+
+Stata does not like string variables with most of its commands.
+
+You must change the string variable to a numeric variable.
+
+But this is easy to do with the ^Strings to labels^ command.
+
+Just enter the variable name and click ^OK^.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@vlabdlg!Label values@
+@dslabdlg!Label dataset@
+@varldlg!Label variable@
+
+@editr_sq!Using the spreadsheet editor (variable labels can also be entered@
+@editr_sq!in the editor)@

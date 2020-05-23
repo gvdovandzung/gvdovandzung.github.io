@@ -1,0 +1,165 @@
+.-
+help for ^Two-way ANOVA^                                  Menu: Statistics--ANOVA
+.-
+
+Topics covered
+--------------
+
+^1. Description of the test^
+^2. How to fill in the dialog box^
+^3. Example (how your data should be arranged)^
+^4. Interaction plots and plots for group means^
+
+
+^1. Description of the test^
+^--------------------------^
+
+This command performs two-way ANOVA.  In this design, we have two categorical
+variables (i.e., two factors), and each subject is measured once under one 
+combination of levels of these variables.  The command allows you to choose 
+whether or not to include an interaction term.
+
+
+^2. How to fill in the dialog box^
+^--------------------------------^
+
+Dependent var.:	 This is the variable that contains the ^measurement^
+                 of interest.
+ 
+Cat. var. #1:    This categorical variable must contain ^numbers^ that
+		 represent different levels of one independent variable.
+
+Cat. var. #2:    This categorical variable must contain ^numbers^ that
+		 represent different levels of a second independent variable.
+
+Include interaction:  When this box is checked, an interaction term
+		      (cat. var. #1)*(cat. var. #2) is included in the model.
+
+
+^3. Example (how your data should be arranged)^
+^---------------------------------------------^
+
+Suppose you wish to test the effectiveness of a new drug for ulcers.  You have
+randomly assigned 12 people to take the drug and 12 people to take a placebo
+(an inactive look-like pill).
+
+You measure the effectiveness of the drug by the number of weeks it takes the
+ulcer to heal.  Since older people may take longer to heal, you wish to include
+the effect of age.  Your data are
+
+              Time to heal (in weeks)
+           -----------------------------
+               Age group (in years)
+Treatment   <=49   50-59   60-69    >=70          
+---------  -----   -----   -----   -----  
+ Placebo     11      18      18      19
+             19      20      17      23
+             15      17      19      34
+
+ Drug         9      11      17      20
+             11      13      12      19
+              8       9      14      17         
+
+A data set should be created containing three variables:
+
+	^heal^  -- the number of weeks to heal
+
+        ^treat^ -- a number representing the treatment:
+                   0 = Placebo, 1 = Drug
+
+	^age^   -- a number representing the age group:
+                   40 for <=49  years
+		   50 for 50-59 years
+		   60 for 60-69 years
+		   70 for >=70  years
+
+The data can be input using the ^Editor^ (see help for @Editor@). 
+If you then list the data by selecting ^List data^ under the ^Summaries^ 
+menu, they will look like
+
+^. list treat age heal in 1/24^                                                  
+                                                                                
+         treat        age      heal                                             
+  1.         0         40        11                                             
+  2.         0         50        18                                             
+  3.         0         60        18                                             
+  4.         0         70        19                                             
+  5.         0         40        19                                             
+  6.         0         50        20                                             
+  7.         0         60        17                                             
+  8.         0         70        23                                             
+  9.         0         40        15                                             
+ 10.         0         50        17                                             
+ 11.         0         60        19                                             
+ 12.         0         70        34                                             
+ 13.         1         40         9                                             
+ 14.         1         50        11                                             
+ 15.         1         60        17                                             
+ 16.         1         70        20                                             
+ 17.         1         40        11                                             
+ 18.         1         50        13                                             
+ 19.         1         60        12                                             
+ 20.         1         70        19                                             
+ 21.         1         40         8                                             
+ 22.         1         50         9                                             
+ 23.         1         60        14                                             
+ 24.         1         70        17                                             
+                                                                                
+Note that for this command, all variables must be numeric (i.e., numbers only);
+they cannot contain strings (i.e., letters, etc.).
+
+
+With this data:   Enter ^heal^  for "Dependent var."
+		  Enter ^treat^ for "Cat. var. #1".
+		  Enter ^age^   for "Cat. var. #2".
+
+                  Leave the "Include interaction" box checked.
+
+Output is
+
+^. anova heal treat age treat*age^                                                
+                                                                                
+                           Number of obs =      24     R-squared     =  0.7365  
+                           Root MSE      = 3.43996     Adj R-squared =  0.6212  
+                                                                                
+                  Source |  Partial SS    df       MS           F     Prob > F  
+              -----------+----------------------------------------------------  
+                   Model |  529.166667     7  75.5952381       6.39     0.0011  
+                         |                                                      
+                   treat |  204.166667     1  204.166667      17.25     0.0007  
+                     age |      313.50     3      104.50       8.83     0.0011  
+               treat*age |       11.50     3  3.83333333       0.32     0.8080  
+                         |                                                      
+                Residual |  189.333333    16  11.8333333                        
+              -----------+----------------------------------------------------  
+                   Total |      718.50    23  31.2391304                        
+                                                                                
+
+Note that the ^treat*age^ interaction term is not significant.  You could run
+this command again with "Include interaction" unchecked.                                                                            
+                                                                                
+
+^4. Interaction plots and plots for group means^
+^----------------------------------------------^
+
+After you run two-way ANOVA, you will be asked if you want to see
+
+	- Interaction plot
+	- Cat. var. #1 error bar plot
+	- Cat. var. #2 error bar plot
+	- Group means by Cat. var. #1 and Cat. var. #2  
+ 
+@aovmdlg!Click here for details on two-way ANOVA plots.@
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@aovmdlg!Two-way ANOVA plots@
+@kwaldlg!One-way nonparametric ANOVA (Kruskal-Wallis test)@ 
+@onewdlg!One-way ANOVA (parametric)@
+@onegdlg!One-way ANOVA plots@
+@rpmdlg!Repeated-measures ANOVA@
+@aovcdlg!N-factor ANOVA & ANOCOVA@

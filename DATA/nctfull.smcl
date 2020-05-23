@@ -1,0 +1,1190 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}F:\kham NC\so lieu NC\NCT\nctfull.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 6 Mar 2012, 22:31:43
+
+{com}. tab mutngontay
+
+ {txt}mutngontay {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        893       79.52       79.52
+{txt}          1 {c |}{res}        230       20.48      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      1,123      100.00
+
+{com}. save "F:\kham NC\so lieu NC\NCT\NCTfull.dta", replace
+{txt}file F:\kham NC\so lieu NC\NCT\NCTfull.dta saved
+
+{com}. exit, clear
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}F:\kham NC\so lieu NC\NCT\nctfull.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 6 Mar 2012, 22:34:22
+
+{com}. exit, clear
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}F:\kham NC\so lieu NC\NCT\nctfull.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 6 Mar 2012, 23:22:32
+
+{com}. edit if  srsmpht>0 | srsmphd>0 |  srsmtht>0 | srsmthd>0
+{txt}- preserve
+- drop in 449
+- drop in 317
+- drop in 329
+- drop in 335
+- drop in 342
+- drop in 39
+- drop in 54
+- restore
+
+{com}. tab mutngontay
+
+ {txt}mutngontay {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        893       79.52       79.52
+{txt}          1 {c |}{res}        230       20.48      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      1,123      100.00
+
+{com}. drop if  srsmpht>0 | srsmphd>0 |  srsmtht>0 | srsmthd>0
+{txt}(215 observations deleted)
+
+{com}. {txt}- preserve
+{com}tab mutngontay
+
+ {txt}mutngontay {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        723       79.63       79.63
+{txt}          1 {c |}{res}        185       20.37      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        908      100.00
+
+{com}. drop if  smrssbpht>=7 |  smtssbphd>=7 | smrssbtht>=7 |  smrssbthd>=7
+{txt}(2 observations deleted)
+
+{com}. {txt}- preserve
+- restore
+{com}tab mutngontay
+
+ {txt}mutngontay {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        721       79.58       79.58
+{txt}          1 {c |}{res}        185       20.42      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        906      100.00
+
+{com}. exit, clear
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}F:\kham NC\so lieu NC\NCT\nctfull.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 6 Mar 2012, 23:41:13
+
+{com}. edit if  srsmpht>0 |  srsmphd>0 |  srsmtht>0 |  srsmthd>0
+{txt}- preserve
+
+{com}. crop if  srsmpht>0 |  srsmphd>0 |  srsmtht>0 |  srsmthd>0
+{err}unrecognized command:  crop
+{txt}{search r(199):r(199);}
+
+{com}. drop if  srsmpht>0 |  srsmphd>0 |  srsmtht>0 |  srsmthd>0
+{txt}(215 observations deleted)
+
+{com}. edit if  smrsspht>=7 |  smrssphd>=7 |  smrsstht>=7 |  smrssthd>=7
+{txt}- preserve
+
+{com}. drop if  smrsspht>=7 |  smrssphd>=7 |  smrsstht>=7 |  smrssthd>=7
+{txt}(162 observations deleted)
+
+{com}. drop if  smrssbpht>=3 |  smtssbphd>=3 |  smrssbtht>=3 |  smrssbthd>=3
+{txt}(50 observations deleted)
+
+{com}. drop if  dt2==0 | dt1==0
+{txt}(67 observations deleted)
+
+{com}. tab mutngontay
+
+ {txt}mutngontay {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        504       80.13       80.13
+{txt}          1 {c |}{res}        125       19.87      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen mutmoitren= mm1==1| mm2==1 |  mt==1 | mt==2
+
+. gen mutmoiduoi= mm1==2| mm2==2 |  md==1 | md==2
+
+. gen mut2moi= mm1==3| mm2==3 | ((mt==1 | mt==2) & (md==1|md==2))
+
+. tab mutmoitren
+
+ {txt}mutmoitren {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        578       91.89       91.89
+{txt}          1 {c |}{res}         51        8.11      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab mutmoiduoi
+
+ {txt}mutmoiduoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        554       88.08       88.08
+{txt}          1 {c |}{res}         75       11.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab mut2moi
+
+    {txt}mut2moi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        613       97.46       97.46
+{txt}          1 {c |}{res}         16        2.54      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen mutluoi= ml1==1 | ml2==1
+
+. tab mutluoi
+
+    {txt}mutluoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        611       97.14       97.14
+{txt}          1 {c |}{res}         18        2.86      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen mutvatkhac= mvk1==1 |mvk2==1
+
+. tab mutvatkhac
+
+ {txt}mutvatkhac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        576       91.57       91.57
+{txt}          1 {c |}{res}         53        8.43      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen canmaphai= cm1==2| cm2==2 | nmm==2
+{err}nmm not found
+{txt}{search r(111):r(111);}
+
+{com}. gen canmaphai= cm1==2| cm2==2 | nnm==2
+
+. gen canmatrai= cm1==3| cm2==3 | nnm==3
+
+. gen can2ma= cm1==1| cm2==1 | nnm==1
+
+. tab1 canmaphai
+
+{res}-> tabulation of canmaphai  
+
+  {txt}canmaphai {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        597       94.91       94.91
+{txt}          1 {c |}{res}         32        5.09      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1 canmatrai
+
+{res}-> tabulation of canmatrai  
+
+  {txt}canmatrai {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        610       96.98       96.98
+{txt}          1 {c |}{res}         19        3.02      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab can2ma
+
+     {txt}can2ma {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        564       89.67       89.67
+{txt}          1 {c |}{res}         65       10.33      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen canmongtay= cmt1==1 | cmt1==2 | cmt2==1 | cmt2==2 |mtay==1 | mtay==2
+
+. tab  canmongtay
+
+ {txt}canmongtay {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        456       72.50       72.50
+{txt}          1 {c |}{res}        173       27.50      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen canvatkhac= ccb==1 |cvk1==1 |cvk2==1
+
+. tab canvatkhac
+
+ {txt}canvatkhac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        552       87.76       87.76
+{txt}          1 {c |}{res}         77       12.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen chongcam= tqk1==1 | tqk2==1
+
+. gen ngunghieng= tqk1==2 | tqk2==2
+
+. gen ngusap= tqk1==3 | tqk2==3
+
+. tab chongcam
+
+   {txt}chongcam {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        566       89.98       89.98
+{txt}          1 {c |}{res}         63       10.02      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab ngunghieng
+
+ {txt}ngunghieng {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        438       69.63       69.63
+{txt}          1 {c |}{res}        191       30.37      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab ngusap
+
+     {txt}ngusap {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        573       91.10       91.10
+{txt}          1 {c |}{res}         56        8.90      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen noingong= nn1==1 | nn2==1
+
+. tab noingong
+
+   {txt}noingong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        600       95.39       95.39
+{txt}          1 {c |}{res}         29        4.61      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. {txt}- preserve
+- replace l = 5 in 5
+- replace l = 5 in 114
+- replace l = 5 in 443
+- replace l = 5 in 476
+- replace l = 5 in 608
+- replace l = 5 in 610
+{com}edit if l==5
+{txt}- preserve
+
+{com}. edit if l==6
+{err}no observations
+{txt}{search r(2000):r(2000);}
+
+{com}. gen dayluoi= l==5 | cl==1 | cl==2
+
+. tab dayluoi
+
+    {txt}dayluoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        615       97.77       97.77
+{txt}          1 {c |}{res}         14        2.23      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen luoithap= l==3
+
+. tab luoithap
+
+   {txt}luoithap {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        616       97.93       97.93
+{txt}          1 {c |}{res}         13        2.07      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen thomieng= ttkm==1 | ttkm==2 | tm1==1| ttkmkn==1 | ttkmkt==1
+
+. tab thomieng
+
+   {txt}thomieng {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        467       74.24       74.24
+{txt}          1 {c |}{res}        162       25.76      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. edit if b==1
+{txt}- preserve
+
+{com}. drop  thomieng
+
+. gen thomieng= ttkm==1 | ttkm==2 | tm1==1| ttkmkn==1 | ttkmkt==1 & b==0
+
+. tab thomieng
+
+   {txt}thomieng {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        481       76.47       76.47
+{txt}          1 {c |}{res}        148       23.53      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. edit if b==1
+{txt}- preserve
+
+{com}. gen nhaibenphai= n1b==1
+
+. gen nhaibentrai= n1b==2
+
+. tab nhaibenphai
+
+{txt}nhaibenphai {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        509       80.92       80.92
+{txt}          1 {c |}{res}        120       19.08      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab nhaibentrai
+
+{txt}nhaibentrai {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        530       84.26       84.26
+{txt}          1 {c |}{res}         99       15.74      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen nghienrang= nr==1
+
+. tab nghienrang
+
+ {txt}nghienrang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        553       87.92       87.92
+{txt}          1 {c |}{res}         76       12.08      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. save "F:\kham NC\so lieu NC\NCT\NCTfull.dta", replace
+{txt}file F:\kham NC\so lieu NC\NCT\NCTfull.dta saved
+
+{com}. exit, clear
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}F:\kham NC\so lieu NC\NCT\nctfull.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 7 Mar 2012, 00:49:21
+
+{com}. tab mutngontay
+
+ {txt}mutngontay {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        504       80.13       80.13
+{txt}          1 {c |}{res}        125       19.87      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. exit, clear
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}F:\kham NC\so lieu NC\NCT\nctfull.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 7 Mar 2012, 13:19:47
+
+{com}. edit if tcnrt==1
+{txt}- preserve
+
+{com}. gen cancheorangtruoc= ccrt==1& tcnrt==0
+
+. tab cancheorangtruoc
+
+{txt}cancheorang {c |}
+      truoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        578       91.89       91.89
+{txt}          1 {c |}{res}         51        8.11      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. drop cancheorangtruoc
+
+. gen cancheorangtruoc= ccrt==1
+
+. tab cancheorangtruoc
+
+{txt}cancheorang {c |}
+      truoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        556       88.39       88.39
+{txt}          1 {c |}{res}         73       11.61      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. drop cancheorangtruoc
+
+. gen cancheorangtruoc= ccrt==1 & tcnrt==1
+
+. tab cancheorangtruoc
+
+{txt}cancheorang {c |}
+      truoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        614       97.62       97.62
+{txt}          1 {c |}{res}         15        2.38      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. edit if ccrt==1
+{txt}- preserve
+
+{com}. drop cancheorangtruoc
+
+. gen cancheorangtruoc= ccrt==1 & tcnrt==0
+
+. tab cancheorangtruoc
+
+{txt}cancheorang {c |}
+      truoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        578       91.89       91.89
+{txt}          1 {c |}{res}         51        8.11      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tabulate mutmoitren cancheorangtruoc, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}   cancheorangtruoc
+mutmoitren {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         0 {c |}{res}       533         45 {txt}{c |}{res}       578 
+           {txt}{c |}{res}     92.21      88.24 {txt}{c |}{res}     91.89 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}        45          6 {txt}{c |}{res}        51 
+           {txt}{c |}{res}      7.79      11.76 {txt}{c |}{res}      8.11 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       578         51 {txt}{c |}{res}       629 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.9960  {txt} Pr = {res}0.318
+
+{com}. save "F:\kham NC\so lieu NC\NCT\NCTfull.dta", replace
+{txt}file F:\kham NC\so lieu NC\NCT\NCTfull.dta saved
+
+{com}. exit
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}F:\kham NC\so lieu NC\NCT\nctfull.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}15 Apr 2012, 14:57:34
+
+{com}. use "F:\kham NC\so lieu NC\NCT\NCTfull.dta", clear
+
+. drop cancheorangtruoc
+
+. gen canchiaquamuc=  dcc>=4
+
+. tab1 canchiaquamua
+{err}variable canchiaquamua not found
+{txt}{search r(111):r(111);}
+
+{com}. tab  canchiaquamuc
+
+{txt}canchiaquam {c |}
+         uc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        466       74.09       74.09
+{txt}          1 {c |}{res}        163       25.91      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. edit
+{txt}- preserve
+
+{com}. gen cancheorangtruoc=  ccrt==1 &  tcnrt==0 | ccrt==1 & tcnrt==.
+
+. tab cancheorangtruoc
+
+{txt}cancheorang {c |}
+      truoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        571       90.78       90.78
+{txt}          1 {c |}{res}         58        9.22      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab tqr6p
+
+      {txt}TQR6P {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        361       71.77       71.77
+{txt}          1 {c |}{res}         76       15.11       86.88
+{txt}          2 {c |}{res}         10        1.99       88.87
+{txt}          3 {c |}{res}         43        8.55       97.42
+{txt}          4 {c |}{res}         13        2.58      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        503      100.00
+
+{com}. tab tqr6t
+
+      {txt}TQR6T {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        351       69.37       69.37
+{txt}          1 {c |}{res}         76       15.02       84.39
+{txt}          2 {c |}{res}         10        1.98       86.36
+{txt}          3 {c |}{res}         59       11.66       98.02
+{txt}          4 {c |}{res}         10        1.98      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        506      100.00
+
+{com}. gen cansaurangtruoc=  cprt>=4 |  csdn==1
+
+. tab cansaurangtruoc
+
+{txt}cansaurangt {c |}
+       ruoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        430       68.36       68.36
+{txt}          1 {c |}{res}        199       31.64      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen canhorangtruoc=  chrt>0 &  cprt==.
+
+. tab canhorangtruoc
+
+{txt}canhorangtr {c |}
+        uoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        575       91.41       91.41
+{txt}          1 {c |}{res}         54        8.59      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen candoidau=  cprt==0
+
+. tab candoidau
+
+  {txt}candoidau {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        606       96.34       96.34
+{txt}          1 {c |}{res}         23        3.66      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. edit
+{txt}- preserve
+
+{com}. gen csrs2ben= csrs==1 | csrs==2
+
+. gen csrsp= csrs==3 | csrs==4
+
+. gen csrst= csrs==5 | csrs==6
+
+. tab csrs2ben
+
+   {txt}csrs2ben {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        628       99.84       99.84
+{txt}          1 {c |}{res}          1        0.16      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab csrsp
+
+      {txt}csrsp {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        626       99.52       99.52
+{txt}          1 {c |}{res}          3        0.48      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab csrst
+
+      {txt}csrst {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        629      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen chrs2ben= chrs==1 | chrs==2
+
+. gen chrsp= chrs==3 | chrs==4
+
+. gen chrst= chrs==5 | chrs==6
+
+. tab chrs2ben
+
+   {txt}chrs2ben {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        625       99.36       99.36
+{txt}          1 {c |}{res}          4        0.64      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1  chrsp
+
+{res}-> tabulation of chrsp  
+
+      {txt}chrsp {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        628       99.84       99.84
+{txt}          1 {c |}{res}          1        0.16      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab chrsp
+
+      {txt}chrsp {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        628       99.84       99.84
+{txt}          1 {c |}{res}          1        0.16      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1  chrst
+
+{res}-> tabulation of chrst  
+
+      {txt}chrst {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        628       99.84       99.84
+{txt}          1 {c |}{res}          1        0.16      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen trs2ben= trs==1 | trs==2
+
+. gen trsp= trs==3 | trs==4
+
+. gen trst= trs==5 | trs==6
+
+. tab1  trs2ben
+
+{res}-> tabulation of trs2ben  
+
+    {txt}trs2ben {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        629      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1  trsp
+
+{res}-> tabulation of trsp  
+
+       {txt}trsp {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        628       99.84       99.84
+{txt}          1 {c |}{res}          1        0.16      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1  trst
+
+{res}-> tabulation of trst  
+
+       {txt}trst {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        628       99.84       99.84
+{txt}          1 {c |}{res}          1        0.16      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. edit
+{txt}- preserve
+
+{com}. gen ccrs2ben= tqcnrs==1 & tcnrs==0 | tqcnrs==1 & tcnrs==.
+
+. gen ccrsp= tqcnrs==2 & tcnrs==0 | tqcnrs==2 & tcnrs==.
+
+. gen ccrst= tqcnrs==3 & tcnrs==0 | tqcnrs==3 & tcnrs==.
+
+. tab1  ccrs2ben
+
+{res}-> tabulation of ccrs2ben  
+
+   {txt}ccrs2ben {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        626       99.52       99.52
+{txt}          1 {c |}{res}          3        0.48      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1  ccrsp
+
+{res}-> tabulation of ccrsp  
+
+      {txt}ccrsp {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        623       99.05       99.05
+{txt}          1 {c |}{res}          6        0.95      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1  ccrst
+
+{res}-> tabulation of ccrst  
+
+      {txt}ccrst {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        623       99.05       99.05
+{txt}          1 {c |}{res}          6        0.95      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. edit if ccrt==1 & tcnrt==.
+{txt}- preserve
+
+{com}. gen cdk2ben= tqcnrs==4 & tcnrs==0 | tqcnrs==4 & tcnrs==.
+
+. gen cdkp= tqcnrs==5 & tcnrs==0 | tqcnrs==5 & tcnrs==.
+
+. gen cdkt= tqcnrs==6 & tcnrs==0 | tqcnrs==6 & tcnrs==.
+
+. tab1 cdk2ben
+
+{res}-> tabulation of cdk2ben  
+
+    {txt}cdk2ben {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        628       99.84       99.84
+{txt}          1 {c |}{res}          1        0.16      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1 cdkp
+
+{res}-> tabulation of cdkp  
+
+       {txt}cdkp {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        624       99.21       99.21
+{txt}          1 {c |}{res}          5        0.79      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1 cdkt
+
+{res}-> tabulation of cdkt  
+
+       {txt}cdkt {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        624       99.21       99.21
+{txt}          1 {c |}{res}          5        0.79      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen lechdgrcp= dgrc==1
+
+. gen lechdgrct= dgrc==2
+
+. tab1 lechdgrcp
+
+{res}-> tabulation of lechdgrcp  
+
+  {txt}lechdgrcp {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        483       76.79       76.79
+{txt}          1 {c |}{res}        146       23.21      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1 lechdgrct
+
+{res}-> tabulation of lechdgrct  
+
+  {txt}lechdgrct {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        503       79.97       79.97
+{txt}          1 {c |}{res}        126       20.03      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen lechdgcp= dgc==1
+
+. gen lechdgct= dgc==2
+
+. tab1 lechdgcp
+
+{res}-> tabulation of lechdgcp  
+
+   {txt}lechdgcp {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        612       97.30       97.30
+{txt}          1 {c |}{res}         17        2.70      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1 lechdgct
+
+{res}-> tabulation of lechdgct  
+
+   {txt}lechdgct {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        624       99.21       99.21
+{txt}          1 {c |}{res}          5        0.79      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen khehortht= khrtht>0
+
+. gen khehorthd= khrthd>0
+
+. tab1 khehortht
+
+{res}-> tabulation of khehortht  
+
+  {txt}khehortht {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        291       46.26       46.26
+{txt}          1 {c |}{res}        338       53.74      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1 khehorthd
+
+{res}-> tabulation of khehorthd  
+
+  {txt}khehorthd {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        469       74.56       74.56
+{txt}          1 {c |}{res}        160       25.44      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. gen lechlacrtht= llrtht>0
+
+. gen lechlacrthd= llrthd>0
+
+. gen lechlacrsht= llrsht==1
+
+. gen lechlacrshd= llrshd==1
+
+. tab1 lechlacrtht
+
+{res}-> tabulation of lechlacrtht  
+
+{txt}lechlacrtht {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        488       77.58       77.58
+{txt}          1 {c |}{res}        141       22.42      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1 lechlacrthd
+
+{res}-> tabulation of lechlacrthd  
+
+{txt}lechlacrthd {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        414       65.82       65.82
+{txt}          1 {c |}{res}        215       34.18      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1 lechlacrsht
+
+{res}-> tabulation of lechlacrsht  
+
+{txt}lechlacrsht {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        622       98.89       98.89
+{txt}          1 {c |}{res}          7        1.11      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. tab1 lechlacrshd
+
+{res}-> tabulation of lechlacrshd  
+
+{txt}lechlacrshd {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        620       98.57       98.57
+{txt}          1 {c |}{res}          9        1.43      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        629      100.00
+
+{com}. save "F:\kham NC\so lieu NC\NCT\NCTfull.dta", replace
+{txt}file F:\kham NC\so lieu NC\NCT\NCTfull.dta saved
+
+{com}. tabulate nhaibenphai lechdgrcp, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+nhaibenpha {c |}       lechdgrcp
+         i {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         0 {c |}{res}       392        117 {txt}{c |}{res}       509 
+           {txt}{c |}{res}     81.16      80.14 {txt}{c |}{res}     80.92 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}        91         29 {txt}{c |}{res}       120 
+           {txt}{c |}{res}     18.84      19.86 {txt}{c |}{res}     19.08 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       483        146 {txt}{c |}{res}       629 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.0759  {txt} Pr = {res}0.783
+
+{com}. exit, clear
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}F:\kham NC\so lieu NC\NCT\nctfull.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}15 Apr 2012, 21:47:27
+
+{com}. use "F:\kham NC\so lieu NC\NCT\NCTfull.dta", clear
+
+. exit, clear
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}F:\kham NC\so lieu NC\NCT\nctfull.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}15 Apr 2012, 21:54:27
+
+{com}. tabulate nhaibenphai lechdgrcp, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+nhaibenpha {c |}       lechdgrcp
+         i {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         0 {c |}{res}       392        117 {txt}{c |}{res}       509 
+           {txt}{c |}{res}     81.16      80.14 {txt}{c |}{res}     80.92 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}        91         29 {txt}{c |}{res}       120 
+           {txt}{c |}{res}     18.84      19.86 {txt}{c |}{res}     19.08 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       483        146 {txt}{c |}{res}       629 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.0759  {txt} Pr = {res}0.783
+
+{com}. 
+. tabulate nhaibenphai lechdgrcp, chi2 expect column
+{txt}
+{c TLC}{hline 20}{c TRC}
+{c |} Key{col 22}{c |}
+{c LT}{hline 20}{c RT}
+{c |}{space 5}{it:frequency}{col 22}{c |}
+{c |}{space 1}{it:expected frequency}{col 22}{c |}
+{c |}{space 1}{it:column percentage}{col 22}{c |}
+{c BLC}{hline 20}{c BRC}
+
+nhaibenpha {c |}       lechdgrcp
+         i {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         0 {c |}{res}       392        117 {txt}{c |}{res}       509 
+           {txt}{c |}{res}     390.9      118.1 {txt}{c |}{res}     509.0 
+           {txt}{c |}{res}     81.16      80.14 {txt}{c |}{res}     80.92 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}        91         29 {txt}{c |}{res}       120 
+           {txt}{c |}{res}      92.1       27.9 {txt}{c |}{res}     120.0 
+           {txt}{c |}{res}     18.84      19.86 {txt}{c |}{res}     19.08 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       483        146 {txt}{c |}{res}       629 
+           {txt}{c |}{res}     483.0      146.0 {txt}{c |}{res}     629.0 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.0759  {txt} Pr = {res}0.783
+
+{com}. cc nhaibenphai lechdgrcp
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       29          91{txt}  {c |}  {res}      120       0.2417
+        {txt}Controls {c |} {res}      117         392{txt}  {c |}  {res}      509       0.2299
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      146         483{txt}  {c |}  {res}      629       0.2321
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.067719{txt}{col 43}{c |}   {res} .6445235    1.731669{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .0634236{txt}{col 43}{c |}   {res}-.5515337    .4225225{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .0153274{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.08{txt}  Pr>chi2 ={res} 0.7829
+
+{com}. tabulate nhaibenphai lechdgrct, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+nhaibenpha {c |}       lechdgrct
+         i {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         0 {c |}{res}       400        109 {txt}{c |}{res}       509 
+           {txt}{c |}{res}     79.52      86.51 {txt}{c |}{res}     80.92 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}       103         17 {txt}{c |}{res}       120 
+           {txt}{c |}{res}     20.48      13.49 {txt}{c |}{res}     19.08 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       503        126 {txt}{c |}{res}       629 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  3.1844  {txt} Pr = {res}0.074
+
+{com}. tabulate nhaibenphai lechdgrct, chi2 expect column
+{txt}
+{c TLC}{hline 20}{c TRC}
+{c |} Key{col 22}{c |}
+{c LT}{hline 20}{c RT}
+{c |}{space 5}{it:frequency}{col 22}{c |}
+{c |}{space 1}{it:expected frequency}{col 22}{c |}
+{c |}{space 1}{it:column percentage}{col 22}{c |}
+{c BLC}{hline 20}{c BRC}
+
+nhaibenpha {c |}       lechdgrct
+         i {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         0 {c |}{res}       400        109 {txt}{c |}{res}       509 
+           {txt}{c |}{res}     407.0      102.0 {txt}{c |}{res}     509.0 
+           {txt}{c |}{res}     79.52      86.51 {txt}{c |}{res}     80.92 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}       103         17 {txt}{c |}{res}       120 
+           {txt}{c |}{res}      96.0       24.0 {txt}{c |}{res}     120.0 
+           {txt}{c |}{res}     20.48      13.49 {txt}{c |}{res}     19.08 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       503        126 {txt}{c |}{res}       629 
+           {txt}{c |}{res}     503.0      126.0 {txt}{c |}{res}     629.0 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  3.1844  {txt} Pr = {res}0.074
+
+{com}. tabulate nhaibenphai lechdgrct, chi2 expect exact column
+{txt}
+{c TLC}{hline 20}{c TRC}
+{c |} Key{col 22}{c |}
+{c LT}{hline 20}{c RT}
+{c |}{space 5}{it:frequency}{col 22}{c |}
+{c |}{space 1}{it:expected frequency}{col 22}{c |}
+{c |}{space 1}{it:column percentage}{col 22}{c |}
+{c BLC}{hline 20}{c BRC}
+
+nhaibenpha {c |}       lechdgrct
+         i {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         0 {c |}{res}       400        109 {txt}{c |}{res}       509 
+           {txt}{c |}{res}     407.0      102.0 {txt}{c |}{res}     509.0 
+           {txt}{c |}{res}     79.52      86.51 {txt}{c |}{res}     80.92 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}       103         17 {txt}{c |}{res}       120 
+           {txt}{c |}{res}      96.0       24.0 {txt}{c |}{res}     120.0 
+           {txt}{c |}{res}     20.48      13.49 {txt}{c |}{res}     19.08 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       503        126 {txt}{c |}{res}       629 
+           {txt}{c |}{res}     503.0      126.0 {txt}{c |}{res}     629.0 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  3.1844  {txt} Pr = {res}0.074
+{txt}           Fisher's exact =                 {res}0.077
+{txt}   1-sided Fisher's exact =                 {res}0.045
+
+{com}. tabulate nhaibenphai lechdgrct, chi2 row
+{txt}
+{c TLC}{hline 16}{c TRC}
+{c |} Key{col 18}{c |}
+{c LT}{hline 16}{c RT}
+{c |}{space 3}{it:frequency}{col 18}{c |}
+{c |}{space 1}{it:row percentage}{col 18}{c |}
+{c BLC}{hline 16}{c BRC}
+
+nhaibenpha {c |}       lechdgrct
+         i {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         0 {c |}{res}       400        109 {txt}{c |}{res}       509 
+           {txt}{c |}{res}     78.59      21.41 {txt}{c |}{res}    100.00 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}       103         17 {txt}{c |}{res}       120 
+           {txt}{c |}{res}     85.83      14.17 {txt}{c |}{res}    100.00 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       503        126 {txt}{c |}{res}       629 
+           {txt}{c |}{res}     79.97      20.03 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  3.1844  {txt} Pr = {res}0.074
+
+{com}. label variable csrs2ben `"can sau rang sau 2 ben"'
+
+. label variable csrsp `"can sau rang sau ben Phai"'
+
+. label variable csrst `"can sau rang sau ben Trai"'
+
+. label variable chrs2ben `"can ho rang sau 2 ben"'
+
+. label variable chrsp `"can ho rang sau ben phai"'
+
+. label variable chrst `"can ho rang sau ben trai"'
+
+. label variable trs2ben `"troi rang sau 2 ben"'
+
+. label variable trsp `"troi rang sau ben phai"'
+
+. label variable trst `"troi rang sau ben trai"'
+
+. label variable ccrs2ben `"can cheo rang sau 2 ben"'
+
+. label variable ccrsp `"can cheo rang sau ben phai"'
+
+. label variable ccrst `"can cheo rang sau ben trai"'
+
+. label variable cdk2ben `"can dang keo 2 ben"'
+
+. label variable cdkp `"can dang keo ben phai"'
+
+. label variable cdkt `"can dang keo ben trai"'
+
+. label variable lechdgrcp `"lech duong giua rang cua sang phai"'
+
+. label variable lechdgrct `"lech duong giua rang cua sang trai"'
+
+. label variable lechdgcp `"lech duong giua cam sang phai"'
+
+. label variable lechdgct `"lech duong giua cam sang trai"'
+
+. label variable khehortht `"khe ho rang truoc ham tren"'
+
+. label variable khehorthd `"khe ho rang truoc ham duoi"'
+
+. label variable lechlacrtht `"lech lac rang truoc ham tren"'
+
+. label variable lechlacrthd `"lech lac rang truoc ham duoi"'
+
+. label variable lechlacrsht `"lech lac rang sau ham tren"'
+
+. label variable lechlacrshd `"lech lac rang sau ham duoi"'
+
+. save "F:\kham NC\so lieu NC\NCT\NCTfull.dta", replace
+{txt}file F:\kham NC\so lieu NC\NCT\NCTfull.dta saved
+
+{com}. exit, clear

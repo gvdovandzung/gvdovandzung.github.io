@@ -1,0 +1,123 @@
+{smcl}
+{* April 15, 2008 @ 21:14:12}{...}
+{cmd:help metandi_postestimation}{right: ({browse "http://www.stata-journal.com/article.html?article=st0163":SJ9-2: st0163})}
+{right:also see:  {helpb metandi}}
+{hline}
+
+{title:Title}
+
+{p2colset 5 31 33 2}{...}
+{p2col :{hi:metandi postestimation} {hline 2}}Postestimation tools for metandi{p_end}
+{p2colreset}{...}
+
+
+{title:Description}
+
+{p 4 4 2}
+Many of Stata's standard postestimation tools will not work after
+{helpb metandi} or will not work as expected, because {helpb metandi}
+temporarily reshapes the data before fitting the model.
+
+{p 4 4 2}
+The notable exception is {cmd:predict}, which can be used to obtain posterior
+predictions (empirical Bayes estimates) of the sensitivity and specificity in
+each study ({cmd:mu}), as well as various statistics that can be useful for
+detecting outliers (e.g., {cmd:ustd}) and influential observations
+({cmd:cooksd}).
+
+{p 4 4 2}
+{helpb metandiplot} graphs the results from {cmd:metandi}.
+
+
+{title:Syntax for predict}
+
+{p 8 17 2}
+{cmd:predict} {dtype} {it:newvarlist}
+{ifin}
+[{cmd:,} {it:statistic}]
+
+{synoptset 11}{...}
+{synopthdr:statistic}
+{synoptline}
+{synopt :{cmd:mu}}posterior predicted (empirical Bayes) sensitivity and specificity; the default{p_end}
+{synopt :{cmd:u}}posterior means (empirical Bayes predictions, BLUPs) of random effects{p_end}
+{synopt :{cmd:sdu}}posterior standard deviations of the random effects{p_end}
+{synopt :{cmd:ustd}}standardized posterior means of random effects {p_end}
+{synopt :{cmdab:l:inpred}}linear predictor with empirical Bayes predictions plugged in: linpred = xb + u{p_end}
+{synopt :{cmdab:co:oksd}}Cook's distance for each study; available only when model was fit using {cmd:gllamm}{p_end}
+{synoptline}
+{p2colreset}{...}
+
+
+{p 4 4 2}
+Most of the above statistics require two new variables to store them: one for
+the statistic associated with sensitivity and one for the statistic associated
+with specificity.  If {it:newvarlist} contains only one {it:newvar}, the
+statistics associated with sensitivity and specificity will be stored in
+{it:newvar}{hi:1} and {it:newvar}{hi:0}, respectively.  {cmd:cooksd}, however,
+is computed once for each study and therefore requires only one {it:newvar}.
+
+
+{title:Remarks}
+
+{p 4 4 2}
+If the model was fit using {cmd:gllamm},
+the predictions are obtained by using {helpb gllapred},
+whose help page contains further details of the statistics available.
+See also the GLLAMM manual
+({help metandi_postestimation##gllammmanual:Rabe-Hesketh, Skrondal, and Pickles 2004})
+and {help metandi_postestimation##rhs:Rabe-Hesketh and Skrondal (2008)}.
+If the model was fit using {cmd:xtmelogit},
+the predictions are obtained by using {cmd:predict};
+see {helpb xtmelogit_postestimation##predict:[R] xtmelogit postestimation}.
+
+
+{title:Examples}
+
+{p 8 14 2}{cmd:. metandi tp fp fn tn}
+
+{p 4 4 2}
+Add empirical Bayes estimates to {helpb metandiplot}:
+
+{p 8 14 2}{cmd:. predict eb}
+
+{p 8 14 2}{cmd:. metandiplot, addplot(scatter eb1 eb0)}
+
+{p 4 4 2}
+Check for particularly influential observations using Cook's distance:
+
+{p 8 14 2}{cmd:. predict cook, cooksd}
+
+{p 8 14 2}{cmd:. scatter cook studyid, mlabel(author)}
+
+{p 4 4 2}
+Check for outliers using standardized predicted random effects
+(interpretable as standardized level-2 residuals):
+
+{p 8 14 2}{cmd:. predict ustd_Se ustd_Sp, ustd}
+
+{p 8 14 2}{cmd:. scatter ustd_Se ustd_Sp, xscale(rev) mlab(studyid) xline(0) yline(0) }
+
+
+{title:References}
+
+{p 4 8 2}{marker rhs}
+Rabe-Hesketh, S., and A. Skrondal. 2008.
+{browse "http://www.stata.com/bookstore/mlmus2.html":{it:Multilevel and Longitudinal Modeling Using Stata.} 2nd ed.}
+College Station, TX: Stata Press.
+
+{p 4 8 2}{marker gllammmanual}
+Rabe-Hesketh, S., A. Skrondal, and A. Pickles. 2004.
+GLLAMM Manual.
+Working Paper 160, Division of Biostatistics, University of California-Berkeley.
+Downloadable from
+{browse "http://www.bepress.com/ucbbiostat/paper160":http://www.bepress.com/ucbbiostat/paper160}.
+
+
+{title:Also see}
+
+{psee}Article: {it:Stata Journal}, volume 9, number 2: {browse "http://www.stata-journal.com/article.html?article=st0163":st0163}
+
+{psee}
+Online:  {helpb gllapred}, {helpb metandi}, {helpb metandiplot}
+{p_end}

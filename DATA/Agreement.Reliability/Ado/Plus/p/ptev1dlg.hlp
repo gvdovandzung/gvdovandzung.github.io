@@ -1,0 +1,47 @@
+.-
+help for ^1-sample test of variance^           Menu: Statistics--Parametric tests
+.-
+
+^Description of the test^
+^-----------------------^
+
+This command performs the chi-squared test, which tests whether the
+variance sigma^^2 of a population equals an hypothesized variance
+sigma_0^^2.
+
+That is, it tests the null hypothesis Ho: sigma^^2 = sigma_0^^2.
+
+The chi-squared test statistic X^^2 is (n - 1)*sd^^2/sigma_0^^2,
+where sd is the standard deviation of the sample and n is the
+number of observations.  This chi-squared statistic has n - 1
+degrees of freedom.
+
+
+^Examples (how to fill in the dialog box)^
+^----------------------------------------^
+
+Enter one "Data variable".
+
+Fill the hypothesized standard deviation (sigma_0) where it says
+"Hypothesized std. dev." 
+
+Note:  The hypothesized standard deviation (sigma_0) is the square
+root of the hypothesized variance (sigma_0^^2). 
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@ptevdlg!2-sample test of variance  (Statistics--Parametric tests)
+
+@sdt1dlg!1-sample test of variance  (Calculator menu)@
+@sdtdlg!2-sample test of variance  (Calculator menu)@
+
+@ptntdlg!Normality test@
+@ptt2dlg!2-sample t test (note unequal variances option)@
+@rsumdlg!Mann-Whitney (Wilcoxon rank-sum) test (nonparametric 2-sample test)@
+@ksmdlg!Kolmogorov-Smirnov test (test for equality of distributions)@
+
+@sdtest!For the command-line version, see help for sdtest.@

@@ -1,0 +1,257 @@
+> sl<-stata.get("chilumba2.dta")
+> head(sl)
+       id  caco         agegrp sex bcgscar        school mbcont pbcont
+1 1000475 chung trung nien som  nu      co 7 nam tro len  khong  khong
+2 1000573 chung trung nien som nam   khong       4-6 nam  khong  khong
+3 1001073 chung         tre em  nu   khong       1-3 nam  khong  khong
+4 1001552 chung         tre em nam      co       4-6 nam  khong  khong
+5 1002063 chung         tre em nam      co       1-3 nam  khong  khong
+6 1003206 chung         tre em nam      co       1-3 nam  khong  khong
+> with(sl,table(bcgscar,caco))
+       caco
+bcgscar chung benh
+  khong   534  210
+  co      474   42
+> ?relevel
+> sl$bcgscar<-relevel(sl$bcgscar,"co")
+> with(sl,table(bcgscar,caco))
+       caco
+bcgscar chung benh
+  co      474   42
+  khong   534  210
+> sl$caco<-relevel(sl$bcgscar,"benh")
+Error in relevel.factor(sl$bcgscar, "benh") : 
+  'ref' must be an existing level
+> sl$caco<-relevel(sl$caco,"benh")
+> with(sl,table(bcgscar,caco))
+       caco
+bcgscar benh chung
+  co      42   474
+  khong  210   534
+> epi.2by2(with(sl,table(bcgscar,caco)),method="case.control")
+             Outcome +    Outcome -      Total        Prevalence *
+Exposed +           42          474        516                8.14
+Exposed -          210          534        744               28.23
+Total              252         1008       1260               20.00
+                 Odds
+Exposed +      0.0886
+Exposed -      0.3933
+Total          0.2500
+
+Point estimates and 95 % CIs:
+---------------------------------------------------------
+Odds ratio (W)                               0.23 (0.16, 0.32)
+Attrib prevalence (W) *                      -20.09 (-24.09, -16.08)
+Attrib prevalence in population (W) *        -8.23 (-12.14, -4.31)
+Attrib fraction (est) in exposed  (%)        -343.35 (-547.89, -209.15)
+Attrib fraction (est) in population (%)      -57.30 (-70.44, -45.18)
+---------------------------------------------------------
+ X2 test statistic: 76.83 p-value: < 0.001
+ W: Wald confidence limits
+ * Cases per 100 population units 
+> head(sl)
+       id  caco         agegrp sex bcgscar        school mbcont pbcont
+1 1000475 chung trung nien som  nu      co 7 nam tro len  khong  khong
+2 1000573 chung trung nien som nam   khong       4-6 nam  khong  khong
+3 1001073 chung         tre em  nu   khong       1-3 nam  khong  khong
+4 1001552 chung         tre em nam      co       4-6 nam  khong  khong
+5 1002063 chung         tre em nam      co       1-3 nam  khong  khong
+6 1003206 chung         tre em nam      co       1-3 nam  khong  khong
+> epi.2by2(with(sl,table(sex,caco)),method="case.control")
+             Outcome +    Outcome -      Total        Prevalence *
+Exposed +          102          469        571                17.9
+Exposed -          150          539        689                21.8
+Total              252         1008       1260                20.0
+                 Odds
+Exposed +       0.217
+Exposed -       0.278
+Total           0.250
+
+Point estimates and 95 % CIs:
+---------------------------------------------------------
+Odds ratio (W)                               0.78 (0.59, 1.03)
+Attrib prevalence (W) *                      -3.91 (-8.31, 0.49)
+Attrib prevalence in population (W) *        -1.77 (-5.56, 2.02)
+Attrib fraction (est) in exposed  (%)        -27.93 (-71.28, 4.18)
+Attrib fraction (est) in population (%)      -11.32 (-25.13, 0.97)
+---------------------------------------------------------
+ X2 test statistic: 2.979 p-value: 0.084
+ W: Wald confidence limits
+ * Cases per 100 population units 
+> head(sl)
+       id  caco         agegrp sex bcgscar        school mbcont pbcont
+1 1000475 chung trung nien som  nu      co 7 nam tro len  khong  khong
+2 1000573 chung trung nien som nam   khong       4-6 nam  khong  khong
+3 1001073 chung         tre em  nu   khong       1-3 nam  khong  khong
+4 1001552 chung         tre em nam      co       4-6 nam  khong  khong
+5 1002063 chung         tre em nam      co       1-3 nam  khong  khong
+6 1003206 chung         tre em nam      co       1-3 nam  khong  khong
+> epi.2by2(with(sl,table(mbcont,caco)),method="case.control")
+             Outcome +    Outcome -      Total        Prevalence *
+Exposed +          244          995       1239                19.7
+Exposed -            8           13         21                38.1
+Total              252         1008       1260                20.0
+                 Odds
+Exposed +       0.245
+Exposed -       0.615
+Total           0.250
+
+Point estimates and 95 % CIs:
+---------------------------------------------------------
+Odds ratio (W)                               0.40 (0.16, 0.97)
+Attrib prevalence (W) *                      -18.40 (-39.29, 2.49)
+Attrib prevalence in population (W) *        -18.10 (-38.98, 2.79)
+Attrib fraction (est) in exposed  (%)        -150.72 (-561.08, 10.97)
+Attrib fraction (est) in population (%)      -146.15 (-487.45, -3.14)
+---------------------------------------------------------
+ X2 test statistic: 4.37 p-value: 0.037
+ W: Wald confidence limits
+ * Cases per 100 population units 
+> bang1<-with(sl,table(agegrp,caco))
+> bang1
+                caco
+agegrp           benh chung
+  tre em           32   267
+  thanh nien       30   200
+  truong thanh     19   143
+  trung nien som   47   144
+  trung nien      124   254
+> epi.2by2(with(sl,table(agegrp,caco))[c(1,3),],method="case.control")
+             Outcome +    Outcome -      Total        Prevalence *
+Exposed +           32          267        299                10.7
+Exposed -           19          143        162                11.7
+Total               51          410        461                11.1
+                 Odds
+Exposed +       0.120
+Exposed -       0.133
+Total           0.124
+
+Point estimates and 95 % CIs:
+---------------------------------------------------------
+Odds ratio (W)                               0.90 (0.49, 1.65)
+Attrib prevalence (W) *                      -1.03 (-7.09, 5.04)
+Attrib prevalence in population (W) *        -0.67 (-6.39, 5.06)
+Attrib fraction (est) in exposed  (%)        -10.84 (-109.91, 42.83)
+Attrib fraction (est) in population (%)      -6.81 (-56.18, 26.95)
+---------------------------------------------------------
+ X2 test statistic: 0.112 p-value: 0.737
+ W: Wald confidence limits
+ * Cases per 100 population units 
+> for (i in c(2,3,4,5)){
++ epi.2by2(with(sl,table(agegrp,caco))[c(1,3),],method="case.control")
++ epi.2by2(with(sl,table(agegrp,caco))[c(1,i),],method="case.control")
++ }
+> for (i in c(2,3,4,5)){
++ epi.2by2(with(sl,table(agegrp,caco))[c(i,1),],method="case.control")
++ }
+> }for (i in c(2,3,4,5)){
+Error: unexpected '}' in "}"
+> print(epi.2by2(with(sl,table(agegrp,caco))[c(i,1),],method="case.control"))
+             Outcome +    Outcome -      Total        Prevalence *
+Exposed +          124          254        378                32.8
+Exposed -           32          267        299                10.7
+Total              156          521        677                23.0
+                 Odds
+Exposed +       0.488
+Exposed -       0.120
+Total           0.299
+
+Point estimates and 95 % CIs:
+---------------------------------------------------------
+Odds ratio (W)                               4.07 (2.66, 6.23)
+Attrib prevalence (W) *                      22.10 (16.21, 27.99)
+Attrib prevalence in population (W) *        12.34 (7.61, 17.07)
+Attrib fraction (est) in exposed  (%)        75.40 (61.92, 84.46)
+Attrib fraction (est) in population (%)      59.97 (44.87, 70.94)
+---------------------------------------------------------
+ X2 test statistic: 45.988 p-value: < 0.001
+ W: Wald confidence limits
+ * Cases per 100 population units 
+> 
+> }
+Error: unexpected '}' in "}"
+> for (i in c(2,3,4,5)){
++ print(epi.2by2(with(sl,table(agegrp,caco))[c(i,1),],method="case.control"))
++ 
++ }
+             Outcome +    Outcome -      Total        Prevalence *
+Exposed +           30          200        230                13.0
+Exposed -           32          267        299                10.7
+Total               62          467        529                11.7
+                 Odds
+Exposed +       0.150
+Exposed -       0.120
+Total           0.133
+
+Point estimates and 95 % CIs:
+---------------------------------------------------------
+Odds ratio (W)                               1.25 (0.74, 2.13)
+Attrib prevalence (W) *                      2.34 (-3.25, 7.93)
+Attrib prevalence in population (W) *        1.02 (-3.43, 5.47)
+Attrib fraction (est) in exposed  (%)        20.07 (-41.10, 54.62)
+Attrib fraction (est) in population (%)      9.73 (-16.32, 29.94)
+---------------------------------------------------------
+ X2 test statistic: 0.689 p-value: 0.407
+ W: Wald confidence limits
+ * Cases per 100 population units 
+             Outcome +    Outcome -      Total        Prevalence *
+Exposed +           19          143        162                11.7
+Exposed -           32          267        299                10.7
+Total               51          410        461                11.1
+                 Odds
+Exposed +       0.133
+Exposed -       0.120
+Total           0.124
+
+Point estimates and 95 % CIs:
+---------------------------------------------------------
+Odds ratio (W)                               1.11 (0.61, 2.03)
+Attrib prevalence (W) *                      1.03 (-5.04, 7.09)
+Attrib prevalence in population (W) *        0.36 (-4.16, 4.89)
+Attrib fraction (est) in exposed  (%)        9.78 (-74.92, 52.36)
+Attrib fraction (est) in population (%)      3.65 (-20.42, 22.91)
+---------------------------------------------------------
+ X2 test statistic: 0.112 p-value: 0.737
+ W: Wald confidence limits
+ * Cases per 100 population units 
+             Outcome +    Outcome -      Total        Prevalence *
+Exposed +           47          144        191                24.6
+Exposed -           32          267        299                10.7
+Total               79          411        490                16.1
+                 Odds
+Exposed +       0.326
+Exposed -       0.120
+Total           0.192
+
+Point estimates and 95 % CIs:
+---------------------------------------------------------
+Odds ratio (W)                               2.72 (1.66, 4.46)
+Attrib prevalence (W) *                      13.90 (6.86, 20.95)
+Attrib prevalence in population (W) *        5.42 (0.64, 10.20)
+Attrib fraction (est) in exposed  (%)        63.20 (38.19, 78.32)
+Attrib fraction (est) in population (%)      37.65 (17.79, 52.71)
+---------------------------------------------------------
+ X2 test statistic: 16.664 p-value: < 0.001
+ W: Wald confidence limits
+ * Cases per 100 population units 
+             Outcome +    Outcome -      Total        Prevalence *
+Exposed +          124          254        378                32.8
+Exposed -           32          267        299                10.7
+Total              156          521        677                23.0
+                 Odds
+Exposed +       0.488
+Exposed -       0.120
+Total           0.299
+
+Point estimates and 95 % CIs:
+---------------------------------------------------------
+Odds ratio (W)                               4.07 (2.66, 6.23)
+Attrib prevalence (W) *                      22.10 (16.21, 27.99)
+Attrib prevalence in population (W) *        12.34 (7.61, 17.07)
+Attrib fraction (est) in exposed  (%)        75.40 (61.92, 84.46)
+Attrib fraction (est) in population (%)      59.97 (44.87, 70.94)
+---------------------------------------------------------
+ X2 test statistic: 45.988 p-value: < 0.001
+ W: Wald confidence limits
+ * Cases per 100 population units 
+> 

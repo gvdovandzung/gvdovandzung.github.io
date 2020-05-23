@@ -1,0 +1,73 @@
+.-
+help for ^galbr^                                            (STB-41: sbe20)
+.-
+
+Assessing heterogeneity in meta-analysis: the Galbraith plot
+------------------------------------------------------------
+
+^galbr^ theta setheta [^if^ exp] [^in^ range] [, ^id(^strvar^)^ graph_options]
+
+
+Description
+-----------
+
+^galbr^ provides a graphical display to get a visual impression of the amount of
+heterogeneity from a meta-analysis. For each trial, the z statistic 
+^theta/setheta^ is plotted against the reciprocal standard error ^1/setheta^. 
+The (unweighted) regression line constrained through the origin, with its 95% 
+confidence interval, has a slope equal to the overall log rate ratio, 
+or log odds ratio, or log hazard ratio in a fixed effects meta-analysis. 
+The position of each trial on the horizontal axis gives an indication of the 
+weight allocated to it in a meta-analysis. The position on the vertical axis
+gives the contribution of each trial to the Q statistic for heterogeneity.
+In the absence of heterogeneity we could expect all the points to lie within 
+the confidence bounds (positioned 2 units over and below the regression line).
+
+^theta^ is the effect estimated from the individual study, and ^setheta^ is
+its standard error. For example theta might be a difference in means, a
+log rate ratio, a log odds ratio or a log hazard ratio.
+
+If you have a dataset which contains data for all studies, then the @byvar@
+command can be used to derive the effect estimates and standard errors for the
+individual studies. For example:
+
+. ^sort study^
+. ^byvar study, coef(group) se(group) generate:^
+. ^quietly poisson cases group, e(pyrs)^
+. ^sort study^
+. ^qui by study: keep if _n==1^
+. ^rename _C_1 logrr^
+. ^rename _S_1 se^
+. ^galbr logrr se, id(study) yline(0)^
+
+Alternatively, the @collapse@ command may be useful.
+
+
+Options
+-------
+
+Graph options are allowed, but ^ylabel()^, ^yscale()^, ^xscale()^, ^symbol()^
+are not suggested.
+
+^id(^labelvar^)^ supplied any variable, which is used to label the studies. 
+If the data contains a labeled numeric variable, it can also be used.
+
+^yline(^0^)^ is a useful to check it with the direction and intensity of the 
+overall effect estimated in a fixed effects meta-analysis by the slope
+of the (unweighted) regression line constrained through the origin.    
+
+
+Author
+-------
+
+       Aurelio Tobias
+       Institut Municipal d'Investigacio Medica
+       Barcelona, Spain
+       email: atobias@@imim.es
+
+
+Also see
+--------
+
+    STB: STB-41 sbe20, STB-38 sbe16 
+On-line: help for @graph@, @byvar@, @collapse@, and @meta@ (if installed)

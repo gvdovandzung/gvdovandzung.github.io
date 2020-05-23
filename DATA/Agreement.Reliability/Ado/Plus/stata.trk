@@ -1,0 +1,1518 @@
+* 00000052
+*! version 1.0.0
+* Do not erase or edit this file
+* It is used by Stata to track the ado and help
+* files you have installed.
+
+S http://www.stata.com/quest7
+N quest1.pkg
+D 27 Mar 2009
+U 1
+d StataQuest addition for Stata 7 (part 1 of 3)
+d Install this package and install packages @net:describe quest2, from(http://www.stata.com/quest7)!quest2@ and @net:describe quest3, from(http://www.stata.com/quest7)!quest3@.
+d 
+d Once you have installed the StataQuest additions, type ^quest on^ to turn
+d on the StataQuest menu system and type ^quest off^ to turn it off.
+f q\quest.hlp
+f q\quest.ado
+f q\quest1.ado
+f a\addchar.ado
+f a\aovcdlg.ado
+f a\aovcdlg.hlp
+f a\aovmdlg.ado
+f a\aovmdlg.hlp
+f b\barbydlg.ado
+f b\bardlg.hlp
+f b\barok.ado
+f b\barsdlg.ado
+f b\bcidlg.ado
+f b\bcidlg.hlp
+f b\bdlg.ado
+f b\bintest.ado
+f b\bintesti.ado
+f b\box1sdlg.ado
+f b\boxbydlg.ado
+f b\boxdlg.ado
+f b\boxdlg.hlp
+f b\boxok.ado
+f c\calcrpn.ado
+f c\calcstd.ado
+f c\ccidlg.ado
+f c\ccidlg.hlp
+f c\chbydlg.ado
+f c\chbyok.ado
+f c\chistdlg.ado
+f c\chistok.ado
+f c\click_me.hlp
+f c\clip_sq.hlp
+f c\cmd_sq.hlp
+f c\crpndlg.ado
+f c\crpndlg.hlp
+f c\cstddlg.ado
+f c\cstddlg.hlp
+f d\decr.ado
+f d\descdlg.ado
+f d\dinfo_sq.hlp
+f d\dplbdlg.ado
+f d\dpldlg.ado
+f d\dpldlg.hlp
+f d\dplot.ado
+f d\dslabdlg.ado
+f d\dslabdlg.hlp
+f d\dtldlg.ado
+f d\dtldlg.hlp
+f d\dtlok.ado
+f e\editr_sq.hlp
+f e\examp_sq.hlp
+f e\expdlg.ado
+f e\expdlg.hlp
+f f\fdlg.ado
+f f\fidlg.ado
+f f\formdlg.ado
+f f\formdlg.hlp
+f g\getbv.ado
+f g\getc2v.ado
+f g\getcv.ado
+f g\getiv.ado
+f g\getlv.ado
+f g\getnv.ado
+f g\getsv.ado
+f g\getvar.ado
+f g\getvar.hlp
+f g\gnname.ado
+f g\gphview.ado
+f g\graph_sq.hlp
+f h\histdlg.ado
+f h\histdlg.hlp
+f h\histok.ado
+f h\hstbydlg.ado
+f h\hstbyok.ado
+f i\impdlg.ado
+f i\impdlg.hlp
+f i\incr.ado
+f i\input_sq.hlp
+f i\intplot.ado
+f i\intro_sq.hlp
+f k\ksmdlg.ado
+f k\ksmdlg.hlp
+f k\kwaldlg.ado
+f k\kwaldlg.hlp
+e
+S http://www.stata.com/quest7
+N quest2.pkg
+D 27 Mar 2009
+U 2
+d StataQuest addition for Stata 7 (part 2 of 3)
+d Install this package and install packages @net:describe quest1, from(http://www.stata.com/quest7)!quest1@ and @net:describe quest3, from(http://www.stata.com/quest7)!quest3@.
+d 
+d Once you have installed the StataQuest additions, type ^quest on^ to turn
+d on the StataQuest menu system and type ^quest off^ to turn it off.
+f q\quest.hlp
+f q\quest.ado
+f q\quest2.ado
+f l\listdlg.ado
+f l\listdlg.hlp
+f l\listok.ado
+f l\logdlg.ado
+f l\logdlg.hlp
+f l\logok.ado
+f l\log_sq.hlp
+f l\ltsdlg.ado
+f m\mem_sq.hlp
+f m\menu_sq.hlp
+f m\mess_sq.hlp
+f m\mregdlg.ado
+f m\mregdlg.hlp
+f n\ndlg.ado
+f n\newdlg.ado
+f n\nicen.ado
+f n\nicenum.ado
+f n\normp1.ado
+f o\onebar.ado
+f o\onedlg.ado
+f o\onedlg.hlp
+f o\onegdlg.ado
+f o\onegdlg.hlp
+f o\onemdlg.ado
+f o\onemok.ado
+f o\oneok.ado
+f o\onew1dlg.ado
+f o\onew2dlg.ado
+f o\onewdlg.ado
+f o\onewdlg.hlp
+f p\pdlg.ado
+f p\pearsdlg.ado
+f p\pearsdlg.hlp
+f p\poidlg.ado
+f p\poidlg.hlp
+f p\precmd.ado
+f p\prefs_sq.hlp
+f p\pregmenu.ado
+f p\pregmenu.hlp
+f p\prgphdlg.ado
+f p\probdlg.hlp
+f p\ptev1dlg.ado
+f p\ptev1dlg.hlp
+f p\ptev2dlg.ado
+f p\ptev3dlg.ado
+f p\ptevdlg.ado
+f p\ptevdlg.hlp
+f p\ptntdlg.ado
+f p\ptntdlg.hlp
+f p\ptp2dlg.ado
+f p\ptp2dlg.hlp
+f p\ptp2gdlg.ado
+f p\ptp2vdlg.ado
+f p\ptt1dlg.ado
+f p\ptt1dlg.hlp
+f p\ptt2dlg.ado
+f p\ptt2dlg.hlp
+f p\ptt2gdlg.ado
+f p\ptt2pdlg.ado
+f p\ptt2pdlg.hlp
+f p\ptt2vdlg.ado
+f p\pttpdlg.ado
+f p\pttpdlg.hlp
+f q\qc1dlg.ado
+f q\qc1ok.ado
+f q\qc2dlg.ado
+f q\qc2ok.ado
+f q\qc3dlg.ado
+f q\qc3ok.ado
+f q\qcdlg.hlp
+f q\qnormdlg.ado
+f q\qnormdlg.hlp
+f q\qnormok.ado
+f r\randbin.ado
+f r\randpoi.ado
+f r\recdlg.ado
+f r\recdlg.hlp
+f r\regok.ado
+f r\rnddlg.ado
+f r\rnddlg.hlp
+f r\rpmdlg.ado
+f r\rpmdlg.hlp
+f r\rregdlg.ado
+f r\rregdlg.hlp
+f r\rsumdlg.ado
+f r\rsumdlg.hlp
+e
+S http://www.stata.com/quest7
+N quest3.pkg
+D 27 Mar 2009
+U 3
+d StataQuest addition for Stata 7 (part 3 of 3)
+d Install this package and install packages @net:describe quest1, from(http://www.stata.com/quest7)!quest1@ and @net:describe quest2, from(http://www.stata.com/quest7)!quest2@.
+d 
+d Once you have installed the StataQuest additions, type ^quest on^ to turn
+d on the StataQuest menu system and type ^quest off^ to turn it off.
+f q\quest.hlp
+f q\quest.ado
+f q\quest3.ado
+f s\save_sq.hlp
+f s\scidlg.ado
+f s\scidlg.hlp
+f s\sciok.ado
+f s\sdt1dlg.ado
+f s\sdt1dlg.hlp
+f s\sdtdlg.ado
+f s\sdtdlg.hlp
+f s\seqdlg.ado
+f s\seqdlg.hlp
+f s\sequence.ado
+f s\setodlg.ado
+f s\sp2dlg.ado
+f s\sp2ok.ado
+f s\sp3dlg.ado
+f s\sp3ok.ado
+f s\spdlg.hlp
+f s\speardlg.ado
+f s\speardlg.hlp
+f s\spmatdlg.ado
+f s\spmatok.ado
+f s\sqcont.hlp
+f s\sqhelp.hlp
+f s\sqmenu.ado
+f s\sqnew.hlp
+f s\sqswdlg.ado
+f s\sqswreg.ado
+f s\srandlg.ado
+f s\srandlg.hlp
+f s\sregdlg.ado
+f s\sregdlg.hlp
+f s\stata_sq.hlp
+f s\stemdlg.ado
+f s\stemdlg.hlp
+f s\stesdlg.ado
+f s\stesdlg.hlp
+f s\stkdlg.ado
+f s\stkdlg.hlp
+f s\stldlg.ado
+f s\stldlg.hlp
+f s\sumbydlg.hlp
+f s\summdlg.ado
+f s\summdlg.hlp
+f s\summok.ado
+f t\tablesq.ado
+f t\tablesqi.ado
+f t\tdlg.ado
+f t\tidlg.ado
+f t\tp1dlg.ado
+f t\tp1dlg.hlp
+f t\tp2dlg.ado
+f t\tp2dlg.hlp
+f t\ts1dlg.ado
+f t\ts1ok.ado
+f t\ts2dlg.ado
+f t\ts2ok.ado
+f t\tsbydlg.ado
+f t\tsdlg.hlp
+f t\tsumdlg.ado
+f t\tt1dlg.ado
+f t\tt1dlg.hlp
+f t\tt2dlg.ado
+f t\tt2dlg.hlp
+f t\twobar.ado
+f t\twodlg.ado
+f t\twodlg.hlp
+f t\twomdlg.ado
+f t\twomok.ado
+f t\twook.ado
+f t\twowdlg.ado
+f t\twowdlg.hlp
+f v\varldlg.ado
+f v\varldlg.hlp
+f v\vlabdlg.ado
+f v\vlabdlg.hlp
+f v\vlabvar.ado
+f x\xdlg.ado
+f x\xidlg.ado
+f z\zdlg.ado
+f z\zidlg.ado
+f z\zt1dlg.ado
+f z\zt1dlg.hlp
+f z\zt2dlg.ado
+f z\zt2dlg.hlp
+f z\ztest2i.ado
+f z\ztesti.ado
+e
+S http://www.stata-press.com/data/itsp
+N itsp-ado.pkg
+D 21 Aug 2009
+U 4
+d itsp: Download user-written commands for ITSP
+d Christopher F. Baum
+d This command will install all the user-written commands that are used in
+d the book An Introduction to Stata Programming.
+f s\spinst_itsp.ado
+e
+S http://fmwww.bc.edu/repec/bocode/a
+N adolist.pkg
+D 21 Aug 2009
+U 5
+d 'ADOLIST': module to manage lists of ado packages
+d 
+d -adolist- creates, installs and uninstalls lists of user ado
+d packages.
+d 
+d KW: ado-files
+d KW: user programs
+d 
+d Requires: Stata version 9.2
+d 
+d Distribution-Date: 20070830
+d 
+d Author: Ben Jann, ETH Zurich
+d Support: email ben.jann@@soz.gess.ethz.ch
+d 
+d Author: Stefan Wehrli, ETH Zurich
+d Support: email
+d 
+f a\adolist.ado
+f a\adolist.hlp
+e
+S http://www.fphhcm.edu.vn/stata
+N thai.pkg
+D 11 Nov 2009
+U 6
+d A magical replacement for other tests
+d Thai Thanh Truc (thaithanhtruc@fphhcm.edu.vn)
+d Faculty of Public Health, Ho Chi Minh city, Vietnam         Tel: +84 908 381 266
+d Program `thai' carries out all testing
+f t\thai.ado
+f t\thai.hlp
+e
+S http://www.fphhcm.edu.vn/stata
+N buitest.pkg
+D 11 Nov 2009
+U 7
+d A magical replacement for t test
+d 
+d Thai Thanh Truc (thaithanhtruc@fphhcm.edu.vn)
+d 
+d Faculty of Public Health, Ho Chi Minh city, Vietnam         Tel: +84 908 381 266
+d 
+d Program `buitest' carries out a t test
+f b\buitest.ado
+f b\buitest.hlp
+e
+S http://www.stata-press.com/data/mais
+N mais.pkg
+D  8 Mar 2010
+U 8
+d Meta-Analysis in Stata: An Updated Collection from the Stata Journal
+d Command to install the user-written packages that are described in
+d the collection and datasets used in the examples.
+f s\spinst_mais.ado
+e
+S http://www.stata.com/stb/stb56
+N sbe28_1.pkg
+D  8 Mar 2010
+U 9
+d STB-56 sbe28_1.  Update of metap
+d STB insert by Aurelio Tobias, Universidad Miguel Hernandez
+d            Alicante, Spain
+d Support:  bledatobias@@ctv.es
+d After installation see help ^metap^
+f m\metap.ado
+f m\metap.hlp
+e
+S http://www.stata-journal.com/software/sj9-2
+N gr0033_1.pkg
+D  8 Mar 2010
+U 10
+d SJ9-2 gr0033_1.  Update: Contour enhanced funnel plots for...
+d Update: Contour enhanced funnel plots for meta-analysis
+d by Tom M. Palmer, Department of Health Sciences,
+d      University of Leicester, Leicester, UK
+d    Jaime L. Peters, School of Mathematical Sciences,
+d      Queensland University of Technology, Brisbane, Australia
+d    Alex J. Sutton, Department of Health Sciences,
+d      University of Leicester, Leicester, UK
+d    Santiago G. Moreno, Department of Health Sciences,
+d      University of Leicester, Leicester, UK
+d Support:  tmp8@@le.ac.uk
+d After installation, type help ^confunnel^
+f c\confunnel.ado
+f c\confunnel.hlp
+e
+S http://www.stata-journal.com/software/sj9-2
+N st0163.pkg
+D  8 Mar 2010
+U 11
+d SJ9-2 st0163.  metandi: Meta-analysis of diagnostic...
+d metandi: Meta-analysis of diagnostic accuracy using
+d   hierarchical logistic regression
+d by Roger Harbord, University of Bristol
+d    Penny Whiting, University of Bristol
+d Support:  roger.harbord@@bristol.ac.uk
+d After installation, type help ^metandi^ and ^metandiplot^
+f m\metandi.ado
+f m\metandi.hlp
+f m\metandiplot.ado
+f m\metandiplot.hlp
+f m\metandi_p.ado
+f m\metandi_postestimation.hlp
+e
+S http://www.stata-journal.com/software/sj9-2
+N st0096_2.pkg
+D  8 Mar 2010
+U 12
+d SJ9-2 st0096_2.  Update: GLS for trend estimation of summarized...
+d Update: GLS for trend estimation of summarized dose-response data
+d by Nicola Orsini, Karolinska Institutet
+d    Rino Bellocco, Karolinska Institutet
+d    Sander Greenland, UCLA School of Public Health
+d Support:  nicola.orsini@@ki.se
+d After installation, type help ^glst^
+f g\glst.ado
+f g\glst.hlp
+e
+S http://www.stata-journal.com/software/sj9-1
+N st0157.pkg
+D  8 Mar 2010
+U 13
+d SJ9-1 st0157.  Meta-analysis with missing data
+d Meta-analysis with missing data
+d by Ian R. White, MRC Biostatistics Unit,
+d      Institute of Public Health, UK
+d    Julian P. T. Higgins, MRC Biostatistics Unit,
+d      Institute of Public Health, UK
+d Support:  ian.white@@mrc-bsu.cam.ac.uk
+d After installation, type help ^metamiss^
+f m\metamiss.ado
+f m\metamiss.hlp
+e
+S http://www.stata-journal.com/software/sj9-1
+N st0156.pkg
+D  8 Mar 2010
+U 14
+d SJ9-1 st0156.  Multivariate random-effects meta-analysis
+d Multivariate random-effects meta-analysis
+d by Ian R. White, MRC Biostatistics Unit,
+d    Institute of Public Health, UK
+d Support:  ian.white@@mrc-bsu.cam.ac.uk
+d After installation, type help ^mvmeta^ and ^mvmeta_make^
+f m\mvmeta.ado
+f m\mvmeta_make.ado
+f m\mvmeta_l.ado
+f m\mvmeta.hlp
+f m\mvmeta_make.hlp
+e
+S http://www.fphhcm.edu.vn/stata
+N cusumchart.pkg
+D 20 Mar 2010
+U 15
+d A command to generate data and CUSUM chart
+d 
+d Thai Thanh Truc (thaithanhtruc@fphhcm.edu.vn)
+d 
+d Faculty of Public Health, Ho Chi Minh city, Vietnam         Tel: +84 908 381 266
+d 
+d Program `cusumchart' carries out a CUSUM chart
+f c\cusumchart.ado
+f c\cusumchart.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/m
+N metaaggr.pkg
+D 12 Apr 2010
+U 16
+d 'METAAGGR': modules for meta-analysis of aggregate data
+d 
+d metan is for performing aggregate level meta-analyses. Studies
+d may be combined using the inverse variance or Der Simonian &
+d Laird weights. If the data are in the form of two proportions,
+d the Mantel-Haenszel method and the Yusuf-Peto "one-step" method
+d may be used to combine the tables. Alternatively, the user may
+d define their own weights. funnel is an update to the
+d previously-distributed funnel2 command. The most important change
+d is  that the ordering of the variable list has been changed, to
+d make it  consistent with other meta-analysis commands (eg meta,
+d metabias). labbe is an update to the labbe program, which
+d produces L'Abbe plots for   binary data; that is, a graph of the
+d two proportions against each other.  This offers an alternative
+d display of the data, and is also potentially useful in deciding
+d whether the assumption of a common odds ratio, risk  ratio or
+d risk difference is reasonable. The newly added options allow the
+d user to superimpose lines that relate to a constant effect on
+d each scales. metannt is a new program which may be used for
+d binary data. It displays  effects in terms of the absolute
+d reduction in risk and number needed to  treat.
+d 
+d Distribution-Date: 20040409
+d 
+d Author: Mike Bradburn, Centre for Statistics in Medicine, Oxford
+d Support: email mike.bradburn@@cancer.org.uk
+d 
+d Author: Jon Deeks, Centre for Statistics in Medicine, Oxford
+d 
+d Author: Doug Altman, Centre for Statistics in Medicine, Oxford
+d Support: email
+d 
+d Author: Thomas Steichen
+d Support: email steichen@@triad.rr.com
+d 
+f f\funnel.ado
+f f\funnel.hlp
+f l\labbe.ado
+f l\labbe.hlp
+f m\metan.ado
+f m\metan.hlp
+f m\metannt.ado
+f m\metannt.hlp
+f f\funnel.dlg
+f l\labbe.dlg
+f m\metan.dlg
+f m\metannt.dlg
+e
+S http://repec.org/bocode/f
+N funnelcompar.pkg
+D 12 Apr 2010
+U 17
+d 'FUNNELCOMPAR': module to perform funnel plot for institutional comparison
+d 
+d funnelcompar computes data and plots a funnel plot as defined by
+d Spiegelhalter 2005. A scatter plot of an indicator values value
+d is plotted  against a measure of their precision pop, typically
+d the sample size,  together with a target line and control limits
+d (contours), that narrow  as the sample size gets bigger. The plot
+d graphically tests whether each  value of the indicator is
+d extracted from a target distribution specified  by the options.
+d 
+d KW: funnel plot
+d 
+d Requires: Stata version 10.0
+d 
+d Distribution-Date: 20100326
+d 
+d Author: Sylvia Forni, Regional Agency for Public Health of Tuscany
+d Support: email silvia.forni@@arsanita.toscana.it
+d 
+d Author: Rosa Gini, Regional Agency for Public Health of Tuscany
+d Support: email rosa.gini@@arsanita.toscana.it
+d 
+f f\funnelcompar.ado
+f f\funnelcompar.sthlp
+e
+S http://repec.org/bocode/s
+N stcmd.pkg
+D 12 Apr 2010
+U 18
+d 'STCMD': module to execute StatTransfer command from within Stata
+d 
+d The program stcmd runs the Stat/Transfer st command from inside
+d Stata, if Stat/Transfer is installed on the user's system.
+d Stat/Transfer converts data sets from one format to another (eg
+d Stata to/from SAS). It is available from Stata Corporation and
+d manufactured by Circle Systems; further information can be found
+d at http://www.stattransfer.com/. The program inputst converts an
+d existing non-Stata input file into a Stata data set in the
+d memory, overwriting any existing data. The program outputst
+d converts the Stata data set in the memory to a newly-created
+d non-Stata output file. The programs inputst and outputst require
+d stcmd, and therefore should not be downloaded alone. If the
+d Stat/Transfer directory on the user's system is not on the user's
+d default path, then the user must edit his/her copy of stcmd.ado
+d to change the setting of the local macro path, which contains the
+d path for the Stat/Transfer st command (see on-line help for
+d details).
+d 
+d 
+d Requires: Stata version 10.0
+d 
+d 
+d Author: Roger Newson, National Heart and Lung Institute, Imperial College London
+d Support: email  r.newson@@imperial.ac.uk
+d 
+d Distribution-Date: 20100410
+f s\stcmd.ado
+f s\stcmd.sthlp
+f i\inputst.ado
+f i\inputst.sthlp
+f o\outputst.ado
+f o\outputst.sthlp
+e
+S http://www.stata-press.com/data/mais
+N mais.pkg
+D 12 Apr 2010
+U 19
+d Meta-Analysis in Stata: An Updated Collection from the Stata Journal
+d Command to install the user-written packages that are described in
+d the collection and datasets used in the examples.
+f s\spinst_mais.ado
+e
+S http://www.stata.com/stb/stb55
+N sbe33.pkg
+D 12 Apr 2010
+U 20
+d STB-55 sbe33.  Comparing several methods of measuring the same quantity
+d STB insert by  Paul Seed, GKT School of Medicine, King's London, UK
+d Support:   paul.seed@@kcl.ac.uk
+d After installation, see help ^baplot^, help ^sdpair^, help ^bamat^,
+d help ^bagroup^
+f b\bagroup.ado
+f b\bagroup.hlp
+f b\bamat.ado
+f b\bamat.hlp
+f b\baplot.ado
+f b\baplot.hlp
+f n\nicenum.ado
+f s\sdpair.ado
+f s\sdpair.hlp
+e
+S http://fmwww.bc.edu/RePEc/bocode/m
+N metan.pkg
+D 12 Apr 2010
+U 21
+d 'METAN': module for fixed and random effects meta-analysis
+d 
+d These routines provide facilities to conduct meta-analyses of
+d data from more than one study and to graph the results. Either
+d binary (event) or continuous data from two groups may be combined
+d using the metan command. Additionally, intervention effect
+d estimates with corresponding standard errors or confidence
+d intervals may be meta-analysed. Recently added facilities include
+d by() processing and an update to Stata 9 graphics. This is an
+d updated version of metan as published in STB-44, authored by
+d Michael J Bradburn, Jonathan J Deeks, Douglas G Altman. The
+d package includes a command to produce funnel plots to assess
+d small study effects, and L'Abbe plots to examine whether the
+d assumption of a common odds ratio, risk ratio or risk difference
+d is reasonable. Also included is the metannt program for binary
+d data, which displays estimated intervention effects in terms of
+d the absolute reduction in risk and number needed to treat. A
+d description of available Stata meta-analysis commands may be
+d found at  http://www.stata.com/support/faqs/stat/meta.html.
+d 
+d KW: meta-analysis
+d KW: fixed effects
+d KW: random effects
+d KW: forest plot
+d KW: l'Abbe plot
+d 
+d Requires: Stata version 9 (version 7 for metan7)
+d 
+d Distribution-Date: 20090519
+d 
+d Author: Ross Harris, Department of Social Medicine, University of Bristol
+d Support: email ross.harris@@bristol.ac.uk
+d 
+d Author: Mike Bradburn, Centre for Statistics in Medicine, University of Oxford
+d Support: email
+d 
+d Author: Jon Deeks, Centre for Statistics in Medicine, University of Oxford
+d Support: email
+d 
+d Author: Roger Harbord, Department of Social Medicine, University of Bristol
+d Support: email
+d 
+d Author: Doug Altman, Centre for Statistics in Medicine, University of Oxford
+d Support: email
+d 
+d Author: Thomas Steichen, RJRT
+d Support: email
+d 
+d Author: Jonathan Sterne, Department of Social Medicine, University of Bristol
+d Support: email
+d 
+f m\metan.ado
+f m\metan.hlp
+f l\labbe.ado
+f l\labbe.hlp
+f l\labbe.dlg
+f m\metan7.ado
+f m\metan7.hlp
+f m\metan7.dlg
+f m\metannt.ado
+f m\metannt.hlp
+f m\metannt.dlg
+f i\i2ci.ado
+f m\metan_examples.ado
+e
+S http://fmwww.bc.edu/repec/bocode/s
+N spmap.pkg
+D 28 Apr 2010
+U 22
+d 'SPMAP': module to visualize spatial data
+d 
+d  spmap is aimed at visualizing several kinds of spatial data, and
+d is particularly suited for drawing thematic maps and displaying
+d the results of spatial data analyses. Proper specification of
+d spmap options and suboptions, combined with the availability of
+d properly formatted spatial data, allows the user to draw several
+d kinds of maps, including choropleth maps, proportional symbol
+d maps, pin maps, pie chart maps, and noncontiguous area
+d cartograms. spmap completely supersedes its predecessor tmap.
+d 
+d KW: maps
+d KW: thematic
+d KW: spatial data
+d KW: choropleth
+d 
+d Requires: Stata version 9.2
+d 
+d Distribution-Date: 20080314
+d 
+d Author: Maurizio Pisati, University of Milano Bicocca - Italy
+d Support: email maurizio.pisati@@unimib.it
+d 
+f s\spmap.ado
+f s\spmap.hlp
+f s\spmap_arrow.ado
+f s\spmap_color.ado
+f s\spmap_diagram.ado
+f s\spmap_examples.ado
+f s\spmap_label.ado
+f s\spmap_line.ado
+f s\spmap_point.ado
+f s\spmap_polygon.ado
+f s\spmap_psl.ado
+f s\spmap_scalebar.ado
+e
+S http://fmwww.bc.edu/repec/bocode/s
+N shp2dta.pkg
+D 28 Apr 2010
+U 23
+d 'SHP2DTA': module to converts shape boundary files to Stata datasets
+d 
+d shp2dta reads a shape (.shp) and dbase (.dbf) file from disk and
+d converts them into Stata datasets.  The shape and dbase files
+d must have the same name and be saved in the same directory.  The
+d user-written command tmap can use the two datasets that shp2dta
+d creates. shp2dta can convert only polygon shapefiles (type 5).
+d 
+d KW: tmap
+d KW: shape files
+d KW: maps
+d 
+d Requires: Stata version 9.1
+d 
+d Distribution-Date: 20081212
+d 
+d Author: Kevin Crow , StataCorp LP
+d Support: email kcrow@@stata.com
+d 
+f s\shp2dta.ado
+f s\shp2dta.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/m
+N mif2dta.pkg
+D 28 Apr 2010
+U 24
+d 'MIF2DTA': module convert MapInfo Interchange Format boundary files to Stata boundary files
+d 
+d   This is a program that converts MapInfo Interchange
+d Format boundary files      into Stata boundary files to be used
+d with the latest release of the -tmap-      package.
+d 
+d KW: maps
+d KW: MapInfo
+d 
+d Requires: Stata version 9.2
+d 
+d Distribution-Date: 20080314
+d 
+d Author: Maurizio Pisati, University of Milano Bicocca - Italy
+d Support: email maurizio.pisati@@unimib.it
+d 
+f m\mif2dta.ado
+f m\mif2dta.hlp
+e
+S http://fmwww.bc.edu/RePEc/bocode/m
+N metaparm.pkg
+D 29 Apr 2010
+U 25
+d 'METAPARM': module to perform meta-analysis and transformations using parmest resultssets
+d 
+d  The metaparm package contains two resultsset-processing
+d programs, parmcip  and metaparm, for use with parmest
+d resultssets. metaparm inputs a dataset      in memory with one
+d observation per parameter and variables containing
+d estimates, standard errors and (optionally) degrees of freedom,
+d and creates    an output dataset with one observation, or one
+d observation per by-group, and      data on estimates, standard
+d errors, z- or t-statistics, P-values and confidence limits
+d for a linear combination (weighted sum) of the input
+d parameters, assuming that the input parameters are estimated
+d independently      for different sub-populations.  The output
+d dataset can be listed to the Stata   log, saved to a disk
+d file, or written to memory, overwriting the existing
+d dataset. metaparm is useful for meta-analyses and for calculating
+d confidence   intervals and P-values for differences or ratios
+d between parameters for      different subpopulations.  parmcip
+d inputs a dataset in memory with one    observation per
+d parameter and variables containing parameter estimates,
+d standard errors and (optionally) degrees of freedom, and adds new
+d variables  to the dataset, containing the confidence limits,
+d z- or t-statistics,    P-values, and (optionally) stars for
+d P-values.  parmcip is useful if the user requires confidence
+d intervals for a transformation of the original      parameters.
+d 
+d Distribution-Date: 20041110
+d 
+d Author: Roger Newson, Guy's, King's and St. Thomas' School of Medicine
+d Support: email roger.newson@@kcl.ac.uk
+d 
+f m\metaparm.ado
+f m\metaparm.hlp
+f p\parmcip.ado
+f p\parmcip.hlp
+e
+S http://www.stata.com/stb/stb35
+N sg65.pkg
+D 19 May 2010
+U 26
+d STB-35 sg65.  Computing intraclass correlations and large ANOVAs.
+d STB insert by John R. Gleason, Syracuse University.
+d Support:  73241.717@@compuserve.com
+d After installation, see help ^l1way^ and help ^iclassr2^.
+f i\iclassr.ado
+f i\iclassr.hlp
+f i\iclassr2.ado
+f i\iclassr2.hlp
+f l\l1way.ado
+f l\l1way.hlp
+e
+S http://www.stata.com/stb/stb56
+N sg145.pkg
+D 23 May 2010
+U 27
+d STB-56 sg145.  Scalar measures of fit for regression models
+d STB insert by J. Scott Long, Indiana University
+d               Jeremy Freese, University of Wisconsin-Madison
+d Support:   jslong@@indiana.edu
+d            jfreese@@ssc.wisc.edu
+d After installation, see help ^fitstat^
+f f\fitstat.ado
+f f\fitstat.hlp
+e
+S http://www.stata-journal.com/software/sj4-1
+N dm0004.pkg
+D 24 May 2010
+U 28
+d SJ4-1 dm0004.  Standardizing anthropometric measures
+d Standardizing anthropometric measures
+d by Suzanna Vidmar, John Carlin, and Kylie Hesketh
+d    Clinical Epidemiology and Biostatistics Unit and
+d    Centre for Community Child Health,
+d    Murdoch Childrens Research Institute and
+d    University of Melbourne Department of Paediatrics,
+d    Royal Children's Hospital, Melbourne, Australia
+d 
+d    Tim Cole
+d    Centre for Paediatric Epidemiology and Biostatistics,
+d    Institute of Child Health,
+d    London, UK
+d Support:  suzanna.vidmar@@mcri.edu.au
+d After installation, type help ^zanthro^
+f _\_gzanthro.ado
+f _\_gzbmicat.ado
+f z\zanthro.hlp
+f z\zbmicat.hlp
+f z\zlenageius.dta
+f z\zwtlenius.dta
+f z\zhcageius.dta
+f z\zwthtus.dta
+f z\zwtagecomus.dta
+f z\zhtageus.dta
+f z\zbmiageus.dta
+f z\zhtageuk.dta
+f z\zwtageuk.dta
+f z\zbmiageuk.dta
+f z\zhcageuk.dta
+f z\zshtageuk.dta
+f z\zllageuk.dta
+f z\zbmicat.dta
+e
+S http://fmwww.bc.edu/RePEc/bocode/m
+N mrdum.pkg
+D  5 Jun 2010
+U 29
+d 'MRDUM': module to create dummy variables and summary table for multiple response data
+d 
+d mrdum searches across varlist for integer codes and creates
+d corresponding dummy variables. Each dummy is equal to 1 if the
+d integer code was found anywhere in varlist, 0 if not, and
+d missing if all of varlist is missing. It also displays a table
+d summarizing the results. This program was created specifically to
+d deal with survey questions wherein  the respondent can give
+d multiple responses to a single question (e.g. "Check all that
+d apply"). Sometimes these data are coded as a series of variables
+d with the responses entered in the order that the respondent
+d indicated them.  Often, however, it is useful to have instead a
+d set of dummy variables  that indicate whether the respondent
+d indicated a particular response regardless of the order in which
+d it was indicated.
+d 
+d Distribution-Date: 20021028
+d 
+d Author: Lee E. Sieswerda , Thunder Bay District Health Unit
+d Support: email Lee.Sieswerda@@tbdhu.com
+d 
+f m\mrdum.ado
+f m\mrdum.hlp
+e
+S http://www.ats.ucla.edu/stat/stata/ado/analysis
+N aipe.pkg
+D  4 Jul 2010
+U 30
+d aipe.  Accuracy in parameter estimation
+d Philip B. Ender
+d Statistical Computing and Consulting
+d UCLA Office of Academic Computing
+d ender@@ucla.edu
+d 
+d STATA  ado and hlp files in the package
+d distribution-date: 20061005
+f a\aipe.ado
+f a\aipe.hlp
+e
+S http://www.stata-journal.com/software/sj5-1
+N dm86_1.pkg
+D 12 Oct 2010
+U 31
+d SJ5-1 dm86_1.  Sampling without replacement: absolute and...
+d Sampling without replacement: absolute sample sizes and
+d   all observations
+d by Nicholas J. Cox, University of Durham, UK
+d Support:  n.j.cox@@durham.ac.uk
+d After installation, type help ^swor^
+f s\swor.ado
+f s\swor.hlp
+e
+S http://fmwww.bc.edu/RePEc/bocode/s
+N sizefx.pkg
+D 18 Oct 2010
+U 32
+d 'SIZEFX': module to compute effect size correlations
+d 
+d sizefx computes Cohen's d, Hedges' g, and effect size (ES)
+d correlations (r) for the two variables specified in varlist. The
+d two variables specified in  varlist correspond to the variables
+d in the command "ttest varname1 == varname2,  unpaired unequal"
+d although the "==" is not used for the sizefx command. The command
+d displays Cohen's d statistic (Cohen 1988) using the pooled
+d variance  of the variables, Cohen's d using the t-statistic from
+d the unpaired t-test assuming unequal variances, and Hedges' g
+d statistic. The unpaired t-test is used to  calculate effect size
+d even when using a dependent sample or correlated designs  (Dunlap
+d et al. 1996). Additionally, effect size (ES) correlations (r) are
+d displayed using Cohen's d,  the t-statistic from the unpaired
+d t-test, and the correlation using Hedges' g.
+d 
+d KW: effect size
+d KW: Cohen's d
+d KW: Hedges' g
+d KW: correlations
+d 
+d Requires: Stata version 9.1
+d 
+d Distribution-Date: 20100402
+d 
+d Author: Matthew Openshaw
+d Support: email openshaw@@utdallas.edu
+d 
+f s\sizefx.ado
+f s\sizefx.hlp
+f s\sizefx.hlp
+e
+S http://www.indiana.edu/~jslsoc/stata
+N spost9_ado.pkg
+D 20 Oct 2010
+U 33
+d Distribution-date: 30Jun2010
+d spost9_ado Stata 9, 10 & 11 commands for the post-estimation interpretation
+d of regression models. Use package spostado.pkg for Stata 8.
+d Based on Long & Freese - Regression Models for Categorical Dependent
+d Variables Using Stata. Second Edition.
+d Support www.indiana.edu/~jslsoc/spost.htm
+d Scott Long & Jeremy Freese (spostsup@@indiana.edu)
+f _\_get_mlogit_bv.ado
+f _\_get_mlogit_bvecv.ado
+f _\_peabbv.ado
+f _\_pebase.ado
+f _\_pebase.hlp
+f _\_pecats.ado
+f _\_pecats.hlp
+f _\_peciboot.ado
+f _\_peciboot.hlp
+f _\_pecidelta.ado
+f _\_pecidelta.hlp
+f _\_peciml.ado
+f _\_pecmdcheck.ado
+f _\_pecollect.ado
+f _\_pecollect.hlp
+f _\_pedum.ado
+f _\_pedum.hlp
+f _\_peife.ado
+f _\_peife.hlp
+f _\_pemarg.ado
+f _\_pemarg.hlp
+f _\_penocon.ado
+f _\_penocon.hlp
+f _\_pepred.ado
+f _\_pepred.hlp
+f _\_perhs.ado
+f _\_perhs.hlp
+f _\_pesum.ado
+f _\_pesum.hlp
+f _\_petrap.ado
+f _\_petrap.hlp
+f _\_peunvec.ado
+f _\_peunvec.hlp
+f _\_pexstring.ado
+f a\asprvalue.ado
+f a\asprvalue.hlp
+f b\brant.ado
+f b\brant.hlp
+f c\case2alt.ado
+f c\case2alt.hlp
+f c\countfit.ado
+f c\countfit.hlp
+f f\fitstat.ado
+f f\fitstat.hlp
+f l\leastlikely.ado
+f l\leastlikely.hlp
+f l\listcoef.ado
+f l\listcoef.hlp
+f m\misschk.ado
+f m\misschk.sthlp
+f m\mlogplot.ado
+f m\mlogplot.hlp
+f m\mlogtest.ado
+f m\mlogtest.sthlp
+f m\mlogview.ado
+f m\mlogview.hlp
+f m\mvtab1.ado
+f m\mvtab1.hlp
+f n\nmlab.ado
+f n\nmlab.hlp
+f p\praccum.ado
+f p\praccum.hlp
+f p\prchange.ado
+f p\prchange.hlp
+f p\prcounts.ado
+f p\prcounts.hlp
+f p\prdc.ado
+f p\prdc.hlp
+f p\prgen.ado
+f p\prgen.hlp
+f p\prtab.ado
+f p\prtab.hlp
+f p\prvalue.ado
+f p\prvalue.hlp
+f p\prwhich.ado
+f s\spex.ado
+f s\spex.hlp
+f s\spost.hlp
+f s\spost_footer.ihlp
+f s\spostupdate.ado
+f v\vardesc.ado
+f v\vardesc.hlp
+f x\xpost.ado
+e
+S http://www.stata.com/stb/stb54
+N sg132.pkg
+D  8 Apr 2011
+U 34
+d STB-54 sg132.pkg. Analysis of variance from summary statistics
+d STB insert by  John R. Gleason, Syracuse University
+d Support:   loesljrg@@accucom.net
+d After installation, see help ^aovsum^
+f a\aovsum.ado
+f a\aovsum.hlp
+e
+S http://fmwww.bc.edu/RePEc/bocode/c
+N cart.pkg
+D 25 Apr 2011
+U 35
+d 'CART': module to perform Classification And Regression Tree analysis
+d 
+d This program performs a CART analysis for failure time data. It
+d uses the martingale residuals of a Cox model to calculate
+d (approximate)  chisquare values for all possible cutpoints on all
+d the CART covariates.
+d 
+d KW:  CART
+d KW: regression
+d KW: regression tree
+d KW: classification
+d 
+d Requires: Stata version 7
+d 
+d Distribution-Date: 20061017
+d 
+d Author: Wim van Putten, Erasmus MC - Daniel den Hoed Cancer Center
+d Support: email w.vanputten@@erasmusmc.nl
+d 
+f c\cart.ado
+f c\cart.hlp
+f c\carts.ado
+f c\change.ado
+f c\change.hlp
+f c\cvar.ado
+f c\cvar.hlp
+f e\eformat.ado
+f e\eformat.hlp
+f f\fns.ado
+f f\fns.hlp
+f l\ljust.ado
+f l\ljust.hlp
+f q\qlist.ado
+f q\qlist.hlp
+f s\sumby.ado
+f s\sumby.hlp
+f t\tabby.ado
+f t\tabby.hlp
+f t\tree.ado
+f t\ttitle.ado
+f u\uc.ado
+e
+S http://www.ats.ucla.edu/stat/stata/ado/analysis
+N tkcomp.pkg
+D 27 Apr 2011
+U 36
+d tkcomp. Tukey-Kramer pairwise comparisons
+d Philip B. Ender
+d Statistical Computing and Consulting
+d UCLA Academic Technology Services
+d ender@@ucla.edu
+d 
+d STATA ado and hlp files in the package
+d distribution-date: 20100111
+f t\tkcomp.ado
+f t\tkcomp.hlp
+e
+S http://www.stata.com/stb/stb46
+N dm64.pkg
+D 27 Apr 2011
+U 37
+d STB-46 dm64.  Quantiles of the studentized range distribution.
+d STB insert by John R. Gleason, Syracuse University.
+d Support:  loesljrg@@ican.net
+d After installation, see help ^qsturng^.
+f q\qsturng.ado
+f q\qsturng.hlp
+e
+S http://www.stata.com/users/njc
+N tab_chi.pkg
+D  5 May 2011
+U 38
+d tab_chi  Tabulation and chi-square test programs.
+d Programs by Nicholas J. Cox, Durham University <N.J.Cox@@durham.ac.uk>.
+d Statalist distribution, 22 March 1999.
+d 
+d See help ^tab_chi^
+f t\tab_chi.hlp
+f c\chitest.ado
+f c\chitest.hlp
+f c\chitesti.ado
+f c\chitesti.hlp
+f m\modes.ado
+f m\modes.hlp
+f t\tabchi.ado
+f t\tabchi.hlp
+f t\tabchii.ado
+f t\tabchii.hlp
+f t\tabm.ado
+f t\tabm.hlp
+f t\tabsort.ado
+f t\tabsort.hlp
+f t\tabsplit.ado
+f t\tabsplit.hlp
+e
+S http://www.fphhcm.edu.vn/stata9255019273a
+N thai.pkg
+D  5 May 2011
+U 39
+d A magical replacement for other tests
+d Thai Thanh Truc (thaithanhtruc@fphhcm.edu.vn)
+d Faculty of Public Health, Ho Chi Minh city, Vietnam         Tel: +84 908 381 266
+d Program `thai' carries out all testing
+f t\thai.ado
+f t\thai.hlp
+e
+S http://www.fphhcm.edu.vn/stata9255019273a
+N thai.pkg
+D  5 May 2011
+U 40
+d A magical replacement for other tests
+d Thai Thanh Truc (thaithanhtruc@fphhcm.edu.vn)
+d Faculty of Public Health, Ho Chi Minh city, Vietnam         Tel: +84 908 381 266
+d Program `thai' carries out all testing
+f t\thai.ado
+f t\thai.hlp
+e
+S http://www.fphhcm.edu.vn/stata9255019273a
+N thai.pkg
+D  5 May 2011
+U 41
+d A magical replacement for other tests
+d Thai Thanh Truc (thaithanhtruc@fphhcm.edu.vn)
+d Faculty of Public Health, Ho Chi Minh city, Vietnam         Tel: +84 908 381 266
+d Program `thai' carries out all testing
+f t\thai.ado
+f t\thai.hlp
+e
+S http://fmwww.bc.edu/RePEc/bocode/s
+N sdtest.pkg
+D 14 Jun 2011
+U 42
+d 'SDTEST': modules (corrected) sdtest, sdtesti
+d 
+d These are versions of sdtest.ado, sdtesti.ado, and _ttest.ado
+d which correct errors in the one-tailed p-values introduced in
+d Stata 5.0. They must be placed in the 'official' Stata:ado
+d directory (not in any of its subdirectories): C:\STATA\ADO in
+d Wintel, :Stata:ado in Macintosh, /usr/local/stata/ado for UNIX.
+d 
+d Author: Bill Sribney, Stata Corporation
+d Support: email wsribney@@stata.com
+d 
+d Distribution-Date: 19971023
+f s\sdtest.ado
+f s\sdtesti.ado
+f _\_ttest.ado
+e
+S http://www.stata-press.com/data/vgsg
+N vgsg.pkg
+D  8 Aug 2011
+U 43
+d vgsg: Data Files, Schemes, and Programs for VGSG
+d Michael Mitchell
+d These are the data files, schemes, and programs that were used to produce
+d graphs in the book A Visual Guide to Stata Graphs
+f v\vgcolormap.ado
+f v\vgcolormap.hlp
+f v\vguse.ado
+f v\vguse.hlp
+f v\vgsg.hlp
+f v\vgsg_ado.hlp
+f v\vgsg_data.hlp
+f v\vgsg_ref.hlp
+f v\vgsg_ref_appendix.hlp
+f v\vgsg_ref_bar.hlp
+f v\vgsg_ref_box.hlp
+f v\vgsg_ref_dot.hlp
+f v\vgsg_ref_intro.hlp
+f v\vgsg_ref_matrix.hlp
+f v\vgsg_ref_options.hlp
+f v\vgsg_ref_pie.hlp
+f v\vgsg_ref_stdopts.hlp
+f v\vgsg_ref_styles.hlp
+f v\vgsg_ref_twoway.hlp
+f v\vgsg_schemes.hlp
+f s\scheme-vg_blue.scheme
+f s\scheme-vg_brite.scheme
+f s\scheme-vg_lgndc.scheme
+f s\scheme-vg_lgndm.scheme
+f s\scheme-vg_outc.scheme
+f s\scheme-vg_outm.scheme
+f s\scheme-vg_palec.scheme
+f s\scheme-vg_palem.scheme
+f s\scheme-vg_past.scheme
+f s\scheme-vg_rose.scheme
+f s\scheme-vg_s1c.scheme
+f s\scheme-vg_s1m.scheme
+f s\scheme-vg_s2c.scheme
+f s\scheme-vg_s2m.scheme
+f s\scheme-vg_samec.scheme
+f s\scheme-vg_samem.scheme
+f s\scheme-vg_size.scheme
+f s\scheme-vg_teal.scheme
+e
+S http://fmwww.bc.edu/RePEc/bocode/n
+N nlcheck.pkg
+D 15 Feb 2012
+U 44
+d 'NLCHECK': module to check linearity assumption after model estimation
+d 
+d  nlcheck is a simple diagnostic tool that can be used after
+d fitting a model to quickly check the linearity assumption for a
+d given predictor. nlcheck categorizes the predictor into bins,
+d refits the model including dummy variables for the bins, and then
+d performs a joint Wald test for the added parameters. Alternative,
+d nlcheck uses linear splines for the adaptive model. Support for
+d discrete variables is also provided. Optionally, nlcheck also
+d displays a graph of the adjusted linear predictions from the
+d original model and the adaptive model.
+d 
+d KW: linearity
+d KW: specification
+d KW: regression
+d 
+d Requires: Stata version 10.0
+d 
+d Distribution-Date: 20081015
+d 
+d Author: Ben Jann, ETH Zurich
+d Support: email ben.jann@@soz.gess.ethz.ch
+d 
+f n\nlcheck.ado
+f n\nlcheck.sthlp
+e
+S http://fmwww.bc.edu/RePEc/bocode/u
+N usespss.pkg
+D 29 Apr 2012
+U 45
+d 'USESPSS': module to import SPSS (*.sav) data (Windows only)
+d 
+d USESPSS loads an SPSS-format (*.sav) dataset into memory. It
+d supports compressed and non-compressed SPSS files from Windows
+d and UNIX/Mac platforms. It preserves the variable and value
+d labels, long variable names, extended missing values, and
+d provides optimization of variable types. USESPSS is implemented
+d as a plugin for 32-bit Stata for Windows and is comparable in
+d speed with commercially available conversion software.
+d 
+d KW: SPSS
+d KW: sav
+d KW: data transfer
+d 
+d Requires: Stata version 8 for Windows
+d 
+d Distribution-Date: 20080804
+d 
+d Author: Sergiy Radyakin, Development Economics Research Group, World Bank
+d Support: email sradyakin@@worldbank.org
+d 
+f u\usespss.ado
+f u\usespss.hlp
+f u\usespss.dlg
+f d\desspss.ado
+f _\_usespss.ado
+f _\_desspss.ado
+f u\usespss.plu
+e
+S http://fmwww.bc.edu/RePEc/bocode/f
+N fagan.pkg
+D 20 May 2012
+U 46
+d 'FAGAN': module for Fagan's Bayesian nomoigram
+d 
+d fagan creates a plot showing the relationship between the prior
+d probability specified by user over the range 0-1, the likelihood
+d ratio  (combination of sensitivity and specificity), and
+d posterior test probability.  fagan plots an axis on the left with
+d the prior log-odds, an axis in the middle  representing the log
+d likelihood ratio and an axis on the right representing the
+d posterior log-odds. Lines are then drawn from the prior
+d probability on the  left through the likelihood ratios in the
+d center and extended to the posterior probabilities on the right. d
+d KW: Bayes' nomogram
+d KW: likelihood ratios
+d KW: probability revision
+d KW: post-test probability
+d 
+d Requires: Stata version 10
+d 
+d Distribution-Date: 20090616
+d 
+d Author:  Ben Dwamena, Division of Nuclear Medicine, Department  of Radiology, University of Michigan Health System, Ann Arbor
+d Support: email  bdwamena@@umich.edu
+d 
+f f\fagan.ado
+f f\fagani.ado
+f f\fagan.sthlp
+f f\fagani.sthlp
+e
+S http://fmwww.bc.edu/RePEc/bocode/t
+N tab3way.pkg
+D 20 Jun 2012
+U 47
+d 'TAB3WAY': module to handle three-way tables with percentages
+d 
+d tab3way cross-tabulates three variables and displays any
+d combination of cell frequencies, cell percents, row percents and
+d column percents. "Missing" categories may be specified. It
+d optionally provides row, column and supercolumn totals by
+d temporarily augmenting observations in the existing data set and
+d making a new category (labelled "TOTAL") for each variable to
+d accommodate these totals. This is version 2.03 of the software.
+d 
+d Distribution-Date: 20020916
+d 
+d Author: Philip Ryan, University of Adelaide
+d Support: email philip.ryan@@adelaide.edu.au
+d 
+f t\tab3way.ado
+f t\tab3way.hlp
+e
+S http://fmwww.bc.edu/RePEc/bocode/t
+N tabout.pkg
+D 20 Jun 2012
+U 48
+d 'TABOUT': module to export publication quality cross-tabulations
+d 
+d  tabout is a table building program for oneway and twoway
+d tables of frequencies and percentages, and for summary tables. It
+d produces publication quality tables for export to a text file.
+d These tables can then be used with spreadsheets, word processors,
+d web browsers or compilers like LaTeX. The tables produced by
+d tabout allow multiple panels so that a number of variables can be
+d included in the one table. tabout also provides standard errors
+d and confidence intervals, as well as a range of table statistics
+d (chi2 etc). The output from tabout matches Stata's tabulate, most
+d of tabstat and some of table.
+d 
+d KW: tables
+d KW: latex
+d KW: html
+d KW: delimited text
+d 
+d Requires: Stata version 9.2
+d 
+d Distribution-Date: 20110603
+d 
+d Author: Ian Watson , Macquarie University, Australia
+d Support: email mail@@ianwatson.com.au
+d 
+f t\tabout.ado
+f t\tabstatout.ado
+f t\tabout.hlp
+f f\figout.ado
+f f\figout.hlp
+e
+S http://www.epiconcept.fr
+N emap.pkg
+D 25 Jun 2012
+U 49
+d emap  Dialog box for spmap command.
+d Program by Gilles DESVE.
+d Distribution-Date: 20100303
+f e\emap.ado
+f s\shp2dta.dlg
+f s\spmap.dlg
+e
+S http://www.stata.com/stb/stb53
+N sg129.pkg
+D  5 Jul 2012
+U 50
+d STB-53 sg129. Generalized linear latent and mixed models
+d STB insert by Sophia Rabe-Hesketh, Institute of Psychiatry, University of
+d London, UK
+d Andrew Pickles University of Manchester, UK Colin Taylor Institute of
+d Psychiatry, University of London, UK
+d Support: spaksrh@@iop.kcl.ac.uk
+d After installation, see help ^gllamm6^
+f g\gllam_ll.ado
+f g\gllamm6.ado
+f g\gllamm6.hlp
+f r\remcor6.ado
+e
+S http://fmwww.bc.edu/RePEc/bocode/i
+N iccvar.pkg
+D  8 Oct 2012
+U 51
+d 'ICCVAR': module to calculate intraclass correlation (ICC) after xtmixed
+d 
+d  iccvar is a post-estimation command for xtmixed.  After fitting
+d a 2, 3, or 4 level model with a random intercept (random
+d slopes are not supported), iccvar will    calculate the
+d intraclass correlation (ICC) values and the associated standard
+d errors    based on the variance components and standard errors of
+d the variance components    estimated from xtmixed.
+d 
+d KW: ICC
+d KW: intraclass correlation
+d KW: xtmixed
+d 
+d Requires: Stata version 11.1
+d 
+d Distribution-Date: 20120808
+d 
+d Author: Eric C. Hedberg, University of Chicago
+d Support: email ech@@uchicago.edu
+d 
+f i\iccvar.ado
+f i\iccvar.sthlp
+e
+S http://fmwww.bc.edu/RePEc/bocode/b
+N batplot.pkg
+D  8 Oct 2012
+U 52
+d 'BATPLOT': module to produce Bland-Altman plots accounting for trend
+d 
+d  The normal Bland-Altman plot is between the difference of paired
+d variables versus  their average. This version uses a regression
+d between the difference and the  average and then alters the
+d limits of agreement accordingly. This is particularly  useful
+d when the two variables might be measured on different scales and
+d hence a  straight conversion factor would recalibrate the two
+d variables.
+d 
+d KW: plot
+d KW: Bland-Altman
+d KW: difference
+d KW: paired variables
+d 
+d Requires: Stata version 9.2
+d 
+d Distribution-Date: 20120617
+d 
+d Author: Adrian Mander
+d Support: email Adrian.Mander@@mrc-hnr.cam.ac.uk
+d 
+f b\batplot.ado
+f b\batplot.hlp
+e

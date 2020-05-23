@@ -1,0 +1,129 @@
+.-
+help for ^Statistical tables and Inverse statistical tables^     Menu: Calculator
+.-
+
+Statistics covered
+------------------
+
+^1.  Normal^
+^2.  Inverse normal^
+^3.  Student's t^
+^4.  Inverse Student's t^
+^5.  F^
+^6.  Inverse F^
+^7.  Chi-squared^
+^8.  Inverse chi-squared^
+^9.  Binomial^
+^10. Poisson^
+
+
+^1. Normal^
+^---------^
+
+Enter ^z^.  Output is
+
+One-tailed probabilities:  Pr(Z <= z)
+                           Pr(Z >= z)
+
+Two-tailed probability:    Pr(|Z| >= |z|)
+
+where Z is Normal(0, 1).
+
+
+^2. Inverse normal^
+^-----------------^
+
+Enter a probability ^p^ between 0 and 1.
+
+Output z is such that Pr(Z <= z) = p.
+
+
+^3. Student's t^
+^--------------^
+
+Enter ^t^ for t statistic and ^df^ for degrees of freedom.  Output is 
+
+One-tailed probabilities:  Pr(T <= t)
+                           Pr(T >= t)
+
+Two-tailed probability:    Pr(|T| >= |t|)
+
+where T has a Student's t distribution with df degrees of freedom.
+
+
+^4. Inverse Student's t^
+^----------------------^
+
+Enter a probability ^p^ between 0 and 1.
+
+Output t is such that Pr(T <= t) = p, where T has a Student's t
+distribution with df degrees of freedom.
+
+
+^5. F^
+^----^
+
+Enter ^f^ for F statistic, ^n1^ for numerator degrees of freedom, and
+^n2^ for denominator degrees of freedom.  Output is
+
+left-tail  probability:  P(F <= f)
+right-tail probability:  P(F >= f)
+
+where F has an F distribution with n1 numerator degrees of freedom and
+n2 denominator degrees of freedom.
+
+
+^6. Inverse F^
+^------------^
+
+Enter a probability ^p^ between 0 and 1.
+
+Output f is such that Pr(F <= f) = p, where F has an F distribution 
+with n1 numerator degrees of freedom and n2 denominator degrees of freedom.
+
+
+^7. Chi-squared^
+^--------------^
+
+Enter ^x^ for chi-squared statistic and ^df^ for degrees of freedom.
+Output is
+
+left-tail  probability:  P(X <= x)
+right-tail probability:  P(X >= x)
+
+where X has a chi-squared distribution with df degrees of freedom.
+
+
+^8. Inverse chi-squared^
+^----------------------^
+
+Enter a probability ^p^ between 0 and 1.
+
+Output x is such that Pr(X <= x) = p, where X has a chi-squared
+distribution with df degrees of freedom.
+
+
+^9. Binomial^
+^-----------^
+
+Enter ^n^ for number of trials, ^p^ for probability of success, and
+^k^ for number of successes.  Output is
+
+	P(S =  k)
+	P(S >= k)
+	P(S <= k)
+
+where S has a Binomial(n, p) distribution.
+
+
+^10. Poisson^
+^-----------^
+
+Enter ^lambda^ for lambda (the true mean of the distribution) and
+^k^ for the count.  Output is
+
+	P(X =  k)
+	P(X >= k)
+	P(X <= k)
+
+where X has a Poisson(lambda) distribution.

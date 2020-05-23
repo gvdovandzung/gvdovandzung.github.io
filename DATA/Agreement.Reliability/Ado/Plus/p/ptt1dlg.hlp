@@ -1,0 +1,109 @@
+.-
+help for ^1-sample t test^                     Menu: Statistics--Parametric tests
+.-
+
+Topics covered
+--------------
+
+^1. Description of the test^
+^2. Example^
+^3. When to use 1-sample t test, 2-sample t test, or paired t test commands^
+
+
+^1. Description of the test^
+^--------------------------^
+
+This command computes a 1-sample t test.  It tests the null hypothesis Ho that
+the mean m of a random variable X has a value m0; i.e., Ho: m = m0.
+
+The hypothesized value m0 is a number specified by the user.
+
+The test assumes that X has a normal distribution.
+
+
+^2. Example^
+^----------^
+
+We have a random sample of 20 students, and we measure their heights in
+inches.  We wish to test the null hypothesis Ho that the mean m of the
+population from which the students were selected is equal to 68 inches;
+i.e., Ho: m = 68 inches. 
+ 
+We enter the heights into the computer using the ^Editor^ and name the variable
+^height^.  @input_sq!(Click here for help on inputting data.)@ 
+
+In the ^1-sample t test^ dialog box, we select the variable ^height^ and then
+enter ^68^ in the box labeled "Hypoth. mean".
+
+This command also produces a confidence interval for the mean.  Change the
+confidence level for the interval if you wish.
+
+
+^3. When to use 1-sample t test, 2-sample t test, or paired t test commands^
+^--------------------------------------------------------------------------^
+
+Test      Null hypothesis                               Examples
+----      ---------------                               --------
+
+^1-sample^  Ho: m = m0, where                             Ho: mean X = 0
+              m  is mean of population variable
+              m0 is hypothesized mean (i.e., a number)
+
+^2-sample^  Ho: m1 = m2, where                            Ho: mean height
+              m1 is mean of variable for population 1            of females
+              m2 is mean of variable for population 2     = mean height
+                                                                 of males
+
+^Paired^    Ho: mean(X1 - X2) = 0, where                  Ho: mean difference of
+              X1 is variable 1 and                          weight before and      
+              X2 is variable 2 measured                     after diet = 0
+              on the same subject
+                  
+
+The ^2-sample t test^ is performed when there are 2 independent samples;
+i.e., the two samples contain different subjects (e.g., different people). 
+The 2 samples come from 2 different populations (e.g., females and males).
+The size ^n1^ of sample 1 and the size ^n2^ of sample 2 can be different (or the 
+same).
+
+The ^paired t test^ is performed when there is only one sample from one
+population, and there are two measurements for each subject in the sample.
+
+For example, you measure the weight of each person at time 1, and then at
+time 2 you measure the weight of each person again.  The measurements are
+compared subject by subject, and so the measurements must be made on exactly
+the same sample of subjects at each time.
+
+The ^paired t test^ can be put in the form of the ^1-sample t test^; hence, they
+are really the same test.
+
+For example, let ^weight1^ be the weights of subjects before a diet and let
+^weight2^ be the weights of the same subjects after the diet.  Create a new
+variable ^diff^ = ^weight1^ - ^weight2^ = difference in weight for each subject.
+Then using the ^1-sample t test^ command to test mean ^diff^ = 0 is exactly the
+same as using the ^paired t test^ command with the variables ^weight1^ and ^weight2^.
+
+You can try this yourself: choose ^Generate/Replace^ under the ^Data^ menu and
+then select ^Formula^.  Enter ^diff^ where it says "New Variable Name", and enter
+^weight1^ - ^weight2^ where it says "Formula".  @formdlg!Click here for help on creating@
+@formdlg!a new variable based on other variables.@
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@tt1dlg!1-sample t test (Calculator menu)@
+
+@ptt2pdlg!Paired t test@
+
+@ptt2dlg!2-sample t test@
+@onewdlg!One-way ANOVA (for testing equality of means for more than 2 groups)@ 
+
+@stesdlg!Sign test (nonparametric equivalent of 1-sample t test)@
+@srandlg!Wilcoxon signed-rank test (nonparametric equivalent of paired t test)@
+@rsumdlg!Mann-Whitney (Wilcoxon rank-sum) test (nonparametric equivalent of@
+	@rsumdlg!2-sample t test)@
+
+@ttest!For the command-line version, see help for ttest.@

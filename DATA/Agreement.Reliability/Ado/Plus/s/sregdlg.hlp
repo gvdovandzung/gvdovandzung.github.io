@@ -1,0 +1,64 @@
+.-
+help for ^Simple regression^                                     Menu: Statistics
+.-
+
+^Description^
+^-----------^
+
+This command computes ordinary least-squares regression (OLS) of Y on X.
+
+It fits the model
+
+	Y = b*X + c + error
+
+Y is the dependent variable and X is the independent variable.
+
+For regression with more than one X variable, @mregdlg!see Multiple regression@
+@mregdlg!under the Statistics menu.@
+
+(Note: You can omit the X variable and fit the model Y = c + error.)
+
+
+^Diagnostics menu^
+^----------------^
+
+If the "Show diagnostics menu" box is checked, you will get a menu of
+post-regression commands after you run the regression.
+
+The diagnostics menu has the following choices:
+
+	- Plot fitted model
+	- Plot residual vs. prediction
+	- Plot residual vs. an X
+	- Normal quantile plot of residuals
+	- Save YHAT as a variable
+	- Save residuals as a variable
+
+@pregmenu!Click here for help on the diagnostic menu.@
+
+
+^Output^
+^------^
+
+The coefficient for X appears next to the X variable name.
+The constant term (intercept) appears last next to the word "_cons".
+
+                      
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@pregmenu!Post-regression diagnostics@
+
+@mregdlg!Multiple regression (for one or more independent variables)@
+@rregdlg!Robust regression@
+@logdlg!Logistic regression@
+
+@kwaldlg!One-way ANOVA (nonparametric)@ 
+@onewdlg!One-way ANOVA (parametric)@ 
+@rpmdlg!Repeated-measures ANOVA@
+@twowdlg!Two-way ANOVA@
+@aovcdlg!N-factor ANOVA & ANOCOVA@
+
+@fit!For more diagnostics (in the command-line version), see help for fit@

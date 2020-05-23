@@ -1,0 +1,135 @@
+.-
+help for ^Using the spreadsheet editor to view and change data^
+.-
+                                                       Buttons: Editor & Browse
+                                                          Menu: Data--Edit data
+
+Topics covered
+--------------
+
+^1. Changing data in the spreadsheet editor -- the Editor button^
+^2. Buttons on the Editor toolbar^
+^3. Preserve and Restore^
+^4. Renaming a variable and variable labels^
+^5. Viewing data in the spreadsheet editor -- the Browse button^
+
+
+^1. Changing data in the spreadsheet editor -- the Editor button^
+^---------------------------------------------------------------^
+
+There are 3 ways to enter the spreadsheet editor.  Either:
+
+	- Click on the ^Editor^ button.
+
+	- Choose ^Edit data^ from the ^Data^ menu.
+
+	or
+
+	- Choose ^New^ from the ^File^ menu.  This also clears the
+          data currently in memory.  So choose this only when you want
+          to start again and enter a new dataset.
+
+@input_sq!Click here for help on inputting data using the spreadsheet editor.@
+
+To change a data point:
+
+	- Click on the cell you want to change.
+
+	- Enter a new value and press ^Enter^ or ^Tab^.
+
+
+^2. Buttons on the Editor toolbar^
+^--------------------------------^
+
+^Preserve^ and ^Restore^ -- see below.
+
+^Sort^ sorts the observations in ascending order of the current variable.
+
+^<<^ shifts the current variable to be the first variable.
+
+^>>^ shifts the current variable to be the last variable.
+
+^Hide^ hides the current variable.  The variable still exists; the editor
+just stops displaying it.
+
+^Delete...^ brings up a dialog that allows you to 
+
+	- delete the current variable
+
+	- delete the current observation
+
+	- delete all observations throughout the dataset that have the
+	  same value for the current variable as the current observation
+
+^Close^ -- exits you from the ^Editor^.  Note: When you exit the ^Editor^
+you will be asked to confirm the changes that you made in the ^Editor^.
+
+
+^3. Preserve and Restore^
+^-----------------------^
+
+Stata automatically makes a backup copy of your data when you enter the
+^Editor^.
+
+If you want to cancel the changes that you made in the ^Editor^, click on
+^Restore^.
+
+Clicking on ^Preserve^ updates the backup copy to the present state of the
+^Editor^.
+
+
+^4. Renaming a variable and variable labels^
+^------------------------------------------^
+
+To rename a variable:
+
+	- Double-click anywhere in the variable's column.
+
+	- This brings up the Variable Information dialog.
+
+	- Enter the new name of the variable.
+
+To label a variable:
+
+	- In the Variable Information dialog, enter a "Label" of
+          31 characters or less (spaces are OK).
+
+Example:  You have a variable ^sbp^.  You give it the variable label
+^systolic blood pressure^.
+
+Variable labels are used in the output of many commands, and help to
+make the output more understandable.
+
+
+^5. Viewing data in the spreadsheet editor -- the Browse button^
+^--------------------------------------------------------------^
+
+Clicking the ^Browse^ button is just like the ^Editor^ -- it takes
+you into the spreadsheet editor.  But there is one important difference.
+
+When you enter the editor using ^Browse^, you cannot make any changes to
+your data.  In the ^Browse^ mode, you are completely protected from
+accidentally changing your data.
+
+So if you just want to look at your data, click on the ^Browse^ button.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@input_sq!Inputting data using the spreadsheet editor@
+@save_sq!Creating, saving, and loading Stata data files@
+@impdlg!Importing an ASCII data file@
+
+@formdlg!Formula -- generating new variables@
+@seqdlg!Sequence -- generating sequences@
+@rnddlg!Random numbers -- generating random numbers@
+@recdlg!Recode -- recoding values of a variable@
+
+@dslabdlg!Label dataset@
+@varldlg!Label variable@
+@vlabdlg!Label values@
+@stldlg!Strings to labels@
+@stldlg!Labels to strings@

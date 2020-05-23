@@ -1,0 +1,21 @@
+.-
+help for ^quest^                                       @net:from http://www.stata.com/quest!http://www.stata.com/quest@
+.-
+
+StataQuest addition for Stata 6 for Windows and Macintosh
+---------------------------------------------------------
+
+StataQuest provides a pull-down menu system for accessing the basic features
+of Stata.  StataQuest is especially popular with students and student labs.
+
+StataQuest will not interfere with Stata's normal operation.
+
+When you want to use Stata in StataQuest mode, type ^quest on^.
+When you want to stop using StataQuest mode, type ^quest off^.
+
+
+Also see
+--------
+
+StataQuest is written using Stata's menu-and-dialog programming features; 
+see help @window@.

@@ -1,0 +1,47 @@
+.-
+help for ^Confidence interval for mean (Calculator version)^     Menu: Calculator
+.-
+
+^Note on dataset version of command^
+^----------------------------------^
+
+This command computes a confidence interval for the mean when you have
+already calculated the mean and standard deviation of the sample.
+
+Use the ^Confidence intervals^ command under the ^Summaries^ menu if you wish
+to have StataQuest compute the mean and standard error of the sample and
+then perform the test.
+
+@scidlg!Click here for help on the dataset version of Confidence intervals.@
+
+
+^Description^
+^-----------^
+
+This command computes a confidence interval for the population mean m_p of a
+variable X.
+
+It assumes that X is normal in the population.
+
+If the sample size is n, the sample mean is m_s, and the sample deviation is s,
+then a 95% confidence interval for the population mean m_p is
+
+	[ m_s - t*s/sqrt(n), m_s + t*s/sqrt(n) ]
+
+where t is the 97.5% percentile of Student's t distribution with n - 1 degrees
+of freedom.
+
+The standard error of the mean is s/sqrt(n).  
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@scidlg!Confidence intervals          (Summaries menu)@
+
+@bcidlg!Binomial confidence interval  (Calculator menu)@
+@poidlg!Poisson  confidence interval  (Calculator menu)@
+
+@cii!For the command-line version, see help for cii.@

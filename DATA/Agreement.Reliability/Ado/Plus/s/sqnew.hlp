@@ -1,0 +1,87 @@
+.-
+help for ^What's new^
+.-
+
+^StataQuest 4^ is a powerful and easy-to-use software package for quantitative
+data analysis.  ^StataQuest 4^ gives you the tools to explore a set of data,
+discover its patterns and relationships, and test hypotheses.  We've made the
+software easy, so you can focus on statistics and data analysis -- rather than
+struggling with the computer.
+
+^StataQuest 4 for Windows^ has been entirely redesigned.  It offers all the
+standard Windows features including
+
+	- point-and-click interface
+	- dialog boxes
+	- cut-and-paste
+	- simplified printing
+
+^StataQuest 4 for Macintosh^ (available Spring of '96) will feature a truly
+Mac-like, full-menu, point-and-click design.
+
+
+^New features^
+^------------^
+
+^StataQuest 4^ has many new features: 
+
+Easier to Use ...
+
+	- new spreadsheet editor makes entering data a breeze 
+	- printing graphs and logs is simple
+	- import/export tab- or comma-delimited ASCII text files
+          with a click of the mouse 
+
+New Graphs ...
+
+	- new dotplot graphs
+	- completely reworked stem-and-leaf plots
+	- new graphical output from ANOVA
+	- cut-and-paste graphs into other applications
+	- save graphs for viewing or printing later
+
+More Statistics ...
+
+	- repeated-measures ANOVA
+	- logistic regression
+	- 1- and 2-sample tests of variance
+	- normal Z tests as well as t tests
+	- Durbin-Watson statistic for regression
+
+More Calculator entries ...
+
+	- statistical tables
+	- two point-and-click calculators
+	- more statisticial tests
+
+
+^Where to go for more information^
+^--------------------------------^
+
+^StataQuest 4^ software was created by ^StataCorp^.
+@stata_sq!Click here for more information about StataCorp and our professional software.^          
+
+^StataQuest 4^ software is distributed by ^Duxbury Press^.  Contact us at
+
+	Duxbury Press
+	10 Davis Drive
+	Belmont, CA 94002
+
+	(800) 327-0325  U.S.
+	(408) 373-6515  Canada
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@intro_sq!Introduction to the StataQuest windows@
+
+@menu_sq!StataQuest menus and buttons@
+
+@examp_sq!An example of a StataQuest session@
+
+@sqcont!Table of contents for StataQuest@
+
+@stata_sq!Professional Stata and StataQuest@

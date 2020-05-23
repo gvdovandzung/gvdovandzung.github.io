@@ -1,0 +1,131 @@
+.-
+help for ^One-way ANOVA (parametric)^                     Menu: Statistics--ANOVA
+.-
+
+Topics covered
+--------------
+
+^1. Description of the test^
+^2. Examples (how to choose the right option for your dataset arrangement)^
+^3. Plotting group means and error bars^
+
+
+^1. Description of the test^
+^--------------------------^
+
+This command performs one-way ANOVA (parametric).  
+
+It tests the null hypothesis that the means of K independent groups are
+the same.  It is equivalent to the two-sample t test when K = 2.
+
+
+^2. Examples (how to choose the right option for your dataset arrangement)^
+^-------------------------------------------------------------------------^
+
+Suppose you have three groups of people and you wish to test whether the
+ages of persons in the groups are the same.
+
+Group A contains 4 people with ages 19, 21, 24, and 27.
+Group B contains 3 people with ages 18, 29, and 31.
+Group C contains 5 people with ages 17, 21, 22, 22, and 23.
+
+There are 2 different ways you can enter this data.  Both are described
+below.
+
+@input_sq!Click here for help on inputting data using the spreadsheet editor.@ 
+
+
+1 data variable, 1 group variable arrangement
+---------------------------------------------
+
+The best way to enter this data is the ^1 data variable, 1 group variable^
+arrangement.
+
+If you do this and then list the data by selecting ^List data^ under the 
+^Summaries^ menu, they will look like
+
+^. list age group in 1/12^                                                        
+                                                                                
+          age     group                                                         
+  1.       19         1                                                         
+  2.       21         1                                                         
+  3.       24         1                                                         
+  4.       27         1                                                         
+  5.       18         2                                                         
+  6.       29         2                                                         
+  7.       31         2                                                         
+  8.       17         3                                                         
+  9.       21         3                                                         
+ 10.       22         3                                                         
+ 11.       22         3                                                         
+ 12.       23         3                                                         
+ 
+Note that the groups should be entered as 1, 2, 3, rather than A, B, C.
+
+For this command, the "Group variable" must be numeric (i.e., numbers only);
+it cannot be a string (i.e., letters, etc.).
+
+With data arranged in this style, select "1 data variable, 1 group variable"
+at the first dialog box and click ^OK^.
+
+At the second dialog box, enter ^age^ for the "Data variable" and enter 
+^group^ for the "Group variable".  Click ^OK^.
+
+This is the best way to enter this kind of data because most of the
+commands in StataQuest require a "Group variable" to compute things
+like statistics or graphs for each group. 
+
+
+k data variables (one per treatment) arrangement
+------------------------------------------------
+
+You could have entered the data so that it looks like
+
+^. list a b c in 1/5^                                                            
+                                                                                
+            a         b         c                                               
+  1.       19        18        17                                               
+  2.       21        29        21                                               
+  3.       24        31        22                                               
+  4.       27         .        22                                               
+  5.        .         .        23                                               
+
+With data arranged in this style, select "k data variables (one per 
+treatment)" at the first dialog box and click ^OK^.  
+
+At the second dialog box, enter your data variables ^a^, ^b^, and ^c^.
+Click ^OK^.
+
+Most of the commands in StataQuest require your dataset to be in the
+other arrangement (^1 data variable, 1 group variable^) to compute things
+like statistics or graphs for each group.
+
+You can transform this style of data into the ^1 data variable, 1 group^
+^variable^ arrangement by choosing ^Stack variables^ from the ^Data^ menu.
+
+@stkdlg!Click here for help on stacking variables.@
+
+
+^3. Plotting group means and error bars^
+^--------------------------------------^
+
+After you run a one-way ANOVA, you will be asked if you want to see a plot
+of the group means with error bars or a plot of the group means compared with
+the overall mean.  @onegdlg!Click here for details on one-way ANOVA plots.@
+ 
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@onegdlg!One-way ANOVA plots@
+@kwaldlg!One-way nonparametric ANOVA (Kruskal-Wallis test)@ 
+@rpmdlg!Repeated-measures ANOVA@
+@twowdlg!Two-way ANOVA@
+@aovmdlg!Two-way ANOVA plots@
+@aovcdlg!N-factor ANOVA & ANOCOVA@
+@ptt2dlg!2-sample t test@
+@rsumdlg!Mann-Whitney (Wilcoxon rank-sum) test@
+
+@stkdlg!Stack variables (transform data to 1 data variable, 1 group variable)@

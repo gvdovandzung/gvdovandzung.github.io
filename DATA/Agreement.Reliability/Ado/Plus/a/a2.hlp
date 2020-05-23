@@ -1,0 +1,64 @@
+.-
+help for ^a2^                                                   (STB-29: sg47)
+.-
+
+Anderson-Darling test
+---------------------
+
+    ^a2^ varlist [^if^ exp] [^in^ range] ^,^ ^di^st^(n^ormal|^u^niform|^c^hisquare^)^ [ ^df(^#^)^ ]
+
+
+Description
+-----------
+
+^a2^ performs the Anderson-Darling distributional goodness-of-fit test for each
+of the variables in varlist.
+
+
+Options
+-------
+
+^dist(normal^|^uniform^|^chisquare)^ is not optional and defines the assumed dist-
+    ribution to be tested.  Only the first letter of the name of the dist-
+    ribution is required.
+
+^df()^ is required for ^dist(chisquare)^ and specifies the degrees of freedom for
+    the chi-square distribution.
+
+
+Examples
+--------
+
+ . ^a2 mpg, dist(normal)^
+
+ . ^set obs 200^
+ . ^gen u = uniform()^
+ . ^gen chi = invnorm(u)^^2^
+ . ^a2 u, dist(uniform)^
+ . ^a2 chi, dist(chisquare) df(1)^
+
+
+Stored results
+--------------
+
+^a2^ stores in the ^$S_^# macros:
+
+	^S_1^		number of observations
+	^S_2^		Anderson-Darling A-squared statistic
+	^S_3^		z (normal equivalent deviate) for A-squared
+	^S_4^		P (upper tail P-value) for A-squared
+
+
+Author
+------
+
+        Patrick Royston
+        Royal Postgraduate Medical School, London
+        FAX:  (011)-44-181-740-3119
+
+
+Also see
+--------
+
+    STB:  STB-29  sg47
+On-line:  help for @swilk@, @qchi@.

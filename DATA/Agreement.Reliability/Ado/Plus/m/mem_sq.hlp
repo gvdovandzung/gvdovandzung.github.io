@@ -1,0 +1,139 @@
+.-
+help for ^Limits on dataset size^ and ^Describe variables^          Menu: Summaries
+.-
+
+Topics covered
+--------------
+
+^1. Describe variables^
+^2. Limits on dataset size^
+^3. Examples^
+^4. Opening Stata files that are too big for StataQuest^
+
+
+^1. Describe variables^
+^---------------------^
+
+When you choose ^Describe variables^ from the ^Summaries^ menu, you will see
+something like
+
+^. describe^                                                                      
+                                              ^dataset label^                                  
+Contains data from c:\data\smauto.dta             ^\^                               
+  Obs:    74 (max=   600) ^}^                   1978 Automobile Data              
+ Vars:     6 (max=    25) ^}-- dataset size^                                                     
+  V*O:   444 (max=  4000) ^}     and limits^                                                      
+  1. make         str18  %18s                 Make and Model ^-- variable labels^                    
+  2. price        int    %8.0g                Price            ^/^                   
+  3. mpg          int    %8.0g                Mileage (mpg)                     
+  4. weight       int    %8.0g                Weight (lbs.)                     
+  5. gratio       float  %6.2f                Gear Ratio                        
+  6. foreign      int    %8.0g       forlab   Car type                          
+        ^|          |       |            \^
+     ^variable   storage  display     name of value label^                                           
+      ^name       type    format^
+
+See below for information on ^dataset size and limits^.
+
+See ^Where to go for more help^ below for information on the other
+features.
+
+
+^2. Limits on dataset size^
+^-------------------------^
+
+StataQuest has limits on the number of variables and observations.
+
+StataQuest will only allow datasets with
+
+Rule 1.  Obs  = number of observations <= 600
+
+Rule 2.  Vars = number of variables    <=  25
+
+AND
+
+Rule 3.  V*O = (no. of variables)*(no. of observations) <= 4000
+
+^NOTE:^  All 3 of these rules must be satisfied simultaneously.
+
+
+^3. Examples^
+^-----------^
+
+A dataset with 500 observations and 20 variables is not allowed since
+(no. of variables)*(no. of observations) = 20*500 = 10,000 (Rule 3).
+
+A dataset with 1000 observations and 1 variable is not allowed since
+number of observations = 1000 (Rule 1).
+
+A dataset with 10 observations and 80 variables is not allowed since
+number of variables = 80 (Rule 2).
+
+Select ^Describe variables^ from the ^Summaries^ to see how close you
+are to these limits.
+
+
+^4. Opening Stata files that are too big for StataQuest^
+^------------------------------------------------------^
+
+You will always be able to load in a Stata data file (^.dta^ file) that
+was created using StataQuest.  But data files created by Professional Stata
+may be too big for StataQuest.
+
+Here's what can happen if you try to load in a Stata data file that is
+too big for StataQuest.
+
+If you choose ^File--Open^, select a ^.dta^ file, and get the following
+error message
+
+^. use C:\DATA\TOOOBS.DTA, clear^                                                   
+no room to add more observations                                                
+r(901); 
+
+then the dataset has too many observations.
+
+There is nothing you can do in StataQuest to make the data file smaller.
+The dataset was created with Professional Stata, so you must run Professional
+Stata, open this file, delete some of the observations, and resave the file
+to be able to use it (actually, a subset of it) in StataQuest. 
+
+If you choose ^File--Open^, select a ^.dta^ file, and get the following
+message
+
+^. use C:\DATA\TOOVAR.DTA, clear^                                                 
+too many variables for StataQuest version:  5 variables lost
+
+then the dataset had too many variables.  StataQuest did not read in the
+last 5 variables from the file on disk (note that the variables still
+exist in the file on disk).  You will not be able to access these lost
+variables from StataQuest.                   
+                                                                                
+^. use C:\DATA\TOOVO.DTA, clear^                                                  
+too many cells for StataQuest version:  7 variables lost                        
+ 
+then the dataset violated Rule 3.  StataQuest did not read in the
+last 7 variables from the file on disk (note that the variables still
+exist in the file on disk).  You will not be able to access these lost
+variables from StataQuest.                    
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@save_sq!Creating, saving, and loading Stata data files@
+
+@impdlg!Importing an ASCII data file@ 
+
+Labeling datasets, variables, and values of variables:
+
+	@dinfo_sq!Dataset info@
+	@dslabdlg!Label dataset@
+	@varldlg!Label variable@
+	@vlabdlg!Label values@
+	@stldlg!Strings to labels (converts strings to numeric variables)@
+	@stldlg!Labels to strings@
+
+For information on storage types and display formats, see the Reference Manual
+for Professional Stata.

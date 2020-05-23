@@ -1,0 +1,92 @@
+.-
+help for ^Wilcoxon signed-rank test^        Menu: Statistics--Nonparametric tests
+.-
+
+^Description of the test^
+^-----------------------^
+
+This command is a nonparametric version of the paired t test.
+
+It tests the null hypothesis Ho that the median difference of two
+"paired" random variables X1 and X2 is zero; i.e.,
+
+	Ho: median(X1 - X2) = 0.
+
+It makes the further assumption that the distribution of Y = X1 - X2
+is symmetric about zero.  If X1 and X2 have the same distribution,
+then this symmetry assumption is satisfied.
+
+The test statistic is produced by first ranking the absolute value
+of the observations (|Y|) and then summing the ranks for those
+observations with positive signs (Y > 0).
+
+
+^Zeros and Ties^
+^--------------^
+
+The test statistic is
+
+	T = sum of R_i, where R_i = sign(Y_i)*rank(|Y_i|).
+
+If there are ties among |Y_i|, then averaged ranks are used.
+If Y_i = 0, then sign(Y_i) = 0 and R_i = 0.  
+
+
+^Example (how your data should be arranged)^
+^------------------------------------------^
+
+We have 15 subjects, and we wish to test the effectiveness of a low-fat diet
+on weight loss.  The weight of each subject is measured before the study, 
+and again after being on the diet for one year.
+ 
+We enter the "before" and "after" weights into the computer using the ^Editor^
+and name the variables ^bweight^ and ^aweight^.
+@input_sq!(Click here for help on inputting data.)@ 
+
+After we enter the data, we list them by selecting ^List data^ under the
+^Summaries^ menu:
+
+. list subject bweight aweight in 1/15                                          
+                                                                                
+      subject    bweight    aweight                                             
+  1.        1        181        173                                             
+  2.        2        183        169                                             
+  3.        3        245        217                                             
+  4.        4        196        211                                             
+  5.        5        214        187                                             
+  6.        6        150        138                                             
+  7.        7        217        203                                             
+  8.        8        172        155                                             
+  9.        9        187        197                                             
+ 10.       10        157        171                                             
+ 11.       11        168        173                                             
+ 12.       12        137        135                                             
+ 13.       13        162        151                                             
+ 14.       14        174        123                                             
+ 15.       15        199        190                                             
+                                                                                
+^IMPORTANT:^ ^bweight^ and ^aweight^ must be entered so that each observation
+(i.e., each row) corresponds to the same subject.
+(We added the ^subject^ variable to emphasize this -- it is not needed for the
+command.)  
+
+To run the command, we enter ^bweight^ for "Data variable #1" and ^aweight^ for 
+"Data variable #2" in the dialog box.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@ptt1dlg!1-sample t test@
+@ptt2dlg!2-sample t test@
+@ptt2pdlg!Paired t test@
+@onewdlg!One-way ANOVA (for testing equality of means for more than 2 groups)@ 
+
+@stesdlg!Sign test (nonparametric equivalent of paired t test)@
+@rsumdlg!Mann-Whitney (Wilcoxon rank-sum) test (nonparametric equivalent of@
+	@rsumdlg!2-sample t test)@
+@kwaldlg!Kruskal-Wallis test (nonparametric one-way ANOVA)@
+
+@signrank!For the command-line version, see help for signrank.@

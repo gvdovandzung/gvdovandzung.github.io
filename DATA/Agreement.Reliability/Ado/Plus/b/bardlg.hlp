@@ -1,0 +1,187 @@
+.-
+help for ^Bar charts by group, Bar chart comparison,^
+         ^and Bar chart comparison by group^
+.-
+                                          Menu: Graphs--One variable by group
+                                                Graphs--Comparison of variables
+
+Topics covered
+--------------
+
+^1. Description^
+^2. Bar charts by group (One variable by group)^
+^3. Bar chart comparison (Comparison of variables)^
+^4. Bar chart comparison by group (Comparison of variables)^
+
+Note:  Click the ^Dialog^  button to bring the dialog box      to the front.
+         "    "  ^Results^   "    "    "    "  ^Results^ window  "   "    "
+         "    "  ^Graph^     "    "    "    "  ^Graph^   window  "   "    "
+
+
+^1. Description^
+^--------------^
+
+Bar charts produce vertical bars that represent the ^sum^ (or the ^mean^) of a
+data variable.
+
+A ^bar chart by group^ looks something like
+
+                |
+                |              I
+                |              I           I
+    income      |              I     I     I
+                |        I     I     I     I
+                |  I     I     I     I     I
+                |  I     I     I     I     I
+                +-------------------------------
+                  1990  1991  1992  1993  1994
+                              year
+
+In this example, ^income^ is the data variable and ^year^ is the group variable.
+
+A ^bar chart comparison^ looks something like
+
+                L = labor costs           M = materials
+                C = capital expenditure   A = advertising
+                O = overhead              T = taxes
+
+                |    M
+                |    M
+                |  L M
+                |  L M C
+                |  L M C A   T
+                |  L M C A O T
+                |  L M C A O T
+                +----------------
+
+In this example, ^labor^, ^material^, ^cap_exp^, ^advert^, ^overhead^, and ^taxes^ are
+the data variables being compared.
+
+A ^bar chart comparison by group^ looks something like
+
+                I = income   P = profit
+
+                |
+                |              I
+                |              I           I
+                |        I     I     I     I
+                |  I     I     I P   I     I P
+                |  I     I P   I P   I     I P
+                |  I P   I P   I P   I P   I P
+                +-------------------------------
+                  1990  1991  1992  1993  1994
+                              year
+
+In this example, ^income^ and ^profit^ are the data variables being compared by
+the group variable ^year^.
+
+
+^2. Bar charts by group (One variable by group)^
+^----------------------------------------------^
+
+Select "Data variable".  This is the variable that will be used to make the
+bar chart.
+
+Select "By group".  This is a group (categorical) variable.  One bar will
+be produced for each unique value of this variable.  The height of the bar
+will be the sum of the "Data variable" for all observations belonging to this
+group.
+
+If you check the box "Bar height to reflect means", the height of a bar will
+be the mean of the data variable for each group. 
+
+If you check the box "Include bar chart of total", there will be a bar
+representing the combined groups.
+
+Example:  Suppose you know the income for a company for each quarter
+(i.e., 3-month period) for the years 1990 to 1993.
+
+The data can be input using the ^Editor^ @input_sq!(click here for help on inputting data)@. 
+If you then list the data by selecting ^List data^ under the ^Summaries^ menu,
+they look like
+
+^. list year quarter income in 1/16^                                             
+                                                                                
+          year   quarter      income                                            
+  1.      1990    199001       23564                                            
+  2.      1990    199002       36463                                            
+  3.      1990    199003       34789                                            
+  4.      1990    199004       56239                                            
+  5.      1991    199101       13862                                            
+  6.      1991    199102       26721                                            
+  7.      1991    199103       33133                                            
+  8.      1991    199104       41023                                            
+  9.      1992    199201       10343                                            
+ 10.      1992    199202       29301                                            
+ 11.      1992    199203       26133                                            
+ 12.      1992    199204       59503                                            
+ 13.      1993    199301       24561                                            
+ 14.      1993    199302       36520                                            
+ 15.      1993    199303       42302                                            
+ 16.      1993    199304       65230                                            
+  
+If you select ^Bar charts by group^ and enter ^income^ for the "Data variable"
+and ^year^ for the "By group" variable, then the bar chart will have 4 bars,
+each representing total income for the year.
+
+E.g., for 1990 the bar is 23564 + 36463 + 34789 + 56239 = 150155.
+
+If you check the "Bar height to reflect means" option, the bar height will be
+the mean income per quarter.
+
+E.g., for 1990 the bar is (23564 + 36463 + 34789 + 56239)/4 = 37764.
+
+Note:  If we had monthly data, rather than quarterly data, the total income
+bar chart ("Bar height to reflect means" option unchecked) would be exactly
+the same.  But the bar chart of means ("Bar height to reflect means" option
+checked) would be different.  It would now show monthly means rather than
+quarterly means.
+
+
+^3. Bar chart comparison (Comparison of variables)^
+^------------------------------------------------^
+
+This produces side-by-side bars representing the sum of one or more data
+variables.
+
+Click on the names of the variables in the list box that you wish to plot.
+Or type them in.
+
+If you check the "Bar height to reflect means" option, the bar heights will
+be the means of the variables.
+
+
+^4. Bar chart comparison by group (Comparison of variables)^
+^----------------------------------------------------------^
+
+This command produces bars for one or more data variables for each value of a
+group (categorical) variable.
+
+Click on the names of one or more variables in the "Data variables" list
+box.  Or type them in.
+
+Enter one variable in the "By group" list box.
+
+If you check the box "Bar height to reflect means", the height of a bar will
+be the mean of the data variable for each group. 
+
+If you check the box "Include bar chart of total", there will be a bar
+representing the combined groups for each data variable.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@histdlg!Histograms@
+@boxdlg!Box plots@
+@stemdlg!Stem-and-leaf plot@
+@dpldlg!Dotplots@
+@qnormdlg!Normal quantile plot@
+
+@spdlg!Scatterplots@
+@tsdlg!Time-series graphs@
+@qcdlg!Quality-control charts@
+
+@graph_sq!Printing, saving, and viewing graphs@

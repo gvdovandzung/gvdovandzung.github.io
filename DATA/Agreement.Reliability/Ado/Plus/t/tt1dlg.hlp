@@ -1,0 +1,71 @@
+.-
+help for ^1-sample t test (Calculator version)^                  Menu: Calculator
+.-
+
+^Note on dataset version of command^
+^----------------------------------^
+
+This command computes a 1-sample t test when you have already calculated
+the sample mean and sample standard deviation.
+
+Use the ^1-sample t test^ command under the ^Parametric tests^ section of 
+the ^Statistics^ menu if you wish to have StataQuest compute the mean and
+standard deviation from the sample observations, and then perform the t test.
+
+@ptt1dlg!Click here for help on the dataset version of the 1-sample t test.@
+
+
+^Description of the test^
+^-----------------------^
+
+The 1-sample t test tests the null hypothesis Ho that the mean m of a random
+variable X has a value m0; i.e., Ho: m = m0.
+
+The hypothesized value m0 is a number specified by the user.
+
+The test assumes that X has a normal distribution.
+
+
+^Example^
+^-------^
+
+Suppose you have the following sample:
+
+1, 2, 5, 6, 9, 10
+
+The number of observations in the sample is n = 6.
+Enter ^6^ for "No. of observations".
+
+The mean of the sample is (1 + 2 + 5 + 6 + 9 + 10)/6 = 33/6 = 5.5.
+Enter ^5.5^ for "Sample mean". 
+
+The sum of squares is 1 + 4 + 25 + 36 + 81 + 100 = 247.
+Thus, the standard deviation is sqrt((247 - 6*5.5^^2)/5) = 3.62
+Enter ^3.62^ for "Sample std. dev.".
+
+You wish to test the hypothesis that the population mean is 5.
+Enter ^5^ for "Hypothesized mean".
+
+This command also produces confidence intervals for the mean.
+If you want to change the confidence level for the interval,
+fill in "Confidence level" (in percent).
+
+Note:  If you use the ^1-sample t test^ command under the ^Parametric tests^
+section of the ^Statistics^ menu, StataQuest will compute the mean and
+standard deviation from the sample observations, and then perform the t test.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@ptt1dlg!1-sample t test       (Statistics--Parametric tests)@
+@ptt2dlg!2-sample t test       (Statistics--Parametric tests)@
+
+@tt2dlg!2-sample t test       (Calculator menu)@
+
+@zt1dlg!1-sample normal test  (Calculator menu)@
+@zt2dlg!2-sample normal test  (Calculator menu)@
+
+@ttesti!For the command-line version, see help for ttesti.@

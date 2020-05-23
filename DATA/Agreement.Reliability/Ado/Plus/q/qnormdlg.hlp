@@ -1,0 +1,49 @@
+.-
+help for ^Normal quantile plot^                        Menu: Graphs--One variable
+.-
+
+Note:  Click the ^Dialog^  button to bring the dialog box      to the front.
+         "    "  ^Results^   "    "    "    "  ^Results^ window  "   "    "
+         "    "  ^Graph^     "    "    "    "  ^Graph^   window  "   "    "
+
+
+^Description^
+^-----------^
+
+This command produces a graph of the data variable (on the y-axis) versus a
+normal variable (on the x-axis) with the same mean and standard deviation.
+
+If the points on the graph lie on the straight line y = x, then the data
+variable has a normal distribution.
+
+The further the points on the graph are away from the line y = x, the
+further the data variable is from being normal.  
+
+
+^How to fill in the dialog box^
+^-----------------------------^
+
+You can only enter one variable.  Click on its name in the list box.
+Or type it in.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@ptntdlg!Normality test@
+
+@histdlg!Histograms@
+@boxdlg!Box plots@
+@stemdlg!Stem-and-leaf plots@
+@dpldlg!Dotplots@
+@bardlg!Bar charts@
+
+@spdlg!Scatterplots@
+@tsdlg!Time-series graphs@
+@qcdlg!Quality-control charts@
+
+@graph_sq!Printing, saving, and viewing graphs@
+
+@qnorm!For the command-line version, see help for qnorm.@

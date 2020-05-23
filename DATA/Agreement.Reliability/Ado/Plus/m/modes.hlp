@@ -1,0 +1,48 @@
+.-
+help for ^modes^
+.-
+
+Mode(s) of a variable
+---------------------
+
+    ^modes^ varname [weight] [^if^ exp] [^in^ range] [, ^m^in^(^#^)^ ]
+
+Description
+-----------
+
+^modes^ shows the mode(s) of varname, that is, the value(s) of varname
+that occur most frequently. varname may be numeric or string.
+
+fweights and aweights are allowed.
+
+^modes^ is most obviously useful with a discrete or categorical variable.
+Continuous variables may need to be placed in bins or classes first.
+
+
+Option
+------
+
+^min(^#^)^ specifies that all values with a frequency of # or more should
+    be shown.
+
+
+Examples
+--------
+
+    . ^modes rep78^
+    . ^modes rep78 if foreign^
+
+
+Author
+------
+
+         Nicholas J. Cox, University of Durham, U.K.
+         n.j.cox@@durham.ac.uk
+
+
+Also see
+--------
+
+On-line: help for @tabulate@, @kdensity@
+
+

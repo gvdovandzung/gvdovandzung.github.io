@@ -1,0 +1,94 @@
+.-
+help for ^One-way (frequency) tabulation^                 Menu: Summaries--Tables
+.-
+
+^Description^
+^-----------^
+
+This command produces a table of the values of a variable and the number of 
+times these values occur (i.e., the frequencies of the values are computed).
+
+Note:  Only numeric variables can be tabulated; string variables cannot be.
+
+
+^Example^
+^-------^
+
+Suppose your data are the following (list them by choosing ^List data^ under
+the ^Summaries^ menu):
+
+^. list x in 1/12^                                                                
+                                                                                
+            x                                                                   
+  1.        4                                                                   
+  2.        2                                                                   
+  3.        5                                                                   
+  4.        3                                                                   
+  5.        6                                                                   
+  6.        2                                                                   
+  7.        1                                                                   
+  8.        2                                                                   
+  9.        2                                                                   
+ 10.        5                                                                   
+ 11.        8                                                                   
+ 12.        8                                                                   
+
+You can determine the frequencies of the values of ^x^ by selecting
+^One-way frequency^ from the ^Tables^ selection under the ^Summaries^ menu.
+
+Then click on the variable ^x^ to enter it.  Or type it in.
+
+You can scroll the list box, if necessary, to see all your variables.
+
+String variables will not appear in the list box.
+
+You can only enter one variable for this command.
+
+If you leave the "Include character plot" box unchecked, the output is
+
+^. tabulate x^                                                                   
+           x|      Freq.     Percent        Cum.                                
+------------+-----------------------------------                                
+          1 |          1        8.33        8.33                                
+          2 |          4       33.33       41.67                                
+          3 |          1        8.33       50.00                                
+          4 |          1        8.33       58.33                                
+          5 |          2       16.67       75.00                                
+          6 |          1        8.33       83.33                                
+          8 |          2       16.67      100.00                                
+------------+-----------------------------------                                
+      Total |         12      100.00
+                                            
+If you check the "Include character plot" box, the output is
+ 
+^. tabulate x, plot^                                                              
+           x|      Freq.                                                        
+------------+------------+----------------------------------------------------- 
+          1 |          1 |*************                                         
+          2 |          4 |***************************************************** 
+          3 |          1 |*************                                         
+          4 |          1 |*************                                         
+          5 |          2 |**************************                            
+          6 |          1 |*************                                         
+          8 |          2 |**************************                            
+------------+------------+----------------------------------------------------- 
+      Total |         12                                                        
+ 
+The character plot is a like a sideways histogram.
+
+Better plots can be obtained with the following commands from the ^One variable^
+section of the ^Graphs^ menu.  (Click any item below to go to its help file.)
+
+@dpldlg!Dotplot@
+@stemdlg!Stem-and-leaf plot@
+@histdlg!Histogram@
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@twodlg!Two-way and three-way tabulations@
+@sumbydlg!Means and SDs by group@
+@listdlg!List data@

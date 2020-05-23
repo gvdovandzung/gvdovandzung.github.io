@@ -1,0 +1,86 @@
+.-
+help for ^Sign test^                        Menu: Statistics--Nonparametric tests
+.-
+
+^Description of the test^
+^-----------------------^
+
+This command is a nonparametric version of the paired t test.
+
+It tests the null hypothesis Ho that the median difference of two
+"paired" random variables X1 and X2 is zero; i.e.,
+
+	Ho: median(X1 - X2) = 0.
+
+It makes no further assumptions about the distribution of Y = X1 - X2.
+
+The test statistic is the number n+ of observations for which
+Y = X1 - X2 is greater than zero.  Under the null hypothesis, n+ has
+a Binomial(n, p = 1/2) distribution, where n is the sample size.
+
+
+^Zeros^
+^-----^
+
+If Y = X1 - X2 is exactly zero for some observations, then these
+observations are omitted from the sample.
+
+
+^Example (how your data should be arranged)^
+^------------------------------------------^
+
+We have 15 subjects, and we wish to test the effectiveness of a low-fat diet
+on weight loss.  The weight of each subject is measured before the study, 
+and again after being on the diet for one year.
+ 
+We enter the "before" and "after" weights into the computer using the ^Editor^
+and name the variables ^bweight^ and ^aweight^.
+@input_sq!(Click here for help on inputting data.)@ 
+
+After we enter the data, we list them by selecting ^List data^ under the
+^Summaries^ menu:
+
+. list subject bweight aweight in 1/15                                          
+                                                                                
+      subject    bweight    aweight                                             
+  1.        1        181        173                                             
+  2.        2        183        169                                             
+  3.        3        245        217                                             
+  4.        4        196        211                                             
+  5.        5        214        187                                             
+  6.        6        150        138                                             
+  7.        7        217        203                                             
+  8.        8        172        155                                             
+  9.        9        187        197                                             
+ 10.       10        157        171                                             
+ 11.       11        168        173                                             
+ 12.       12        137        135                                             
+ 13.       13        162        151                                             
+ 14.       14        174        123                                             
+ 15.       15        199        190                                             
+                                                                                
+^IMPORTANT:^ ^bweight^ and ^aweight^ must be entered so that each observation
+(i.e., each row) corresponds to the same subject.
+(We added the ^subject^ variable to emphasize this -- it is not needed for the
+command.)  
+
+To run the command, we enter ^bweight^ for "Data variable #1" and ^aweight^ for 
+"Data variable #2" in the dialog box.
+
+                      
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@ptt1dlg!1-sample t test@
+@ptt2dlg!2-sample t test@
+@ptt2pdlg!Paired t test@
+@onewdlg!One-way ANOVA (for testing equality of means for more than 2 groups)@ 
+
+@srandlg!Wilcoxon signed-rank test (nonparametric equivalent of paired t test)@
+@rsumdlg!Mann-Whitney (Wilcoxon rank-sum) test (nonparametric equivalent of@
+	@rsumdlg!2-sample t test)@
+@kwaldlg!Kruskal-Wallis test (nonparametric one-way ANOVA)@
+
+@signtest!For the command-line version, see help for signtest.@

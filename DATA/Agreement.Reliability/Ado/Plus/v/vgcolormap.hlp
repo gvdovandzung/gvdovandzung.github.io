@@ -1,0 +1,35 @@
+{smcl}
+{* 21Jan2004}{...}
+{hline}
+help for {hi:vgcolormap}
+{hline}
+
+{title:Display map of Stata colors}
+
+{p 8 16 2}
+{cmd:vgcolormap}
+
+{title:Description}
+
+{p 4 4 2}
+{cmd:vgcolormap} produces a graph showing many of the colors listed available in Stata
+via {it:{help colorstyle}}. 
+Each color is shown as a marker with a corresponding label showing the name of 
+the color.  This is to help you select colors when making graphs. In addition
+to the colors shown here, it is also possible to blend your own colors
+using a mixture of Red, Blue, and Green, see {it:{help colorstyle}}
+
+{title:Remarks}
+
+{p 4 4 2}
+The {cmd:vgcolormap} command is merely for seeing a list of colors.  It is 
+based on the {cmd:palette} command, see {it:{help palette}} for more 
+information.
+
+{title:Also see}
+
+    Manual:  {hi:[G] palette}
+
+{p 4 13 2}
+Online:  help for {help graph}, {help palette}, {help colorstyle}
+

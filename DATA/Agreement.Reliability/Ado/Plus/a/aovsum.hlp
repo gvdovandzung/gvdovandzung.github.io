@@ -1,0 +1,90 @@
+.-
+help for ^aovsum^                                                 (STB-54: sg132)
+.-
+
+One-way analysis of variance from summary statistics
+----------------------------------------------------
+
+   ^aovsum, n(^nlist^) m^ean^(^mlist^) { sd(^sdlist^)^|^se(^selist^)^ }
+           [ ^k^eep ^nam^es^(^yname [grpname [freqname]]^)^  onewayopts ]
+
+   ^aovsum^ ^?^
+
+
+Description
+-----------
+
+^aovsum^ performs a one-way analysis of variance from the size (^n^), mean (^M^), and
+standard deviation [or, standard error] (^s^) of each of a series of independent
+groups of observations.  (Data are often summarized by those quantities in aca-
+demic and scientific writing.)  This is done by synthesizing a data set having
+the correct ^n^, ^M^, and ^s^ within each group.  The synthetic data can be retained
+and used to perform a variety of other analyses that, like the analysis of var-
+iance, depend on the data only through ^n^, ^M^, and ^s^.
+
+In the first syntax, n() and mean() are required; exactly one of sd() or se()
+also must be given.  The three argument lists must contain the same number of
+values.  The second syntax produces a terse reminder of the first syntax.
+
+
+Options
+-------
+
+^n(^nlist^)^ provides a list of positive integers, the sample sizes (^n^'s) for the
+    groups or factor levels, one per group.
+
+^mean(^mlist^)^ provides a list of group means (^M^'s), one per group, in the same
+    order as given in ^n()^.
+
+^sd(^sdlist^)^ provides a list of group standard deviations (^s^'s), one per group,
+    in the same order as given in ^n()^.
+
+^se(^selist^)^ is an alternative to ^sd()^, whose elements consist of group standard
+    errors, ^s^/sqrt(^n^).
+
+^onewayopts^ is any collection of options for the @oneway@ command; ^aovsum^ invokes
+    ^oneway^ to perform a one-way ANOVA on the synthetic data.
+
+^keep^ retains the synthetic data created from ^n^, ^M^, and ^s^.  The data consist of
+    a response variable, a group variable (factor), and a frequency count that
+    serves as an @fweight@. Their default names are ^y_^, ^cond_^, and ^freq_^, respec-
+    tively; the data are placed in observations 1..2K where K is the number of
+    groups (factor levels).  By default, those variables are deleted at exit.
+
+^names(^namelist^)^ provides alternative names for the synthetic data. Its argument
+    is a list of (up to) three variable names to be used in place of ^y_^, ^cond_^,
+    and ^freq_^, in that order.
+
+
+Examples
+--------
+
+ . ^aovsum, n(23 12 14 19) m(11.5 23.0 29.8 38.4) sd(2.11 4.07 3.43 4.62)^
+   (One-way ANOVA with four groups)
+
+ . ^aovsum, n(23 12 14 19) m(11.5 23.0 29.8 38.4) sd(2.11 4.07 3.43 4.62)^
+           ^keep name(wloss dose)^
+   (Same as above, but retain the synthetic data as observations 1..8 of
+   new variables named wloss, dose, and freq_)
+
+ . ^anova wloss dose [fw=freq_]^
+   (Duplicate last ANOVA using @anova@ rather than @oneway@)
+
+ . ^gen byte Dose = dose^        (duplicate the factor)
+ . ^anova wloss dose Dose [fw=freq_], cont(dose) seq^
+   (Test for linear trend in dose, and for deviations from linear trend)
+
+
+Author
+------
+   John R. Gleason, Syracuse University, Syracuse NY, USA
+   (loesljrg@@accucom.net)    [This is Version 1.1.1 (27Sep1999).]
+
+
+Also see
+--------
+
+ Manual:   ^[U] 14.1.6 weight^
+           ^[R] anova^
+           ^[R] oneway^
+ On-line:  help for @anova@, @fweight@, @oneway@

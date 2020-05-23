@@ -1,0 +1,1504 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}D:\DATA\bang huyet sau sinh.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}19 Oct 2011, 13:10:02
+{txt}
+{com}. 
+. foreach var1 of varlist tuoi hemoglobin kcsinh {c -(}
+{txt}  2{com}. zqnttest `var1', by(nhanhct)
+{txt}  3{com}. {c )-}
+==============================================================================
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+        tuoi {c |}{res}      1620    23.25247     3.19799         15         34
+==============================================================================
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+ Placebo {c |}{res}{col 12}    808{col 22} 23.21535{col 34} .1092491{col 46} 3.105443{col 58}  23.0009{col 70} 23.42979
+{txt}Misopros {c |}{res}{col 12}    812{col 22} 23.28941{col 34} .1154211{col 46} 3.288996{col 58} 23.06285{col 70} 23.51597
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}   1620{col 22} 23.25247{col 34} .0794547{col 46}  3.19799{col 58} 23.09662{col 70} 23.40831
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.0740623{col 34} .1589483{col 58}-.3858285{col 70} .2377039
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}Placebo{txt}) - mean({res}Misopros{txt})                         t = {res} -0.4660
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1618
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.3207         {txt}Pr(|T| > |t|) = {res}0.6413          {txt}Pr(T > t) = {res}0.6793
+==============================================================================
+==============================================================================
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+  hemoglobin {c |}{res}      1620    95.89568    8.913882         63        123
+==============================================================================
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+ Placebo {c |}{res}{col 12}    808{col 22} 95.86015{col 34} .3140759{col 46} 8.927714{col 58} 95.24365{col 70} 96.47665
+{txt}Misopros {c |}{res}{col 12}    812{col 22} 95.93103{col 34} .3125203{col 46} 8.905459{col 58} 95.31759{col 70} 96.54448
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}   1620{col 22} 95.89568{col 34} .2214672{col 46} 8.913882{col 58} 95.46129{col 70} 96.33007
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} -.070886{col 34} .4430691{col 58}-.9399355{col 70} .7981636
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}Placebo{txt}) - mean({res}Misopros{txt})                         t = {res} -0.1600
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1618
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.4365         {txt}Pr(|T| > |t|) = {res}0.8729          {txt}Pr(T > t) = {res}0.5635
+==============================================================================
+==============================================================================
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+      kcsinh {c |}{res}      1147    2.813426     1.33423          2         15
+==============================================================================
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+ Placebo {c |}{res}{col 12}    583{col 22} 2.795883{col 34} .0571628{col 46} 1.380217{col 58} 2.683613{col 70} 2.908154
+{txt}Misopros {c |}{res}{col 12}    564{col 22}  2.83156{col 34} .0541478{col 46} 1.285939{col 58} 2.725204{col 70} 2.937917
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}   1147{col 22} 2.813426{col 34} .0393957{col 46}  1.33423{col 58} 2.736131{col 70} 2.890722
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-.0356769{col 34} .0788296{col 58}-.1903435{col 70} .1189897
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}Placebo{txt}) - mean({res}Misopros{txt})                         t = {res} -0.4526
+{txt}Ho: diff = 0                                     degrees of freedom = {res}    1145
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.3255         {txt}Pr(|T| > |t|) = {res}0.6509          {txt}Pr(T > t) = {res}0.6745
+==============================================================================
+{txt}
+{com}. 
+. foreach var1 of varlist  tienthai bietchu khamthai sinhtainha sinhnon rachsinhmon gioi tlsosinh{c -(}
+{txt}  2{com}. tab `var1' nhanhct, col chi
+{txt}  3{com}. {c )-}
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+              {c |} Nhanh Misoprostol vs
+ tien can san {c |}     nhanh Placebo
+         khoa {c |}   Placebo  Misoprost {c |}     Total
+{hline 14}{c +}{hline 22}{c +}{hline 10}
+  Sinh con so {c |}{res}       225        248 {txt}{c |}{res}       473 
+              {txt}{c |}{res}     27.85      30.54 {txt}{c |}{res}     29.20 
+{txt}{hline 14}{c +}{hline 22}{c +}{hline 10}
+Da co 1-2 con {c |}{res}       496        472 {txt}{c |}{res}       968 
+              {txt}{c |}{res}     61.39      58.13 {txt}{c |}{res}     59.75 
+{txt}{hline 14}{c +}{hline 22}{c +}{hline 10}
+   Co >=3 con {c |}{res}        87         92 {txt}{c |}{res}       179 
+              {txt}{c |}{res}     10.77      11.33 {txt}{c |}{res}     11.05 
+{txt}{hline 14}{c +}{hline 22}{c +}{hline 10}
+        Total {c |}{res}       808        812 {txt}{c |}{res}     1,620 
+              {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}2{txt}) = {res}  1.8432  {txt} Pr = {res}0.398
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |} Nhanh Misoprostol vs
+  biet doc {c |}     nhanh Placebo
+ biet viet {c |}   Placebo  Misoprost {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+    Mu chu {c |}{res}       297        301 {txt}{c |}{res}       598 
+           {txt}{c |}{res}     36.76      37.07 {txt}{c |}{res}     36.91 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+ Co di hoc {c |}{res}       511        511 {txt}{c |}{res}     1,022 
+           {txt}{c |}{res}     63.24      62.93 {txt}{c |}{res}     63.09 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       808        812 {txt}{c |}{res}     1,620 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.0169  {txt} Pr = {res}0.897
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+                  {c |} Nhanh Misoprostol vs
+                  {c |}     nhanh Placebo
+ so lan kham thai {c |}   Placebo  Misoprost {c |}     Total
+{hline 18}{c +}{hline 22}{c +}{hline 10}
+ <3 lan kham thai {c |}{res}        92        100 {txt}{c |}{res}       192 
+                  {txt}{c |}{res}     11.39      12.32 {txt}{c |}{res}     11.85 
+{txt}{hline 18}{c +}{hline 22}{c +}{hline 10}
+>=3 lan kham thai {c |}{res}       716        712 {txt}{c |}{res}     1,428 
+                  {txt}{c |}{res}     88.61      87.68 {txt}{c |}{res}     88.15 
+{txt}{hline 18}{c +}{hline 22}{c +}{hline 10}
+            Total {c |}{res}       808        812 {txt}{c |}{res}     1,620 
+                  {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.3347  {txt} Pr = {res}0.563
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+                  {c |} Nhanh Misoprostol vs
+                  {c |}     nhanh Placebo
+     sinh tai nha {c |}   Placebo  Misoprost {c |}     Total
+{hline 18}{c +}{hline 22}{c +}{hline 10}
+Sinh con tai tram {c |}{res}       443        432 {txt}{c |}{res}       875 
+                  {txt}{c |}{res}     54.83      53.20 {txt}{c |}{res}     54.01 
+{txt}{hline 18}{c +}{hline 22}{c +}{hline 10}
+   Sinh con o nha {c |}{res}       365        380 {txt}{c |}{res}       745 
+                  {txt}{c |}{res}     45.17      46.80 {txt}{c |}{res}     45.99 
+{txt}{hline 18}{c +}{hline 22}{c +}{hline 10}
+            Total {c |}{res}       808        812 {txt}{c |}{res}     1,620 
+                  {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.4304  {txt} Pr = {res}0.512
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+sinh non vs {c |} Nhanh Misoprostol vs
+    sinh du {c |}     nhanh Placebo
+      thang {c |}   Placebo  Misoprost {c |}     Total
+{hline 12}{c +}{hline 22}{c +}{hline 10}
+   Du thang {c |}{res}       627        639 {txt}{c |}{res}     1,266 
+            {txt}{c |}{res}     77.60      78.69 {txt}{c |}{res}     78.15 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+Thieu thang {c |}{res}       181        173 {txt}{c |}{res}       354 
+            {txt}{c |}{res}     22.40      21.31 {txt}{c |}{res}     21.85 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+      Total {c |}{res}       808        812 {txt}{c |}{res}     1,620 
+            {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.2847  {txt} Pr = {res}0.594
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |} Nhanh Misoprostol vs
+ rach tang {c |}     nhanh Placebo
+  sinh mon {c |}   Placebo  Misoprost {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Khong {c |}{res}       724        733 {txt}{c |}{res}     1,457 
+           {txt}{c |}{res}     89.60      90.27 {txt}{c |}{res}     89.94 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+        Co {c |}{res}        84         79 {txt}{c |}{res}       163 
+           {txt}{c |}{res}     10.40       9.73 {txt}{c |}{res}     10.06 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       808        812 {txt}{c |}{res}     1,620 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.1991  {txt} Pr = {res}0.655
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |} Nhanh Misoprostol vs
+           {c |}     nhanh Placebo
+      gioi {c |}   Placebo  Misoprost {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+        Nu {c |}{res}       414        379 {txt}{c |}{res}       793 
+           {txt}{c |}{res}     51.24      46.67 {txt}{c |}{res}     48.95 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+       Nam {c |}{res}       394        433 {txt}{c |}{res}       827 
+           {txt}{c |}{res}     48.76      53.33 {txt}{c |}{res}     51.05 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       808        812 {txt}{c |}{res}     1,620 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  3.3741  {txt} Pr = {res}0.066
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+            {c |} Nhanh Misoprostol vs
+trong luong {c |}     nhanh Placebo
+    so sinh {c |}   Placebo  Misoprost {c |}     Total
+{hline 12}{c +}{hline 22}{c +}{hline 10}
+    <1500 g {c |}{res}         1          0 {txt}{c |}{res}         1 
+            {txt}{c |}{res}      0.12       0.00 {txt}{c |}{res}      0.06 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+1500-1999 g {c |}{res}         4         10 {txt}{c |}{res}        14 
+            {txt}{c |}{res}      0.50       1.23 {txt}{c |}{res}      0.86 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+2000-2499 g {c |}{res}       116        103 {txt}{c |}{res}       219 
+            {txt}{c |}{res}     14.36      12.68 {txt}{c |}{res}     13.52 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+3000-3499 g {c |}{res}       638        659 {txt}{c |}{res}     1,297 
+            {txt}{c |}{res}     78.96      81.16 {txt}{c |}{res}     80.06 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+    >3500 g {c |}{res}        49         40 {txt}{c |}{res}        89 
+            {txt}{c |}{res}      6.06       4.93 {txt}{c |}{res}      5.49 
+{txt}{hline 12}{c +}{hline 22}{c +}{hline 10}
+      Total {c |}{res}       808        812 {txt}{c |}{res}     1,620 
+            {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}4{txt}) = {res}  5.5834  {txt} Pr = {res}0.232
+{txt}
+{com}. 
+. foreach var1 of varlist  bhss bhssnang {c -(}
+{txt}  2{com}. cs  `var1' nhanhct
+{txt}  3{com}. {c )-}
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}       52          97{txt}  {c |}  {res}      149
+        {txt}Noncases {c |} {res}      760         711{txt}  {c |}  {res}     1471
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0640394    .1200495{txt}  {c |}  {res} .0919753
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0560101{txt}{col 43}{c |}   {res}-.0840421   -.0279781{txt} 
+      Risk ratio {c |} {res}{col 27} .5334417{txt}{col 43}{c |}   {res} .3863997    .7364396{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .4665583{txt}{col 43}{c |}   {res} .2635604    .6136003{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .2338552{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 22}          chi2(1) ={res}    15.21{txt}  Pr>chi2 ={res} 0.0001
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        2          10{txt}  {c |}  {res}       12
+        {txt}Noncases {c |} {res}      810         798{txt}  {c |}  {res}     1608
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0024631    .0123762{txt}  {c |}  {res} .0074074
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0099132{txt}{col 43}{c |}   {res} -.018264   -.0015624{txt} 
+      Risk ratio {c |} {res}{col 27} .1990148{txt}{col 43}{c |}   {res} .0437427    .9054514{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .8009852{txt}{col 43}{c |}   {res} .0945486    .9562573{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .4014815{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 22}          chi2(1) ={res}     5.41{txt}  Pr>chi2 ={res} 0.0200
+{txt}
+{com}. 
+. 
+. 
+{txt}end of do-file
+
+{com}. do "C:\Users\Dzung\AppData\Local\Temp\STD07000000.tmp"
+{txt}
+{com}. 
+. foreach var1 of varlist  bhss bhssnang {c -(}
+{txt}  2{com}. cs  `var1' nhanhct
+{txt}  3{com}. {c )-}
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}       52          97{txt}  {c |}  {res}      149
+        {txt}Noncases {c |} {res}      760         711{txt}  {c |}  {res}     1471
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0640394    .1200495{txt}  {c |}  {res} .0919753
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0560101{txt}{col 43}{c |}   {res}-.0840421   -.0279781{txt} 
+      Risk ratio {c |} {res}{col 27} .5334417{txt}{col 43}{c |}   {res} .3863997    .7364396{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .4665583{txt}{col 43}{c |}   {res} .2635604    .6136003{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .2338552{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 22}          chi2(1) ={res}    15.21{txt}  Pr>chi2 ={res} 0.0001
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        2          10{txt}  {c |}  {res}       12
+        {txt}Noncases {c |} {res}      810         798{txt}  {c |}  {res}     1608
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0024631    .0123762{txt}  {c |}  {res} .0074074
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0099132{txt}{col 43}{c |}   {res} -.018264   -.0015624{txt} 
+      Risk ratio {c |} {res}{col 27} .1990148{txt}{col 43}{c |}   {res} .0437427    .9054514{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .8009852{txt}{col 43}{c |}   {res} .0945486    .9562573{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .4014815{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 22}          chi2(1) ={res}     5.41{txt}  Pr>chi2 ={res} 0.0200
+{txt}
+{com}. 
+. 
+. 
+{txt}end of do-file
+
+{com}. graph box maumat, by(nhanhct)
+{res}
+{com}. cs bhssnang nhanhct, exact
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}        2          10{txt}  {c |}  {res}       12
+        {txt}Noncases {c |} {res}      810         798{txt}  {c |}  {res}     1608
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0024631    .0123762{txt}  {c |}  {res} .0074074
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0099132{txt}{col 43}{c |}   {res} -.018264   -.0015624{txt} 
+      Risk ratio {c |} {res}{col 27} .1990148{txt}{col 43}{c |}   {res} .0437427    .9054514{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .8009852{txt}{col 43}{c |}   {res} .0945486    .9562573{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .4014815{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 35}1-sided Fisher's exact P ={res} 0.0185
+{txt}{col 35}2-sided Fisher's exact P ={res} 0.0217
+
+{com}. use "D:\DATA\chilumba3.dta", clear
+{txt}(Leprosy and BCG vaccination)
+
+{com}. describe
+
+{txt}Contains data from {res}D:\DATA\chilumba3.dta
+{txt}  obs:{res}         1,260                          Leprosy and BCG vaccination
+{txt} vars:{res}             8                          11 Nov 2009 22:31
+{txt} size:{res}        22,680{txt} (99.8% of memory free)
+{hline 79}
+              storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}id             {txt} float  %9.0g                  {res}Identity number
+caco           {txt} byte   %8.0g       caco       {res}Case of Leprosy or  Control
+agegroup       {txt} float  %18.0g      agegroup   {res}Age group of patient
+sex            {txt} byte   %8.0g       sex        {res}0=male, 1=female
+bcgscar        {txt} byte   %8.0g       cokhong    {res}0=no, 1=yes
+school         {txt} byte   %13.0g      school     {res}Duration of schooling
+mbcont         {txt} byte   %8.0g       cokhong    {res}Contact with MB case
+pbcont         {txt} byte   %8.0g       cokhong    {res}Contact with PB case
+{txt}{hline 79}
+Sorted by:  
+
+{com}. tab  caco bcgscar, row chi
+{txt}
+{c TLC}{hline 16}{c TRC}
+{c |} Key{col 18}{c |}
+{c LT}{hline 16}{c RT}
+{c |}{space 3}{it:frequency}{col 18}{c |}
+{c |}{space 1}{it:row percentage}{col 18}{c |}
+{c BLC}{hline 16}{c BRC}
+
+   Case of {c |}
+Leprosy or {c |}      0=no, 1=yes
+   Control {c |}     khong         co {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+   Control {c |}{res}       534        474 {txt}{c |}{res}     1,008 
+           {txt}{c |}{res}     52.98      47.02 {txt}{c |}{res}    100.00 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+   Leprosy {c |}{res}       210         42 {txt}{c |}{res}       252 
+           {txt}{c |}{res}     83.33      16.67 {txt}{c |}{res}    100.00 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       744        516 {txt}{c |}{res}     1,260 
+           {txt}{c |}{res}     59.05      40.95 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res} 76.8300  {txt} Pr = {res}0.000
+
+{com}. di 534*42/(474*210)
+{res}.22531646
+
+{com}. exp(1.96*sqrt(1/534+1/474+1/210+1/42))
+{err}unrecognized command:  exp
+{txt}{search r(199):r(199);}
+
+{com}. di exp(1.96*sqrt(1/534+1/474+1/210+1/42))
+{res}1.4242371
+
+{com}. di .22531646 * 1.4242371
+{res}.32090406
+
+{com}. di .22531646 / 1.4242371
+{res}.15820151
+
+{com}. cc caco bcgscar
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{com}. cc caco bcgscar, woolf
+
+{col 18}{txt}{c |} 0=no, 1=yes{col 43}{c |}             Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c |}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1582025     .320902{txt} (Woolf)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res}  .679098    .8417975{txt} (Woolf)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 22}          chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{com}. tab1  agegroup
+
+{res}-> tabulation of agegroup  
+
+      {txt}Age group of {c |}
+           patient {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+tre em; thanh nien {c |}{res}        529       41.98       41.98
+{txt}         nguoi lon {c |}{res}        731       58.02      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}      1,260      100.00
+
+{com}. tab1  agegroup, nol
+
+{res}-> tabulation of agegroup  
+
+  {txt}Age group {c |}
+ of patient {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        529       41.98       41.98
+{txt}          1 {c |}{res}        731       58.02      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      1,260      100.00
+
+{com}. cc caco bcgscar, by(agegroup)
+
+{txt}Age group of pat {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+tre em; thanh ni {c |}  {res} .4574437      .2525757   .8150305     19.38941{txt} (exact)
+       nguoi lon {c |}  {res} .1737757      .0992072   .2909204     49.35841{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2537805      .1766689   .3645493{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    6.63{txt}  Pr>chi2 = {res}0.0101
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     59.84
+                                                {txt}Pr>chi2 ={res}    0.0000
+
+{com}. zcc caco bcgscar, by(agegroup)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Age group of pat {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+tre em; thanh ni {c |}  {res} .4574437      .2525757   .8150305     19.38941{txt} (exact)
+       nguoi lon {c |}  {res} .1737757      .0992072   .2909204     49.35841{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2537805      .1766689   .3645493{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    6.63{txt}  Pr>chi2 = {res}0.0101
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     59.84
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien agegroup co tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so agegroup  =0.89
+       Chenh lech giua OR tho va OR hieu chinh cho bien so agegroup  =-11.2%
+Bien agegroup co gay nhieu len moi quan he giua bien bcgscar va bien caco
+
+{com}. zcc caco bcgscar, by(sex)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}0=male, 1=female {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+             nam {c |}  {res} .2669118      .1534245   .4505235     33.34501{txt} (exact)
+              nu {c |}  {res} .1975228      .1135363   .3299594      44.5283{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2272349      .1593445   .3240505{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    0.69{txt}  Pr>chi2 = {res}0.4060
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     75.05
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien sex khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so sex  =0.99
+       Chenh lech giua OR tho va OR hieu chinh cho bien so sex  =-0.8%
+Bien sex khong gay nhieu len moi quan he giua bien bcgscar va bien caco
+
+{com}. zcc caco bcgscar, by(schoo;)
+{err}; invalid name
+in option by()
+{txt}{search r(198):r(198);}
+
+{com}. zcc caco bcgscar, by(school)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Duration of scho {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+           khong {c |}  {res} .2233766      .0747423   .5612751     13.48249{txt} (exact)
+         1-3 nam {c |}  {res} .3300095      .1964685   .5399023     33.58852{txt} (exact)
+         4-6 nam {c |}  {res} .1662246      .0628698    .399011     14.98013{txt} (exact)
+   7 nam tro len {c |}  {res}        .             0          .            0{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2736061      .1887176    .396679{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}3{txt}) = {res}    4.50{txt}  Pr>chi2 = {res}0.2120
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     51.74
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien school khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so school  =0.82
+       Chenh lech giua OR tho va OR hieu chinh cho bien so school  =-17.6%
+Bien school co gay nhieu len moi quan he giua bien bcgscar va bien caco
+
+{com}. zcc caco bcgscar, by(mbcont)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Contact with MB  {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+           khong {c |}  {res} .2302029      .1569272   .3319636     76.18644{txt} (exact)
+              co {c |}  {res} .0634921      .0012718   .8705853            3{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res}  .223887      .1571883   .3188875{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    1.08{txt}  Pr>chi2 = {res}0.2989
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     77.59
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien mbcont khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so mbcont  =1.01
+       Chenh lech giua OR tho va OR hieu chinh cho bien so mbcont  =0.6%
+Bien mbcont khong gay nhieu len moi quan he giua bien bcgscar va bien caco
+
+{com}. zcc caco bcgscar, by(pbcont)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Contact with PB  {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+           khong {c |}  {res} .2086383      .1355792   .3135481     66.84177{txt} (exact)
+              co {c |}  {res} .2749868      .1102791    .647622     12.27922{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2189352      .1532658   .3127419{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    0.37{txt}  Pr>chi2 = {res}0.5454
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     78.55
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien pbcont khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so pbcont  =1.03
+       Chenh lech giua OR tho va OR hieu chinh cho bien so pbcont  =2.9%
+Bien pbcont khong gay nhieu len moi quan he giua bien bcgscar va bien caco
+
+{com}. logistic caco bcgscar agegroup sex school mbcont pbcont
+
+{txt}Logistic regression                               Number of obs   = {res}      1209
+                                                  {txt}LR chi2({res}6{txt})      = {res}    126.93
+                                                  {txt}Prob > chi2     = {res}    0.0000
+{txt}Log likelihood = {res}-529.11851                       {txt}Pseudo R2       = {res}    0.1071
+
+{txt}{hline 13}{c TT}{hline 64}
+        caco {c |} Odds Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+{hline 13}{c +}{hline 64}
+     bcgscar {c |}  {res}  .300704   .0587719    -6.15   0.000     .2050095     .441067
+    {txt}agegroup {c |}  {res} 2.117911   .3665104     4.34   0.000     1.508707    2.973107
+         {txt}sex {c |}  {res} .9989562   .1637843    -0.01   0.995     .7244148    1.377544
+      {txt}school {c |}  {res}  .640891   .0740356    -3.85   0.000     .5110385    .8037385
+      {txt}mbcont {c |}  {res} 3.008224   1.578978     2.10   0.036     1.075289    8.415791
+      {txt}pbcont {c |}  {res} 1.794842    .399471     2.63   0.009     1.160319    2.776354
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. do "C:\Users\Dzung\AppData\Local\Temp\STD07000000.tmp"
+{txt}
+{com}. use "D:\DATA\chilumba3.dta", clear
+{txt}(Leprosy and BCG vaccination)
+
+{com}. describe
+
+{txt}Contains data from {res}D:\DATA\chilumba3.dta
+{txt}  obs:{res}         1,260                          Leprosy and BCG vaccination
+{txt} vars:{res}             8                          11 Nov 2009 22:31
+{txt} size:{res}        22,680{txt} (99.8% of memory free)
+{hline 79}
+              storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}id             {txt} float  %9.0g                  {res}Identity number
+caco           {txt} byte   %8.0g       caco       {res}Case of Leprosy or  Control
+agegroup       {txt} float  %18.0g      agegroup   {res}Age group of patient
+sex            {txt} byte   %8.0g       sex        {res}0=male, 1=female
+bcgscar        {txt} byte   %8.0g       cokhong    {res}0=no, 1=yes
+school         {txt} byte   %13.0g      school     {res}Duration of schooling
+mbcont         {txt} byte   %8.0g       cokhong    {res}Contact with MB case
+pbcont         {txt} byte   %8.0g       cokhong    {res}Contact with PB case
+{txt}{hline 79}
+Sorted by:  
+
+{com}. cc caco bcgscar
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+{txt}
+{com}. zcc caco bcgscar, by(agegroup)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Age group of pat {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+tre em; thanh ni {c |}  {res} .4574437      .2525757   .8150305     19.38941{txt} (exact)
+       nguoi lon {c |}  {res} .1737757      .0992072   .2909204     49.35841{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2537805      .1766689   .3645493{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    6.63{txt}  Pr>chi2 = {res}0.0101
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     59.84
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien agegroup co tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so agegroup  =0.89
+       Chenh lech giua OR tho va OR hieu chinh cho bien so agegroup  =-11.2%
+Bien agegroup co gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. zcc caco bcgscar, by(sex)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}0=male, 1=female {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+             nam {c |}  {res} .2669118      .1534245   .4505235     33.34501{txt} (exact)
+              nu {c |}  {res} .1975228      .1135363   .3299594      44.5283{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2272349      .1593445   .3240505{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    0.69{txt}  Pr>chi2 = {res}0.4060
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     75.05
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien sex khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so sex  =0.99
+       Chenh lech giua OR tho va OR hieu chinh cho bien so sex  =-0.8%
+Bien sex khong gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. zcc caco bcgscar, by(school)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Duration of scho {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+           khong {c |}  {res} .2233766      .0747423   .5612751     13.48249{txt} (exact)
+         1-3 nam {c |}  {res} .3300095      .1964685   .5399023     33.58852{txt} (exact)
+         4-6 nam {c |}  {res} .1662246      .0628698    .399011     14.98013{txt} (exact)
+   7 nam tro len {c |}  {res}        .             0          .            0{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2736061      .1887176    .396679{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}3{txt}) = {res}    4.50{txt}  Pr>chi2 = {res}0.2120
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     51.74
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien school khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so school  =0.82
+       Chenh lech giua OR tho va OR hieu chinh cho bien so school  =-17.6%
+Bien school co gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. zcc caco bcgscar, by(mbcont)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Contact with MB  {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+           khong {c |}  {res} .2302029      .1569272   .3319636     76.18644{txt} (exact)
+              co {c |}  {res} .0634921      .0012718   .8705853            3{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res}  .223887      .1571883   .3188875{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    1.08{txt}  Pr>chi2 = {res}0.2989
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     77.59
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien mbcont khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so mbcont  =1.01
+       Chenh lech giua OR tho va OR hieu chinh cho bien so mbcont  =0.6%
+Bien mbcont khong gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. zcc caco bcgscar, by(pbcont)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Contact with PB  {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+           khong {c |}  {res} .2086383      .1355792   .3135481     66.84177{txt} (exact)
+              co {c |}  {res} .2749868      .1102791    .647622     12.27922{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2189352      .1532658   .3127419{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    0.37{txt}  Pr>chi2 = {res}0.5454
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     78.55
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien pbcont khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so pbcont  =1.03
+       Chenh lech giua OR tho va OR hieu chinh cho bien so pbcont  =2.9%
+Bien pbcont khong gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. logistic caco bcgscar agegroup sex school mbcont pbcont
+
+{txt}Logistic regression                               Number of obs   = {res}      1209
+                                                  {txt}LR chi2({res}6{txt})      = {res}    126.93
+                                                  {txt}Prob > chi2     = {res}    0.0000
+{txt}Log likelihood = {res}-529.11851                       {txt}Pseudo R2       = {res}    0.1071
+
+{txt}{hline 13}{c TT}{hline 64}
+        caco {c |} Odds Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+{hline 13}{c +}{hline 64}
+     bcgscar {c |}  {res}  .300704   .0587719    -6.15   0.000     .2050095     .441067
+    {txt}agegroup {c |}  {res} 2.117911   .3665104     4.34   0.000     1.508707    2.973107
+         {txt}sex {c |}  {res} .9989562   .1637843    -0.01   0.995     .7244148    1.377544
+      {txt}school {c |}  {res}  .640891   .0740356    -3.85   0.000     .5110385    .8037385
+      {txt}mbcont {c |}  {res} 3.008224   1.578978     2.10   0.036     1.075289    8.415791
+      {txt}pbcont {c |}  {res} 1.794842    .399471     2.63   0.009     1.160319    2.776354
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\Dzung\AppData\Local\Temp\STD07000000.tmp"
+{txt}
+{com}. use "D:\DATA\chilumba3.dta", clear
+{txt}(Leprosy and BCG vaccination)
+
+{com}. describe
+
+{txt}Contains data from {res}D:\DATA\chilumba3.dta
+{txt}  obs:{res}         1,260                          Leprosy and BCG vaccination
+{txt} vars:{res}             8                          11 Nov 2009 22:31
+{txt} size:{res}        22,680{txt} (99.8% of memory free)
+{hline 79}
+              storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}id             {txt} float  %9.0g                  {res}Identity number
+caco           {txt} byte   %8.0g       caco       {res}Case of Leprosy or  Control
+agegroup       {txt} float  %18.0g      agegroup   {res}Age group of patient
+sex            {txt} byte   %8.0g       sex        {res}0=male, 1=female
+bcgscar        {txt} byte   %8.0g       cokhong    {res}0=no, 1=yes
+school         {txt} byte   %13.0g      school     {res}Duration of schooling
+mbcont         {txt} byte   %8.0g       cokhong    {res}Contact with MB case
+pbcont         {txt} byte   %8.0g       cokhong    {res}Contact with PB case
+{txt}{hline 79}
+Sorted by:  
+
+{com}. cc caco bcgscar
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+{txt}
+{com}. zcc caco bcgscar, by(agegroup)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Age group of pat {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+tre em; thanh ni {c |}  {res} .4574437      .2525757   .8150305     19.38941{txt} (exact)
+       nguoi lon {c |}  {res} .1737757      .0992072   .2909204     49.35841{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2537805      .1766689   .3645493{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    6.63{txt}  Pr>chi2 = {res}0.0101
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     59.84
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien agegroup co tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so agegroup  =0.89
+       Chenh lech giua OR tho va OR hieu chinh cho bien so agegroup  =-11.2%
+Bien agegroup co gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. zcc caco bcgscar, by(sex)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}0=male, 1=female {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+             nam {c |}  {res} .2669118      .1534245   .4505235     33.34501{txt} (exact)
+              nu {c |}  {res} .1975228      .1135363   .3299594      44.5283{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2272349      .1593445   .3240505{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    0.69{txt}  Pr>chi2 = {res}0.4060
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     75.05
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien sex khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so sex  =0.99
+       Chenh lech giua OR tho va OR hieu chinh cho bien so sex  =-0.8%
+Bien sex khong gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. zcc caco bcgscar, by(school)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Duration of scho {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+           khong {c |}  {res} .2233766      .0747423   .5612751     13.48249{txt} (exact)
+         1-3 nam {c |}  {res} .3300095      .1964685   .5399023     33.58852{txt} (exact)
+         4-6 nam {c |}  {res} .1662246      .0628698    .399011     14.98013{txt} (exact)
+   7 nam tro len {c |}  {res}        .             0          .            0{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2736061      .1887176    .396679{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}3{txt}) = {res}    4.50{txt}  Pr>chi2 = {res}0.2120
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     51.74
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien school khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so school  =0.82
+       Chenh lech giua OR tho va OR hieu chinh cho bien so school  =-17.6%
+Bien school co gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. zcc caco bcgscar, by(mbcont)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Contact with MB  {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+           khong {c |}  {res} .2302029      .1569272   .3319636     76.18644{txt} (exact)
+              co {c |}  {res} .0634921      .0012718   .8705853            3{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res}  .223887      .1571883   .3188875{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    1.08{txt}  Pr>chi2 = {res}0.2989
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     77.59
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien mbcont khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so mbcont  =1.01
+       Chenh lech giua OR tho va OR hieu chinh cho bien so mbcont  =0.6%
+Bien mbcont khong gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. zcc caco bcgscar, by(pbcont)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Contact with PB  {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+           khong {c |}  {res} .2086383      .1355792   .3135481     66.84177{txt} (exact)
+              co {c |}  {res} .2749868      .1102791    .647622     12.27922{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2189352      .1532658   .3127419{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    0.37{txt}  Pr>chi2 = {res}0.5454
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     78.55
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien pbcont khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so pbcont  =1.03
+       Chenh lech giua OR tho va OR hieu chinh cho bien so pbcont  =2.9%
+Bien pbcont khong gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. logistic caco bcgscar agegroup sex school mbcont pbcont
+
+{txt}Logistic regression                               Number of obs   = {res}      1209
+                                                  {txt}LR chi2({res}6{txt})      = {res}    126.93
+                                                  {txt}Prob > chi2     = {res}    0.0000
+{txt}Log likelihood = {res}-529.11851                       {txt}Pseudo R2       = {res}    0.1071
+
+{txt}{hline 13}{c TT}{hline 64}
+        caco {c |} Odds Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+{hline 13}{c +}{hline 64}
+     bcgscar {c |}  {res}  .300704   .0587719    -6.15   0.000     .2050095     .441067
+    {txt}agegroup {c |}  {res} 2.117911   .3665104     4.34   0.000     1.508707    2.973107
+         {txt}sex {c |}  {res} .9989562   .1637843    -0.01   0.995     .7244148    1.377544
+      {txt}school {c |}  {res}  .640891   .0740356    -3.85   0.000     .5110385    .8037385
+      {txt}mbcont {c |}  {res} 3.008224   1.578978     2.10   0.036     1.075289    8.415791
+      {txt}pbcont {c |}  {res} 1.794842    .399471     2.63   0.009     1.160319    2.776354
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\Dzung\AppData\Local\Temp\STD07000000.tmp"
+{txt}
+{com}. use "D:\DATA\chilumba3.dta", clear
+{txt}(Leprosy and BCG vaccination)
+
+{com}. describe
+
+{txt}Contains data from {res}D:\DATA\chilumba3.dta
+{txt}  obs:{res}         1,260                          Leprosy and BCG vaccination
+{txt} vars:{res}             8                          11 Nov 2009 22:31
+{txt} size:{res}        22,680{txt} (99.8% of memory free)
+{hline 79}
+              storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}id             {txt} float  %9.0g                  {res}Identity number
+caco           {txt} byte   %8.0g       caco       {res}Case of Leprosy or  Control
+agegroup       {txt} float  %18.0g      agegroup   {res}Age group of patient
+sex            {txt} byte   %8.0g       sex        {res}0=male, 1=female
+bcgscar        {txt} byte   %8.0g       cokhong    {res}0=no, 1=yes
+school         {txt} byte   %13.0g      school     {res}Duration of schooling
+mbcont         {txt} byte   %8.0g       cokhong    {res}Contact with MB case
+pbcont         {txt} byte   %8.0g       cokhong    {res}Contact with PB case
+{txt}{hline 79}
+Sorted by:  
+
+{com}. cc caco bcgscar
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+{txt}
+{com}. zcc caco bcgscar, by(agegroup)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Age group of pat {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+tre em; thanh ni {c |}  {res} .4574437      .2525757   .8150305     19.38941{txt} (exact)
+       nguoi lon {c |}  {res} .1737757      .0992072   .2909204     49.35841{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2537805      .1766689   .3645493{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    6.63{txt}  Pr>chi2 = {res}0.0101
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     59.84
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien agegroup co tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so agegroup  =0.89
+       Chenh lech giua OR tho va OR hieu chinh cho bien so agegroup  =-11.2%
+Bien agegroup co gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. zcc caco bcgscar, by(sex)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}0=male, 1=female {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+             nam {c |}  {res} .2669118      .1534245   .4505235     33.34501{txt} (exact)
+              nu {c |}  {res} .1975228      .1135363   .3299594      44.5283{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2272349      .1593445   .3240505{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    0.69{txt}  Pr>chi2 = {res}0.4060
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     75.05
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien sex khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so sex  =0.99
+       Chenh lech giua OR tho va OR hieu chinh cho bien so sex  =-0.8%
+Bien sex khong gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. zcc caco bcgscar, by(school)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Duration of scho {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+           khong {c |}  {res} .2233766      .0747423   .5612751     13.48249{txt} (exact)
+         1-3 nam {c |}  {res} .3300095      .1964685   .5399023     33.58852{txt} (exact)
+         4-6 nam {c |}  {res} .1662246      .0628698    .399011     14.98013{txt} (exact)
+   7 nam tro len {c |}  {res}        .             0          .            0{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2736061      .1887176    .396679{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}3{txt}) = {res}    4.50{txt}  Pr>chi2 = {res}0.2120
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     51.74
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien school khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so school  =0.82
+       Chenh lech giua OR tho va OR hieu chinh cho bien so school  =-17.6%
+Bien school co gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. zcc caco bcgscar, by(mbcont)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Contact with MB  {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+           khong {c |}  {res} .2302029      .1569272   .3319636     76.18644{txt} (exact)
+              co {c |}  {res} .0634921      .0012718   .8705853            3{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res}  .223887      .1571883   .3188875{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    1.08{txt}  Pr>chi2 = {res}0.2989
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     77.59
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien mbcont khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so mbcont  =1.01
+       Chenh lech giua OR tho va OR hieu chinh cho bien so mbcont  =0.6%
+Bien mbcont khong gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. zcc caco bcgscar, by(pbcont)
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       42         210{txt}  {c |}  {res}      252       0.1667
+        {txt}Controls {c |} {res}      474         534{txt}  {c |}  {res}     1008       0.4702
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}      516         744{txt}  {c |}  {res}     1260       0.4095
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .2253165{txt}{col 43}{c |}   {res} .1543594    .3234627{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .7746835{txt}{col 43}{c |}   {res} .6765373    .8456406{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .3642857{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}    76.83{txt}  Pr>chi2 ={res} 0.0000
+
+{txt}Contact with PB  {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+           khong {c |}  {res} .2086383      .1355792   .3135481     66.84177{txt} (exact)
+              co {c |}  {res} .2749868      .1102791    .647622     12.27922{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .2253165      .1543594   .3234627{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .2189352      .1532658   .3127419{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    0.37{txt}  Pr>chi2 = {res}0.5454
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}     78.55
+                                                {txt}Pr>chi2 ={res}    0.0000
+Bien pbcont khong tuong tac len moi quan he giua bien bcgscar va bien caco
+       Ti so OR tho / OR hieu chinh cho bien so pbcont  =1.03
+       Chenh lech giua OR tho va OR hieu chinh cho bien so pbcont  =2.9%
+Bien pbcont khong gay nhieu len moi quan he giua bien bcgscar va bien caco
+{txt}
+{com}. logistic caco bcgscar agegroup sex school mbcont pbcont
+
+{txt}Logistic regression                               Number of obs   = {res}      1209
+                                                  {txt}LR chi2({res}6{txt})      = {res}    126.93
+                                                  {txt}Prob > chi2     = {res}    0.0000
+{txt}Log likelihood = {res}-529.11851                       {txt}Pseudo R2       = {res}    0.1071
+
+{txt}{hline 13}{c TT}{hline 64}
+        caco {c |} Odds Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+{hline 13}{c +}{hline 64}
+     bcgscar {c |}  {res}  .300704   .0587719    -6.15   0.000     .2050095     .441067
+    {txt}agegroup {c |}  {res} 2.117911   .3665104     4.34   0.000     1.508707    2.973107
+         {txt}sex {c |}  {res} .9989562   .1637843    -0.01   0.995     .7244148    1.377544
+      {txt}school {c |}  {res}  .640891   .0740356    -3.85   0.000     .5110385    .8037385
+      {txt}mbcont {c |}  {res} 3.008224   1.578978     2.10   0.036     1.075289    8.415791
+      {txt}pbcont {c |}  {res} 1.794842    .399471     2.63   0.009     1.160319    2.776354
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. 
+{txt}end of do-file
+
+{com}. use "D:\DATA\banghuyetss miso.dta"
+
+. cs bhss nhanhct, or exact
+
+{col 18}{txt}{c |} Nhanh Misoprostol vs{col 43}{c |}
+{col 18}{c |} nhanh Placebo{col 43}{c |}
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total
+{hline 17}{c +}{hline 24}{c +}{hline 12}
+           Cases {c |} {res}       52          97{txt}  {c |}  {res}      149
+        {txt}Noncases {c |} {res}      760         711{txt}  {c |}  {res}     1471
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 12}
+{col 12}Total {c |} {res}      812         808{txt}  {c |}  {res}     1620
+{txt}{col 18}{c |}{col 43}{c |}
+            Risk {c |} {res} .0640394    .1200495{txt}  {c |}  {res} .0919753
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+ Risk difference {c |} {res}{col 27}-.0560101{txt}{col 43}{c |}   {res}-.0840421   -.0279781{txt} 
+      Risk ratio {c |} {res}{col 27} .5334417{txt}{col 43}{c |}   {res} .3863997    .7364396{txt} 
+ Prev. frac. ex. {c |} {res}{col 27} .4665583{txt}{col 43}{c |}   {res} .2635604    .6136003{txt} 
+ Prev. frac. pop {c |} {res}{col 27} .2338552{txt}{col 43}{c |}
+      Odds ratio {c |} {res}{col 27} .5015193{txt}{col 43}{c |}   {res} .3532035    .7121575{txt} (Cornfield)
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+{col 35}1-sided Fisher's exact P ={res} 0.0001
+{txt}{col 35}2-sided Fisher's exact P ={res} 0.0001
+
+{com}. di 52/760
+{res}.06842105
+
+{com}. di 97/711
+{res}.13642757
+
+{com}. di .06842105/.13642757
+{res}.50151923
+
+{com}. di 0.6/1.6
+{res}.375
+
+{com}. exit, clear

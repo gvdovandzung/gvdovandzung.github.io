@@ -1,0 +1,217 @@
+{smcl}
+{* dec2003}{...}
+{hline}
+help for {hi:zanthro}, {hi:zbmicat}{right:(SJ4-1: dm0004)}
+{hline}
+
+
+{title:Extensions to generate: Standardizing anthropometric measures in children and adolescents}
+
+{p 8 17 2}{cmd:egen} [{it:type}] {it:newvar} {cmd:=}
+{cmd:zanthro}{cmd:(}{it:varname}{cmd:,}{it:chart}{cmd:,}{it:version}{cmd:)} 
+[{cmd:if} {it:exp}] [{cmd:in} {it:range}]{cmd:,} 
+{cmdab:x:var(}{it:varname}{cmd:)} {cmdab:gen:der(}{it:varname}{cmd:)}
+{cmdab:genc:ode(}{cmdab:m:ale=}{it:code}{cmd:,} {cmdab:f:emale=}{it:code}{cmd:)}
+[{cmdab:ageu:nit(}{it:unit}{cmd:)} {cmdab:noc:utoff}] 
+
+{p 8 17 2}{cmd:egen} [{it:type}] {it:newvar} {cmd:=}
+{cmd:zbmicat}{cmd:(}{it:varname}{cmd:)} [{cmd:if} {it:exp}] [{cmd:in} 
+{it:range}]{cmd:,} 
+{cmdab:x:var(}{it:varname}{cmd:)} {cmdab:gen:der(}{it:varname}{cmd:)} 
+{cmdab:genc:ode(}{cmdab:m:ale=}{it:code}{cmd:,} {cmdab:f:emale=}{it:code}{cmd:)}
+[{cmdab:ageu:nit(}{it:unit}{cmd:)}] 
+
+{p 4 4 2}{cmd:by} {it:...} {cmd::} cannot be used with either of these functions.
+
+
+{title:Description}
+
+{p 4 4 2}
+(This is the general specification copied from the help for {help egen}.)
+
+{p 4 4 2}
+{help egen} creates {it:newvar} of the optionally specified storage type equal to
+{it:fcn}{cmd:(}{it:stuff}{cmd:)}.  Depending on {it:fcn}{cmd:()}, {it:stuff}
+refers to an expression, {it:varlist}, or a {it:numlist} and the options are similarly function dependent.
+
+{p 4 4 2}
+Two additional functions for {help egen} have been developed.  The function 
+{hi:zanthro} allows transformation of child anthropometric data to z-scores 
+using the LMS method and the reference data available from the 2000 CDC 
+Growth Reference in the U.S. or the 1990 British Growth Reference.  The 
+function {hi:zbmicat} allows for children to be categorized according to 
+international cut-off points recommended by the Childhood Obesity Working 
+Group of the International Obesity Taskforce.
+
+
+{title:{cmd:egen} functions}
+
+{p 4 4 2}{hi:zanthro(}{it:varname}{cmd:,}{it:chart}{cmd:,}{it:version}{cmd:)}
+calculates z-scores for anthropometric measures in children and adolescents
+according to US or UK reference growth charts.  The three arguments are
+
+{p 8 12 2}{it:varname}{space 2}the variable name of the measure in your
+dataset for which z-scores are to be calculated (e.g., {cmd:height}, 
+{cmd:weight}, or {cmd:bmi}).
+
+{p 8 12 2}{it:chart}{space 2}see the Growth Charts section below for a list of
+valid chart codes.
+
+{p 8 12 2}{it:version}{space 2}either {cmd:US} or {cmd:UK}.  {cmd:US} will
+calculate z-scores using the 2000 CDC Growth Reference; while {cmd:UK} uses
+the 1990 British Growth Reference as the reference data.  Some charts are
+available for only one of these versions.
+
+{p 4 4 2}{hi:zbmicat(}{it:varname}{cmd:)}
+categorizes children from 2 to 18 years as normal weight, overweight or 
+obese, using BMI cut-offs recommended by the Childhood Obesity Working Group 
+of the International Obesity Taskforce.  BMI is in kg/m^2.  This function 
+generates a variable with values 1, 2, 3 labeled respectively as 
+"Normal wt", "Overweight" and "Obese".
+
+
+{title:Options}
+
+{p 4 8 2}{cmd:xvar(}{it:varname}{cmd:)} specifies the variable used (along
+with gender) as the basis for standardizing the measure of interest.  This
+variable is usually age, but can also be height or length when the measurement
+is weight; i.e., weight-for-age, weight-for-height, and weight-for-length are
+all available growth charts.
+
+{p 4 8 2}{cmd:gender(}{it:varname}{cmd:)} specifies the gender variable.  It
+can be string or numeric.  The codes for male and female must be specified by
+the {hi:gencode} option.
+
+{p 4 8 2}{cmd:gencode(male=}{it:code}{cmd:, female=}{it:code}{cmd:)} specifies 
+the codes for male and female.  The gender can be specified in either order,
+and the comma is optional.  No quotes are required around the codes, even if 
+the gender variable is a string.
+
+{p 4 8 2}{cmd:ageunit(}{it:unit}{cmd:)} gives the unit for the age variable
+and is only valid for measurement-for-age charts; i.e., omit this option when
+the chart code is {cmd:wh} or {cmd:wl} (see Growth Charts section below).  The
+{it:unit} can be {cmd:day}, {cmd:month}, or {cmd:year}.  This option can be
+omitted if the {it:unit} is {cmd:year}, as this is the default.
+
+{p 4 8 2}{cmd:nocutoff} is optional.  By default, any z-scores with absolute
+value greater than or equal to 5 (i.e., values that are 5 standard deviations
+or more away from the mean) are set to missing.  This option forces
+calculation of all z-scores, allowing for extreme values in your dataset.
+
+
+{title:Growth Charts}
+
+{col 5}{ul:2000 CDC Growth Charts: Version US}
+
+{col 5}Chart{col 18}Description{col 40}Measurement{col 59}{cmd:xvar()} range
+{col 5}code{col 43}unit
+{col 5}{hline 71}
+{col 6}{cmd:ha}{col 16}height-for-age{col 44}cm{col 58}2 to 20 years
+{col 6}{cmd:wa}{col 16}weight-for-age{col 44}kg{col 58}0 to 20 years
+{col 6}{cmd:ba}{col 17}bmi-for-age{col 42}kg/m^2{col 58}2 to 20 years
+{col 6}{cmd:hca}{col 10}head circumference-for-age{col 44}cm{col 58}0 to 36 months
+{col 6}{cmd:la}{col 16}length-for-age{col 44}cm{col 58}0 to 36.5 months
+{col 6}{cmd:wh}{col 15}weight-for-height{col 44}kg{col 57}77 to 121.5 cm
+{col 6}{cmd:wl}{col 15}weight-for-length{col 44}kg{col 57}45 to 103.5 cm
+
+
+{col 5}{ul:1990 British Growth Charts: Version UK}
+
+{col 5}Chart{col 18}Description{col 40}Measurement{col 66}{cmd:xvar()} range
+{col 5}code{col 43}unit
+{col 5}{hline 77}
+{col 6}{cmd:ha}{col 17}height-for-age{col 45}cm{col 65}0 to 23 years
+{col 6}{cmd:wa}{col 17}weight-for-age{col 45}kg{col 65}0 to 23 years
+{col 6}{cmd:ba}{col 18}bmi-for-age{col 43}kg/m^2{col 65}0 to 23 years
+{col 6}{cmd:hca}{col 11}head circumference-for-age{col 45}cm{col 58}Males: 0 to 18 years
+{col 56}Females: 0 to 17 years
+{col 6}{cmd:sha}{col 13}sitting height-for-age{col 45}cm{col 65}0 to 23 years
+{col 6}{cmd:lla}{col 15}leg length-for-age{col 45}cm{col 65}0 to 23 years
+
+
+{title:Examples}
+
+{p 4}Gender variable {cmd:sex} coded male=1, female=2
+
+{p 8 16}{cmd:age} variable in months{p_end}
+{p 12 16 2}{cmd:. egen zwauk1 = zanthro(weight,wa,UK), xvar(agemth) gender(sex) gencode(male=1, female=2) ageunit(month)}
+
+{p 8 16}{cmd:age} variable in years{p_end}
+{p 12 16 2}{cmd:. egen zwauk2 = zanthro(weight,wa,UK), xvar(ageyr) gender(sex) gencode(male=1, female=2)}
+
+{p 8 16 2}{cmd:age} variable in years and calculating all z-scores including where abs(z)>=5{p_end}
+{p 12 16 2}{cmd:. egen zwauk3 = zanthro(weight,wa,UK), xvar(ageyr) gender(sex) gencode(male=1, female=2) nocutoff}
+
+{p 8 16 2}{cmd:xvar()} is height or length{p_end}
+{p 12 16 2}{cmd:. egen zwhus = zanthro(weight,wh,US), xvar(height) gender(sex) gencode(male=1, female=2)}{p_end}
+{p 12 16 2}{cmd:. egen zwlus = zanthro(weight,wl,US), xvar(length) gender(sex) gencode(male=1, female=2)}
+
+{p 4}Gender variable {cmd:sex} coded male=M, female=F{p_end}
+
+{p 8 16}{cmd:age} variable in months{p_end}
+{p 12 16 2}{cmd:. egen zbaus1 = zanthro(bmi,ba,US), xvar(agemth) gender(sex) gencode(male=M, female=F) ageunit(month)}{p_end}
+{p 12 16 2}{cmd:. egen bcat = zbmicat(bmi), xvar(agemth) gender(sex) gencode(male=M, female=F) ageunit(month)}
+
+{p 8 16}Using just the first letter in specifying each gender{p_end}
+{p 12 16 2}{cmd:. egen zbaus1 = zanthro(bmi,ba,US), xvar(agemth) gender(sex) gencode(m=M, f=F) ageunit(month)}{p_end}
+
+{p 4}Gender variable {cmd:sex} coded male=Male, female=Female{p_end}
+
+{p 8 16 2}NOTE: The code cannot be abbreviated.  It must be typed into the {hi:gencode} 
+option exactly as it appears in your dataset.{p_end}
+{p 12 16 2}{cmd:. egen zbaus2 = zanthro(bmi,ba,US), xvar(agemth) gender(sex) gencode(m=Male, f=Female) ageunit(month)}{p_end}
+
+{p 8 16 2}Can swap the order in specifying the gender codes{p_end}
+{p 12 16 2}{cmd:. egen zbaus2 = zanthro(bmi,ba,US), xvar(agemth) gender(sex) gencode(f=Female, m=Male) ageunit(month)}{p_end}
+
+{p 8 16 2}Can omit the comma from the {hi:gencode} option{p_end}
+{p 12 16 2}{cmd:. egen zbaus2 = zanthro(bmi,ba,US), xvar(agemth) gender(sex) gencode(f=Female m=Male) ageunit(month)}{p_end}
+
+
+{title:Authors}
+
+    Suzanna Vidmar, John Carlin and Kylie Hesketh
+    Clinical Epidemiology and Biostatistics Unit and
+    Centre for Community Child Health
+    Murdoch Children's Research Institute and 
+    University of Melbourne Department of Paediatrics
+    Melbourne, AUSTRALIA
+
+    Tim Cole
+    Centre for Paediatric Epidemiology and Biostatistics
+    Institute of Child Health 
+    London, UK
+
+
+{title:References}
+
+{p 4 8 2}
+Cole, T. J. 1990. The LMS method for constructing normalized growth standards.
+    {it:European Journal of Clinical Nutrition} 44: 45-60. 
+
+{p 4 8 2}
+Cole, T. J., M. C. Bellizzi, K. M. Flegal, and W. H. Dietz. 2000. Establishing
+    a standard definition for child overweight and obesity worldwide: 
+    international survey. {it:British Medical Journal} 320(7244): 1240-3. 
+
+{p 4 8 2}
+Cole, T. J., J. V. Freeman, and M. A. Preece. 1998.  British 1990 growth 
+    reference centiles for weight, height, body mass index and head 
+    circumference fitted by maximum penalized likelihood. 
+    {it:Statistics in Medicine} 17(4): 407-29.
+
+{p 4 8 2}
+Cole, T. J. and P. J. Green. 1992.  Smoothing reference centile curves: 
+    The LMS method and penalized likelihood. {it:Statistics in Medicine} 11: 
+    1305-19.
+
+{p 4 8 2}
+Kuczmarski, R. J., C. L. Ogden, L. M. Grummer-Strawn, K. M. Flegal, S. S. Guo, 
+    R. Wei, A. Mei, L. R. Curtin, A. F. Roche, and C. L. Johnson. 
+    2000.  CDC growth charts: United States. {it:Advance Data} (314): 1-27.
+
+
+{title:Also see}
+
+{p 4 14 2}Manual:  {hi:[R] egen}{p_end}
+{p 4 14 2}Online:  help for {help egen}, {help functions}, {help generate}

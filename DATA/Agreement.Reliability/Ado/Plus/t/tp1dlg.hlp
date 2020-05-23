@@ -1,0 +1,102 @@
+.-
+help for ^1-sample test of proportion (Calculator version)^      Menu: Calculator
+.-
+
+^Topics covered^
+^--------------^
+
+^1. Note on dataset version of command^
+^2. Description of the test^
+^3. How to fill in the dialog box^
+^4. Example^
+
+
+^1. Note on dataset version of command^
+^-------------------------------------^
+
+The 1-sample test of proportion is a test that can be used for a variable
+that has two possible values: "success" and "failure" (or "yes" and "no",
+etc.).
+
+This command computes a 1-sample test of proportion when you have already
+counted the total number of successes in a sample.
+
+Use the ^1-sample test of proportion^ command under the ^Parametric tests^
+section of the ^Statistics^ menu if you wish to have StataQuest count the
+number of successes, and then perform the test.
+
+@pttpdlg!Click here for help on the dataset version of the 1-sample test@
+@pttpdlg!of proportion.@
+
+
+^2. Description of the test^
+^--------------------------^
+
+The 1-sample test of proportion tests whether the proportion of successes
+equals a specified value p0.
+
+The total number of successes has a Binomial(n, p) distribution, where n
+is the sample size and p is the probability of success for one trial
+(i.e., p is the probability that a single observation is a success).
+
+The null hypothesis is Ho: p = p0, where p0 is the hypothesized probability
+of success for one trial. 
+
+
+^3. How to fill in the dialog box^
+^--------------------------------^
+
+^No. of observations^  Enter the total number of observations (successes plus
+failures).
+
+^No. of successes^  Enter the total number of successes observed in the sample.
+
+^Prob. of success or exp. no. successes^  Enter p0 = hypothesized probability
+of success or n0 = expected number of successes.
+
+You must enter 0 < p0 < 1 or 1 <= n0 < n.
+
+If the value entered is <  1, it is interpreted as p0.
+If the value entered is >= 1, it is interpreted as n0,
+and p0 is computed using the formula p0 = n0/n.
+
+^Confidence level^  This command also calculates confidence intervals.
+Enter the desired level in percent for the confidence interval.
+
+^Normal approximation^  If left unchecked, it produces P-values and confidence
+intervals using an exact binomial distribution.  If checked, it produces
+P-values and confidence intervals using a normal approximation.   
+
+
+^4. Example^
+^----------^
+
+You asked 104 people a certain question that they must answer "yes" or "no".
+
+68 people answered "yes".
+
+You wish to test the null hypothesis that the proportion of persons who
+answer "yes" in the population is 1/2.
+
+Enter ^104^ for "No. of observations".
+
+Enter ^68^ for "No. of successes".
+
+Enter ^0.5^ for "Prob. of success or Exp. no. successes".
+
+Or you could enter ^52^ (52 = 0.5*104) for "Prob. of success or
+Exp. no. successes".
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@pttpdlg!1-sample test of proportion  (Statistics--Parametric tests)@
+@ptp2dlg!2-sample test of proportions (Statistics--Parametric tests)@
+
+@tp2dlg!2-sample test of proportions (Calculator menu)@
+
+@bitesti!For the command-line version for exact P-values, see help for bitesti.@
+@cii!For the command-line version for exact confidence intervals, see help for cii.@

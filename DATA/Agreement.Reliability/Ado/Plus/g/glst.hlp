@@ -1,0 +1,196 @@
+{smcl}
+{* 27sep2006}{...}
+{cmd:help glst} {right: ({browse "http://www.stata-journal.com/article.html?article=up0025":SJ9-2: st0096_2})}
+{hline}
+
+{title:Title}
+
+{p2colset 5 13 15 2}{...}
+{p2col :{hi: glst} {hline 2}}Generalized least squares for trend estimation of summarized dose-response data{p_end}
+{p2colreset}{...}
+
+
+{title:Syntax}
+
+{p 8 16 2}
+{cmd:glst} {depvar} {it:dose} [{indepvars}] {ifin}{cmd:,} {opth s:e(varname)}
+        {opt c:ov(n cases)} {c -(}{cmd:cc} | {cmd:ir} | {cmd:ci}{c )-}
+        [{it:options}]
+
+        
+{synoptset 18 tabbed}{...}
+{synopthdr:options}
+{synoptline}
+{p2coldent :* {opth s:e(varname)}}variable containing estimate of standard error{p_end}
+{p2coldent :* {opt c:ov(n cases)}}variables containing the information required to fit the covariances{p_end} 
+{p2coldent :+ {opt cc}}case-control data{p_end}
+{p2coldent :+ {opt ir}}incidence-rate data{p_end}
+{p2coldent :+ {opt ci}}cumulative incidence data{p_end}
+{synopt :{opt vwls}}variance-weighted least-squares estimation{p_end}
+{synopt :{opt cr:udes}}crude relative risks and correlations{p_end}
+{synopt :{opt pf:irst(id study)}}pool-first method{p_end} 
+{synopt :{cmdab:ts:tage(f}|{cmd:r)}}two-stage fixed- or random-effects meta-analysis{p_end} 
+{synopt :{opt ss:est}}study-specific linear trend estimates{p_end} 
+{synopt :{opt r:andom}}random-effects for the {it:dose} coefficient in an aggregate analysis{p_end}
+
+{synopt :{opt l:evel(#)}}set confidence level; default is {cmd:level(95)}{p_end}
+{synopt :{opt eform}}generic label; {cmd:exp(b)}; the default{p_end}
+{synoptline}
+{p2colreset}{...}
+{p 4 6 2}* {cmd:se()} and {cmd:cov()} are required.{p_end}
+{p 4 6 2}+ One of {cmd:cc}, {cmd:ir}, or {cmd:ci} is required for trend estimation.{p_end}
+{p 4 6 2} {depvar} contains log relative-risks;
+{it:dose} is the main covariate of interest and contains the exposure levels;
+and {indepvars} may contain other covariates, such as polynomial terms of
+{it:dose} or interaction terms.
+
+
+{title:Description}
+
+{pstd}
+{cmd:glst} estimates log-linear dose-response regression models using
+generalized least squares for trend estimation of single or multiple summarized
+dose-response epidemiological studies, namely, case-control, incidence-rate,
+and cumulative incidence data.  It differs from variance-weighted
+least squares (see {manhelp vwls R}) in that {cmd:glst} estimates a
+variance-covariance matrix of the beta coefficients, as proposed by Greenland
+and Longnecker (1992).
+
+
+{title:Options}
+
+{phang}
+{opth se(varname)} specifies an estimate of the standard error of {depvar}, log
+relative-risks.  All values of {it:varname} must be > 0.  
+
+{phang}
+{opt cov(n cases)} specifies variables containing the information required to
+fit the covariances among the beta coefficients.  At each exposure level,
+{it:n} is the number of subjects (controls plus cases) for case-control data
+({cmd:cc}); or the total person-time for incidence-rate data ({cmd:ir}); or the
+total number of persons (cases plus noncases) for cumulative incidence data
+({cmd:ci}).  The {it:cases} variable contains the number of cases at each
+exposure level.{p_end}
+
+{phang}
+{opt cc} specifies case-control data. It is required for trend estimation of
+one study unless the {opt pfirst()} option is specified.{p_end}
+
+{phang}
+{opt ir} specifies incidence-rate data. It is required for trend estimation of 
+one study unless the {opt pfirst()} option is specified.{p_end}
+
+{phang}
+{opt ci} specifies cumulative incidence data. It is required for trend
+estimation of one study unless the {opt pfirst()} option is specified.{p_end}
+
+{phang}
+{opt vwls} specifies variance-weighted least-squares (see {manhelp vwls R})
+estimation, which assumes zero covariances among a series of log relative-risks;
+the default is generalized least squares. {p_end}
+
+{phang}
+{opt crudes} specifies to calculate the vector of crude relative risks, and its
+variance-covariance and correlation matrices.  This option also provides the
+relative differences (as percentages) between crude and adjusted relative risks
+and their correlation matrix.{p_end}
+
+{phang}
+{opt pfirst(id study)} specifies the pool-first method with multiple summarized
+studies. The {it:id} variable is an indicator variable that assumes the same
+value across correlated parameters within a study. The {it:study} variable must
+take value 1 for case-control data, 2 for incidence-rate data, and 3 for
+cumulative incidence data. Within each group of parameters, the first
+observation is assumed to be the referent. This option allows the estimation
+either a fixed- or random-effects meta-regression model. {p_end}
+
+{phang}
+{cmd:tstage(f}|{cmd:r)} specifies the two-stage fixed-effects ({cmd:f})
+(inverse variance-weighted least squares) or random-effects ({cmd:r})
+meta-analysis of dose-response linear trends (using the method of moments to
+estimate the between-study variance, tau2).  This option can be specified only
+if {opt pfirst()} is also specified, and if only one covariate, namely, the
+{it:dose} variable, is included in the linear predictor.{p_end}
+
+{phang}
+{opt ssest} displays study-specific linear trend estimates. This option can be
+specified only if {opt pfirst()} is also specified.{p_end}
+
+{phang}
+{opt random} specifies the iterative generalized least-squares method to
+fit a random-effects meta-regression model (aggregate analysis).
+Between-study variability of the {it:dose} coefficient is estimated with the
+moment estimator.  This option can be specified only if {opt pfirst()}
+is specified.{p_end}
+
+{phang}
+{opt level(#)} specifies the confidence level, as a percentage, for confidence
+intervals.  The default is {cmd:level(95)} or as set by {helpb set level}.
+
+{phang}
+{opt eform} reports coefficient estimates as exp(b) rather than b.  Standard
+errors and confidence intervals are similarly transformed. 
+
+
+{title:Example}
+
+{pstd}Input data from table 1, page 1302 of Greenland and Longnecker (1992)
+
+{pmore} . {stata "use http://nicolaorsini.altervista.org/stata/data/dose.dta, clear"}{p_end}
+ 
+{pstd}Go from 95% CI of odds ratios to 95% CI of log odds-ratios
+
+{pmore}	. {stata "gen double logor = log(adjor)"} {p_end}
+{pmore}	. {stata "gen double logorlb = log(lb)"}{p_end}
+{pmore}	. {stata "gen double logorub = log(ub)"}{p_end}
+{pmore}	. {stata "gen double se =  ((logorub - logorlb)/(2*invnorm(.975)))"}
+
+{pstd}Trend estimation without correction for covariance of odds ratios  
+
+{pmore}	. {stata "vwls logor dose in 2/4, sd(se) nocons"}{p_end}
+{pmore}	. {stata "mat list e(V)"}
+
+{pstd}Trend estimation with correction for covariance of log odds-ratios  
+
+{pmore}. {stata "glst logor dose, se(se) cov(N case) cc"}
+
+{pstd}Check the variance-covariance matrix of log odds-ratios 
+
+{pmore}. {stata "mat list e(Sigma)"}
+
+
+{title:Reference}
+
+{p 4 8 2}Greenland S., and M. P. Longnecker. 1992. Methods for trend
+estimation from summarized dose-reponse data, with applications to
+meta-analysis. {it:American Journal of Epidemiology} 135: 1301-1309.
+
+
+{title:Authors}
+
+{p 4 8 2}Nicola Orsini, Division of Nutritional Epidemiology,
+Institute of Environmental Medicine, Karolinska Institutet, Sweden {p_end}
+
+{p 4 8 2}Rino Bellocco, Department of Medical Epidemiology and Biostatistics,
+Karolinska Institutet, Sweden {p_end}
+
+{p 4 8 2}Sander Greenland, Department of Epidemiology, 
+UCLA School of Public Health{p_end}
+
+
+{title:Support}
+
+{p 4 8 2}{browse "http://nicolaorsini.altervista.org"}{p_end}
+{p 4 8 2}{browse "mailto:nicola.orsini@ki.se?subject=glst":nicola.orsini@ki.se}{p_end}
+
+
+{title:Also see}
+
+{psee}
+Article: {it:Stata Journal}, volume 9, number 2: {browse "http://www.stata-journal.com/article.html?article=up0025":st0096_2}{break}
+         {it:Stata Journal}, volume 9, number 1: {browse "http://www.stata-journal.com/article.html?article=up0024":st0096_1}{break}
+         {it:Stata Journal}, volume 6, number 1: {browse "http://www.stata-journal.com/article.html?article=st0096":st0096}{break}
+
+{psee}Manual:  {hi:[R] vwls}{p_end}
+
+{psee}Online:  {manhelp vwls R}{p_end}

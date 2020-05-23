@@ -1,0 +1,231 @@
+.-
+help for ^Stack variables^                                             Menu: Data
+.-
+
+Topics covered
+--------------
+
+^1. Description^
+^2. How to fill in the dialog box^
+^3. Example^
+^4. Rules for variable names^
+
+
+^1. Description^
+^--------------^
+
+This command will transform "wide" data into "long" data so that it can be
+used with commands that require a "by group" variable. 
+
+Your current data variables will be stacked to make one new data variable
+and a new group (categorical) variable that indicates where the values of
+the new data variable came from.
+
+For example, suppose you have a dataset that looks like
+
+^. list x1 x2 x3 in 1/5^                                                          
+                                                                                
+            x1         x2         x3                                            
+  1.         9          3          5                                            
+  2.         3          2          5                                            
+  3.         6          5          9                                            
+  4.         3          8          1                                            
+  5.        10          9          7                                            
+ 
+After you stack it, it will look like
+
+^. list x group in 1/15^                                                         
+                                                                                
+             x     group                                                        
+  1.         9        x1                                                        
+  2.         3        x1                                                        
+  3.         6        x1                                                        
+  4.         3        x1                                                        
+  5.        10        x1                                                        
+  6.         3        x2                                                        
+  7.         2        x2                                                        
+  8.         5        x2                                                        
+  9.         8        x2                                                        
+ 10.         9        x2                                                        
+ 11.         5        x3                                                        
+ 12.         5        x3                                                        
+ 13.         9        x3                                                        
+ 14.         1        x3                                                        
+ 15.         7        x3 
+
+The new group variable is numeric (even though it looks like a string).
+Its underlying values are 1, 2, 3,..., but they are labeled using ^value^
+^labels^ with the names of the old data variables.  See the example below
+for details.
+                                                       
+
+^2. How to fill in the dialog box^
+^--------------------------------^
+
+^WARNING:^  This command will change the data in memory.  You may want
+to save your data to disk before proceeding in case you make a mistake.
+@save_sq!Click here for help on saving data.@
+
+Enter the name of the "New data variable".
+
+Enter the name of the "New group variable".
+
+These names can be any valid variable names.  See ^4. Rules for variable^
+^names^ below.
+
+Select the current variables that you want to stack.  By default, all
+variables are selected.  Any variables ^NOT^ selected will be omitted
+from the new data variable.
+
+
+^3. Example^
+^----------^
+
+Suppose you have the following data on the number of verbal errors made
+by 17 subjects after the intake of different volumes of alcohol:
+
+              Volume of alcohol
+       -----------------------------
+       0 ounces   1 ounce   2 ounces
+       --------   -------   --------
+           0          1         2                                                    
+           1          3         3                                                    
+           2          4         3                                                    
+           2          5         6                                                    
+           2                    7                                                    
+           5                    8                                                    
+                                8                                                    
+ 
+You enter the data into using the ^Editor^ just as it appears in the above
+table.  @input_sq!(Click here for help on inputting data.)@
+
+If you list the data by selecting ^List data^ under the ^Summaries^ menu,
+they look like
+
+^. list error0 error1 error2 in 1/7^                                             
+                                                                                
+       error0    error1    error2                                               
+  1.        0         1         2                                               
+  2.        1         3         3                                               
+  3.        2         4         3                                               
+  4.        2         5         6                                               
+  5.        2         .         7                                               
+  6.        5         .         8                                               
+  7.        .         .         8                                               
+                                                                                
+Now you try to do a StataQuest command that requires a "By group"
+variable and you realize that StataQuest demands that the data
+look like
+
+^. list error group in 1/17^                                                     
+                                                                                
+        error     group                                                         
+  1.        0         0                                                         
+  2.        1         0                                                         
+  3.        2         0                                                         
+  4.        2         0                                                         
+  5.        2         0                                                         
+  6.        5         0                                                         
+  7.        1         1                                                         
+  8.        3         1                                                         
+  9.        4         1                                                         
+ 10.        5         1                                                         
+ 11.        2         2                                                         
+ 12.        3         2                                                         
+ 13.        3         2                                                         
+ 14.        6         2                                                         
+ 15.        7         2                                                         
+ 16.        8         2                                                         
+ 17.        8         2                                                         
+ 
+You do ^NOT^ have to enter your data again to make it look like this!
+(Although it would have been simpler if you had entered this way
+in the first place.)
+
+This command will make this data transformation.
+
+Enter ^error^ for the "New data variable".
+
+Enter ^group^ for the "New group variable".
+
+You will see ^error0 error1 error2^ entered for "Data variables".
+Just leave this and click ^OK^.
+
+^. list error group in 1/21^                                                     
+                                                                                
+        error     group                                                         
+  1.        0    error0                                                         
+  2.        1    error0                                                         
+  3.        2    error0                                                         
+  4.        2    error0                                                         
+  5.        2    error0                                                         
+  6.        5    error0                                                         
+  7.        .    error0                                                         
+  8.        1    error1                                                         
+  9.        3    error1                                                         
+ 10.        4    error1                                                         
+ 11.        5    error1                                                         
+ 12.        .    error1                                                         
+ 13.        .    error1                                                         
+ 14.        .    error1                                                         
+ 15.        2    error2                                                         
+ 16.        3    error2                                                         
+ 17.        3    error2                                                         
+ 18.        6    error2                                                         
+ 19.        7    error2                                                         
+ 20.        8    error2                                                         
+ 21.        8    error2                                                         
+ 
+The dataset can now be used with any of the commands that require
+a "By group" variable.
+
+Important notes
+---------------
+
+1. The new group variable ^group^ is actually a numeric variable.  Its 
+   values are the numbers ^1^, ^2^, and ^3^ -- not ^error0^, ^error1^, and 
+   ^error2^.
+
+   This is because a ^value label^ was created that labels ^1^ as ^error0^,
+   ^2^ as ^error1^, and ^3^ as ^error2^ on output.
+
+   You can change the ^value labels^ using the ^Label values^ selection under
+   the ^Data--Label^ menu.  @vlabdlg!Click here for help on label values.
+
+2. The periods (^.^) you see for the value of the new variable ^error^ for
+   observations 7, 12, 13, and 14 are Stata's missing value indicator.
+   These values were missing in your original dataset.  Stata's commands
+   ignore missing values so you need not about concerned about them.
+
+   If you wish to delete these observations, click the ^Editor^ button,
+   highlight a cell with a missing value, click on the ^Delete^ button,
+   select "Delete all 4 obs. where error == .", and click ^OK^.
+
+
+^4. Rules for variable names^
+^---------------------------^
+
+A variable name must
+
+	- be 1 to 8 characters long
+
+        - consist of lowercase or uppercase letters (a-z, A-Z) or numbers (0-9)
+
+	- have a letter as the first character
+
+	- not use any other characters
+
+Examples: ^x^, ^x1^, ^X^, ^group^, ^Group^, ^GROUP^, ^dum06^
+
+Note: Stata is case sensitive.  ^group^, ^Group^, and ^GROUP^ are three 
+different variables.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@vlabdlg!Label values@
+
+@editr_sq!Using the spreadsheet editor to view and change data@

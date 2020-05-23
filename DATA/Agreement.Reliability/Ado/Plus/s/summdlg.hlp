@@ -1,0 +1,42 @@
+.-
+help for ^Means and SDs^                                          Menu: Summaries
+.-
+
+^Description^
+^-----------^
+
+This command displays the number of nonmissing observations, mean, standard
+deviation, minimum, and maximum for one or more variables.
+
+Note:  For ^string^ variables, 0 observations and missing values for the
+means, etc., will be displayed. 
+
+
+^How to fill in the dialog box^
+^-----------------------------^
+
+You can enter none, one, or several variables.
+
+If you enter nothing and just click ^OK^, the means, etc., for all the
+variables in your data set will be computed (except for string variables).
+
+If you want to select the variables, click on the ones you want in the
+list box.  Or type the variable names.
+
+You can scroll the list box, if necessary, to see all your variables.
+
+String variables will not appear in the list box.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@sumbydlg!Means and SDs by group@
+@dtldlg!Median/Percentiles (includes skewness, kurtosis, 5 smallest/largest)@
+@scidlg!Confidence intervals@
+
+@ptt1dlg!1-sample t test@
+@ptt2dlg!2-sample t test@
+@ptt2pdlg!Paired t test@

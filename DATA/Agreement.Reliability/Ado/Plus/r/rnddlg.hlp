@@ -1,0 +1,223 @@
+.-
+help for ^Random numbers^                            Menu: Data--Generate/Replace
+.-
+
+Topics covered
+--------------
+
+^1.  Description^
+^2.  How to fill in the dialog box^
+^3.  Number of observations^
+^4.  Normal^
+^5.  Bernoulli^
+^6.  Binomial^
+^7.  Chi-squared^
+^8.  Exponential^
+^9.  F^
+^10. Student's t^
+^11. Uniform^
+^12. Poisson^
+^13. Integers^
+
+
+^1. Description^
+^--------------^
+
+This command will create new variables and add them to your data set.
+
+The new variables will be randomly distributed according to the distribution
+you choose.
+
+
+^2. How to fill in the dialog box^
+^--------------------------------^
+
+This is best explained by example.
+
+If you enter ^x^ for "Variable name prefix" and leave "Number of variables"
+blank, one variable called ^x^ will be created.
+
+If you enter ^x^ for "Variable name prefix" and enter 5 for "Number of
+variables", five variables called ^x1^, ^x2^, ^x3^, ^x4^, and ^x5^ will be
+created.
+
+If you enter ^rand^ for "Variable name prefix" and enter 3 for "Number of
+variables", three variables called ^rand1^, ^rand2^, and ^rand3^ will be
+created.
+
+Note:  Variable names can only be 8 characters long in total.  So do not
+make the variable name prefix longer than 6 or 7 characters.
+
+(If you choose names of variables that already exist, you will be asked
+if you want to overwrite them.)
+
+Choose the type of random distribution by clicking on it in the list box.
+You will have to scroll the list box to see all the choices.
+
+You can only choose one type of random distribution at a time.
+
+Click ^OK^ and then a second dialog box will appear in which you choose
+the parameters for the distribution.
+
+
+^3. Number of observations^
+^-------------------------^
+
+If your data set is empty (e.g., you just launched StataQuest and there are
+no variables in the ^Variables^ window), then you will be asked to set the 
+number of observations.
+
+If your data set is not empty, the new variable(s) that are created by this
+command will have the same number of observations as the existing variables.
+
+(You can see how many observations there are in your current data set by
+choosing ^Describe variables^ from the ^Summaries^ menu.)
+
+If you want to start with an empty data set, first save your present data set
+by choosing ^Save^ or ^Save As^ from the ^File^ menu (if you want to save it),
+and then type ^clear^ in the ^Stata Command^ window and press ^Enter^.
+
+@save_sq!Click here for information on saving Stata data files.@
+
+
+Advanced note
+-------------
+
+If you want to create ^x^ with 100 observations and ^y^ with 200 observations
+(and have ^x^ and ^y^ present in the data set at the same time), this can be
+done by doing the following:
+
+	- Save your present data set (if you want to save it).
+
+	- Type ^clear^ in the ^Stata Command^ window and press ^Enter^.
+
+	- Generate ^x^ by choosing ^Data--Generate/Replace--Random numbers^.
+	  (Your data set will now have 100 observations.)
+
+	- Type ^set obs 200^ in the ^Stata Command^ window and press ^Enter^.
+	  (Your data set will now have 200 observations and ^x^ will contain
+          100 missing values.)
+
+	- Generate ^y^ by choosing ^Data--Generate/Replace--Random numbers^.
+
+
+^4. Normal^
+^---------^
+
+Numbers from a normal distribution can (possibly) take on any value between
+-infinity and +infinity.
+
+Enter the mean and standard deviation of the normal distribution you wish to
+generate.  (Remember:  The standard deviation is the square root of the
+variance.)
+
+
+^5. Bernoulli^
+^------------^
+
+Numbers from a Bernoulli distribution can (possibly) take on the values 
+0 (failure) or 1 (success).
+
+Enter the probability p that a single observation takes on the value 1
+(i.e., the probability of a success for a single trial).
+
+
+^6. Binomial^
+^-----------^
+
+Numbers from a binomial distribution can (possibly) take on the values
+0, 1, 2,..., n, where n is the number of trials.
+
+Enter the number of trials n for "No. trials".
+
+Enter the p (the probability of a success for a single trial) for
+"Probability".
+
+
+^7. Chi-squared^
+^--------------^
+
+Numbers from a chi-squared distribution can (possibly) take on any value
+between 0 and +infinity.
+
+Enter the degrees of freedom.
+
+
+^8. Exponential^
+^--------------^
+
+Numbers from an exponential distribution can (possibly) take on any value
+between 0 and +infinity.
+
+Enter the mean of the distribution.
+
+
+^9. F^
+^----^
+
+Numbers from an F distribution can (possibly) take on any value between
+0 and +infinity.
+
+Enter the numerator and denominator degrees of freedom.
+
+
+^10. Student's t^
+^---------------^
+
+Numbers from a normal distribution can (possibly) take on any value between
+-infinity and +infinity.
+
+Enter the mean, standard deviation, and degrees of freedom.
+
+
+^11. Uniform^
+^-----------^
+
+Numbers from a uniform distribution can (possibly) take on any value between 
+^a^ (lower limit) and ^b^ (upper limit).
+
+Enter the lower limit ^a^ and the upper limit ^b^.
+
+Note:  This function returns numbers like 0.49672345.  If you want an uniform
+distribution of integers, see ^13. Integers^ below. 
+
+
+^12. Poisson^
+^-----------^
+
+Numbers from a Poisson distribution can (possibly) take on the values
+0, 1, 2,... (i.e., any nonnegative integer).
+
+Enter the mean of the distribution.
+
+
+^13. Integers^
+^------------^
+
+Numbers from an uniform distribution of integers can (possibly) take on the
+values ^a^, ^a + 1^, ^a + 2^,..., ^b^, where ^a^ is the lower limit and ^b^ is
+the upper limit.
+
+Enter the lower limit ^a^ and the upper limit ^b^.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+The following commands under the ^Summaries^ menu may be useful for examining
+the random variables you have generated.
+
+@summdlg!Means and SDs@
+@dtldlg!Median/Percentiles (includes skewness, kurtosis, 5 smallest/largest)@
+@scidlg!Confidence intervals@
+@onedlg!One-way (frequency) tables
+
+The following commands under the ^Graph^ menu may be useful for examining the
+random variables you have generated.
+
+@histdlg!Histograms@
+@boxdlg!Box plots@
+@dpldlg!Dotplots@
+@qnormdlg!Normal quantile plot@

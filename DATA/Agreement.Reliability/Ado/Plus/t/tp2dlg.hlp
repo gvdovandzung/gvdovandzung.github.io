@@ -1,0 +1,99 @@
+.-
+help for ^2-sample test of proportions (Calculator version)^     Menu: Calculator
+.-
+
+^Topics covered^
+^--------------^
+
+^1. Note on dataset version of command^
+^2. Description of the test^
+^3. How to fill in the dialog box^
+^4. Example^
+
+
+^1. Note on dataset version of command^
+^-------------------------------------^
+
+The 2-sample test of proportions is a test that can be used to compare two
+samples where the observed outcomes have two possible values: "success" and
+"failure" (or "yes" and "no", etc.).
+
+This command computes a 2-sample test of proportions when you have already
+counted the total number of successes in each sample.
+
+Use the ^2-sample test of proportions^ command under the ^Parametric tests^
+section of the ^Statistics^ menu if you wish to have StataQuest count the
+number of successes, and then perform the test.
+
+@ptp2dlg!Click here for help on the dataset version of the 2-sample test@
+@ptp2dlg!of proportion.@
+
+
+^2. Description of the test^
+^--------------------------^
+
+This command performs a test of the equality of the proportion p1 of
+successes in Population 1 compared with the proportion p2 of successes
+in Population 2.
+
+The observed number of successes in Sample 1 has a Binomial(n1, p1)
+distribution, where n1 is the sample size and p1 is the probability of
+success for one trial.
+
+Similarly, the observed number of successes in Sample 2 has a Binomial(n2, p2)
+distribution.
+
+The null hypothesis is Ho: p1 = p2.
+
+
+^3. How to fill in the dialog box^
+^--------------------------------^
+
+^No. of observations^  Enter the total number of observations (successes plus
+failures) for each sample.
+
+^No. of successes or observed proportion^  Enter the total number of successes
+in each sample or the observed proportion of successes in each sample.
+If the number entered is < 1, it is interpreted as a proportion.
+If it is >= 1, it is interpreted as the total number of successes.
+
+^Confidence level^  This command also calculates confidence intervals.
+Enter the desired level in percent for the confidence interval.
+
+
+^4. Example^
+^----------^
+
+You asked 104 women and 95 men a certain question that they must answer
+either "yes" or "no".
+
+68 women answered "yes" and 39 men answered "yes".
+
+You wish to test the null hypothesis that the proportion of women in the
+population who would answer "yes" is equal to the proportion of men in the
+the population who would answer "yes".
+
+Enter ^104^ for "No. of observations" in "Sample 1".
+Enter  ^95^ for "No. of observations" in "Sample 2".
+
+Enter  ^68^ for "No. of successes or observed proportion" in "Sample 1".
+Enter  ^39^ for "No. of successes or observed proportion" in "Sample 2".
+
+Or suppose you were told that 65.4% of 104 women answered "yes"
+and 41.1% of 95 men answered "yes".
+
+Then you would enter "No. of observations" as before.
+
+Enter ^0.654^ for "No. of successes or observed proportion" in "Sample 1".
+Enter ^0.411^ for "No. of successes or observed proportion" in "Sample 2".
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@ptp2dlg!2-sample test of proportions (Dataset version)@
+
+@tp2dlg!1-sample test of proportion  (Calculator version)@
+@pttpdlg!1-sample test of proportion  (Dataset version)@

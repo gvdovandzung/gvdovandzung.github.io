@@ -1,0 +1,56 @@
+.-
+help for ^List data^                                              Menu: Summaries
+.-
+
+^Description^
+^-----------^
+
+This command lists the contents of the variables in your data set.
+
+The output will appear in your log file (if you have created one) so 
+that you can print it.
+
+@log_sq!Click here for help on creating and printing a log.@
+
+You can also press the ^Browse^ button to enter the spreadsheet editor
+to view your data set.
+
+Note:  The ^Editor^ button will also take you into the spreadsheet editor.
+However, when you enter using the ^Browse^ button you are protected from
+making accidental changes to your data.
+
+@editr_sq!Click here for help on Editor and Browse.^
+
+
+^How to fill in the dialog box^
+^-----------------------------^
+
+You can enter none, one, or several variables.
+
+If you enter nothing and just click ^OK^, all the variables in your
+data set will be listed.
+
+If you want to select the variables, click on the ones you want in the
+list box.  Or type the variable names.
+
+You can scroll the list box, if necessary, to see all your variables.
+
+
+^Listing only some observations^
+^------------------------------^
+
+You can restrict the observations that are listed.
+
+For example, to list only observations ^3^ through ^10^, enter
+^3^ for "First observation" and ^10^ for "Last observation".
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@editr_sq!Using the spreadsheet editor to view (Browse button) and@
+@editr_sq!change (Editor button) data@
+
+@log_sq!Creating and printing a log (Log button).@

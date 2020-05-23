@@ -1,0 +1,111 @@
+.-
+help for ^Command-line mode^
+.-
+
+^Giving commands in StataQuest^
+^-----------------------------^
+
+You can give commands in StataQuest by either
+
+	(1) Using the menus, or
+
+	(2) Typing commands in the Stata Command window
+
+@menu_sq!Click here for an introduction to using the menus in StataQuest.@  
+
+In Professional Stata, commands are entered in the Stata Command window.
+
+You can also enter commands in the Command window in StataQuest.
+
+
+^Typing commands in the Command window^
+^-------------------------------------^
+
+If you are familiar with Professional Stata, you can type commands in
+StataQuest just as you would in Professional Stata.
+
+Just one thing to be aware of:  Professional Stata has many more commands than
+does StataQuest.
+
+Example: You may type ^kdensity x^ and get back the message "unrecognized
+command".  ^kdensity^ is a command in Professional Stata, but it is not included
+with StataQuest.
+
+If you are not familiar with Professional Stata, you will quickly learn a
+lot of command syntax by looking at what appears in the Results and Review
+windows.
+
+When you issue a command in StataQuest by pulling down a menu, it executes
+the command just as if you typed it in the Command window.
+
+Example
+-------
+
+You do a 1-sample t test of the null hypothesis mean(^x^) = 0.
+
+In the Results window, you will see
+
+^. ttest x = 0^
+
+[output]
+
+If you type ^ttest x = 0^ in the Command window and press ^Enter^ you will
+get the same result as you did using the pull-down menus.
+
+Note: All menu pull-downs have command-line equivalents, but in a few cases,
+the command-line equivalents are not displayed because of their complexity.
+
+
+^Review window^
+^-------------^
+
+The past commands you have given (but no output) appear in the Review window.
+
+You can use the Review window together with the Stata Command window to repeat
+commands.
+
+Clicking once on a command in the Review window loads it into the Command
+window where it can be edited and reissued.
+  
+Clicking twice on a command in the Review window executes it.  
+
+
+^Variables window^
+^----------------^
+
+The Variables window will help build up your command.
+
+Clicking on a variable loads it into the Command window.
+
+Example
+-------
+
+Suppose you issued the command
+
+^. regress y x1 x2^
+
+Now you want to perform the regression of ^y^ on ^x1^, ^x2^, and ^x3^.
+
+To do this, click once on the command
+
+^regress y x1 x2^
+
+in the Review window.
+
+This loads the old command in the Command window (but does not execute
+it unless you click twice).
+
+Now click on the variable ^x3^ in the Variables window.  The Command
+window now shows
+
+^regress y x1 x2 x3^
+
+which is what we want.  Press ^Enter^ to execute the command.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@stata_sq!Professional Stata and StataQuest@

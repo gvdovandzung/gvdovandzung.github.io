@@ -1,0 +1,46 @@
+.-
+help for ^Two-way ANOVA plots^                         Dialog after Two-way ANOVA
+.-
+
+^Description^
+^-----------^
+
+After you run a two-way ANOVA you will be asked if you want to see some graphs.
+
+You can see either
+
+	- an interaction plot
+
+	- an error bar plot for one categorical variable
+
+	- an error bar plot for the other categorical variable
+
+	- a graph of means for the two categorical variables (computed
+          separately) displayed on the same graph
+
+To see the plot, select the plot you want, and click ^Run^.
+
+If you do not want to see any plots, click ^Cancel^.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@twowdlg!Two-way ANOVA@
+
+@onewdlg!One-way ANOVA (parametric)@
+@onegdlg!One-way ANOVA plots@
+@kwaldlg!One-way nonparametric ANOVA (Kruskal-Wallis test)@ 
+@rpmdlg!Repeated-measures ANOVA@
+@aovcdlg!N-factor ANOVA & ANOCOVA@
+
+@sumbydlg!Means and SDs by group@
+
+@boxdlg!Box plots@
+@graph_sq!Printing, saving, and viewing graphs@
+
+
+
+

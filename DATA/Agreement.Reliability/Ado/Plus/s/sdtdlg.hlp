@@ -1,0 +1,52 @@
+.-
+help for ^2-sample test of variance (Calculator version)^        Menu: Calculator
+.-
+
+^Note on dataset version of command^
+^----------------------------------^
+
+This command computes an equality of variance test when you have already
+calculated the standard deviations for the two samples.
+
+Use the ^2-sample test of variance^ command under the ^Parametric tests^
+section of the ^Statistics^ menu if you wish to have StataQuest compute the
+standard deviations for the samples and then perform the test.
+
+@ptevdlg!Click here for help on the dataset version of the 2-sample test of variance.@
+
+
+^Description of the test^
+^-----------------------^
+
+This command performs the variance ratio test, which tests whether the
+variance sigma_1^^2 of population 1 equals the variance sigma_2^^2 of
+population 2.
+
+That is, it tests the null hypothesis Ho: sigma_1^^2 = sigma_2^^2.
+
+The test statistic VR is the ratio of the standard deviation squared sd_1^^2
+for sample 1 to the standard deviation squared sd_2^^2 for sample 2;
+i.e., VR = (sd_1^^2)/(sd_2^^2). 
+
+If population 1 and population 2 are both normal, then VR has an F distribution
+with n1 - 1 numerator degrees of freedom and n2 - 1 denominator degrees of
+freedom, where n1 and n2 are the sizes of samples 1 and 2, respectively.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@ptevdlg!2-sample test of variance  (Statistics--Parametric tests)@
+@ptev1dlg!1-sample test of variance  (Statistics--Parametric tests)@
+
+@sdt1dlg!1-sample test of variance  (Calculator menu)@
+
+@ptntdlg!Normality test@
+@ptt2dlg!2-sample t test (note unequal variances option)@
+@tt2dlg!2-sample t test (Calculator menu; note unequal variances option)@
+@rsumdlg!Mann-Whitney (Wilcoxon rank-sum) test (nonparametric 2-sample test)@
+@ksmdlg!Kolmogorov-Smirnov test (test for equality of distributions)@
+
+@sdtesti!For the command-line version, see help for sdtesti.@

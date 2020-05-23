@@ -1,0 +1,2279 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+       log:  {res}d:\data\ketqua1.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}23 Apr 2012, 18:45:11
+{txt}
+{com}. describe
+
+{txt}Contains data from {res}D:\DATA\ivf_v2.dta
+{txt}  obs:{res}           641                          
+{txt} vars:{res}             9                          30 Dec 2006 06:37
+{txt} size:{res}        25,640{txt} (99.8% of memory free)
+{hline 79}
+              storage  display     value
+variable name   type   format      label      variable label
+{hline 79}
+{res}maso           {txt} float  %9.0g                  {res}ma so
+tuoime         {txt} float  %9.0g                  {res}tuoi me (nam)
+tang_ha        {txt} float  %9.0g       tang_ha    {res}tang huyet ap thai ki - 1=tang
+                                                ha, 0=khong tang ha
+tuoithai       {txt} float  %9.0g                  {res}tuoi thai (tuan)
+gioi           {txt} float  %9.0g       sex        {res}gioi tinh tre - 1=trai, 0=gai
+tlsosinh       {txt} float  %9.0g                  {res}trong luong so sinh (gram)
+nghenghiep     {txt} float  %9.0g       nghenghiep
+                                              {res}nghe nghiep me - 1=tu do,
+                                                2=cong nhan, 3=vien chuc
+nhomtuoi       {txt} float  %9.0g       nhomtuoi   {res}
+sinhnon        {txt} float  %9.0g       sinhnon    {res}
+{txt}{hline 79}
+Sorted by:  {res}maso
+{txt}
+{com}. di "DAC DIEM DAN SO"
+{res}DAC DIEM DAN SO
+{txt}
+{com}. sum  tuoime
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+      tuoime {c |}{res}       641    33.97192     3.87046         23         43
+{txt}
+{com}. tab1 nghenghiep gioi
+
+{res}-> tabulation of nghenghiep  
+
+{txt}nghe nghiep {c |}
+  me - 1=tu {c |}
+ do, 2=cong {c |}
+      nhan, {c |}
+3=vien chuc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      tu do {c |}{res}        104       16.22       16.22
+{txt}  cong nhan {c |}{res}        238       37.13       53.35
+{txt}  vien chuc {c |}{res}        299       46.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        641      100.00
+
+-> tabulation of gioi  
+
+  {txt}gioi tinh {c |}
+      tre - {c |}
+    1=trai, {c |}
+      0=gai {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+        gai {c |}{res}        315       49.14       49.14
+{txt}       trai {c |}{res}        326       50.86      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        641      100.00
+{txt}
+{com}. di "MO TA KET CUOC: TRONG LUONG SO SINH VA TUOI THAI"
+{res}MO TA KET CUOC: TRONG LUONG SO SINH VA TUOI THAI
+{txt}
+{com}. sum  tuoithai tlsosinh
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    tuoithai {c |}{res}       641    38.68725    2.329931      24.69      42.35
+    {txt}tlsosinh {c |}{res}       641    3129.137    652.7827        630       4650
+{txt}
+{com}. tab1  sinhnon
+
+{res}-> tabulation of sinhnon  
+
+    {txt}sinhnon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   du thang {c |}{res}        552       86.12       86.12
+{txt}    sinhnon {c |}{res}         89       13.88      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        641      100.00
+{txt}
+{com}. di "MO TA KET CUOC THEO DAC TINH NEN"
+{res}MO TA KET CUOC THEO DAC TINH NEN
+{txt}
+{com}. sum  tuoithai tlsosinh
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    tuoithai {c |}{res}       641    38.68725    2.329931      24.69      42.35
+    {txt}tlsosinh {c |}{res}       641    3129.137    652.7827        630       4650
+{txt}
+{com}. bysort gioi: sum  tuoithai tlsosinh
+
+{txt}{hline}
+-> gioi = gai
+
+    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    tuoithai {c |}{res}       315    38.67384    2.451053      24.69      42.35
+    {txt}tlsosinh {c |}{res}       315    3044.127    628.6603        630       4416
+
+{txt}{hline}
+-> gioi = trai
+
+    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    tuoithai {c |}{res}       326    38.70021    2.210307      27.77      42.35
+    {txt}tlsosinh {c |}{res}       326    3211.279    665.9798        700       4650
+
+{txt}
+{com}. bysort gioi: tab1  sinhnon
+
+{txt}{hline}
+-> gioi = gai
+
+{res}-> tabulation of sinhnon  
+
+    {txt}sinhnon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   du thang {c |}{res}        270       85.71       85.71
+{txt}    sinhnon {c |}{res}         45       14.29      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        315      100.00
+
+{txt}{hline}
+-> gioi = trai
+
+{res}-> tabulation of sinhnon  
+
+    {txt}sinhnon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+   du thang {c |}{res}        282       86.50       86.50
+{txt}    sinhnon {c |}{res}         44       13.50      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        326      100.00
+{txt}
+{com}. bysort nghenghiep: sum  tuoithai tlsosinh
+
+{txt}{hline}
+-> nghenghiep = tu do
+
+    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    tuoithai {c |}{res}       104    38.68115    2.783022      24.69      42.21
+    {txt}tlsosinh {c |}{res}       104    2981.413    643.7628        630       3890
+
+{txt}{hline}
+-> nghenghiep = cong nhan
+
+    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    tuoithai {c |}{res}       238     38.5545    2.274392      27.77      42.35
+    {txt}tlsosinh {c |}{res}       238    3118.084    646.6934        920       4520
+
+{txt}{hline}
+-> nghenghiep = vien chuc
+
+    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    tuoithai {c |}{res}       299    38.79505    2.200437      27.91      42.29
+    {txt}tlsosinh {c |}{res}       299    3189.318    654.1965        710       4650
+
+{txt}
+{com}. ttest tlsosinh, by(gioi)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+     gai {c |}{res}{col 12}    315{col 22} 3044.127{col 34}   35.421{col 46} 628.6603{col 58} 2974.434{col 70} 3113.819
+    {txt}trai {c |}{res}{col 12}    326{col 22} 3211.279{col 34} 36.88521{col 46} 665.9798{col 58} 3138.715{col 70} 3283.843
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 3129.137{col 34} 25.78336{col 46} 652.7827{col 58} 3078.507{col 70} 3179.767
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-167.1522{col 34} 51.18935{col 58}-267.6718{col 70}-66.63249
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}gai{txt}) - mean({res}trai{txt})                                 t = {res} -3.2654
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     639
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0006         {txt}Pr(|T| > |t|) = {res}0.0012          {txt}Pr(T > t) = {res}0.9994
+{txt}
+{com}. ttest tlsosinh, by(tang_ha)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+   ha bt {c |}{res}{col 12}    552{col 22} 3191.531{col 34} 25.58435{col 46} 601.0962{col 58} 3141.276{col 70} 3241.786
+ {txt}ha tang {c |}{res}{col 12}     89{col 22} 2742.157{col 34} 86.17222{col 46} 812.9471{col 58} 2570.908{col 70} 2913.406
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 3129.137{col 34} 25.78336{col 46} 652.7827{col 58} 3078.507{col 70} 3179.767
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} 449.3735{col 34} 72.47462{col 58} 307.0563{col 70} 591.6907
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}ha bt{txt}) - mean({res}ha tang{txt})                            t = {res}  6.2004
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     639
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}1.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}0.0000
+{txt}
+{com}. ttest tlsosinh, by(gioi)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+     gai {c |}{res}{col 12}    315{col 22} 3044.127{col 34}   35.421{col 46} 628.6603{col 58} 2974.434{col 70} 3113.819
+    {txt}trai {c |}{res}{col 12}    326{col 22} 3211.279{col 34} 36.88521{col 46} 665.9798{col 58} 3138.715{col 70} 3283.843
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 3129.137{col 34} 25.78336{col 46} 652.7827{col 58} 3078.507{col 70} 3179.767
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-167.1522{col 34} 51.18935{col 58}-267.6718{col 70}-66.63249
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}gai{txt}) - mean({res}trai{txt})                                 t = {res} -3.2654
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     639
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0006         {txt}Pr(|T| > |t|) = {res}0.0012          {txt}Pr(T > t) = {res}0.9994
+{txt}
+{com}. ttest tlsosinh, by(tang_ha)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+   ha bt {c |}{res}{col 12}    552{col 22} 3191.531{col 34} 25.58435{col 46} 601.0962{col 58} 3141.276{col 70} 3241.786
+ {txt}ha tang {c |}{res}{col 12}     89{col 22} 2742.157{col 34} 86.17222{col 46} 812.9471{col 58} 2570.908{col 70} 2913.406
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    641{col 22} 3129.137{col 34} 25.78336{col 46} 652.7827{col 58} 3078.507{col 70} 3179.767
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22} 449.3735{col 34} 72.47462{col 58} 307.0563{col 70} 591.6907
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}ha bt{txt}) - mean({res}ha tang{txt})                            t = {res}  6.2004
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     639
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}1.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}0.0000
+{txt}
+{com}. oneway tlsosinh nghenghiep, bonferroni
+
+                        {txt}Analysis of Variance
+    Source              SS         df      MS            F     Prob > F
+{hline 72}
+Between groups     {res} 3381483.56      2   1690741.78      4.00     0.0187
+{txt} Within groups     {res}  269338638    638   422160.875
+{txt}{hline 72}
+    Total          {res}  272720122    640    426125.19
+
+{txt}Bartlett's test for equal variances:  chi2({res}2{txt}) = {res}  0.0558{txt}  Prob>chi2 = {res}0.973
+
+                   {txt}Comparison of trong luong so sinh (gram)
+            by nghe nghiep me - 1=tu do, 2=cong nhan, 3=vien chuc
+                                (Bonferroni)
+Row Mean-{c |}
+Col Mean {c |}      tu do   cong nha
+{hline 9}{c +}{hline 22}
+cong nha {c |}   {res} 136.671
+         {txt}{c |}  {res}    0.222
+         {txt}{c |}
+vien chu {c |}   {res} 207.904    71.2337
+         {txt}{c |}  {res}    0.015      0.622
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. use "D:\DATA\thieumau_pnmt.dta", clear
+{txt}(bs Dinh)
+
+{com}. di "MO TA DAC DIEM DAN SO"
+{res}MO TA DAC DIEM DAN SO
+
+{com}. sum age b1 b2 b41a b42a b5
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+         age {c |}{res}       800    25.66875    5.314539         16         47
+          {txt}b1 {c |}{res}       800     1.60625    .7310123          1          3
+          {txt}b2 {c |}{res}       331    1.700906    .6164162          1          3
+        {txt}b41a {c |}{res}        57    1.596491    .8207063          1          4
+        {txt}b42a {c |}{res}        25        1.68    .7483315          1          3
+{txt}{hline 13}{c +}{hline 56}
+          b5 {c |}{res}       800        2.34    .4818612          1          3
+
+{com}. zsum age b1 b2 b41a b42a b5
+{err}unrecognized command:  zsum
+{txt}{search r(199):r(199);}
+
+{com}. zsumm age b1 b2 b41a b42a b5
+{txt}Variable |    Obs    Mean     S.D.     Min      Max     S.E.     C.V.
+---------+-------------------------------------------------------------
+{res}age      {txt}|    {res}800 25.6687  5.31454      16       47  .187897  .207043
+b1       {txt}|    {res}800 1.60625  .731012       1        3  .025845  .455105
+b2       {txt}|    {res}331 1.70091  .616416       1        3  .033881  .362405
+b41a     {txt}|     {res}57 1.59649  .820706       1        4  .108705  .514069
+b42a     {txt}|     {res}25    1.68  .748331       1        3  .149666  .445435
+b5       {txt}|    {res}800    2.34  .481861       1        3  .017036  .205924
+
+{com}. tab1   a1 a3 a4 a5 a6 a7 b3 b41 b42 b6
+
+{res}-> tabulation of a1  
+
+              {txt}xa {c |}      Freq.     Percent        Cum.
+{hline 17}{c +}{hline 35}
+          an phu {c |}{res}         55        6.88        6.88
+{txt}     an nhon tay {c |}{res}         60        7.51       14.39
+{txt}         hoa phu {c |}{res}         21        2.63       17.02
+{txt}       nhuan duc {c |}{res}         34        4.26       21.28
+{txt}      phuoc hiep {c |}{res}         52        6.51       27.78
+{txt}     phuoc thanh {c |}{res}         39        4.88       32.67
+{txt}   phuoc vinh an {c |}{res}          9        1.13       33.79
+{txt}    pham van coi {c |}{res}         22        2.75       36.55
+{txt}    phu hoa dong {c |}{res}         82       10.26       46.81
+{txt}     phu my hung {c |}{res}         22        2.75       49.56
+{txt}   tan phu trung {c |}{res}        142       17.77       67.33
+{txt}   tan thong hoi {c |}{res}         47        5.88       73.22
+{txt}      tan an hoi {c |}{res}         18        2.25       75.47
+{txt}   tan thanh tay {c |}{res}          3        0.38       75.84
+{txt}  tan thanh dong {c |}{res}        111       13.89       89.74
+{txt}    trung lap ha {c |}{res}         57        7.13       96.87
+{txt}trung lap thuong {c |}{res}          4        0.50       97.37
+{txt}        trung an {c |}{res}          3        0.38       97.75
+{txt}         thai my {c |}{res}          9        1.13       98.87
+{txt}        thi tran {c |}{res}          9        1.13      100.00
+{txt}{hline 17}{c +}{hline 35}
+           Total {c |}{res}        799      100.00
+
+-> tabulation of a3  
+
+   {txt}trinh do {c |}
+    hoc van {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     mu chu {c |}{res}         18        2.25        2.25
+{txt}      cap 1 {c |}{res}        105       13.13       15.38
+{txt}      cap 2 {c |}{res}        455       56.88       72.25
+{txt}      cap 3 {c |}{res}        182       22.75       95.00
+{txt}     > cap3 {c |}{res}         40        5.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        800      100.00
+
+-> tabulation of a4  
+
+     {txt}nghe nghiep {c |}      Freq.     Percent        Cum.
+{hline 17}{c +}{hline 35}
+       cong nhan {c |}{res}        429       53.63       53.63
+{txt}        nong dan {c |}{res}         20        2.50       56.13
+{txt}can bo,vien chuc {c |}{res}         25        3.13       59.25
+{txt}        buon ban {c |}{res}         55        6.88       66.13
+{txt}     hsinh,svien {c |}{res}          3        0.38       66.50
+{txt}         noi tro {c |}{res}        258       32.25       98.75
+{txt}     that nghiep {c |}{res}          1        0.13       98.88
+{txt}            khac {c |}{res}          9        1.13      100.00
+{txt}{hline 17}{c +}{hline 35}
+           Total {c |}{res}        800      100.00
+
+-> tabulation of a5  
+
+    {txt}dan toc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+       kinh {c |}{res}        785       98.13       98.13
+{txt}        hoa {c |}{res}          1        0.13       98.25
+{txt}      khmer {c |}{res}         12        1.50       99.75
+{txt}       khac {c |}{res}          2        0.25      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        800      100.00
+
+-> tabulation of a6  
+
+       {txt}ton giao {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+      phat giao {c |}{res}        465       58.13       58.13
+{txt}thien chua giao {c |}{res}         47        5.88       64.00
+{txt}          khong {c |}{res}        272       34.00       98.00
+{txt}           khac {c |}{res}         16        2.00      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        800      100.00
+
+-> tabulation of a7  
+
+       {txt}kinh te {c |}      Freq.     Percent        Cum.
+{hline 15}{c +}{hline 35}
+             0 {c |}{res}        699       87.38       87.38
+{txt}      ho ngheo {c |}{res}        101       12.63      100.00
+{txt}{hline 15}{c +}{hline 35}
+         Total {c |}{res}        800      100.00
+
+-> tabulation of b3  
+
+ {txt}tinh trang {c |}
+   sinh con {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        284       93.42       93.42
+{txt}thieu thang {c |}{res}         20        6.58      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        304      100.00
+
+-> tabulation of b41  
+
+   {txt}xay thai {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        265       73.00       73.00
+{txt}         co {c |}{res}         98       27.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        363      100.00
+
+-> tabulation of b42  
+
+   {txt}dieu hoa {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        302       87.03       87.03
+{txt}         co {c |}{res}         45       12.97      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        347      100.00
+
+-> tabulation of b6  
+
+           {txt}phu khoa {c |}      Freq.     Percent        Cum.
+{hline 20}{c +}{hline 35}
+                  0 {c |}{res}        758       94.75       94.75
+{txt}          rong kinh {c |}{res}         32        4.00       98.75
+{txt}         cuong kinh {c |}{res}          2        0.25       99.00
+{txt}bang huyet sau sinh {c |}{res}          8        1.00      100.00
+{txt}{hline 20}{c +}{hline 35}
+              Total {c |}{res}        800      100.00
+
+{com}. di "MO TA KET CUOC"
+{res}MO TA KET CUOC
+
+{com}. tab1  thieumau thieumauthieusat
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}        576       72.00       72.00
+{txt}      thieu mau {c |}{res}        224       28.00      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        800      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}        649       81.13       81.13
+{txt}         co {c |}{res}        151       18.88      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        800      100.00
+
+{com}. bysort  a1:tab1  thieumau thieumauthieusat
+
+{txt}{hline}
+-> a1 = an
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         39       70.91       70.91
+{txt}      thieu mau {c |}{res}         16       29.09      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         55      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         44       80.00       80.00
+{txt}         co {c |}{res}         11       20.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         55      100.00
+
+{txt}{hline}
+-> a1 = an
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         44       73.33       73.33
+{txt}      thieu mau {c |}{res}         16       26.67      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         60      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         51       85.00       85.00
+{txt}         co {c |}{res}          9       15.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         60      100.00
+
+{txt}{hline}
+-> a1 = ho
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         18       85.71       85.71
+{txt}      thieu mau {c |}{res}          3       14.29      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         21      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         19       90.48       90.48
+{txt}         co {c |}{res}          2        9.52      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         21      100.00
+
+{txt}{hline}
+-> a1 = nh
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         20       58.82       58.82
+{txt}      thieu mau {c |}{res}         14       41.18      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         34      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         26       76.47       76.47
+{txt}         co {c |}{res}          8       23.53      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         34      100.00
+
+{txt}{hline}
+-> a1 = ph
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         41       78.85       78.85
+{txt}      thieu mau {c |}{res}         11       21.15      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         52      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         44       84.62       84.62
+{txt}         co {c |}{res}          8       15.38      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         52      100.00
+
+{txt}{hline}
+-> a1 = ph
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         33       84.62       84.62
+{txt}      thieu mau {c |}{res}          6       15.38      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         39      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         37       94.87       94.87
+{txt}         co {c |}{res}          2        5.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         39      100.00
+
+{txt}{hline}
+-> a1 = ph
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}          4       44.44       44.44
+{txt}      thieu mau {c |}{res}          5       55.56      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          9      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}          5       55.56       55.56
+{txt}         co {c |}{res}          4       44.44      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          9      100.00
+
+{txt}{hline}
+-> a1 = ph
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         12       54.55       54.55
+{txt}      thieu mau {c |}{res}         10       45.45      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         22      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         15       68.18       68.18
+{txt}         co {c |}{res}          7       31.82      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         22      100.00
+
+{txt}{hline}
+-> a1 = ph
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         66       80.49       80.49
+{txt}      thieu mau {c |}{res}         16       19.51      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         82      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         69       84.15       84.15
+{txt}         co {c |}{res}         13       15.85      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         82      100.00
+
+{txt}{hline}
+-> a1 = ph
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         14       63.64       63.64
+{txt}      thieu mau {c |}{res}          8       36.36      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         22      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         17       77.27       77.27
+{txt}         co {c |}{res}          5       22.73      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         22      100.00
+
+{txt}{hline}
+-> a1 = ta
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         94       66.20       66.20
+{txt}      thieu mau {c |}{res}         48       33.80      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        142      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}        109       76.76       76.76
+{txt}         co {c |}{res}         33       23.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        142      100.00
+
+{txt}{hline}
+-> a1 = ta
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         40       85.11       85.11
+{txt}      thieu mau {c |}{res}          7       14.89      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         47      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         43       91.49       91.49
+{txt}         co {c |}{res}          4        8.51      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         47      100.00
+
+{txt}{hline}
+-> a1 = ta
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         13       72.22       72.22
+{txt}      thieu mau {c |}{res}          5       27.78      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         18      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         15       83.33       83.33
+{txt}         co {c |}{res}          3       16.67      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         18      100.00
+
+{txt}{hline}
+-> a1 = ta
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}          3      100.00      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          3      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}          3      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          3      100.00
+
+{txt}{hline}
+-> a1 = ta
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         80       72.07       72.07
+{txt}      thieu mau {c |}{res}         31       27.93      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        111      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         87       78.38       78.38
+{txt}         co {c |}{res}         24       21.62      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        111      100.00
+
+{txt}{hline}
+-> a1 = tr
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         36       63.16       63.16
+{txt}      thieu mau {c |}{res}         21       36.84      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         57      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         44       77.19       77.19
+{txt}         co {c |}{res}         13       22.81      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         57      100.00
+
+{txt}{hline}
+-> a1 = tr
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}          3       75.00       75.00
+{txt}      thieu mau {c |}{res}          1       25.00      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          4      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}          3       75.00       75.00
+{txt}         co {c |}{res}          1       25.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          4      100.00
+
+{txt}{hline}
+-> a1 = tr
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}          2       66.67       66.67
+{txt}      thieu mau {c |}{res}          1       33.33      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          3      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}          3      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          3      100.00
+
+{txt}{hline}
+-> a1 = th
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}          7       77.78       77.78
+{txt}      thieu mau {c |}{res}          2       22.22      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          9      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}          7       77.78       77.78
+{txt}         co {c |}{res}          2       22.22      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          9      100.00
+
+{txt}{hline}
+-> a1 = th
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}          7       77.78       77.78
+{txt}      thieu mau {c |}{res}          2       22.22      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          9      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}          8       88.89       88.89
+{txt}         co {c |}{res}          1       11.11      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          9      100.00
+
+{txt}{hline}
+-> a1 = .
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+      thieu mau {c |}{res}          1      100.00      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          1      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         co {c |}{res}          1      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          1      100.00
+
+{com}. bysort  a3:tab1  thieumau thieumauthieusat
+
+{txt}{hline}
+-> a3 = m
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         13       72.22       72.22
+{txt}      thieu mau {c |}{res}          5       27.78      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         18      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         16       88.89       88.89
+{txt}         co {c |}{res}          2       11.11      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         18      100.00
+
+{txt}{hline}
+-> a3 = c
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         79       75.24       75.24
+{txt}      thieu mau {c |}{res}         26       24.76      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        105      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         86       81.90       81.90
+{txt}         co {c |}{res}         19       18.10      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        105      100.00
+
+{txt}{hline}
+-> a3 = c
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}        326       71.65       71.65
+{txt}      thieu mau {c |}{res}        129       28.35      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        455      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}        372       81.76       81.76
+{txt}         co {c |}{res}         83       18.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        455      100.00
+
+{txt}{hline}
+-> a3 = c
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}        131       71.98       71.98
+{txt}      thieu mau {c |}{res}         51       28.02      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        182      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}        145       79.67       79.67
+{txt}         co {c |}{res}         37       20.33      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        182      100.00
+
+{txt}{hline}
+-> a3 = >
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         27       67.50       67.50
+{txt}      thieu mau {c |}{res}         13       32.50      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         40      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         30       75.00       75.00
+{txt}         co {c |}{res}         10       25.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         40      100.00
+
+{com}. tab1  a3
+
+{res}-> tabulation of a3  
+
+   {txt}trinh do {c |}
+    hoc van {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     mu chu {c |}{res}         18        2.25        2.25
+{txt}      cap 1 {c |}{res}        105       13.13       15.38
+{txt}      cap 2 {c |}{res}        455       56.88       72.25
+{txt}      cap 3 {c |}{res}        182       22.75       95.00
+{txt}     > cap3 {c |}{res}         40        5.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        800      100.00
+
+{com}. di "MO TA KET CUOC"
+{res}MO TA KET CUOC
+
+{com}. tab1  thieumau thieumauthieusat
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}        576       72.00       72.00
+{txt}      thieu mau {c |}{res}        224       28.00      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        800      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}        649       81.13       81.13
+{txt}         co {c |}{res}        151       18.88      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        800      100.00
+
+{com}. bysort  a3:tab1  thieumau thieumauthieusat
+
+{txt}{hline}
+-> a3 = m
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         13       72.22       72.22
+{txt}      thieu mau {c |}{res}          5       27.78      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         18      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         16       88.89       88.89
+{txt}         co {c |}{res}          2       11.11      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         18      100.00
+
+{txt}{hline}
+-> a3 = c
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         79       75.24       75.24
+{txt}      thieu mau {c |}{res}         26       24.76      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        105      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         86       81.90       81.90
+{txt}         co {c |}{res}         19       18.10      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        105      100.00
+
+{txt}{hline}
+-> a3 = c
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}        326       71.65       71.65
+{txt}      thieu mau {c |}{res}        129       28.35      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        455      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}        372       81.76       81.76
+{txt}         co {c |}{res}         83       18.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        455      100.00
+
+{txt}{hline}
+-> a3 = c
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}        131       71.98       71.98
+{txt}      thieu mau {c |}{res}         51       28.02      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        182      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}        145       79.67       79.67
+{txt}         co {c |}{res}         37       20.33      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        182      100.00
+
+{txt}{hline}
+-> a3 = >
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         27       67.50       67.50
+{txt}      thieu mau {c |}{res}         13       32.50      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         40      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         30       75.00       75.00
+{txt}         co {c |}{res}         10       25.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         40      100.00
+
+{com}. browse
+
+. edit
+{txt}- preserve
+- format a3 %10.0f
+- format a4 %10.0f
+- format a5 %10.0f
+- format a6 %10.0f
+- format a7 %10.0f
+- format b1 %10.0f
+- format b2 %10.0f
+- format b3 %10.0f
+- format b41 %10.0f
+- format b7 %10.0f
+- format b71 %10.0f
+
+{com}. bysort  a3:tab1  thieumau thieumauthieusat
+
+{txt}{hline}
+-> a3 = mu chu
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         13       72.22       72.22
+{txt}      thieu mau {c |}{res}          5       27.78      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         18      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         16       88.89       88.89
+{txt}         co {c |}{res}          2       11.11      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         18      100.00
+
+{txt}{hline}
+-> a3 = cap 1
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         79       75.24       75.24
+{txt}      thieu mau {c |}{res}         26       24.76      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        105      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         86       81.90       81.90
+{txt}         co {c |}{res}         19       18.10      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        105      100.00
+
+{txt}{hline}
+-> a3 = cap 2
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}        326       71.65       71.65
+{txt}      thieu mau {c |}{res}        129       28.35      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        455      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}        372       81.76       81.76
+{txt}         co {c |}{res}         83       18.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        455      100.00
+
+{txt}{hline}
+-> a3 = cap 3
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}        131       71.98       71.98
+{txt}      thieu mau {c |}{res}         51       28.02      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        182      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}        145       79.67       79.67
+{txt}         co {c |}{res}         37       20.33      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        182      100.00
+
+{txt}{hline}
+-> a3 = > cap3
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         27       67.50       67.50
+{txt}      thieu mau {c |}{res}         13       32.50      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         40      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         30       75.00       75.00
+{txt}         co {c |}{res}         10       25.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         40      100.00
+
+{com}. help format
+
+. format   a1 a3 a4 a5 a6 a7 b3 b41 b42 b6 %1.0f
+
+. browse
+
+. format   a1 a3 a4 a5 a6 a7 b3 b41 b42 b6 %10.0f
+
+. browse
+
+. bysort a1: tab1  thieumau thieumauthieusat
+
+{txt}{hline}
+-> a1 = an phu
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         39       70.91       70.91
+{txt}      thieu mau {c |}{res}         16       29.09      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         55      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         44       80.00       80.00
+{txt}         co {c |}{res}         11       20.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         55      100.00
+
+{txt}{hline}
+-> a1 = an nhon ta
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         44       73.33       73.33
+{txt}      thieu mau {c |}{res}         16       26.67      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         60      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         51       85.00       85.00
+{txt}         co {c |}{res}          9       15.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         60      100.00
+
+{txt}{hline}
+-> a1 = hoa phu
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         18       85.71       85.71
+{txt}      thieu mau {c |}{res}          3       14.29      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         21      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         19       90.48       90.48
+{txt}         co {c |}{res}          2        9.52      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         21      100.00
+
+{txt}{hline}
+-> a1 = nhuan duc
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         20       58.82       58.82
+{txt}      thieu mau {c |}{res}         14       41.18      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         34      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         26       76.47       76.47
+{txt}         co {c |}{res}          8       23.53      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         34      100.00
+
+{txt}{hline}
+-> a1 = phuoc hiep
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         41       78.85       78.85
+{txt}      thieu mau {c |}{res}         11       21.15      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         52      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         44       84.62       84.62
+{txt}         co {c |}{res}          8       15.38      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         52      100.00
+
+{txt}{hline}
+-> a1 = phuoc than
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         33       84.62       84.62
+{txt}      thieu mau {c |}{res}          6       15.38      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         39      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         37       94.87       94.87
+{txt}         co {c |}{res}          2        5.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         39      100.00
+
+{txt}{hline}
+-> a1 = phuoc vinh
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}          4       44.44       44.44
+{txt}      thieu mau {c |}{res}          5       55.56      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          9      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}          5       55.56       55.56
+{txt}         co {c |}{res}          4       44.44      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          9      100.00
+
+{txt}{hline}
+-> a1 = pham van c
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         12       54.55       54.55
+{txt}      thieu mau {c |}{res}         10       45.45      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         22      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         15       68.18       68.18
+{txt}         co {c |}{res}          7       31.82      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         22      100.00
+
+{txt}{hline}
+-> a1 = phu hoa do
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         66       80.49       80.49
+{txt}      thieu mau {c |}{res}         16       19.51      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         82      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         69       84.15       84.15
+{txt}         co {c |}{res}         13       15.85      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         82      100.00
+
+{txt}{hline}
+-> a1 = phu my hun
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         14       63.64       63.64
+{txt}      thieu mau {c |}{res}          8       36.36      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         22      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         17       77.27       77.27
+{txt}         co {c |}{res}          5       22.73      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         22      100.00
+
+{txt}{hline}
+-> a1 = tan phu tr
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         94       66.20       66.20
+{txt}      thieu mau {c |}{res}         48       33.80      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        142      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}        109       76.76       76.76
+{txt}         co {c |}{res}         33       23.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        142      100.00
+
+{txt}{hline}
+-> a1 = tan thong
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         40       85.11       85.11
+{txt}      thieu mau {c |}{res}          7       14.89      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         47      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         43       91.49       91.49
+{txt}         co {c |}{res}          4        8.51      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         47      100.00
+
+{txt}{hline}
+-> a1 = tan an hoi
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         13       72.22       72.22
+{txt}      thieu mau {c |}{res}          5       27.78      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         18      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         15       83.33       83.33
+{txt}         co {c |}{res}          3       16.67      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         18      100.00
+
+{txt}{hline}
+-> a1 = tan thanh
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}          3      100.00      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          3      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}          3      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          3      100.00
+
+{txt}{hline}
+-> a1 = tan thanh
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         80       72.07       72.07
+{txt}      thieu mau {c |}{res}         31       27.93      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        111      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         87       78.38       78.38
+{txt}         co {c |}{res}         24       21.62      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        111      100.00
+
+{txt}{hline}
+-> a1 = trung lap
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         36       63.16       63.16
+{txt}      thieu mau {c |}{res}         21       36.84      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         57      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         44       77.19       77.19
+{txt}         co {c |}{res}         13       22.81      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         57      100.00
+
+{txt}{hline}
+-> a1 = trung lap
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}          3       75.00       75.00
+{txt}      thieu mau {c |}{res}          1       25.00      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          4      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}          3       75.00       75.00
+{txt}         co {c |}{res}          1       25.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          4      100.00
+
+{txt}{hline}
+-> a1 = trung an
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}          2       66.67       66.67
+{txt}      thieu mau {c |}{res}          1       33.33      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          3      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}          3      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          3      100.00
+
+{txt}{hline}
+-> a1 = thai my
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}          7       77.78       77.78
+{txt}      thieu mau {c |}{res}          2       22.22      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          9      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}          7       77.78       77.78
+{txt}         co {c |}{res}          2       22.22      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          9      100.00
+
+{txt}{hline}
+-> a1 = thi tran
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}          7       77.78       77.78
+{txt}      thieu mau {c |}{res}          2       22.22      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          9      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}          8       88.89       88.89
+{txt}         co {c |}{res}          1       11.11      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          9      100.00
+
+{txt}{hline}
+-> a1 = .
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+      thieu mau {c |}{res}          1      100.00      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          1      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         co {c |}{res}          1      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          1      100.00
+
+{com}. bysort a4: tab1  thieumau thieumauthieusat
+
+{txt}{hline}
+-> a4 = cong nhan
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}        317       73.89       73.89
+{txt}      thieu mau {c |}{res}        112       26.11      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        429      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}        354       82.52       82.52
+{txt}         co {c |}{res}         75       17.48      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        429      100.00
+
+{txt}{hline}
+-> a4 = nong dan
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         13       65.00       65.00
+{txt}      thieu mau {c |}{res}          7       35.00      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         20      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         17       85.00       85.00
+{txt}         co {c |}{res}          3       15.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         20      100.00
+
+{txt}{hline}
+-> a4 = can bo,vie
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         19       76.00       76.00
+{txt}      thieu mau {c |}{res}          6       24.00      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         25      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         20       80.00       80.00
+{txt}         co {c |}{res}          5       20.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         25      100.00
+
+{txt}{hline}
+-> a4 = buon ban
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}         40       72.73       72.73
+{txt}      thieu mau {c |}{res}         15       27.27      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}         55      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}         44       80.00       80.00
+{txt}         co {c |}{res}         11       20.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         55      100.00
+
+{txt}{hline}
+-> a4 = hsinh,svie
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+      thieu mau {c |}{res}          3      100.00      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          3      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}          1       33.33       33.33
+{txt}         co {c |}{res}          2       66.67      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          3      100.00
+
+{txt}{hline}
+-> a4 = noi tro
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}        179       69.38       69.38
+{txt}      thieu mau {c |}{res}         79       30.62      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}        258      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}        205       79.46       79.46
+{txt}         co {c |}{res}         53       20.54      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        258      100.00
+
+{txt}{hline}
+-> a4 = that nghie
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+      thieu mau {c |}{res}          1      100.00      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          1      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         co {c |}{res}          1      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          1      100.00
+
+{txt}{hline}
+-> a4 = khac
+
+{res}-> tabulation of thieumau  
+
+   {txt}RECODE of d2 {c |}
+   (HGB (g/dL)) {c |}      Freq.     Percent        Cum.
+{hline 16}{c +}{hline 35}
+khong thieu mau {c |}{res}          8       88.89       88.89
+{txt}      thieu mau {c |}{res}          1       11.11      100.00
+{txt}{hline 16}{c +}{hline 35}
+          Total {c |}{res}          9      100.00
+
+-> tabulation of thieumauthieusat  
+
+{txt}thieumauthi {c |}
+      eusat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+      khong {c |}{res}          8       88.89       88.89
+{txt}         co {c |}{res}          1       11.11      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          9      100.00
+
+{com}. di "THONG KE PHAN TICH"
+{res}THONG KE PHAN TICH
+
+{com}. tabulate thieumau c1, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+   RECODE of d2 {c |}             chan dat
+   (HGB (g/dL)) {c |}     khong  thinh tho  thuong xu {c |}     Total
+{hline 16}{c +}{hline 33}{c +}{hline 10}
+khong thieu mau {c |}{res}       450        102         24 {txt}{c |}{res}       576 
+                {txt}{c |}{res}     72.93      67.11      77.42 {txt}{c |}{res}     72.00 
+{txt}{hline 16}{c +}{hline 33}{c +}{hline 10}
+      thieu mau {c |}{res}       167         50          7 {txt}{c |}{res}       224 
+                {txt}{c |}{res}     27.07      32.89      22.58 {txt}{c |}{res}     28.00 
+{txt}{hline 16}{c +}{hline 33}{c +}{hline 10}
+          Total {c |}{res}       617        152         31 {txt}{c |}{res}       800 
+                {txt}{c |}{res}    100.00     100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}2{txt}) = {res}  2.5247  {txt} Pr = {res}0.283
+
+{com}. tabulate thieumau c21, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+   RECODE of d2 {c |}        an chay
+   (HGB (g/dL)) {c |}         0         co {c |}     Total
+{hline 16}{c +}{hline 22}{c +}{hline 10}
+khong thieu mau {c |}{res}       547         29 {txt}{c |}{res}       576 
+                {txt}{c |}{res}     71.78      76.32 {txt}{c |}{res}     72.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+      thieu mau {c |}{res}       215          9 {txt}{c |}{res}       224 
+                {txt}{c |}{res}     28.22      23.68 {txt}{c |}{res}     28.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+          Total {c |}{res}       762         38 {txt}{c |}{res}       800 
+                {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.3686  {txt} Pr = {res}0.544
+
+{com}. tabulate thieumau c22, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+   RECODE of d2 {c |}  an thit,ca,hai san
+   (HGB (g/dL)) {c |}         0         co {c |}     Total
+{hline 16}{c +}{hline 22}{c +}{hline 10}
+khong thieu mau {c |}{res}        58        518 {txt}{c |}{res}       576 
+                {txt}{c |}{res}     66.67      72.65 {txt}{c |}{res}     72.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+      thieu mau {c |}{res}        29        195 {txt}{c |}{res}       224 
+                {txt}{c |}{res}     33.33      27.35 {txt}{c |}{res}     28.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+          Total {c |}{res}        87        713 {txt}{c |}{res}       800 
+                {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  1.3773  {txt} Pr = {res}0.241
+
+{com}. tabulate thieumau c23, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+   RECODE of d2 {c |}        rau,dau
+   (HGB (g/dL)) {c |}         0         co {c |}     Total
+{hline 16}{c +}{hline 22}{c +}{hline 10}
+khong thieu mau {c |}{res}        85        491 {txt}{c |}{res}       576 
+                {txt}{c |}{res}     77.98      71.06 {txt}{c |}{res}     72.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+      thieu mau {c |}{res}        24        200 {txt}{c |}{res}       224 
+                {txt}{c |}{res}     22.02      28.94 {txt}{c |}{res}     28.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+          Total {c |}{res}       109        691 {txt}{c |}{res}       800 
+                {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  2.2397  {txt} Pr = {res}0.135
+
+{com}. tabulate thieumau c24, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+   RECODE of d2 {c |}       trai cay
+   (HGB (g/dL)) {c |}         0         co {c |}     Total
+{hline 16}{c +}{hline 22}{c +}{hline 10}
+khong thieu mau {c |}{res}        49        527 {txt}{c |}{res}       576 
+                {txt}{c |}{res}     76.56      71.60 {txt}{c |}{res}     72.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+      thieu mau {c |}{res}        15        209 {txt}{c |}{res}       224 
+                {txt}{c |}{res}     23.44      28.40 {txt}{c |}{res}     28.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+          Total {c |}{res}        64        736 {txt}{c |}{res}       800 
+                {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.7183  {txt} Pr = {res}0.397
+
+{com}. tabulate thieumau c25, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+   RECODE of d2 {c |}       tra,cafe
+   (HGB (g/dL)) {c |}         0         co {c |}     Total
+{hline 16}{c +}{hline 22}{c +}{hline 10}
+khong thieu mau {c |}{res}       419        157 {txt}{c |}{res}       576 
+                {txt}{c |}{res}     72.12      71.69 {txt}{c |}{res}     72.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+      thieu mau {c |}{res}       162         62 {txt}{c |}{res}       224 
+                {txt}{c |}{res}     27.88      28.31 {txt}{c |}{res}     28.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+          Total {c |}{res}       581        219 {txt}{c |}{res}       800 
+                {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.0144  {txt} Pr = {res}0.904
+
+{com}. tabulate thieumau c26, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+   RECODE of d2 {c |}     an uong khac
+   (HGB (g/dL)) {c |}         0         co {c |}     Total
+{hline 16}{c +}{hline 22}{c +}{hline 10}
+khong thieu mau {c |}{res}       548         28 {txt}{c |}{res}       576 
+                {txt}{c |}{res}     71.63      80.00 {txt}{c |}{res}     72.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+      thieu mau {c |}{res}       217          7 {txt}{c |}{res}       224 
+                {txt}{c |}{res}     28.37      20.00 {txt}{c |}{res}     28.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+          Total {c |}{res}       765         35 {txt}{c |}{res}       800 
+                {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  1.1619  {txt} Pr = {res}0.281
+
+{com}. tabulate thieumau c3, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+   RECODE of d2 {c |}          muc do an uong
+   (HGB (g/dL)) {c |} it hon bi  binh thuo  nhieu hon {c |}     Total
+{hline 16}{c +}{hline 33}{c +}{hline 10}
+khong thieu mau {c |}{res}       143        169        264 {txt}{c |}{res}       576 
+                {txt}{c |}{res}     71.14      75.11      70.59 {txt}{c |}{res}     72.00 
+{txt}{hline 16}{c +}{hline 33}{c +}{hline 10}
+      thieu mau {c |}{res}        58         56        110 {txt}{c |}{res}       224 
+                {txt}{c |}{res}     28.86      24.89      29.41 {txt}{c |}{res}     28.00 
+{txt}{hline 16}{c +}{hline 33}{c +}{hline 10}
+          Total {c |}{res}       201        225        374 {txt}{c |}{res}       800 
+                {txt}{c |}{res}    100.00     100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}2{txt}) = {res}  1.5230  {txt} Pr = {res}0.467
+
+{com}. tabulate thieumau c4, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+   RECODE of d2 {c |}             vien sat
+   (HGB (g/dL)) {c |} thuong xu  khong thu  khong uon {c |}     Total
+{hline 16}{c +}{hline 33}{c +}{hline 10}
+khong thieu mau {c |}{res}       422        101         53 {txt}{c |}{res}       576 
+                {txt}{c |}{res}     74.43      67.33      63.86 {txt}{c |}{res}     72.00 
+{txt}{hline 16}{c +}{hline 33}{c +}{hline 10}
+      thieu mau {c |}{res}       145         49         30 {txt}{c |}{res}       224 
+                {txt}{c |}{res}     25.57      32.67      36.14 {txt}{c |}{res}     28.00 
+{txt}{hline 16}{c +}{hline 33}{c +}{hline 10}
+          Total {c |}{res}       567        150         83 {txt}{c |}{res}       800 
+                {txt}{c |}{res}    100.00     100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}2{txt}) = {res}  6.0078  {txt} Pr = {res}0.050
+
+{com}. tabulate thieumau c5, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+   RECODE of d2 {c |}       tay giun
+   (HGB (g/dL)) {c |}         0         co {c |}     Total
+{hline 16}{c +}{hline 22}{c +}{hline 10}
+khong thieu mau {c |}{res}       468        108 {txt}{c |}{res}       576 
+                {txt}{c |}{res}     72.56      69.68 {txt}{c |}{res}     72.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+      thieu mau {c |}{res}       177         47 {txt}{c |}{res}       224 
+                {txt}{c |}{res}     27.44      30.32 {txt}{c |}{res}     28.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+          Total {c |}{res}       645        155 {txt}{c |}{res}       800 
+                {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.5144  {txt} Pr = {res}0.473
+
+{com}. tabulate thieumau c6, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+   RECODE of d2 {c |}       om nghen
+   (HGB (g/dL)) {c |}  buon non  non thuon {c |}     Total
+{hline 16}{c +}{hline 22}{c +}{hline 10}
+khong thieu mau {c |}{res}       381        195 {txt}{c |}{res}       576 
+                {txt}{c |}{res}     71.21      73.58 {txt}{c |}{res}     72.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+      thieu mau {c |}{res}       154         70 {txt}{c |}{res}       224 
+                {txt}{c |}{res}     28.79      26.42 {txt}{c |}{res}     28.00 
+{txt}{hline 16}{c +}{hline 22}{c +}{hline 10}
+          Total {c |}{res}       535        265 {txt}{c |}{res}       800 
+                {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res}  0.4937  {txt} Pr = {res}0.482
+
+{com}. do "C:\Users\Dzung\AppData\Local\Temp\STD03000000.tmp"
+{txt}
+{com}. capture log close
+{smcl}
+{com}{sf}{ul off}

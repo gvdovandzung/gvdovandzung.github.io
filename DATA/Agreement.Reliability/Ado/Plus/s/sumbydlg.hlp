@@ -1,0 +1,196 @@
+.-
+help for ^Means and SDs by group^                                 Menu: Summaries
+.-
+
+^Description^
+^-----------^
+
+This command has two versions:
+
+^One-way of means^  Produces a table of the mean of ^x^, the standard deviation
+of ^x^, and the frequencies (number of observations) for each category of a
+group variable:
+
+^. tabulate group1, summ(x)^
+                                                                                
+            |             Summary of x                                          
+      group1|        Mean   Std. Dev.       Freq.                               
+------------+------------------------------------                               
+          1 |          21   4.2426407           2                               
+          2 |      19.125   3.7583241           8                               
+          3 |   19.433333   4.1413252          30                               
+          4 |   21.666667   4.9348699          18                               
+------------+------------------------------------                               
+      Total |   20.137931   4.3827744          58                               
+
+
+^Two-way of means^  Produces a table of the mean of ^x^, the standard deviation
+of ^x^, and the frequencies (number of observations) for each category formed
+by all the possible levels of two group variables:
+
+^. tabulate group1 group2, summ(x)^                                              
+                                                                                
+              Means, Standard Deviations and Frequencies of x                   
+                                                                                
+           | group2                                                             
+     group1|         0          1      Total                                    
+-----------+----------------------+----------                                   
+         1 |        21          . |        21                                   
+           | 4.2426407          . | 4.2426407                                   
+           |         2          0 |         2                                   
+-----------+----------------------+----------                                   
+         2 |    19.125          . |    19.125                                   
+           | 3.7583241          . | 3.7583241                                   
+           |         8          0 |         8                                   
+-----------+----------------------+----------                                   
+         3 |        19  23.333333 | 19.433333                                   
+           | 4.0856221  2.5166115 | 4.1413252                                   
+           |        27          3 |        30                                   
+-----------+----------------------+----------                                   
+         4 | 18.444444  24.888889 | 21.666667                                   
+           | 4.5856055  2.7131368 | 4.9348699                                   
+           |         9          9 |        18                                   
+-----------+----------------------+----------                                   
+     Total |        19       24.5 | 20.137931                                   
+           |  4.027682  2.6457513 | 4.3827744                                   
+           |        46         12 |        58                                   
+      
+ 
+^Examples (how to fill in the dialog box)^
+^----------------------------------------^
+
+^One-way tabulation of means^
+
+Suppose you have three groups of people and you wish to calculate the mean
+age for each group.
+
+Group A contains 4 people with ages 19, 21, 24, and 27.
+Group B contains 3 people with ages 18, 29, and 31.
+Group C contains 5 people with ages 17, 21, 22, 22, and 23.
+
+The data can be input using the ^Editor^ @input_sq!(click here for help on inputting data)@. 
+
+If you then list the data by selecting ^List data^ under the ^Summaries^ menu,
+they will look like
+
+^. list age group in 1/12^                                                        
+                                                                                
+          age     group                                                         
+  1.       19         1                                                         
+  2.       21         1                                                         
+  3.       24         1                                                         
+  4.       27         1                                                         
+  5.       18         2                                                         
+  6.       29         2                                                         
+  7.       31         2                                                         
+  8.       17         3                                                         
+  9.       21         3                                                         
+ 10.       22         3                                                         
+ 11.       22         3                                                         
+ 12.       23         3                                                         
+ 
+Note that the groups must be entered as 1, 2, 3, rather than A, B, C.
+For this command, the group variable must be numeric (i.e., numbers only);
+it cannot be a string (i.e., letters, etc.).
+
+With this data:
+
+Choose the ^One-way of means^ option under ^Means and SDs by group^.
+  
+Enter ^age^   for the "Data variable".
+Enter ^group^ for the "By group" variable.
+
+Enter variables by clicking on their names in the list box, or by typing
+them in.
+
+Output is
+
+^. tabulate group, summ(age)^                                                     
+                                                                                
+            |            Summary of age                                         
+       group|        Mean   Std. Dev.       Freq.                               
+------------+------------------------------------                               
+          1 |       22.75         3.5           4                               
+          2 |          26           7           3                               
+          3 |          21   2.3452079           5                               
+------------+------------------------------------                               
+      Total |   22.833333   4.3029236          12                               
+ 
+
+^Two-way tabulation of means^
+
+You enter your data using the ^Editor^ and then list it using ^List data^ 
+from the ^Summaries^ menu:
+
+^. list height gender race in 1/11^                                              
+                                                                                
+       height    gender      race                                               
+  1.       73         1         1                                               
+  2.       61         1         1                                               
+  3.       67         1         2                                               
+  4.       62         1         2                                               
+  5.       60         1         2                                               
+  6.       69         1         2                                               
+  7.       65         2         1                                               
+  8.       68         2         1                                               
+  9.       74         2         1                                               
+ 10.       72         2         2                                               
+ 11.       67         2         2                                               
+                                                                              
+
+To get the means for each of the 4 gender by race groups:
+
+Choose the ^Two-way of means^ option under ^Means and SDs by group^.
+
+Enter ^height^ for the "Data variable".
+Enter ^gender^ for the "Row group variable".
+Enter ^race^   for the "Column group variable".
+
+Enter variables by pressing the button to the right of the edit box.
+A list box will appear and you can select the variable you want by
+clicking on it.  Or you can type in the name of the variable.
+
+Output is 
+
+^. tabulate gender race, summ(height)^                                            
+                                                                                
+           Means, Standard Deviations and Frequencies of height                 
+                                                                                
+           | race                                                               
+     gender|         1          2      Total                                    
+-----------+----------------------+----------                                   
+         1 |        67       64.5 | 65.333333                                   
+           | 8.4852814  4.2031734 | 5.1639778                                   
+           |         2          4 |         6                                   
+-----------+----------------------+----------                                   
+         2 |        69       69.5 |      69.2                                   
+           | 4.5825757  3.5355339 | 3.7013511                                   
+           |         3          2 |         5                                   
+-----------+----------------------+----------                                   
+     Total |      68.2  66.166667 | 67.090909                                   
+           | 5.4497706   4.445972 | 4.7844445                                   
+           |         5          6 |        11                                   
+ 
+                                                                                
+Note: You could have entered race as the "Row group variable" and
+gender as the "Column group variable".                                                                               
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@summdlg!Means and SDs@
+@dtldlg!Median/Percentiles (includes skewness, kurtosis, 5 smallest/largest)@
+@scidlg!Confidence intervals@
+
+@onewdlg!One-way ANOVA (parametric)@
+@onegdlg!One-way ANOVA plots@
+@kwaldlg!One-way nonparametric ANOVA (Kruskal-Wallis test)@ 
+@rpmdlg!Repeated-measures ANOVA@
+@twowdlg!Two-way ANOVA@
+@aovmdlg!Two-way ANOVA plots@
+@aovcdlg!N-factor ANOVA & ANOCOVA@
+@ptt2dlg!2-sample t test@
+@rsumdlg!Mann-Whitney (Wilcoxon rank-sum) test@

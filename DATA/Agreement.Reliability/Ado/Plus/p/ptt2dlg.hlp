@@ -1,0 +1,175 @@
+.-
+help for ^2-sample t test^                     Menu: Statistics--Parametric tests
+.-
+
+Topics covered
+--------------
+
+^1. Description of the test^
+^2. Unequal variances option^
+^3. Examples (how to choose the right option for your dataset arrangement)^
+^4. When to use 1-sample t test, 2-sample t test, or paired t test commands^
+
+
+^1. Description of the test^
+^--------------------------^
+
+This command computes a 2-sample t test.  It tests the null hypothesis Ho that
+the mean m1 of a random variable X1 is equal to the mean m2 of a random
+variable X2; i.e., Ho: m1 = m2.
+
+X1 is a measurement (e.g., height) for subjects in population 1, and X2 is a
+measurement for subjects in population 2.
+
+The test assumes that X1 and X2 are normally distributed in population 1 and
+population 2, respectively.
+
+
+^2. Unequal variances option^
+^---------------------------^
+
+The standard t test also assumes that the population variance of X1 is the
+same as the population variance of X2.  To do the standard t test, leave the
+"Unequal variances" box unchecked.
+
+If you do not want to assume equal population variances, check the "Unequal
+variances" box.  When you check it, the command uses Satterthwaite's approx-
+imation formula to handle (possibly) unequal variances.
+
+
+^3. Examples (how to choose the right option for your dataset arrangement)^
+^--------------------------------------------------------------------------^
+
+In this example, we illustrate the choice of options
+
+	^1 data variable, 1 group variable^
+	^2 independent data variables^
+
+We wish to test whether the mean height of male college seniors is the same
+as the mean height of male college freshmen.  So we randomly sample 6 male
+seniors and 7 freshmen and measure their heights (in inches):
+
+Seniors:   65, 67, 70, 71, 74, 75
+Freshmen:  68, 69, 71, 71, 72, 73, 76
+
+The data can be entered in two ways @input_sq!(click here for help on inputting data)@:
+
+^Data Arrangement:  1 data variable, 1 group variable^
+
+We create two variables: ^height^ and ^group^.
+^group^ = 1 for seniors, and ^group^ = 2 for freshmen.
+
+After we enter the data, we list them by selecting ^List data^ under the
+^Summaries^ menu:
+
+^. list height group in 1/13^                                                     
+                                                                                
+       height     group                                                         
+  1.       65         1                                                         
+  2.       67         1                                                         
+  3.       70         1                                                         
+  4.       71         1                                                         
+  5.       74         1                                                         
+  6.       75         1                                                         
+  7.       68         2                                                         
+  8.       69         2                                                         
+  9.       71         2                                                         
+ 10.       71         2                                                         
+ 11.       72         2                                                         
+ 12.       73         2                                                         
+ 13.       76         2                                                         
+ 
+For this data arrangement, we must choose the "1 data variable, 1 group
+variable" option in the first dialog box. 
+
+In the second dialog box, we choose ^height^ for the "Data variable" and
+^group^ for the "Group var. (2 groups)".
+
+This command also produces a confidence interval for the difference of 
+the means of the two groups.  Change the confidence level for the interval
+if you wish.
+
+
+^Data Arrangement: 2 independent data variables^
+
+We create two variables: ^hsenior^ and ^hfresh^.
+^hsenior^ contains the heights of the seniors, and
+^hfresh^ contains the heights of the freshmen.
+
+After we enter the data, we list them by selecting ^List data^ under the
+^Summaries^ menu:
+
+. list hsenior hfresh in 1/7                                                    
+                                                                                
+      hsenior    hfresh                                                         
+  1.       65        68                                                         
+  2.       67        69                                                         
+  3.       70        71                                                         
+  4.       71        71                                                         
+  5.       74        72                                                         
+  6.       75        73                                                         
+  7.        .        76                                                         
+ 
+For this data arrangement, we must choose the "2 independent data variables"
+option in the first dialog box. 
+
+In the second dialog box, we choose ^hsenior^ for "Data variable #1" and
+^hfresh^ for "Data variable #2".
+
+
+^4. When to use 1-sample t test, 2-sample t test, or paired t test commands^
+^--------------------------------------------------------------------------^
+
+Test      Null hypothesis                               Examples
+----      ---------------                               --------
+
+^1-sample^  Ho: m = m0, where                             Ho: mean X = 0
+              m  is mean of population variable
+              m0 is hypothesized mean (i.e., a number)
+
+^2-sample^  Ho: m1 = m2, where                            Ho: mean height
+              m1 is mean of variable for population 1            of females
+              m2 is mean of variable for population 2     = mean height
+                                                                 of males
+
+^Paired^    Ho: mean(X1 - X2) = 0, where                  Ho: mean difference of
+              X1 is variable 1 and                          weight before and      
+              X2 is variable 2 measured                     after diet = 0
+              on the same subject
+                  
+
+The ^2-sample t test^ is performed when there are 2 independent samples;
+i.e., the two samples contain different subjects (e.g., different people). 
+The 2 samples come from 2 different populations (e.g., females and males).
+The size ^n1^ of sample 1 and the size ^n2^ of sample 2 can be different (or the 
+same).
+
+The ^paired t test^ is performed when there is only one sample from one
+population, and there are two measurements for each subject in the sample.
+
+For example, you measure the weight of each person at time 1, and then at
+time 2 you measure the weight of each person again.  The measurements are
+compared subject by subject, and so the measurements must be made on exactly
+the same sample of subjects at each time.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@tt2dlg!2-sample t test (Calculator menu)@
+
+@ptt1dlg!1-sample t test (Dataset version)@
+@tt1dlg!1-sample t test (Calculator menu)@
+
+@ptt2pdlg!Paired t test@
+
+@onewdlg!One-way ANOVA (for testing equality of means for more than 2 groups)@ 
+
+@stesdlg!Sign test (nonparametric equivalent of 1-sample t test)@
+@srandlg!Wilcoxon signed-rank test (nonparametric equivalent of paired t test)@
+@rsumdlg!Mann-Whitney (Wilcoxon rank-sum) test (nonparametric equivalent of@
+	@rsumdlg!2-sample t test)@
+
+@ttest!For the command-line version, see help for ttest.@

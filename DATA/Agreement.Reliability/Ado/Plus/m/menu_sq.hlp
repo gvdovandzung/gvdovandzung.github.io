@@ -1,0 +1,163 @@
+.-
+help for ^StataQuest menus and buttons^
+.-
+
+Topics covered
+--------------
+
+^1. The StataQuest menus^
+^2. The StataQuest buttons^
+^3. Dialog boxes^
+
+
+^1. The StataQuest menus^
+^-----------------------^
+
+The StataQuest menus are
+
+-------------------------------------------------
+Menus for file management and setting preferences
+-------------------------------------------------
+
+^File^          Choose ^New^ to enter the spreadsheet editor and
+	      create a new dataset.
+
+              Choose ^Open^ to load a (previously saved) Stata
+	      dataset.
+              
+	      Choose ^Save^ to create a new Stata dataset or 
+	      to save changes to a (previously saved) Stata
+	      dataset.
+              
+	      @save_sq!Click here for details.@
+
+^Edit^          Use this menu to copy to the Windows clipboard.
+              @clip_sq!Click here for help.@
+		
+^Prefs^         (Preferences) Use these selections to customize
+              the look of your Stataquest.  @prefs_sq!Click here for help.@
+
+------------------------------------------
+Menus for data manipulation and statistics
+------------------------------------------
+
+^Data^		Selecting any item under these menus brings up
+^Graphs^    	a dialog box (see ^3. Dialog boxes^ below).
+^Summaries^  	
+^Statistics^	Fill in the dialog box, click OK, and output appears
+^Calculator^ 	in the ^Stata Results^ or ^Stata Graph^ window.
+	
+              If you make a mistake, an error message will appear
+	      in the ^Results^ window.
+
+	      For some data manipulation commands, nothing may 
+	      appear in the ^Results^ window.  If you didn't 
+	      get an error message, you can be sure the command
+	      executed.  Click on the ^Browse^ button to view 
+	      changes in your data.  @editr_sq!Click here for help on Browse.@
+
+	      Help for the items on these menus can be found
+	      by selecting the menu item and clicking on the
+	      ^Help^ button in the dialog box.
+
+---------
+Help menu
+---------
+
+^Help^		Click on the ^Help!^ button for more information on
+	      the StataQuest help system.
+
+
+^2. The StataQuest buttons^
+^-------------------------^
+
+The buttons on the main tool bar are
+
+
+^Log...^    Click to create a session log.  This is how you preserve 
+	  and print your StataQuest output.  @log_sq!Click here for help.@
+
+^Dialog^    Click to bring the current dialog box to the top.  (It may
+	  get hidden under other windows.)
+
+^Results^   Click to bring the ^Stata Results^ window to the top.
+
+^Graph^	    Click to bring the ^Stata Graph^ window to the top.
+	  @graph_sq!Click here for help.@
+
+^Editor^    Click to enter the ^Editor^.  
+^Browse^    Click to enter the ^Editor^ to look at your data.  In the ^Browse^
+          mode, you are protected from accidentally changing your data.
+          @input_sq!Click here for help on inputting data using the spreadsheet editor.@
+          @editr_sq!Click here for help on using the editor to view and change data.@ 
+
+^More^	    When you see a ^--more--^ at the bottom of the ^Stata Results^
+	  window, clicking ^More^ (or pressing any key) will display
+          the next page of output.
+
+^Break^	    Click to interrupt a command at any time.  It is always safe
+	  to click ^Break^.  The state of the system will return to
+	  what it was before you issued the command.
+
+
+^3. Dialog boxes^
+^---------------^
+
+Dialog boxes are easy to fill in.
+
+If you have a question about what to do, just click on the ^Help^ button in
+the dialog box.
+
+In the help file, you will find a description of the command and examples
+(including how your data should be arranged to use the command).  
+
+
+Filling in variables
+--------------------
+
+When a variable needs to be filled in, a ^list box^ with all your variable
+names will either be visible or be accessible via a button to the right of
+the edit box.
+
+Just click on the variable and it will get loaded into the edit box.
+
+If more than variable is allowed, clicking on additional variables will
+load them into the edit box.
+
+Sometimes it will say "optional" next to a variable edit box.  In these cases,
+you can leave the edit box blank, and the command will be performed on all
+variables in your dataset.
+
+Note: For certain types of variable list boxes, only some of your variables
+may be listed.  In these cases, StataQuest is automatically screening your
+variables and allowing only the appropriate variables to appear in the list
+box.
+
+Example:  In a "Group var. (2 groups)" variable list box, you must enter a
+numeric variable that takes on only two values.  So StataQuest only allows
+variables that meet this criterion to appear in the list box.
+
+
+Repeating a command
+-------------------
+
+If you repeat a command, the dialog box will be filled in to what it was
+previously.  You can just make any necessary changes and reissue the command.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@intro_sq!Introduction to the StataQuest windows@
+
+@examp_sq!An example of a StataQuest session@
+
+@input_sq!Inputting data using the spreadsheet editor@
+
+@save_sq!Creating, saving, and loading Stata data files@
+
+@log_sq!Saving and printing results and output -- the Log button@
+
+@sqcont!Table of contents for StataQuest@

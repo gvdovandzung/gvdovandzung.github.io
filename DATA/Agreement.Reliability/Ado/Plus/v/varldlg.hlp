@@ -1,0 +1,45 @@
+.-
+help for ^Label variable^                                       Menu: Data--Label
+.-
+
+^Description^
+^-----------^
+
+You can create a variable label that will be used in the output of many
+commands.  Variable labels can help to make the output more understandable.
+
+You will see the variable label next to the variable name in the Variables
+window.
+
+You will also see the variable label when you choose ^Describe variables^
+from the ^Summaries^ menu.
+
+
+^How to fill in the dialog box^
+^-----------------------------^
+
+Press the button (with the down arrow) that is located to the right of
+"Variable to label".
+
+Click on the name of the variable that you wish to label.  Or type the
+name into the edit box.
+
+Where it says, "Variable label", type in any label consisting of 31 characters
+or less (blanks are OK).
+
+Example:  You have a variable ^sbp^.  You give it the variable label
+^systolic blood pressure^.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@editr_sq!Using the spreadsheet editor (variable labels can also be entered@
+@editr_sq!in the editor)@
+
+@dslabdlg!Label dataset@
+@vlabdlg!Label values@
+@stldlg!Strings to labels@
+@stldlg!Labels to strings@

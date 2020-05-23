@@ -1,0 +1,53 @@
+.-
+help for ^tabm^
+.-
+
+Tabulation of multiple variables
+--------------------------------
+
+    ^tabm^ varlist [weight] [^if^ exp] [^in^ range]
+    [, ^tr^ans ^v^allbl^(^lblname^)^ tabulate_options ]
+
+Description
+-----------
+
+^tabm^ tabulates varlist, containing two or more comparable variables,
+in a combined two-way table of variables in varlist by values in
+varlist. Either all variables should be numeric, or all variables should
+be string: the type of the first variable named is taken to indicate the
+user's intentions. By default, variables are listed in the rows of the
+table and values in the columns.
+
+Options
+-------
+
+^trans^ transposes rows and columns as compared with the default. This
+    option may be needed if there are too many values to show as
+    columns.
+
+^vallbl(^lblname^)^ specifies a value label name to be used in
+    tabulation. The default is that any value label associated with the
+    first numeric variable in varlist will be used. This option will be
+    ignored in tabulation of string variables.
+
+tabulate_options are options allowed with ^tabulate^ rowvar colvar.
+
+
+Examples
+--------
+
+    . ^tabm q1-q15^
+
+
+Author
+------
+
+         Nicholas J. Cox, University of Durham, U.K.
+         n.j.cox@@durham.ac.uk
+
+
+Also see
+--------
+
+On-line: help for @tabulate@
+

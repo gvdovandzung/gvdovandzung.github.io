@@ -1,0 +1,1121 @@
+LABELBLOCK
+  LABEL label_q3    1  nam    2  nu  END
+  LABEL label_q10a    1  co    0  khong  END
+  LABEL label_dd    0  binhthuong    1  sddnhe    2  sddvua    3  sddnang    4  beophi  END
+  LABEL label_ktkh1    1  "<=2 lan/tuan"    2  ">2 lan/tuan"    3  ">2 lan/tuan keo dai"  END
+  LABEL label_kvnc4    1  "<=2 ngay/tuan"    2  ">2 ngay/tuan"  END
+  LABEL label_kvnc6    1  "0 ngay"    2  "1-2 ngay"    3  ">=3 ngay"  END
+  LABEL label_kvnc7    1  "thuong xuyen"    0  "khong thuong xuyen"  END
+  LABEL label_kvnc8    1  dung    0  "khong dung"  END
+  LABEL label_kvnc9    1  "kiem soat tot"    2  "kiem soat mot phan"    3  "khong kiem soat"  END
+END
+
+BEFORE FILE
+  TYPE COMMENT ALLFIELDS RED
+END
+
+id
+  KEY UNIQUE 1
+END
+
+q3
+  COMMENT LEGAL USE label_q3
+  TYPE COMMENT 
+END
+
+q5
+  AFTER ENTRY
+    T=(Q5-Q2)/30.45
+  END
+END
+
+t
+  NOENTER
+END
+
+q10a
+  COMMENT LEGAL USE label_q10a
+  TYPE COMMENT 
+END
+
+q10b
+  COMMENT LEGAL USE label_q10a
+  TYPE COMMENT 
+END
+
+q10c
+  COMMENT LEGAL USE label_q10a
+  TYPE COMMENT 
+END
+
+q10d
+  COMMENT LEGAL USE label_q10a
+  TYPE COMMENT 
+END
+
+q10e
+  COMMENT LEGAL USE label_q10a
+  TYPE COMMENT 
+END
+
+q10f
+  COMMENT LEGAL USE label_q10a
+  TYPE COMMENT 
+END
+
+q10g
+  COMMENT LEGAL USE label_q10a
+  TYPE COMMENT 
+END
+
+q10h
+  COMMENT LEGAL USE label_q10a
+  TYPE COMMENT 
+END
+
+q10k
+  COMMENT LEGAL USE label_q10a
+END
+
+q10l
+  COMMENT LEGAL USE label_q10a
+END
+
+dd
+  COMMENT LEGAL USE label_dd
+END
+
+q14a
+  COMMENT LEGAL USE label_q10a
+END
+
+q14b
+  COMMENT LEGAL USE label_q10a
+END
+
+q14c
+  COMMENT LEGAL USE label_q10a
+END
+
+q14d
+  COMMENT LEGAL USE label_q10a
+END
+
+q14e
+  COMMENT LEGAL USE label_q10a
+END
+
+q14f
+  COMMENT LEGAL USE label_q10a
+END
+
+q14g
+  COMMENT LEGAL USE label_q10a
+END
+
+q14h
+  COMMENT LEGAL USE label_q10a
+END
+
+q15a
+  COMMENT LEGAL USE label_q10a
+END
+
+q15b
+  COMMENT LEGAL USE label_q10a
+END
+
+q18
+  COMMENT LEGAL USE label_q10a
+END
+
+q19a
+  COMMENT LEGAL USE label_q10a
+END
+
+q19b
+  COMMENT LEGAL USE label_q10a
+END
+
+q19c
+  COMMENT LEGAL USE label_q10a
+END
+
+q19d
+  COMMENT LEGAL USE label_q10a
+END
+
+q20
+  COMMENT LEGAL USE label_q10a
+END
+
+q21
+  COMMENT LEGAL USE label_q10a
+END
+
+c1
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc1
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc2
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc3
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc4
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc6
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc7
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc8
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc9
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc11
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc12
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc13
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc14
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc15
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc16
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc17
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc19
+  COMMENT LEGAL USE label_q10a
+END
+
+avnc20
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc1
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc2
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc4
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc5
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc6
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc7
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc9
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc11
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc13
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc15
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc17
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc18
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc19
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc20
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc22
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc24
+  COMMENT LEGAL USE label_q10a
+END
+
+bvnc26
+  COMMENT LEGAL USE label_q10a
+END
+
+cvnc1
+  COMMENT LEGAL USE label_q10a
+END
+
+cvnc2
+  COMMENT LEGAL USE label_q10a
+END
+
+cvnc4
+  COMMENT LEGAL USE label_q10a
+END
+
+cvnc5
+  COMMENT LEGAL USE label_q10a
+END
+
+cvnc6
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm1
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm2
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm3
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm4
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm6
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm7
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm8
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm9
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm11
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm12
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm13
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm14
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm15
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm16
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm17
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm19
+  COMMENT LEGAL USE label_q10a
+END
+
+atkm20
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm1
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm2
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm4
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm5
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm6
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm7
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm9
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm11
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm13
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm15
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm17
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm18
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm19
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm20
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm22
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm24
+  COMMENT LEGAL USE label_q10a
+END
+
+btkm26
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkm1
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkm2
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkm4
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkm5
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkm6
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh1
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh2
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh3
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh4
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh6
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh7
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh8
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh9
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh11
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh12
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh13
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh14
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh15
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh16
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh17
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh19
+  COMMENT LEGAL USE label_q10a
+END
+
+atkh20
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh1
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh2
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh4
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh5
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh6
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh7
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh9
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh11
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh13
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh15
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh17
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh18
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh19
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh20
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh22
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh24
+  COMMENT LEGAL USE label_q10a
+END
+
+btkh26
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkh1
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkh2
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkh4
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkh5
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkh6
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb1
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb2
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb3
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb4
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb6
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb7
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb8
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb9
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb11
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb12
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb13
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb14
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb15
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb16
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb17
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb19
+  COMMENT LEGAL USE label_q10a
+END
+
+atkb20
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb1
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb2
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb4
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb5
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb6
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb7
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb9
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb11
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb13
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb15
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb17
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb18
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb19
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb20
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb22
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb24
+  COMMENT LEGAL USE label_q10a
+END
+
+btkb26
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkb1
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkb2
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkb4
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkb5
+  COMMENT LEGAL USE label_q10a
+END
+
+ctkb6
+  COMMENT LEGAL USE label_q10a
+END
+
+kvnc1
+  COMMENT LEGAL USE label_ktkh1
+END
+
+kvnc2
+  COMMENT LEGAL USE label_q10a
+END
+
+kvnc3
+  COMMENT LEGAL USE label_q10a
+END
+
+kvnc4
+  COMMENT LEGAL USE label_kvnc4
+  TYPE COMMENT 
+END
+
+kvnc6
+  COMMENT LEGAL USE label_kvnc6
+  TYPE COMMENT 
+END
+
+kvnc7
+  COMMENT LEGAL USE label_kvnc7
+  TYPE COMMENT 
+END
+
+kvnc8
+  COMMENT LEGAL USE label_kvnc8
+  TYPE COMMENT 
+END
+
+kvnc9
+  COMMENT LEGAL USE label_kvnc9
+  TYPE COMMENT 
+END
+
+ktkm1
+  COMMENT LEGAL USE label_ktkh1
+END
+
+ktkm2
+  COMMENT LEGAL USE label_q10a
+END
+
+ktkm3
+  COMMENT LEGAL USE label_q10a
+END
+
+ktkm4
+  COMMENT LEGAL USE label_kvnc4
+END
+
+ktkm6
+  COMMENT LEGAL USE label_kvnc6
+END
+
+ktkm7
+  COMMENT LEGAL USE label_kvnc7
+END
+
+ktkm8
+  COMMENT LEGAL USE label_kvnc8
+END
+
+ktkm9
+  COMMENT LEGAL USE label_kvnc9
+END
+
+ktkh1
+  COMMENT LEGAL USE label_ktkh1
+  TYPE COMMENT 
+END
+
+ktkh2
+  COMMENT LEGAL USE label_q10a
+END
+
+ktkh3
+  COMMENT LEGAL USE label_q10a
+END
+
+ktkh4
+  COMMENT LEGAL USE label_kvnc4
+END
+
+ktkh6
+  COMMENT LEGAL USE label_kvnc6
+END
+
+ktkh7
+  COMMENT LEGAL USE label_kvnc7
+END
+
+ktkh8
+  COMMENT LEGAL USE label_kvnc8
+END
+
+ktkh9
+  COMMENT LEGAL USE label_kvnc9
+END
+
+ktkb1
+  COMMENT LEGAL USE label_ktkh1
+END
+
+ktkb2
+  COMMENT LEGAL USE label_q10a
+END
+
+ktkb3
+  COMMENT LEGAL USE label_q10a
+END
+
+ktkb4
+  COMMENT LEGAL USE label_kvnc4
+END
+
+ktkb6
+  COMMENT LEGAL USE label_kvnc6
+END
+
+ktkb7
+  COMMENT LEGAL USE label_kvnc7
+END
+
+ktkb8
+  COMMENT LEGAL USE label_kvnc8
+END
+
+ktkb9
+  COMMENT LEGAL USE label_kvnc9
+END
+
+kshen
+  COMMENT LEGAL USE label_kvnc9
+END
+
+n1a
+  COMMENT LEGAL USE label_q10a
+END
+
+n1b
+  COMMENT LEGAL USE label_q10a
+END
+
+n1c
+  COMMENT LEGAL USE label_q10a
+END
+
+n1d
+  COMMENT LEGAL USE label_q10a
+END
+
+n1e
+  COMMENT LEGAL USE label_q10a
+END
+
+n2
+  COMMENT LEGAL USE label_q10a
+END
+
+n3
+  COMMENT LEGAL USE label_q10a
+END
+
+n4
+  COMMENT LEGAL USE label_q10a
+END
+
+n5
+  COMMENT LEGAL USE label_q10a
+END
+
+n6
+  COMMENT LEGAL USE label_q10a
+END
+
+n7
+  COMMENT LEGAL USE label_q10a
+END
+
+n8
+  COMMENT LEGAL USE label_q10a
+END
+
+n9
+  COMMENT LEGAL USE label_q10a
+END
+
+n10a
+  COMMENT LEGAL USE label_q10a
+END
+
+n10b
+  COMMENT LEGAL USE label_q10a
+END
+
+n10c
+  COMMENT LEGAL USE label_q10a
+END
+
+n10d
+  COMMENT LEGAL USE label_q10a
+END
+
+n11e
+  COMMENT LEGAL USE label_q10a
+END
+
+n11a
+  COMMENT LEGAL USE label_q10a
+END
+
+n11b
+  COMMENT LEGAL USE label_q10a
+END
+
+n11c
+  COMMENT LEGAL USE label_q10a
+END
+
+n11d
+  COMMENT LEGAL USE label_q10a
+END
+
+n11e1
+  COMMENT LEGAL USE label_q10a
+END
+
+n11f
+  COMMENT LEGAL USE label_q10a
+END
+
+n11g
+  COMMENT LEGAL USE label_q10a
+END
+
+n12a
+  COMMENT LEGAL USE label_q10a
+END
+
+n12b
+  COMMENT LEGAL USE label_q10a
+END
+
+n12c
+  COMMENT LEGAL USE label_q10a
+END
+
+n12d
+  COMMENT LEGAL USE label_q10a
+END
+
+n12e
+  COMMENT LEGAL USE label_q10a
+END
+
+n12f
+  COMMENT LEGAL USE label_q10a
+END
+
+n12g
+  COMMENT LEGAL USE label_q10a
+END
+
+n13a
+  COMMENT LEGAL USE label_q10a
+END
+
+n13b
+  COMMENT LEGAL USE label_q10a
+END
+
+n13c
+  COMMENT LEGAL USE label_q10a
+END
+
+n13d
+  COMMENT LEGAL USE label_q10a
+END
+
+n13e
+  COMMENT LEGAL USE label_q10a
+END
+
+n14a
+  COMMENT LEGAL USE label_q10a
+END
+
+n14b
+  COMMENT LEGAL USE label_q10a
+END
+
+n14c
+  COMMENT LEGAL USE label_q10a
+END
+
+n14d
+  COMMENT LEGAL USE label_q10a
+END
+
+n14e
+  COMMENT LEGAL USE label_q10a
+END
+
+n14f
+  COMMENT LEGAL USE label_q10a
+END
+
+n14g
+  COMMENT LEGAL USE label_q10a
+END
+
+n15
+  COMMENT LEGAL USE label_q10a
+END
+
+n16
+  COMMENT LEGAL USE label_q10a
+END
+
+n17
+  COMMENT LEGAL USE label_q10a
+END
+
+n18
+  COMMENT LEGAL USE label_q10a
+END
+
+n19
+  COMMENT LEGAL USE label_q10a
+END
+
+n20
+  COMMENT LEGAL USE label_q10a
+END
+

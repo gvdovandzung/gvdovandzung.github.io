@@ -1,0 +1,307 @@
+.-
+help for ^StataQuest contents^
+.-
+
+For help on using the StataQuest help system, press the ^Help!^ button.
+
+Click on any green word to go to the help file for that topic.
+
+Copyright (c) 1985-1996 Stata Corporation (including all help files).
+
+
+^Table of contents for general features of StataQuest^
+^----------------------------------------------------^
+
+General introductions
+---------------------
+
+@intro_sq!Introduction to the StataQuest windows@
+
+@menu_sq!StataQuest menus and buttons@
+
+@examp_sq!An example of a StataQuest session@                         
+
+
+Data input
+----------
+
+@input_sq!Inputting data using the spreadsheet editor@
+
+@impdlg!Importing ASCII data files@
+
+
+Saving data
+-----------
+
+@save_sq!Creating, saving, and loading Stata data files@
+
+@expdlg!Exporting ASCII data files@
+
+
+Saving and printing results and output
+--------------------------------------
+
+@log_sq!Creating and printing a log -- the Log button@
+
+
+Using the spreadsheet editor -- the Editor and Browse buttons
+-------------------------------------------------------------
+
+@input_sq!Inputting data using the spreadsheet editor@
+
+@editr_sq!Using the spreadsheet editor to view and change data@
+
+
+Graphs
+------
+
+@graph_sq!Saving, viewing, and printing graphs@
+
+
+Messy windows?
+--------------
+
+@mess_sq!What to do if your StataQuest windows become messed up@
+
+
+Edit menu
+---------
+
+@clip_sq!Copying to the Windows clipboard@
+
+
+Prefs menu
+----------
+
+@prefs_sq!Customizing the look of your StataQuest@
+
+
+Advanced topics
+---------------
+
+@mem_sq!Limits on dataset size@
+
+@cmd_sq!Command-line mode@
+
+@stata_sq!Professional Stata and StataQuest@
+
+
+^Table of contents for Data, Graphs, Summaries, Statistics, and Calculator menus^
+^-------------------------------------------------------------------------------^
+
+Data menu
+---------
+
+Generate/Replace
+
+	@rnddlg!Random numbers@
+	@seqdlg!Sequence@
+	@formdlg!Formula@
+	@recdlg!Recode@
+
+Label
+
+	@dslabdlg!Label dataset@
+	@varldlg!Label variable@
+	@vlabdlg!Label values@
+	@stldlg!Strings to labels@
+	@stldlg!Labels to strings@
+
+Edit data
+
+	@input_sq!Inputting data using the spreadsheet editor@
+	@editr_sq!Using the spreadsheet editor@
+
+@stkdlg!Stack variables (transform data to 1 data variable, 1 group variable)@
+
+
+Graphs menu
+-----------
+
+One variable
+
+	@histdlg!Histogram@
+		@histdlg!Continuous variable@
+		@histdlg!Discrete variable@
+	@boxdlg!Box plot@
+	@boxdlg!Box plot & one-way@
+	@stemdlg!Stem-and-leaf@
+	@dpldlg!Dotplot@
+	@qnormdlg!Normal quantile plot@	
+
+One variable by group
+
+	@histdlg!Histograms by group@
+		@histdlg!Continuous variable@
+		@histdlg!Discrete variable@
+	@boxdlg!Box plots by group@
+	@bardlg!Bar charts by group@
+	@dpldlg!Dotplots by group@
+
+Comparison of variables
+
+	@boxdlg!Box plot comparison@
+	@boxdlg!Box plot & one-way comparison@
+	@bardlg!Bar chart comparison@
+	@bardlg!Bar chart comparison by group@
+
+@spdlg!Scatterplots@
+
+	@spdlg!Plot Y vs. X@
+	@spdlg!Plot Y vs. X, naming points@
+	@spdlg!Plot Y vs. X, with regression line@
+	@spdlg!Plot Y vs. X, scale symbols to Z@
+	@spdlg!Plot Y vs. X, by group@
+	@spdlg!Scatterplot matrix@
+
+@tsdlg!Time series@
+
+	@tsdlg!Plot Y vs. X@
+	@tsdlg!Plot Y vs. obs. no.@
+	@tsdlg!Plot more than one Y vs. X@
+	@tsdlg!Plot more than one Y vs. obs. no.@
+
+@qcdlg!Quality control@
+
+	@qcdlg!Control (C) chart for defects@
+	@qcdlg!Fraction defective (P) chart@
+	@qcdlg!Range (R) chart@
+	@qcdlg!X-bar chart@
+	@qcdlg!X-bar & R chart@
+
+@graph_sq!View saved graphs@
+
+
+Summaries menu
+--------------
+
+@summdlg!Means and SDs@
+
+@sumbydlg!Means and SDs by group@
+
+	@sumbydlg!One-way of means and SDs@
+	@sumbydlg!Two-way of means@
+
+@dtldlg!Median/Percentiles (includes skewness, kurtosis, 5 smallest/largest)@
+
+@scidlg!Confidence intervals@
+
+Tables
+
+	@onedlg!One-way (frequency)@
+	@twodlg!Two-way (cross-tabulation)@
+	@twodlg!Three-way (two-way by group)@
+
+@dinfo_sq!Dataset info@
+
+@mem_sq!Describe variables@
+
+@listdlg!List data@
+
+
+Statistics menu
+---------------
+
+Parametric tests
+
+	@ptt1dlg!1-sample t test@
+	@ptt2dlg!2-sample t test@
+	@ptt2pdlg!Paired t test@
+	@ptev1dlg!1-sample test of variance@
+	@ptevdlg!2-sample test of variance@
+	@ptntdlg!Normality test@
+	@pttpdlg!1-sample test of proportion@
+	@ptp2dlg!2-sample test of proportions@
+
+Nonparametric tests
+
+	@stesdlg!Sign test@
+	@srandlg!Wilcoxon signed-ranks@
+	@rsumdlg!Mann-Whitney (Wilcoxon rank-sum)@
+	@kwaldlg!Kruskal-Wallis (one-way nonparametric ANOVA)@
+	@ksmdlg!Kolmogorov-Smirnov@
+
+Correlation
+
+	@pearsdlg!Pearson (regular)@
+	@speardlg!Spearman (rank)@
+
+@sregdlg!Simple regression@
+
+@mregdlg!Multiple regression@
+
+@rregdlg!Robust regression@
+
+	@pregmenu!Post-regression diagnostics@
+
+@logdlg!Logistic regression@
+
+ANOVA
+
+	@kwaldlg!One-way nonparametric (Kruskal-Wallis test)@
+	@onewdlg!One-way@
+		@onegdlg!One-way ANOVA plots@
+	@rpmdlg!Repeated measures@
+	@twowdlg!Two-way@
+		@aovmdlg!Two-way ANOVA plots@
+	@aovcdlg!N-factor ANOVA & ANOCOVA@
+
+
+Calculator menu
+---------------
+
+@zt1dlg!1-sample normal test@
+@zt2dlg!2-sample normal test@
+
+@tt1dlg!1-sample t test@
+@tt2dlg!2-sample t test@
+
+@tp1dlg!1-sample test of proportion@
+@tp2dlg!2-sample test of proportions@
+
+@sdt1dlg!1-sample test of variance@
+@sdtdlg!2-sample test of variance@
+
+@ccidlg!Confidence interval of mean@
+@bcidlg!Binomial confidence interval@
+@poidlg!Poisson confidence interval@
+
+@probdlg!Statistical tables@
+
+	@probdlg!Normal@
+	@probdlg!Student's t@
+	@probdlg!F@
+	@probdlg!Chi-squared@
+	@probdlg!Binomial@
+	@probdlg!Poisson@
+
+@probdlg!Inverse statistical tables@
+
+	@probdlg!Normal@
+	@probdlg!Student's t@
+	@probdlg!F@
+	@probdlg!Chi-squared@
+
+@cstddlg!Standard calculator@
+
+@crpndlg!RPN calculator@
+
+
+^Table of contents for Professional Stata^
+^----------------------------------------^
+
+@contents!Click here to see a table of contents for Professional Stata.@ 
+
+@stata_sq!Click here for more information on Professional Stata.@
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@intro_sq!Introduction to the StataQuest windows@
+
+@menu_sq!StataQuest menus and buttons@
+
+@examp_sq!An example of a StataQuest session@

@@ -1,0 +1,59 @@
+{smcl}
+{p 0 4}
+{bf:{help vgsg:A Visual Guide to Stata Graphics}} > {bf:{help vgsg_ref:Cross Reference}} > {bf:Styles}
+{p_end}
+{hline}
+
+{title:Styles}
+
+{p 4 8 4}
+Angle{break}
+{bf:{help anglestyle}}
+
+{p 4 8 4}
+Color{break}
+{bf:{help colorstyle}}
+
+{p 4 8 4}
+Clockpos{break}
+{bf:{help clockpos}}
+
+{p 4 8 4}
+Compassdir{break}
+{bf:{help compassdirstyle}}
+
+{p 4 8 4}
+Connect{break}
+{bf:{help connectstyle}}
+
+{p 4 8 4}
+Linepattern{break}
+{bf:{help connect_options}}
+
+{p 4 8 4}
+Linewidth{break}
+{bf:{help linewidthstyle}}
+
+{p 4 8 4}
+Margin{break}
+{bf:{help marginstyle}}
+
+{p 4 8 4}
+Markersize{break}
+{bf:{help markersizestyle}}
+
+{p 4 8 4}
+Orientation{break}
+{bf:{help orientationstyle}}
+
+{p 4 8 4}
+Symbol{break}
+{bf:{help symbolstyle}}
+
+{p 4 8 4}
+Textsize{break}
+{bf:{help textsizestyle}}
+
+
+
+{hline}

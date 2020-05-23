@@ -1,0 +1,118 @@
+.-
+help for ^thai^ - Author: ^Thai Thanh Truc^ - Version: 2.0.1 (Brisbane, ngay 10/11/2009)
+.-
+
+Gioi thieu: Tu truoc den nay (11/2009), viec phan tich so lieu mac du khong kho
+nhung cung khien nguoi dung Stata gap nhieu kho khan trong viec ghi nho cau lenh
+hoac ghi nho duong dan vao menu he thong. Hon nua, dau cho chung ta co the nho
+het cac cau lenh phan tich do, lieu rang chung ta co chon lua kiem dinh phu hop
+de giai thich cho cau hoi nghien cuu hay khong? Cac sinh vien va hoc vien thuong
+rat nhuc dau sau nhung buoi hoc Stata va nhieu nguoi da tung mo uoc rang "Phai
+chi co mot cau lenh nao do, chi mot cau lenh thoi, co the tinh toan lam sao va
+biet duoc bien so dua vao la bien so nao va tu dua ra mot kiem dinh phu hop!".
+Vi du, neu bien phu thuoc la bien dinh luong va bien doc lap la nhi gia thi cau
+lenh se nghi ngay den t test, hoac neu bien phu thuoc la dinh luong va bien doc
+lap nhieu hon 2 nhom thi cau lenh se cho ra ket qua cua ANOVA hoac Kruskal Wallis.
+Tuong tu nhu vay va cung voi cau lenh do, neu bien phu thuoc la nhi gia va bien
+doc lap la nhi gia thi chuong trinh se nghi ngay den con so thong ke dich te nao do,
+vi du OR, RR, PR va se tien hanh phan tich phan tang neu nhu bien doc lap nhieu hon
+2 nhom.
+
+Tu y tuong do, ^Thai Thanh Truc^ da xay dung cau lenh dung de thay the tat ca cac 
+cau lenh con lai va giup nguoi dung thuan tien hon trong phan tich thong ke. Voi 
+cau lenh nay, viec phan tich thong ke se tro nen nhanh chong va de dang hon bao gio
+het voi ca nhung nguoi khong chuyen ve may tinh.
+
+Cau lenh nay duoc thuc hien la de tang cho ^Bui Thi Hy Han^ vi nhu cau phan tich.
+Chinh vi vay, viec sao chep cau lenh ma khong co su dong y cua ^Bui Thi Hy Han^
+la vi pham ban quyen.
+
+.-
+
+Cau lenh:
+----------------------------------------------------
+
+   ^thai^ bienphuthuoc biendoclap, [or] [pr] [rr] [it]
+
+Trong do:
+       * ^bien phu thuoc^: la bien dinh luong hoac dinh tinh nhi gia
+       * ^bien doc lap^: la bien dinh luong hoac dinh tinh
+
+^Vi du:^
+	thai tuoithai gioi ^-->^ O day ^tuoithai^ la bien dinh luong va ^gioi^ la 
+	                         bien dinh tinh nhi gia. Cau lenh se tien hanh kiem
+	                         tra xem bien phu thuoc co phan phoi binh thuong
+	                         hay khong dua vao trung binh, do lech chuan, do nghien
+	                         (skewness) va Kurtosis. Neu bien phu thuoc co phan phoi
+	                         binh thuong thi cau lenh se tien hanh kiem phuong sai
+	                         va sau do se tien hanh kiem dinh t voi phuong sai dong
+	                         nhat hoac khong dong nhat. Neu phan phoi khong binh
+	                         thuong thi cau lenh se tien hanh kiem dinh Wilcoxon.
+.-	
+	thai tuoithai nghenghiep ^-->^ O day ^tuoithai^ la bien dinh luong va ^nghenghiep^
+	                         la bien dinh tinh co 3 nhom. Cau lenh se tien hanh kiem
+	                         tra xem bien phu thuoc co phan phoi binh thuong hay
+	                         hay khong dua vao trung binh, do lech chuan, do nghien
+	                         (skewness) va Kurtosis. Neu bien phu thuoc co phan phoi
+	                         binh thuong thi cau lenh se tien hanh kiem phuong sai 
+	                         cua cac nhom. Neu Phan phoi binh thuong va phuong sai 
+	                         dong nhat thi cau lenh se tien hanh kiem dinh ANOVA.
+	                         Neu phan phoi khong binh thuong hoac phuong sai cac
+	                         nhom khong dong nhat thi cau lenh se tien hanh kiem dinh
+	                         Kruskal Wallis.
+.-							 
+	thai tuoithai tuoime ^-->^ O day ^tuoithai^ la bien dinh luong va ^tuoime^ cung
+	                         bien dinh luong. Cau lenh se tien hanh tinh tuong quan
+	                         va xay dung phuong trinh hoi quy tuyen tinh.
+.-							 
+	thai sinhnon gioi ^-->^ O day ^sinhnon^ la bien nhi gia va ^gioi^ la bien nhi gia.
+	                         Cau lenh se lap bang 2 x 2 va thuc hien kiem dinh Chi
+	                         binh phuong (Hoac Fisher) sau do se tinh so do dich te PR.
+.-							 
+	thai sinhnon gioi, or ^-->^ O day ^sinhnon^ la bien nhi gia va ^gioi^ la
+	                         bien nhi gia. Cau lenh se lap bang 2 x 2 va thuc hien
+	                         kiem dinh Chi binh phuong (Hoac Fisher) sau do se tinh so
+	                         do dich te OR.
+.-	
+	thai sinhnon gioi, rr ^-->^ O day ^sinhnon^ la bien nhi gia va ^gioi^ la
+	                         bien nhi gia. Cau lenh se lap bang 2 x 2 va thuc hien
+	                         kiem dinh Chi binh phuong (Hoac Fisher) sau do se tinh so
+	                         do dich te RR.
+.-
+	thai sinhnon nghenghiep, ^-->^ O day ^sinhnon^ la bien nhi gia va ^nghenghiep^ la 
+	                         bien nhi gia. Cau lenh se lap bang 2 x n va thuc hien kiem
+	                         dinh Chi binh phuong (Hoac Fisher) sau do se tinh so do 
+	                         dich te PR phan tang lay nhom dau tien lam nhom chuan.
+.-							 
+	thai sinhnon nghenghiep, or ^-->^ O day ^sinhnon^ la bien nhi gia va ^nghenghiep^ la
+	                         bien nhi gia. Cau lenh se lap bang 2 x n va thuc hien
+	                         kiem dinh Chi binh phuong (Hoac Fisher) sau do se tinh so
+	                         do dich te OR phan tang lay nhom dau tien lam nhom chuan.
+.-	
+	thai sinhnon nghenghiep, rr ^-->^ O day ^sinhnon^ la bien nhi gia va ^nghenghiep^ la
+	                         bien nhi gia. Cau lenh se lap bang 2 x n va thuc hien
+	                         kiem dinh Chi binh phuong (Hoac Fisher) sau do se tinh so
+	                         do dich te RR phan tang lay nhom dau tien lam nhom chuan.
+.-
+	^Luu y^: trong truong hop phan tich phan tang cac so do dich te, neu cau lenh chay
+             lien tuc trong 1 thoi gian dai ma khong hien ket qua thi nguoi dung nen them
+             tuy chon ^it^. Vi du: thai sinhnon nghenghiep, or it
+
+.-
+			 
+^TOM LAI:^ NGUOI DUNG CHI CAN NHO TEN CAU LENH VA DIEN BIEN PHU THUOC DI TRUOC VA BIEN DOC
+LAP DI SAU CUNG VOI NHUNG TUY CHON VE SO DO DICH TE MONG MUON. CAU LENH SE HOAN TAT VIEC
+CON LAI.
+
+.-
+
+ ---------------------------------------------------------------------
+|                             ^Tac gia:^                                |
+ ---------------------------------------------------------------------
+|    Thai Thanh Truc - Khoa Y te cong cong, Dai hoc Y duoc TP.HCM     |
+|                  Email: thaithanhtruc@gmail.com                     |
+|    Bui Thi Hy Han - Khoa Suc khoe cong dong,                        |
+|                     Vien Ve sinh y te cong cong TP.HCM              |
+|                  Email: buithihyhan@gmail.com                       |
+ ---------------------------------------------------------------------
+

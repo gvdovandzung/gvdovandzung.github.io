@@ -1,0 +1,221 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+       log:  {res}d:\data\ket qua.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}19 Apr 2012, 20:06:36
+{txt}
+{com}. use "D:\DATA\biendoisolieu.step4.dta", clear
+{txt}
+{com}. di "MO TA DAN SO"
+{res}MO TA DAN SO
+{txt}
+{com}. tab1  gioi nhomtuoi
+
+{res}-> tabulation of gioi  
+
+      {txt}gioi: {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+         Nu {c |}{res}        262       57.08       57.08
+{txt}        Nam {c |}{res}        197       42.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        459      100.00
+
+-> tabulation of nhomtuoi  
+
+  {txt}RECODE of {c |}
+       tuoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+ Thanh nien {c |}{res}        120       26.14       26.14
+{txt} Trung nien {c |}{res}        321       69.93       96.08
+{txt}        Gia {c |}{res}         18        3.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        459      100.00
+{txt}
+{com}. sum  tuoi
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+        tuoi {c |}{res}       459     36.7146    8.906307         18         63
+{txt}
+{com}. di "MO TA KET CUOC"
+{res}MO TA KET CUOC
+{txt}
+{com}. sum  chieucao cannang vongeo vonghong hamax hamin bmi
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    chieucao {c |}{res}       459    159.0697    7.413809        140        180
+     {txt}cannang {c |}{res}       459    55.58606    9.359551         36         90
+      {txt}vongeo {c |}{res}       459    73.63181    9.332852         55         97
+    {txt}vonghong {c |}{res}       459     90.9695    5.672575         76        107
+       {txt}hamax {c |}{res}       459    116.8845    16.20993         90        220
+{txt}{hline 13}{c +}{hline 56}
+       hamin {c |}{res}       459     74.6841    11.04073         60        130
+         {txt}bmi {c |}{res}       459    21.89333    2.793033      15.43      31.23
+{txt}
+{com}. tab1  beophi tha
+
+{res}-> tabulation of beophi  
+
+     {txt}beophi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        395       86.06       86.06
+{txt}          1 {c |}{res}         64       13.94      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        459      100.00
+
+-> tabulation of tha  
+
+        {txt}tha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        397       86.49       86.49
+{txt}          1 {c |}{res}         62       13.51      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        459      100.00
+{txt}
+{com}. di "MO TA KET CUOC THEO DAN SO"
+{res}MO TA KET CUOC THEO DAN SO
+{txt}
+{com}. bysort  gioi: sum  chieucao cannang vongeo vonghong hamax hamin bmi
+
+{txt}{hline}
+-> gioi = Nu
+
+    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    chieucao {c |}{res}       262     154.584    5.277601        140        174
+     {txt}cannang {c |}{res}       262    51.30534    6.823324         36         87
+      {txt}vongeo {c |}{res}       262    69.16794    7.093414         55         95
+    {txt}vonghong {c |}{res}       262    89.42748    5.079492         76        107
+       {txt}hamax {c |}{res}       262    113.2634    14.84077         90        180
+{txt}{hline 13}{c +}{hline 56}
+       hamin {c |}{res}       262    71.64122    9.785883         60        110
+         {txt}bmi {c |}{res}       262     21.4484    2.444504      15.43      29.94
+
+{txt}{hline}
+-> gioi = Nam
+
+    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+    chieucao {c |}{res}       197    165.0355    5.355119        150        180
+     {txt}cannang {c |}{res}       197    61.27919    9.253693         42         90
+      {txt}vongeo {c |}{res}       197    79.56853    8.629661         59         97
+    {txt}vonghong {c |}{res}       197     93.0203    5.781709         78        106
+       {txt}hamax {c |}{res}       197    121.7005    16.72944         90        220
+{txt}{hline 13}{c +}{hline 56}
+       hamin {c |}{res}       197    78.73096    11.33505         60        130
+         {txt}bmi {c |}{res}       197    22.48508    3.107261      15.59      31.23
+
+{txt}
+{com}. bysort gioi: tab1  beophi tha
+
+{txt}{hline}
+-> gioi = Nu
+
+{res}-> tabulation of beophi  
+
+     {txt}beophi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        243       92.75       92.75
+{txt}          1 {c |}{res}         19        7.25      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        262      100.00
+
+-> tabulation of tha  
+
+        {txt}tha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        242       92.37       92.37
+{txt}          1 {c |}{res}         20        7.63      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        262      100.00
+
+{txt}{hline}
+-> gioi = Nam
+
+{res}-> tabulation of beophi  
+
+     {txt}beophi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        152       77.16       77.16
+{txt}          1 {c |}{res}         45       22.84      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        197      100.00
+
+-> tabulation of tha  
+
+        {txt}tha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        155       78.68       78.68
+{txt}          1 {c |}{res}         42       21.32      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        197      100.00
+{txt}
+{com}. di "THONG KE PHAN TICH"
+{res}THONG KE PHAN TICH
+{txt}
+{com}. tabulate tha beophi, chi2 column
+{txt}
+{c TLC}{hline 19}{c TRC}
+{c |} Key{col 21}{c |}
+{c LT}{hline 19}{c RT}
+{c |}{space 5}{it:frequency}{col 21}{c |}
+{c |}{space 1}{it:column percentage}{col 21}{c |}
+{c BLC}{hline 19}{c BRC}
+
+           {c |}        beophi
+       tha {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         0 {c |}{res}       355         42 {txt}{c |}{res}       397 
+           {txt}{c |}{res}     89.87      65.63 {txt}{c |}{res}     86.49 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+         1 {c |}{res}        40         22 {txt}{c |}{res}        62 
+           {txt}{c |}{res}     10.13      34.38 {txt}{c |}{res}     13.51 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}       395         64 {txt}{c |}{res}       459 
+           {txt}{c |}{res}    100.00     100.00 {txt}{c |}{res}    100.00 
+
+{txt}          Pearson chi2({res}1{txt}) = {res} 27.7188  {txt} Pr = {res}0.000
+{txt}
+{com}. ttest hamax, by(beophi)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    395{col 22} 115.2405{col 34} .7487579{col 46} 14.88127{col 58} 113.7684{col 70} 116.7126
+       {txt}1 {c |}{res}{col 12}     64{col 22} 127.0313{col 34} 2.511676{col 46} 20.09341{col 58} 122.0121{col 70} 132.0504
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    459{col 22} 116.8845{col 34} .7566146{col 46} 16.20993{col 58} 115.3977{col 70} 118.3714
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-11.79074{col 34} 2.115917{col 58}-15.94888{col 70}-7.632609
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -5.5724
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     457
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. ttest hamin, by(beophi)
+
+{txt}Two-sample t test with equal variances
+{hline 9}{c TT}{hline 68}
+   Group{col 10}{c |}{col 16}Obs{col 27}Mean{col 35}Std. Err.{col 47}Std. Dev.{col 59}[95% Conf. Interval]
+{hline 9}{c +}{hline 68}
+       0 {c |}{res}{col 12}    395{col 22} 73.35443{col 34} .5131465{col 46} 10.19858{col 58} 72.34558{col 70} 74.36328
+       {txt}1 {c |}{res}{col 12}     64{col 22} 82.89063{col 34} 1.562221{col 46} 12.49777{col 58} 79.76878{col 70} 86.01247
+{txt}{hline 9}{c +}{hline 68}
+combined {c |}{res}{col 12}    459{col 22}  74.6841{col 34} .5153373{col 46} 11.04073{col 58} 73.67138{col 70} 75.69681
+{txt}{hline 9}{c +}{hline 68}
+    diff {c |}{res}{col 22}-9.536195{col 34} 1.420953{col 58}-12.32861{col 70}-6.743783
+{txt}{hline 9}{c BT}{hline 68}
+    diff = mean({res}0{txt}) - mean({res}1{txt})                                      t = {res} -6.7111
+{txt}Ho: diff = 0                                     degrees of freedom = {res}     457
+
+    {txt}Ha: diff < 0                 Ha: diff != 0                 Ha: diff > 0
+ Pr(T < t) = {res}0.0000         {txt}Pr(|T| > |t|) = {res}0.0000          {txt}Pr(T > t) = {res}1.0000
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. exit, clear

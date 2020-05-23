@@ -1,0 +1,135 @@
+.-
+help for ^Formula^                                   Menu: Data--Generate/Replace
+.-
+
+Topics covered
+--------------
+
+^1. Description^
+^2. Examples (how to fill in the dialog box)^
+^3. Functions^
+^4. Rules for variable names^
+^5. Number of observations^
+
+
+^1. Description^
+^--------------^
+
+This command will create a new variable based on a mathematical formula
+involving existing variables, Stata functions, observation number, etc.
+
+This is the basic way to generate new variables. 
+
+
+^2. Examples (how to fill in the dialog box)^
+^-------------------------------------------^
+
+Enter the "New variable name".
+
+See ^3. Rules for variable names^ below for allowed names.
+
+Enter a "Formula" in the edit box using "standard" algebraic computer
+notation.
+
+In the following examples, we assume that ^y^ is the "New variable name"
+and x, x1, x2,... are existing variables.
+
+
+Examples of formulas  Explanation
+--------------------  -----------
+
+  1                   Create new variable ^y^ = 1  [a constant equal to 1]
+
+  2*x                 
+
+  sqrt(x)             square root of x     
+
+  x^^2                 x squared
+
+  (x - 3)^^2
+
+  (x1 + x2 + x3)/3
+
+  x1/(2*(x2 - x3))
+
+  sum(x)              ^y^ = sum(x) creates ^y^ equal to the running sum of x.
+
+
+^3. Functions^
+^------------^
+
+  sqrt(x)             square root of x     
+
+  x^^2                 x squared
+
+  x^^3                 x cubed
+
+  x^^a                 x to the power a (where a is a constant or a variable) 
+
+  abs(x)              |x|, absolute value of x
+
+  exp(x)              exponential function
+
+  ln(x)               natural logarithm
+
+  log(x)              natural logarithm (same as above)
+
+  log10(x)            logarithm to the base 10
+
+  sin(x)              sin(x), x in radians
+
+  cos(x)              cos(x), x in radians
+
+These are the basic mathematical functions.  Stata has many more functions;
+see the ^Stata Reference Manual^ for Professional Stata for a complete list.
+
+
+^4. Rules for variable names^
+^---------------------------^
+
+A variable name must
+
+	- be 1 to 8 characters long
+
+        - consist of lowercase or uppercase letters (a-z, A-Z) or numbers (0-9)
+
+	- have a letter as the first character
+
+	- not use any other characters
+
+Examples: ^x^, ^x1^, ^X^, ^group^, ^Group^, ^GROUP^, ^dum06^
+
+Note: Stata is case sensitive.  ^group^, ^Group^, and ^GROUP^ are three 
+different variables.
+
+
+^5. Number of observations^
+^-------------------------^
+
+If your data set is empty (e.g., you just launched StataQuest and there are
+no variables in the ^Variables^ window), then you will be asked to set the 
+number of observations.
+
+If your data set is not empty, the new variable that is created by this
+command will have the same number of observations as the existing variables.
+
+(You can see how many observations there are in your current data set by
+choosing ^Describe variables^ from the ^Summaries^ menu.)
+
+If you want to start with an empty data set, first save your present data set
+by choosing ^Save^ or ^Save As^ from the ^File^ menu (if you want to save it),
+and then type ^clear^ in the ^Stata Command^ window and press ^Enter^.
+
+@save_sq!Click here for information on saving Stata data files.@
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@seqdlg!Sequence -- generating sequences@
+@rnddlg!Random numbers -- generating random numbers@
+@recdlg!Recode -- recoding values of a variable@
+
+@editr_sq!Using the spreadsheet editor to view and change data@

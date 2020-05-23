@@ -1,0 +1,50 @@
+.-
+help for ^Normality test^                      Menu: Statistics--Parametric tests
+.-
+
+^Description of the test^
+^-----------------------^
+
+This command performs the Shapiro-Wilk W test for normality and the
+Shapiro-Francia W' test for normality.
+
+The null hypothesis is that the distribution is normal.
+
+
+^Interpretation of P-values^
+^--------------------------^
+
+Speaking precisely:
+
+For small P-values, the hypothesis of normality is rejected.
+For large P-values, the hypothesis of normality cannot be rejected.
+
+Speaking loosely:
+
+Small P-values indicate nonnormality.
+Large P-values indicate normality.
+
+
+^How to fill in the dialog box^
+^-----------------------------^
+
+Click on the names of the variables that you wish to test.  
+
+You can enter more than one variable.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@ksmdlg!Kolmogorov-Smirnov test (test for equality of distributions)@
+@ptev1dlg!1-sample test of variance@
+@ptevdlg!2-sample test of variance@
+
+@stesdlg!Sign test@
+@srandlg!Wilcoxon signed-rank test@
+@rsumdlg!Mann-Whitney (Wilcoxon rank-sum) test@
+@kwaldlg!Kruskal-Wallis test (one-way nonparametric ANOVA)@
+
+@swilk!For the command-line version, see help for swilk and sfrancia.@

@@ -1,0 +1,2018 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+       log:  {res}D:\DATA\nhaplieu Bs Hong\ket qua phan tich.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}28 Aug 2012, 09:44:10
+{txt}
+{com}. 
+. di "I. DAC DIEM DAN SO NGHIEN CUU (tan so, ti le)"
+{res}I. DAC DIEM DAN SO NGHIEN CUU (tan so, ti le)
+{txt}
+{com}. 
+. tab1 nhomtuoi q3 hcm bvnc20 bvnc21r     
+
+{res}-> tabulation of nhomtuoi  
+
+{txt}RECODE of t {c |}
+     (tuoi) {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+  <36 thang {c |}{res}         55       35.95       35.95
+{txt}  36+ thang {c |}{res}         98       64.05      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of q3  
+
+  {txt}gioi tinh {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+        nam {c |}{res}         87       56.86       56.86
+{txt}         nu {c |}{res}         66       43.14      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of hcm  
+
+           {txt}hcm {c |}      Freq.     Percent        Cum.
+{hline 15}{c +}{hline 35}
+          Tinh {c |}{res}         24       15.69       15.69
+{txt}TP Ho Chi Minh {c |}{res}        129       84.31      100.00
+{txt}{hline 15}{c +}{hline 35}
+         Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc20  
+
+    {txt}nha tre {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         30       19.61       19.61
+{txt}         co {c |}{res}        123       80.39      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc21r  
+
+  {txt}RECODE of {c |}
+    bvnc21x {c |}
+(ghi ro nha {c |}
+       tre) {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    nha tre {c |}{res}         27       21.95       21.95
+{txt} truong hoc {c |}{res}         96       78.05      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+{txt}
+{com}. 
+. di "5. Dinh duong: dua theo can nang va chieu cao theo tuoi"
+{res}5. Dinh duong: dua theo can nang va chieu cao theo tuoi
+{txt}
+{com}. tab1  sddnhecan sddchieucao
+
+{res}-> tabulation of sddnhecan  
+
+       {txt}RECODE of _zwei {c |}
+       (Weight-for-age {c |}
+              z-score) {c |}      Freq.     Percent        Cum.
+{hline 23}{c +}{hline 35}
+khong SDD cannang/tuoi {c |}{res}        151       98.69       98.69
+{txt}      SDD cannang/tuoi {c |}{res}          2        1.31      100.00
+{txt}{hline 23}{c +}{hline 35}
+                 Total {c |}{res}        153      100.00
+
+-> tabulation of sddchieucao  
+
+        {txt}RECODE of _zlen {c |}
+ (Length/height-for-age {c |}
+               z-score) {c |}      Freq.     Percent        Cum.
+{hline 24}{c +}{hline 35}
+khong SDD chieucao/tuoi {c |}{res}        128       83.66       83.66
+{txt}      SDD chieucao/tuoi {c |}{res}         25       16.34      100.00
+{txt}{hline 24}{c +}{hline 35}
+                  Total {c |}{res}        153      100.00
+{txt}
+{com}. 
+. di "II. DAC DIEM LAM SANG (tan so, ti le)"
+{res}II. DAC DIEM LAM SANG (tan so, ti le)
+{txt}
+{com}. di "BENH SU"
+{res}BENH SU
+{txt}
+{com}. tab1 kvnc9 q12d
+
+{res}-> tabulation of kvnc9  
+
+     {txt}hen phan loai {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+     kiem soat tot {c |}{res}         30       19.61       19.61
+{txt}kiem soat mot phan {c |}{res}         70       45.75       65.36
+{txt}   khong kiem soat {c |}{res}         53       34.64      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+
+-> tabulation of q12d  
+
+                 {txt}thuoc dang sd {c |}      Freq.     Percent        Cum.
+{hline 31}{c +}{hline 35}
+                     FLIXOTIDE {c |}{res}         53       34.64       34.64
+           {txt}FLIXOTIDE, MONTIGET {c |}{res}          6        3.92       38.56
+          {txt}FLIXOTIDE, SINGULAIR {c |}{res}         34       22.22       60.78
+                         {txt}KHONG {c |}{res}         27       17.65       78.43
+                      {txt}MONTIGET {c |}{res}         14        9.15       87.58
+                      {txt}SERETIDE {c |}{res}          2        1.31       88.89
+            {txt}SERETIDE, MONTIGET {c |}{res}          1        0.65       89.54
+                     {txt}SINGULAIR {c |}{res}         16       10.46      100.00
+{txt}{hline 31}{c +}{hline 35}
+                         Total {c |}{res}        153      100.00
+{txt}
+{com}. tab1  benhdiungkethopr
+
+{res}-> tabulation of benhdiungkethopr  
+
+  {txt}RECODE of {c |}
+benhdiungke {c |}
+       thop {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         14        9.15        9.15
+{txt}          1 {c |}{res}         66       43.14       52.29
+{txt}          2 {c |}{res}         48       31.37       83.66
+{txt}   >=3 benh {c |}{res}         25       16.34      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+{txt}
+{com}. di "TIEN SU"
+{res}TIEN SU
+{txt}
+{com}. sum q12a q12b q12c 
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+        q12a {c |}{res}       153    22.58824    14.42701          1         55
+        {txt}q12b {c |}{res}       153    14.52941    11.90315          3         49
+        {txt}q12c {c |}{res}       153    29.26144    13.53736          2         55
+{txt}
+{com}. tab1 q12b
+
+{res}-> tabulation of q12b  
+
+  {txt}so lan kk {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          3 {c |}{res}         26       16.99       16.99
+{txt}          4 {c |}{res}         14        9.15       26.14
+{txt}          5 {c |}{res}          8        5.23       31.37
+{txt}          6 {c |}{res}          3        1.96       33.33
+{txt}          7 {c |}{res}          5        3.27       36.60
+{txt}          8 {c |}{res}          9        5.88       42.48
+{txt}          9 {c |}{res}          1        0.65       43.14
+{txt}         10 {c |}{res}         14        9.15       52.29
+{txt}         11 {c |}{res}          2        1.31       53.59
+{txt}         12 {c |}{res}          8        5.23       58.82
+{txt}         13 {c |}{res}          4        2.61       61.44
+{txt}         14 {c |}{res}          2        1.31       62.75
+{txt}         16 {c |}{res}          2        1.31       64.05
+{txt}         17 {c |}{res}          1        0.65       64.71
+{txt}         18 {c |}{res}          5        3.27       67.97
+{txt}         19 {c |}{res}          4        2.61       70.59
+{txt}         20 {c |}{res}          4        2.61       73.20
+{txt}         21 {c |}{res}          4        2.61       75.82
+{txt}         22 {c |}{res}          2        1.31       77.12
+{txt}         23 {c |}{res}          3        1.96       79.08
+{txt}         24 {c |}{res}          3        1.96       81.05
+{txt}         26 {c |}{res}          2        1.31       82.35
+{txt}         27 {c |}{res}          2        1.31       83.66
+{txt}         28 {c |}{res}          2        1.31       84.97
+{txt}         29 {c |}{res}          2        1.31       86.27
+{txt}         30 {c |}{res}          3        1.96       88.24
+{txt}         32 {c |}{res}          1        0.65       88.89
+{txt}         33 {c |}{res}          3        1.96       90.85
+{txt}         34 {c |}{res}          2        1.31       92.16
+{txt}         36 {c |}{res}          3        1.96       94.12
+{txt}         40 {c |}{res}          3        1.96       96.08
+{txt}         41 {c |}{res}          1        0.65       96.73
+{txt}         44 {c |}{res}          1        0.65       97.39
+{txt}         46 {c |}{res}          1        0.65       98.04
+{txt}         48 {c |}{res}          2        1.31       99.35
+{txt}         49 {c |}{res}          1        0.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+{txt}
+{com}. 
+. di "Tien su benh di ung khac (tan so, ti le)" 
+{res}Tien su benh di ung khac (tan so, ti le)
+{txt}
+{com}. tab1 q14a q14b q14c q14d q14e q14f q14g q14h q14ha
+
+{res}-> tabulation of q14a  
+
+       {txt}cham {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        129       84.31       84.31
+{txt}         co {c |}{res}         24       15.69      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of q14b  
+
+ {txt}viem xoang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        148       96.73       96.73
+{txt}         co {c |}{res}          5        3.27      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of q14c  
+
+{txt}viem mui du {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        102       66.67       66.67
+{txt}         co {c |}{res}         51       33.33      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of q14d  
+
+ {txt}du thuc an {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        123       80.39       80.39
+{txt}         co {c |}{res}         30       19.61      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of q14e  
+
+    {txt}du thoi {c |}
+       tiet {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         33       21.57       21.57
+{txt}         co {c |}{res}        120       78.43      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of q14f  
+
+{txt}du khoi bui {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        148       96.73       96.73
+{txt}         co {c |}{res}          5        3.27      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of q14g  
+
+{txt}du phan hoa {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        153      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of q14h  
+
+    {txt}du khac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        147       96.08       96.08
+{txt}         co {c |}{res}          6        3.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of q14ha  
+
+                   {txt}di ung khac {c |}      Freq.     Percent        Cum.
+{hline 31}{c +}{hline 35}
+                            DA {c |}{res}          4        2.61        2.61
+                         {txt}KHONG {c |}{res}        147       96.08       98.69
+                       {txt}MUI DAU {c |}{res}          1        0.65       99.35
+            {txt}THUOC (KHANG SINH) {c |}{res}          1        0.65      100.00
+{txt}{hline 31}{c +}{hline 35}
+                         Total {c |}{res}        153      100.00
+{txt}
+{com}. di "Benh di ung ket hop (tan so, ti le) " 
+{res}Benh di ung ket hop (tan so, ti le) 
+{txt}
+{com}. tab1  benhdiungkethopr
+
+{res}-> tabulation of benhdiungkethopr  
+
+  {txt}RECODE of {c |}
+benhdiungke {c |}
+       thop {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         14        9.15        9.15
+{txt}          1 {c |}{res}         66       43.14       52.29
+{txt}          2 {c |}{res}         48       31.37       83.66
+{txt}   >=3 benh {c |}{res}         25       16.34      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+{txt}
+{com}. di "Tien su benh di ung gia dinh"
+{res}Tien su benh di ung gia dinh
+{txt}
+{com}. tab1 q15a q15aa q15b q15bb
+
+{res}-> tabulation of q15a  
+
+    {txt}gd benh {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         68       44.44       44.44
+{txt}         co {c |}{res}         85       55.56      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of q15aa  
+
+                         {txt}gd benh ghi ro {c |}      Freq.     Percent        Cum.
+{hline 40}{c +}{hline 35}
+                                ANH HEN {c |}{res}          1        0.65        0.65
+         {txt}ANH HEN, CAU HEN, BA NGOAI HEN {c |}{res}          1        0.65        1.31
+                             {txt}ANH HO HEN {c |}{res}          6        3.92        5.23
+                    {txt}ANH HO HEN, CAU HEN {c |}{res}          1        0.65        5.88
+                              {txt}BA CO HEN {c |}{res}          3        1.96        7.84
+                      {txt}BA CO HEN, CO HEN {c |}{res}          1        0.65        8.50
+                          {txt}BA CO NOI HEN {c |}{res}          1        0.65        9.15
+             {txt}BA CO NOI HEN, ONG NOI HEN {c |}{res}          1        0.65        9.80
+                                 {txt}BA HEN {c |}{res}          8        5.23       15.03
+{txt}BA HEN, ANH HO HEN, CO HEN, ONG NOI HEN {c |}{res}          1        0.65       15.69
+                     {txt}BA HEN, BA NOI HEN {c |}{res}          1        0.65       16.34
+                         {txt}BA HEN, CO HEN {c |}{res}          1        0.65       16.99
+                         {txt}BA HEN, ME HEN {c |}{res}          1        0.65       17.65
+ {txt}BA HEN, ME HEN, CAU HEN, BA CO NOI HEN {c |}{res}          1        0.65       18.30
+            {txt}BA HEN, ME HEN, ONG NOI HEN {c |}{res}          1        0.65       18.95
+                           {txt}BA NGOAI HEN {c |}{res}          3        1.96       20.92
+                             {txt}BA NOI HEN {c |}{res}          5        3.27       24.18
+                                {txt}BAC HEN {c |}{res}          3        1.96       26.14
+                                {txt}CAU HEN {c |}{res}          4        2.61       28.76
+      {txt}CHI HEN, BA NOI HEN, BA NGOAI HEN {c |}{res}          1        0.65       29.41
+                             {txt}CHI HO HEN {c |}{res}          2        1.31       30.72
+                                {txt}CHU HEN {c |}{res}          2        1.31       32.03
+                                 {txt}CO HEN {c |}{res}          1        0.65       32.68
+                  {txt}CO HEN, ONG NGOAI HEN {c |}{res}          1        0.65       33.33
+                    {txt}CO HEN, ONG NOI HEN {c |}{res}          1        0.65       33.99
+                          {txt}CO VIEM XOANG {c |}{res}          1        0.65       34.64
+                                 {txt}DI HEN {c |}{res}          1        0.65       35.29
+                                  {txt}KHONG {c |}{res}         68       44.44       79.74
+                                 {txt}ME HEN {c |}{res}          9        5.88       85.62
+               {txt}ME HEN + VIEM MUI DI UNG {c |}{res}          1        0.65       86.27
+                   {txt}ME HEN, BA NGOAI HEN {c |}{res}          1        0.65       86.93
+               {txt}ME HEN, CAU HEN, ANH HEN {c |}{res}          1        0.65       87.58
+                     {txt}ME HEN, CHI HO HEN {c |}{res}          1        0.65       88.24
+                     {txt}ME HEN, ONG CO HEN {c |}{res}          1        0.65       88.89
+                            {txt}ONG CAU HEN {c |}{res}          1        0.65       89.54
+                             {txt}ONG CO HEN {c |}{res}          1        0.65       90.20
+                         {txt}ONG CO NOI HEN {c |}{res}          1        0.65       90.85
+                          {txt}ONG NGOAI HEN {c |}{res}          5        3.27       94.12
+                  {txt}ONG NGOAI HEN, DI HEN {c |}{res}          1        0.65       94.77
+                            {txt}ONG NOI HEN {c |}{res}          7        4.58       99.35
+                 {txt}ONG NOI HEN, BA CO HEN {c |}{res}          1        0.65      100.00
+{txt}{hline 40}{c +}{hline 35}
+                                  Total {c |}{res}        153      100.00
+
+-> tabulation of q15b  
+
+  {txt}gd di ung {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         59       38.56       38.56
+{txt}         co {c |}{res}         94       61.44      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of q15bb  
+
+                           {txt}gd du ghi ro {c |}      Freq.     Percent        Cum.
+{hline 40}{c +}{hline 35}
+                          ANH HO DU MUI {c |}{res}          1        0.65        0.65
+           {txt}ANH VIEM MUI DU, BA NOI CHAM {c |}{res}          1        0.65        1.31
+                                {txt}BA CHAM {c |}{res}          3        1.96        3.27
+                      {txt}BA DI UNG THUC AN {c |}{res}          1        0.65        3.92
+                              {txt}BA DU BUI {c |}{res}          1        0.65        4.58
+                               {txt}BA DU DA {c |}{res}          3        1.96        6.54
+{txt}BA DU DA, BAC DU DA, CO DU THUOC VA LON {c |}{res}          1        0.65        7.19
+      {txt}BA DU DA, ME VIEM MUI DU, ME CHAM {c |}{res}          1        0.65        7.84
+                        {txt}BA DU THOI TIET {c |}{res}          2        1.31        9.15
+                          {txt}BA DU THUC AN {c |}{res}          2        1.31       10.46
+               {txt}BA DU THUC AN, CO DU MEN {c |}{res}          1        0.65       11.11
+{txt}BA DU THUC AN, ME CHAM, BA NGOAI VXOANG {c |}{res}          1        0.65       11.76
+{txt}BA DU THUC AN, ONG NOI CHAM, CO VIEM XO {c |}{res}          1        0.65       12.42
+                          {txt}BA NGOAI CHAM {c |}{res}          1        0.65       13.07
+    {txt}BA NGOAI VIEM XOANG, CAU VIEM XOANG {c |}{res}          1        0.65       13.73
+             {txt}BA NGOAI, BA CO VIEM XOANG {c |}{res}          1        0.65       14.38
+                         {txt}BA VIEM MUI DU {c |}{res}          6        3.92       18.30
+          {txt}BA VIEM MUI DU, ME DU THUC AN {c |}{res}          1        0.65       18.95
+         {txt}BA VIEM MUI DU, ME VIEM MUI DU {c |}{res}          1        0.65       19.61
+       {txt}BA VIEM MUI DU,BA NGOAI DU THUOC {c |}{res}          1        0.65       20.26
+                          {txt}BA VIEM XOANG {c |}{res}          7        4.58       24.84
+           {txt}BA VIEM XOANG, CO VIEM XOANG {c |}{res}          1        0.65       25.49
+          {txt}BA VIEM XOANG, ME VIEM MUI DU {c |}{res}          1        0.65       26.14
+{txt}BA VIEM XOANG, ME VIEM MUI DU, BA NGOAI {c |}{res}          1        0.65       26.80
+{txt}BA VIEM XOANG, ME VIEM XOANG, CO CHU VI {c |}{res}          1        0.65       27.45
+{txt}BA VIEM XOANG, ME VIEM XOANG, ONG NGOAI {c |}{res}          1        0.65       28.10
+      {txt}BA VIEM XOANG, VIEM MUI DU, DU DA {c |}{res}          1        0.65       28.76
+                         {txt}BAC VIEM XOANG {c |}{res}          1        0.65       29.41
+                         {txt}CAU VIEM XOANG {c |}{res}          1        0.65       30.07
+                         {txt}CO VIEM MUI DU {c |}{res}          1        0.65       30.72
+                                {txt}DI CHAM {c |}{res}          1        0.65       31.37
+                                  {txt}DI DU {c |}{res}          1        0.65       32.03
+                          {txt}DI VIEM XOANG {c |}{res}          1        0.65       32.68
+       {txt}DI VIEM XOANG, BA NGOAI DU THUOC {c |}{res}          1        0.65       33.33
+                                  {txt}KHONG {c |}{res}         58       37.91       71.24
+                                {txt}ME CHAM {c |}{res}          3        1.96       73.20
+                {txt}ME CHAM, CAU DU THUC AN {c |}{res}          1        0.65       73.86
+                 {txt}ME CHAM, ME DU THUC AN {c |}{res}          1        0.65       74.51
+                 {txt}ME CHAM, ME VIEM XOANG {c |}{res}          1        0.65       75.16
+{txt}ME CHAM, ME VIEM XOANG, BA NGOAI VIEM X {c |}{res}          1        0.65       75.82
+                      {txt}ME DI UNG THUC AN {c |}{res}          1        0.65       76.47
+                              {txt}ME DU BUI {c |}{res}          1        0.65       77.12
+                               {txt}ME DU DA {c |}{res}          4        2.61       79.74
+                          {txt}ME DU THUC AN {c |}{res}          3        1.96       81.70
+          {txt}ME DU THUC AN, BA VIEM MUI DU {c |}{res}          1        0.65       82.35
+{txt}ME DU THUC AN, ME DU DA, BA NGOAI DU TH {c |}{res}          1        0.65       83.01
+               {txt}ME DU THUOC (KHANG SINH) {c |}{res}          1        0.65       83.66
+                         {txt}ME VIEM MUI DU {c |}{res}          4        2.61       86.27
+              {txt}ME VIEM MUI DU, ANH DU DA {c |}{res}          1        0.65       86.93
+          {txt}ME VIEM MUI DU, ME VIEM XOANG {c |}{res}          1        0.65       87.58
+                          {txt}ME VIEM XOANG {c |}{res}         13        8.50       96.08
+            {txt}ME VIEM XOANG, DU THOI TIET {c |}{res}          1        0.65       96.73
+                 {txt}ME VIEM XOANG, ME CHAM {c |}{res}          1        0.65       97.39
+             {txt}ME VIEM XOANG, VIEM MUI DU {c |}{res}          1        0.65       98.04
+                         {txt}ONG NGOAI CHAM {c |}{res}          1        0.65       98.69
+     {txt}ONG NOI VIEM MUI DU, CO VIEM XOANG {c |}{res}          1        0.65       99.35
+                     {txt}ONG NOI VIEM XOANG {c |}{res}          1        0.65      100.00
+{txt}{hline 40}{c +}{hline 35}
+                                  Total {c |}{res}        153      100.00
+{txt}
+{com}. 
+. 
+. di "Test da"
+{res}Test da
+{txt}
+{com}. tab1 v6bpos2 v7bpos2 v8bpos2 v9bpos2 v10bpos2 v11bpos2
+
+{res}-> tabulation of v6bpos2  
+
+  {txt}RECODE of {c |}
+     v6bpos {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    Am tinh {c |}{res}        129       84.31       84.31
+{txt} Duong tinh {c |}{res}         24       15.69      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of v7bpos2  
+
+  {txt}RECODE of {c |}
+     v7bpos {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    Am tinh {c |}{res}        109       71.24       71.24
+{txt} Duong tinh {c |}{res}         44       28.76      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of v8bpos2  
+
+  {txt}RECODE of {c |}
+     v8bpos {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    Am tinh {c |}{res}        126       82.35       82.35
+{txt} Duong tinh {c |}{res}         27       17.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of v9bpos2  
+
+  {txt}RECODE of {c |}
+     v9bpos {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    Am tinh {c |}{res}        119       77.78       77.78
+{txt} Duong tinh {c |}{res}         34       22.22      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of v10bpos2  
+
+  {txt}RECODE of {c |}
+    v10bpos {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    Am tinh {c |}{res}        126       82.35       82.35
+{txt} Duong tinh {c |}{res}         27       17.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of v11bpos2  
+
+  {txt}RECODE of {c |}
+    v11bpos {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+    Am tinh {c |}{res}        102       66.67       66.67
+{txt} Duong tinh {c |}{res}         51       33.33      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+{txt}
+{com}. tab1 soallergen  
+
+{res}-> tabulation of soallergen  
+
+ {txt}soallergen {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         64       41.83       41.83
+{txt}          1 {c |}{res}         37       24.18       66.01
+{txt}          2 {c |}{res}         22       14.38       80.39
+{txt}          3 {c |}{res}          9        5.88       86.27
+{txt}          4 {c |}{res}          9        5.88       92.16
+{txt}          5 {c |}{res}          9        5.88       98.04
+{txt}          6 {c |}{res}          3        1.96      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+{txt}
+{com}. 
+. di "16. Di nguyen khong khi:  "
+{res}16. Di nguyen khong khi:  
+{txt}
+{com}. 
+. tab1 avnc1  avnc2  avnc3  avnc4  avnc5  
+
+{res}-> tabulation of avnc1  
+
+    {txt}nha nem {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         19       12.42       12.42
+{txt}         co {c |}{res}        134       87.58      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc2  
+
+       {txt}tham {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        148       96.73       96.73
+{txt}         co {c |}{res}          5        3.27      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc3  
+
+   {txt}tham nho {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         26       16.99       16.99
+{txt}         co {c |}{res}        127       83.01      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc4  
+
+     {txt}do moi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        106       69.28       69.28
+{txt}         co {c |}{res}         47       30.72      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc5  
+
+                 {txt}ghi ro do moi {c |}      Freq.     Percent        Cum.
+{hline 31}{c +}{hline 35}
+                         CHIEU {c |}{res}          1        0.65        0.65
+                       {txt}DON NHA {c |}{res}          1        0.65        1.31
+                            {txt}GO {c |}{res}          1        0.65        1.96
+                           {txt}GOI {c |}{res}          2        1.31        3.27
+                       {txt}GOI, GA {c |}{res}          1        0.65        3.92
+                          {txt}KHAN {c |}{res}          1        0.65        4.58
+                         {txt}KHONG {c |}{res}        106       69.28       73.86
+                      {txt}KHONG RO {c |}{res}          4        2.61       76.47
+                           {txt}NEM {c |}{res}          2        1.31       77.78
+                       {txt}QUAN AO {c |}{res}         18       11.76       89.54
+                   {txt}QUAN AO, RA {c |}{res}          3        1.96       91.50
+                            {txt}RA {c |}{res}          6        3.92       95.42
+                           {txt}SON {c |}{res}          1        0.65       96.08
+                       {txt}SON NHA {c |}{res}          2        1.31       97.39
+                       {txt}SUA NHA {c |}{res}          1        0.65       98.04
+                          {txt}THAM {c |}{res}          1        0.65       98.69
+                      {txt}THAM LOT {c |}{res}          1        0.65       99.35
+                            {txt}TU {c |}{res}          1        0.65      100.00
+{txt}{hline 31}{c +}{hline 35}
+                         Total {c |}{res}        153      100.00
+{txt}
+{com}. tab1 avnc6  avnc7  avnc8  avnc9  avnc10  
+
+{res}-> tabulation of avnc6  
+
+     {txt}be nem {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         23       15.03       15.03
+{txt}         co {c |}{res}        130       84.97      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc7  
+
+      {txt}chieu {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        113       73.86       73.86
+{txt}         co {c |}{res}         40       26.14      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc8  
+
+    {txt}goi gon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         90       58.82       58.82
+{txt}         co {c |}{res}         63       41.18      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc9  
+
+  {txt}nuoc dong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        109       71.24       71.24
+{txt}         co {c |}{res}         44       28.76      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc10  
+
+              {txt}ghi ro nuoc dong {c |}      Freq.     Percent        Cum.
+{hline 31}{c +}{hline 35}
+                           BEP {c |}{res}          1        0.65        0.65
+                   {txt}DAT SAU NHA {c |}{res}          1        0.65        1.31
+                            {txt}HO {c |}{res}          1        0.65        1.96
+                         {txt}KHONG {c |}{res}        109       71.24       73.20
+                      {txt}KHONG RO {c |}{res}          4        2.61       75.82
+                      {txt}MAY LANH {c |}{res}          1        0.65       76.47
+                           {txt}NEN {c |}{res}          2        1.31       77.78
+                       {txt}NEN NHA {c |}{res}          2        1.31       79.08
+                           {txt}NHA {c |}{res}         16       10.46       89.54
+                       {txt}NHA BEP {c |}{res}          1        0.65       90.20
+                     {txt}PHONG TAM {c |}{res}          4        2.61       92.81
+                      {txt}SAN NUOC {c |}{res}          2        1.31       94.12
+                     {txt}THAM NUOC {c |}{res}          1        0.65       94.77
+                         {txt}TUONG {c |}{res}          7        4.58       99.35
+                          {txt}VUON {c |}{res}          1        0.65      100.00
+{txt}{hline 31}{c +}{hline 35}
+                         Total {c |}{res}        153      100.00
+{txt}
+{com}. tab1 avnc11  avnc12  avnc13  avnc14  avnc15  
+
+{res}-> tabulation of avnc11  
+
+  {txt}xit phong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        133       86.93       86.93
+{txt}         co {c |}{res}         20       13.07      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc12  
+
+   {txt}may lanh {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         72       47.06       47.06
+{txt}         co {c |}{res}         81       52.94      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc13  
+
+        {txt}moc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        121       79.08       79.08
+{txt}         co {c |}{res}         32       20.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc14  
+
+    {txt}mui moc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        140       91.50       91.50
+{txt}         co {c |}{res}         13        8.50      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc15  
+
+        {txt}cho {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        125       81.70       81.70
+{txt}         co {c |}{res}         28       18.30      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+{txt}
+{com}. tab1 avnc16  avnc17  avnc18  avnc18a avnc19  avnc20
+
+{res}-> tabulation of avnc16  
+
+        {txt}meo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        138       90.20       90.20
+{txt}         co {c |}{res}         15        9.80      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc17  
+
+  {txt}trai chan {c |}
+       nuoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         61       39.87       39.87
+{txt}         co {c |}{res}         92       60.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc18  
+
+              {txt}ghi ro chan nuoi {c |}      Freq.     Percent        Cum.
+{hline 31}{c +}{hline 35}
+                          CHIM {c |}{res}         13        8.50        8.50
+                      {txt}CHIM, GA {c |}{res}          3        1.96       10.46
+                  {txt}CHIM, GA, BO {c |}{res}          1        0.65       11.11
+                 {txt}CHIM, GA, HEO {c |}{res}          1        0.65       11.76
+                      {txt}CHIM. GA {c |}{res}          1        0.65       12.42
+                           {txt}CHO {c |}{res}         11        7.19       19.61
+                     {txt}CHO, CHIM {c |}{res}          2        1.31       20.92
+                 {txt}CHO, CHIM, GA {c |}{res}          2        1.31       22.22
+                       {txt}CHO, GA {c |}{res}          8        5.23       27.45
+                      {txt}CHO, MEO {c |}{res}          5        3.27       30.72
+                {txt}CHO, MEO, CHIM {c |}{res}          2        1.31       32.03
+            {txt}CHO, MEO, CHIM, GA {c |}{res}          1        0.65       32.68
+       {txt}CHO, MEO, CHIM, GA, HEO {c |}{res}          1        0.65       33.33
+                  {txt}CHO, MEO, GA {c |}{res}          3        1.96       35.29
+        {txt}CHO, MEO, GA, VIT, HEO {c |}{res}          1        0.65       35.95
+                            {txt}GA {c |}{res}         21       13.73       49.67
+                  {txt}GA, TRAU, BO {c |}{res}          1        0.65       50.33
+                       {txt}GA, VIT {c |}{res}          1        0.65       50.98
+                           {txt}HEO {c |}{res}          2        1.31       52.29
+                         {txt}KHONG {c |}{res}         61       39.87       92.16
+                           {txt}MEO {c |}{res}         10        6.54       98.69
+                       {txt}MEO, GA {c |}{res}          1        0.65       99.35
+                 {txt}MEO, GA, CHIM {c |}{res}          1        0.65      100.00
+{txt}{hline 31}{c +}{hline 35}
+                         Total {c |}{res}        153      100.00
+
+-> tabulation of avnc18a  
+
+    {txt}avnc18a {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         61       39.87       39.87
+{txt}          1 {c |}{res}         92       60.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc19  
+
+       {txt}gian {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         44       28.76       28.76
+{txt}         co {c |}{res}        109       71.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of avnc20  
+
+      {txt}chuot {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         72       47.06       47.06
+{txt}         co {c |}{res}         81       52.94      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+{txt}
+{com}. 
+. gen sodiung=avnc1+avnc2+avnc3+avnc4+ avnc6 +avnc7 + avnc8 +avnc9 
+{txt}
+{com}. replace sodiung=avnc11 +avnc12 +avnc13 +avnc14 +avnc15+avnc16+avnc17+avnc19+avnc20
+{txt}(125 real changes made)
+
+{com}. 
+. di "Khoi thuoc la"
+{res}Khoi thuoc la
+{txt}
+{com}. tab1 bvnc1 bvnc2  bvnc3
+
+{res}-> tabulation of bvnc1  
+
+  {txt}hut thuoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         83       54.25       54.25
+{txt}         co {c |}{res}         70       45.75      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc2  
+
+    {txt}hut nha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        111       72.55       72.55
+{txt}         co {c |}{res}         42       27.45      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc3  
+
+   {txt}so nguoi {c |}
+        hut {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         83       54.25       54.25
+{txt}          1 {c |}{res}         54       35.29       89.54
+{txt}          2 {c |}{res}         11        7.19       96.73
+{txt}          3 {c |}{res}          4        2.61       99.35
+{txt}          9 {c |}{res}          1        0.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+{txt}
+{com}. di "bep gas"
+{res}bep gas
+{txt}
+{com}. tab1 bvnc4  
+
+{res}-> tabulation of bvnc4  
+
+     {txt}nau an {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        144       94.12       94.12
+{txt}         co {c |}{res}          9        5.88      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+{txt}
+{com}. di "bep cui"
+{res}bep cui
+{txt}
+{com}. tab1 n14b  n14c  n14d  n14e  n14f  n14g  n14ga  
+
+{res}-> tabulation of n14b  
+
+    {txt}nha cui {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        149       97.39       97.39
+{txt}         co {c |}{res}          4        2.61      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of n14c  
+
+   {txt}nha than {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        152       99.35       99.35
+{txt}         co {c |}{res}          1        0.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of n14d  
+
+{txt}nha than da {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        152       99.35       99.35
+{txt}         co {c |}{res}          1        0.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of n14e  
+
+   {txt}nha phan {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        153      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of n14f  
+
+    {txt}nha rom {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        153      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of n14g  
+
+ {txt}nha nau an {c |}
+       khac {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        147       96.08       96.08
+{txt}         co {c |}{res}          6        3.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of n14ga  
+
+             {txt}ghi ro nha nau an {c |}      Freq.     Percent        Cum.
+{hline 31}{c +}{hline 35}
+                      BEP DIEN {c |}{res}          1        0.65        0.65
+                   {txt}BEP DIEN TU {c |}{res}          1        0.65        1.31
+                        {txt}BEP TU {c |}{res}          2        1.31        2.61
+                        {txt}CUA SO {c |}{res}          1        0.65        3.27
+                          {txt}DIEN {c |}{res}          1        0.65        3.92
+                         {txt}KHONG {c |}{res}        147       96.08      100.00
+{txt}{hline 31}{c +}{hline 35}
+                         Total {c |}{res}        153      100.00
+{txt}
+{com}. tab1 bvnc1  bvnc2  bvnc3  bvnc4  bvnc5  bvnc6  
+
+{res}-> tabulation of bvnc1  
+
+  {txt}hut thuoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         83       54.25       54.25
+{txt}         co {c |}{res}         70       45.75      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc2  
+
+    {txt}hut nha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        111       72.55       72.55
+{txt}         co {c |}{res}         42       27.45      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc3  
+
+   {txt}so nguoi {c |}
+        hut {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         83       54.25       54.25
+{txt}          1 {c |}{res}         54       35.29       89.54
+{txt}          2 {c |}{res}         11        7.19       96.73
+{txt}          3 {c |}{res}          4        2.61       99.35
+{txt}          9 {c |}{res}          1        0.65      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc4  
+
+     {txt}nau an {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        144       94.12       94.12
+{txt}         co {c |}{res}          9        5.88      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc5  
+
+     {txt}bep ga {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          6        3.92        3.92
+{txt}         co {c |}{res}        147       96.08      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc6  
+
+   {txt}hut khoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        122       79.74       79.74
+{txt}         co {c |}{res}         31       20.26      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+{txt}
+{com}. tab1 bvnc6  bvnc7  bvnc8  bvnc9  bvnc10  bvnc11 bvnc12   
+
+{res}-> tabulation of bvnc6  
+
+   {txt}hut khoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        122       79.74       79.74
+{txt}         co {c |}{res}         31       20.26      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc7  
+
+   {txt}diet con {c |}
+      trung {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         55       35.95       35.95
+{txt}         co {c |}{res}         98       64.05      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc8  
+
+         {txt}ghi ro diet con trung {c |}      Freq.     Percent        Cum.
+{hline 31}{c +}{hline 35}
+                         KHONG {c |}{res}         55       35.95       35.95
+                      {txt}KHONG RO {c |}{res}          5        3.27       39.22
+              {txt}REID, MUOI, KIEN {c |}{res}          1        0.65       39.87
+                {txt}THUOC XIT GIAN {c |}{res}          3        1.96       41.83
+       {txt}THUOC XIT GIAN (BALCON) {c |}{res}          1        0.65       42.48
+      {txt}THUOC XIT GIAN (MOSTFLY) {c |}{res}          1        0.65       43.14
+         {txt}THUOC XIT GIAN (REID) {c |}{res}          9        5.88       49.02
+          {txt}THUOC XIT GIAN, KIEN {c |}{res}          3        1.96       50.98
+{txt}THUOC XIT GIAN, KIEN (MOSTFLY) {c |}{res}          1        0.65       51.63
+   {txt}THUOC XIT GIAN, KIEN (REID) {c |}{res}          3        1.96       53.59
+    {txt}THUOC XIT GIAN, KIEN, MUOI {c |}{res}          3        1.96       55.56
+          {txt}THUOC XIT GIAN, MUOI {c |}{res}          3        1.96       57.52
+  {txt}THUOC XIT GIAN, MUOI (JUMBO) {c |}{res}          1        0.65       58.17
+{txt}THUOC XIT GIAN, MUOI (MOSTFLY) {c |}{res}          1        0.65       58.82
+   {txt}THUOC XIT GIAN, MUOI (REID) {c |}{res}          1        0.65       59.48
+    {txt}THUOC XIT GIAN, MUOI, KIEN {c |}{res}          4        2.61       62.09
+    {txt}THUOC XIT GIAN, RUOI, MUOI {c |}{res}          1        0.65       62.75
+                {txt}THUOC XIT KIEN {c |}{res}          4        2.61       65.36
+       {txt}THUOC XIT KIEN (BALCON) {c |}{res}          1        0.65       66.01
+      {txt}THUOC XIT KIEN (MOSTFLY) {c |}{res}          5        3.27       69.28
+         {txt}THUOC XIT KIEN (REID) {c |}{res}          8        5.23       74.51
+   {txt}THUOC XIT KIEN, MUOI (REID) {c |}{res}          1        0.65       75.16
+      {txt}THUOC XIT KIEN,GIAN,MUOI {c |}{res}          1        0.65       75.82
+                {txt}THUOC XIT MUOI {c |}{res}          9        5.88       81.70
+       {txt}THUOC XIT MUOI (BALCON) {c |}{res}          2        1.31       83.01
+       {txt}THUOC XIT MUOI (BANCON) {c |}{res}          1        0.65       83.66
+      {txt}THUOC XIT MUOI (MOSTFLY) {c |}{res}          7        4.58       88.24
+         {txt}THUOC XIT MUOI (REID) {c |}{res}          6        3.92       92.16
+   {txt}THUOC XIT MUOI, GIAN (REID) {c |}{res}          2        1.31       93.46
+          {txt}THUOC XIT MUOI, KIEN {c |}{res}          4        2.61       96.08
+{txt}THUOC XIT MUOI, KIEN (MOSTFLY) {c |}{res}          5        3.27       99.35
+                      {txt}XIT MUOI {c |}{res}          1        0.65      100.00
+{txt}{hline 31}{c +}{hline 35}
+                         Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc9  
+
+ {txt}nhang muoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        146       95.42       95.42
+{txt}         co {c |}{res}          7        4.58      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc10  
+
+ {txt}ngay trong {c |}
+ tuan nhang {c |}
+       muoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        146       95.42       95.42
+{txt}          1 {c |}{res}          4        2.61       98.04
+{txt}          7 {c |}{res}          3        1.96      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc11  
+
+ {txt}thap nhang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         31       20.26       20.26
+{txt}         co {c |}{res}        122       79.74      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc12  
+
+ {txt}ngay trong {c |}
+  tuan thap {c |}
+      nhang {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         31       20.26       20.26
+{txt}          1 {c |}{res}         33       21.57       41.83
+{txt}          3 {c |}{res}          2        1.31       43.14
+{txt}          7 {c |}{res}         87       56.86      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+{txt}
+{com}. tab1 bvnc13  bvnc14  bvnc15  bvnc16  bvnc17  
+
+{res}-> tabulation of bvnc13  
+
+   {txt}khoi bui {c |}
+        nha {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        119       77.78       77.78
+{txt}         co {c |}{res}         34       22.22      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc14  
+
+           {txt}ghi ro khoi bui nha {c |}      Freq.     Percent        Cum.
+{hline 31}{c +}{hline 35}
+                    BAI GIU XE {c |}{res}          1        0.65        0.65
+                       {txt}BAN PHO {c |}{res}          1        0.65        1.31
+                 {txt}BAN XANG, BUI {c |}{res}          1        0.65        1.96
+                           {txt}BUI {c |}{res}          1        0.65        2.61
+               {txt}BUI/KEO DAY KEM {c |}{res}          1        0.65        3.27
+                           {txt}HAN {c |}{res}          1        0.65        3.92
+                   {txt}HAN SAT, GO {c |}{res}          1        0.65        4.58
+                         {txt}KHONG {c |}{res}        119       77.78       82.35
+                           {txt}MAY {c |}{res}         14        9.15       91.50
+                           {txt}MOC {c |}{res}          4        2.61       94.12
+                        {txt}NAU AN {c |}{res}          1        0.65       94.77
+            {txt}NAU AN/CUI, CAO SU {c |}{res}          2        1.31       96.08
+                {txt}SOI TO/BAN GHE {c |}{res}          1        0.65       96.73
+                       {txt}SUA NHA {c |}{res}          1        0.65       97.39
+                      {txt}THAN, GA {c |}{res}          1        0.65       98.04
+                       {txt}XAY NHA {c |}{res}          2        1.31       99.35
+               {txt}XAY RANG CA PHE {c |}{res}          1        0.65      100.00
+{txt}{hline 31}{c +}{hline 35}
+                         Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc15  
+
+  {txt}thuoc tru {c |}
+        sau {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        143       93.46       93.46
+{txt}         co {c |}{res}         10        6.54      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc16  
+
+          {txt}ghi ro thuoc tru sau {c |}      Freq.     Percent        Cum.
+{hline 31}{c +}{hline 35}
+                         KHONG {c |}{res}        143       93.46       93.46
+                      {txt}KHONG RO {c |}{res}          2        1.31       94.77
+          {txt}THUOC KICH THICH CAY {c |}{res}          1        0.65       95.42
+             {txt}THUOC TRU SAU VTP {c |}{res}          1        0.65       96.08
+                 {txt}THUOC XIT CAY {c |}{res}          1        0.65       96.73
+            {txt}THUOC XIT CAY CANH {c |}{res}          1        0.65       97.39
+                  {txt}THUOC XIT CO {c |}{res}          1        0.65       98.04
+                 {txt}THUOC XIT HOA {c |}{res}          1        0.65       98.69
+                 {txt}THUOC XIT LUA {c |}{res}          1        0.65       99.35
+                 {txt}THUOC XIT RAU {c |}{res}          1        0.65      100.00
+{txt}{hline 31}{c +}{hline 35}
+                         Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc17  
+
+ {txt}duong quoc {c |}
+         lo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        111       72.55       72.55
+{txt}         co {c |}{res}         42       27.45      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+{txt}
+{com}. tab1 bvnc18  bvnc19  bvnc20  bvnc21  bvnc22  bvnc23  
+
+{res}-> tabulation of bvnc18  
+
+  {txt}duong sua {c |}
+       chua {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        121       79.08       79.08
+{txt}         co {c |}{res}         32       20.92      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc19  
+
+   {txt}khu cong {c |}
+     nghiep {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        117       76.47       76.47
+{txt}         co {c |}{res}         36       23.53      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc20  
+
+    {txt}nha tre {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         30       19.61       19.61
+{txt}         co {c |}{res}        123       80.39      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc21  
+
+                         {txt}ghi ro nha tre {c |}      Freq.     Percent        Cum.
+{hline 40}{c +}{hline 35}
+                             CO DAY TRE {c |}{res}          1        0.81        0.81
+                             {txt}CO GIU TRE {c |}{res}          1        0.81        1.63
+                                {txt}NHA TRE {c |}{res}         23       18.70       20.33
+                         {txt}NHA TRE, DI BO {c |}{res}          1        0.81       21.14
+             {txt}NHA TRE, DI BO 5 NGAY/TUAN {c |}{res}          1        0.81       21.95
+                             {txt}TRUONG HOC {c |}{res}         90       73.17       95.12
+{txt}TRUONG HOC,DI BO 2 PHUT/NGAY 5 NGAY/TUA {c |}{res}          1        0.81       95.93
+{txt}TRUONG HOC,DI BO 2 PHUT/NGAY 6 NGAY/TUA {c |}{res}          1        0.81       96.75
+{txt}TRUONG HOC,DI BO 5 PHUT/NGAY 5 NGAY/TUA {c |}{res}          1        0.81       97.56
+{txt}TRUONG HOC,DI BO 5 PHUT/NGAY 6 NGAY/TUA {c |}{res}          2        1.63       99.19
+{txt}TRUONG HOC,DI BO 5 PHUT/NGAY,5 NGAY/TUA {c |}{res}          1        0.81      100.00
+{txt}{hline 40}{c +}{hline 35}
+                                  Total {c |}{res}        123      100.00
+
+-> tabulation of bvnc22  
+
+     {txt}xe dap {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        123      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of bvnc23  
+
+        {txt}ngay trong tuan xe dap {c |}      Freq.     Percent        Cum.
+{hline 31}{c +}{hline 35}
+                         KHONG {c |}{res}        123      100.00      100.00
+{txt}{hline 31}{c +}{hline 35}
+                         Total {c |}{res}        123      100.00
+{txt}
+{com}. tab1 bvnc24  bvnc25  bvnc16  bvnc27  cvnc1  cvnc2  
+
+{res}-> tabulation of bvnc24  
+
+ {txt}xe gan may {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         12        9.76        9.76
+{txt}         co {c |}{res}        111       90.24      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of bvnc25  
+
+    {txt}ngay trong tuan xe gan may {c |}      Freq.     Percent        Cum.
+{hline 31}{c +}{hline 35}
+     10 PHUT/NGAY, 5 NGAY/TUAN {c |}{res}         18       14.63       14.63
+     {txt}10 PHUT/NGAY, 6 NGAY/TUAN {c |}{res}          4        3.25       17.89
+     {txt}15 PHUT/NGAY, 5 NGAY/TUAN {c |}{res}          8        6.50       24.39
+     {txt}15 PHUT/NGAY, 6 NGAY/TUAN {c |}{res}          9        7.32       31.71
+     {txt}15 PHUT/NGAY, 7 NGAY/TUAN {c |}{res}          1        0.81       32.52
+     {txt}20 PHUT/NGAY, 5 NGAY/TUAN {c |}{res}          8        6.50       39.02
+     {txt}25 PHUT/NGAY, 5 NGAY/TUAN {c |}{res}          1        0.81       39.84
+      {txt}3 PHUT/NGAY, 5 NGAY/TUAN {c |}{res}          3        2.44       42.28
+      {txt}3 PHUT/NGAY, 6 NGAY/TUAN {c |}{res}          2        1.63       43.90
+       {txt}3 PHUT/NGAY,5 NGAY/TUAN {c |}{res}          1        0.81       44.72
+     {txt}30 PHUT/NGAY, 5 NGAY/TUAN {c |}{res}          2        1.63       46.34
+     {txt}30 PHUT/NGAY, 6 NGAY/TUAN {c |}{res}          1        0.81       47.15
+     {txt}30 PHUT/NGAY, 7 NGAY/TUAN {c |}{res}          1        0.81       47.97
+     {txt}40 PHUT/NGAY, 6 NGAY/TUAN {c |}{res}          1        0.81       48.78
+      {txt}5 PHUT/NGAY, 4 NGAY/TUAN {c |}{res}          1        0.81       49.59
+      {txt}5 PHUT/NGAY, 5 NGAY.TUAN {c |}{res}          1        0.81       50.41
+      {txt}5 PHUT/NGAY, 5 NGAY/TUAN {c |}{res}         36       29.27       79.67
+      {txt}5 PHUT/NGAY, 6 NGAY/TUAN {c |}{res}          9        7.32       86.99
+      {txt}6 NGAY/TUAN, 5 PHUT/NGAY {c |}{res}          1        0.81       87.80
+      {txt}6 NGAY/TUAN, 7 PHUT/NGAY {c |}{res}          1        0.81       88.62
+      {txt}7 PHUT/NGAY, 3 NGAY/TUAN {c |}{res}          1        0.81       89.43
+      {txt}7 PHUT/NGAY, 5 NGAY/TUAN {c |}{res}          1        0.81       90.24
+                         {txt}KHONG {c |}{res}         11        8.94       99.19
+      {txt}THUOC XIT MUOI (MOSTFLY) {c |}{res}          1        0.81      100.00
+{txt}{hline 31}{c +}{hline 35}
+                         Total {c |}{res}        123      100.00
+
+-> tabulation of bvnc16  
+
+          {txt}ghi ro thuoc tru sau {c |}      Freq.     Percent        Cum.
+{hline 31}{c +}{hline 35}
+                         KHONG {c |}{res}        143       93.46       93.46
+                      {txt}KHONG RO {c |}{res}          2        1.31       94.77
+          {txt}THUOC KICH THICH CAY {c |}{res}          1        0.65       95.42
+             {txt}THUOC TRU SAU VTP {c |}{res}          1        0.65       96.08
+                 {txt}THUOC XIT CAY {c |}{res}          1        0.65       96.73
+            {txt}THUOC XIT CAY CANH {c |}{res}          1        0.65       97.39
+                  {txt}THUOC XIT CO {c |}{res}          1        0.65       98.04
+                 {txt}THUOC XIT HOA {c |}{res}          1        0.65       98.69
+                 {txt}THUOC XIT LUA {c |}{res}          1        0.65       99.35
+                 {txt}THUOC XIT RAU {c |}{res}          1        0.65      100.00
+{txt}{hline 31}{c +}{hline 35}
+                         Total {c |}{res}        153      100.00
+
+-> tabulation of bvnc27  
+
+        {txt}ngay trong tuan xe hoi {c |}      Freq.     Percent        Cum.
+{hline 31}{c +}{hline 35}
+     10 PHUT/NGAY, 5 NGAY/TUAN {c |}{res}          1        0.81        0.81
+     {txt}15 PHUT/NGAY, 5 NGAY/TUAN {c |}{res}          1        0.81        1.63
+      {txt}5 PHUT/NGAY, 5 NGAY/TUAN {c |}{res}          1        0.81        2.44
+     {txt}6 NGAY/TUAN, 30 PHUT/NGAY {c |}{res}          1        0.81        3.25
+                         {txt}KHONG {c |}{res}        119       96.75      100.00
+{txt}{hline 31}{c +}{hline 35}
+                         Total {c |}{res}        123      100.00
+
+-> tabulation of cvnc1  
+
+     {txt}nt lon {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         24       19.51       19.51
+{txt}         co {c |}{res}         99       80.49      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of cvnc2  
+
+{txt}nt thu nuoi {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        116       94.31       94.31
+{txt}         co {c |}{res}          7        5.69      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+{txt}
+{com}. tab1 cvnc3  cvnc4  cvnc5  cvnc6
+
+{res}-> tabulation of cvnc3  
+
+            {txt}ghi ro nt thu nuoi {c |}      Freq.     Percent        Cum.
+{hline 31}{c +}{hline 35}
+                          CHIM {c |}{res}          1        0.81        0.81
+                           {txt}CHO {c |}{res}          4        3.25        4.07
+                         {txt}KHONG {c |}{res}        116       94.31       98.37
+                           {txt}MEO {c |}{res}          1        0.81       99.19
+                     {txt}NHIM, SOC {c |}{res}          1        0.81      100.00
+{txt}{hline 31}{c +}{hline 35}
+                         Total {c |}{res}        123      100.00
+
+-> tabulation of cvnc4  
+
+     {txt}nt hut {c |}
+      thuoc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        113       91.87       91.87
+{txt}         co {c |}{res}         10        8.13      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of cvnc5  
+
+   {txt}nt duong {c |}
+    quoc lo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         69       56.10       56.10
+{txt}         co {c |}{res}         54       43.90      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+
+-> tabulation of cvnc6  
+
+   {txt}nt duong {c |}
+   sua chua {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        103       83.74       83.74
+{txt}         co {c |}{res}         20       16.26      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+{txt}
+{com}. 
+. gen sobvnc=bvnc1+bvnc2+bvnc3+bvnc4+bvnc5+bvnc6 +bvnc6+bvnc7+bvnc9+bvnc11  
+{txt}
+{com}. replace sobvnc=sobvnc+bvnc13+bvnc15+bvnc17+bvnc18+bvnc19+bvnc20+bvnc24+cvnc1+cvnc2+cvnc4+cvnc5+cvnc6  
+{txt}(153 real changes made, 30 to missing)
+
+{com}. tab1 sobvnc
+
+{res}-> tabulation of sobvnc  
+
+     {txt}sobvnc {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          4 {c |}{res}          6        4.88        4.88
+{txt}          5 {c |}{res}          4        3.25        8.13
+{txt}          6 {c |}{res}         10        8.13       16.26
+{txt}          7 {c |}{res}         27       21.95       38.21
+{txt}          8 {c |}{res}         16       13.01       51.22
+{txt}          9 {c |}{res}         23       18.70       69.92
+{txt}         10 {c |}{res}         17       13.82       83.74
+{txt}         11 {c |}{res}          7        5.69       89.43
+{txt}         12 {c |}{res}          5        4.07       93.50
+{txt}         13 {c |}{res}          1        0.81       94.31
+{txt}         14 {c |}{res}          2        1.63       95.93
+{txt}         15 {c |}{res}          3        2.44       98.37
+{txt}         16 {c |}{res}          1        0.81       99.19
+{txt}         18 {c |}{res}          1        0.81      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        123      100.00
+{txt}
+{com}. 
+.   
+. 
+. 
+. di "Thuoc dieu tri"
+{res}Thuoc dieu tri
+{txt}
+{com}. tab1  ktkm5r ktkh5r ktkb5r
+
+{res}-> tabulation of ktkm5r  
+
+            {txt}ktkm5r {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+    khong dieu tri {c |}{res}          3        1.96        1.96
+{txt}flixotide/seretide {c |}{res}         84       54.90       56.86
+{txt}           ket hop {c |}{res}         66       43.14      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+
+-> tabulation of ktkh5r  
+
+            {txt}ktkh5r {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+    khong dieu tri {c |}{res}          2        1.31        1.31
+{txt}flixotide/seretide {c |}{res}         87       56.86       58.17
+{txt}           ket hop {c |}{res}         64       41.83      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+
+-> tabulation of ktkb5r  
+
+            {txt}ktkb5r {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+    khong dieu tri {c |}{res}          3        1.96        1.96
+{txt}flixotide/seretide {c |}{res}         90       58.82       60.78
+{txt}           ket hop {c |}{res}         60       39.22      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+{txt}
+{com}. 
+. di "Tuan thu dieu tri"
+{res}Tuan thu dieu tri
+{txt}
+{com}. tab1  ktkm7 ktkh7 ktkb7
+
+{res}-> tabulation of ktkm7  
+
+      {txt}hen tai kham {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+                 0 {c |}{res}         34       22.22       22.22
+{txt}      thuong xuyen {c |}{res}        119       77.78      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+
+-> tabulation of ktkh7  
+
+      {txt}hen tai kham {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+                 0 {c |}{res}         48       31.37       31.37
+{txt}      thuong xuyen {c |}{res}        105       68.63      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+
+-> tabulation of ktkb7  
+
+      {txt}hen tai kham {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+                 0 {c |}{res}         47       30.72       30.72
+{txt}      thuong xuyen {c |}{res}        106       69.28      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+{txt}
+{com}. 
+. di "Quen dung thuoc"
+{res}Quen dung thuoc
+{txt}
+{com}. tab1  ktkm6 ktkh6 ktkb6
+
+{res}-> tabulation of ktkm6  
+
+   {txt}hen quen {c |}
+thuoc phong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     0 ngay {c |}{res}        138       90.20       90.20
+{txt}   1-2 ngay {c |}{res}          7        4.58       94.77
+{txt}   >=3 ngay {c |}{res}          8        5.23      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of ktkh6  
+
+   {txt}hen quen {c |}
+thuoc phong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     0 ngay {c |}{res}        141       92.16       92.16
+{txt}   1-2 ngay {c |}{res}          8        5.23       97.39
+{txt}   >=3 ngay {c |}{res}          4        2.61      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of ktkb6  
+
+   {txt}hen quen {c |}
+thuoc phong {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+     0 ngay {c |}{res}        142       92.81       92.81
+{txt}   1-2 ngay {c |}{res}          7        4.58       97.39
+{txt}   >=3 ngay {c |}{res}          4        2.61      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+{txt}
+{com}. 
+. di "Ky thuat dung thuoc"
+{res}Ky thuat dung thuoc
+{txt}
+{com}. tab1  ktkm8 ktkh8 ktkb8
+
+{res}-> tabulation of ktkm8  
+
+     {txt}hen ky {c |}
+      thuat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          5        3.27        3.27
+{txt}       dung {c |}{res}        148       96.73      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of ktkh8  
+
+     {txt}hen ky {c |}
+      thuat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          5        3.27        3.27
+{txt}       dung {c |}{res}        148       96.73      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+
+-> tabulation of ktkb8  
+
+     {txt}hen ky {c |}
+      thuat {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          2        1.31        1.31
+{txt}       dung {c |}{res}        151       98.69      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        153      100.00
+{txt}
+{com}. 
+. di "PHAN DO KIEM SOAT HEN CHUNG (tan so, ti le)" 
+{res}PHAN DO KIEM SOAT HEN CHUNG (tan so, ti le)
+{txt}
+{com}. tab1 kshen
+
+{res}-> tabulation of kshen  
+
+     {txt}kiem soat hen {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+     kiem soat tot {c |}{res}         88       57.52       57.52
+{txt}kiem soat mot phan {c |}{res}         65       42.48      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+{txt}
+{com}. 
+. di "LIEN QUAN GIUA KIEM SOAT HEN CHUNG VA DI UNG NGUYEN" 
+{res}LIEN QUAN GIUA KIEM SOAT HEN CHUNG VA DI UNG NGUYEN
+{txt}
+{com}. tab1 kshen
+
+{res}-> tabulation of kshen  
+
+     {txt}kiem soat hen {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+     kiem soat tot {c |}{res}         88       57.52       57.52
+{txt}kiem soat mot phan {c |}{res}         65       42.48      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+{txt}
+{com}. foreach X of varlist v6bpos2 v7bpos2 v8bpos2 v9bpos2 v10bpos2 v11bpos2 {c -(}
+{txt}  2{com}. cc outcome `X'
+{txt}  3{com}. {c )-}
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       11          54{txt}  {c |}  {res}       65       0.1692
+        {txt}Controls {c |} {res}       13          75{txt}  {c |}  {res}       88       0.1477
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       24         129{txt}  {c |}  {res}      153       0.1569
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.175214{txt}{col 43}{c |}   {res} .4397085    3.085997{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .1490909{txt}{col 43}{c |}   {res}-1.274234    .6759556{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .0252308{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.13{txt}  Pr>chi2 ={res} 0.7177
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       17          48{txt}  {c |}  {res}       65       0.2615
+        {txt}Controls {c |} {res}       27          61{txt}  {c |}  {res}       88       0.3068
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       44         109{txt}  {c |}  {res}      153       0.2876
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .8001543{txt}{col 43}{c |}   {res} .3644791     1.72927{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .1998457{txt}{col 43}{c |}   {res}-.7292699    .6355209{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0613163{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.37{txt}  Pr>chi2 ={res} 0.5408
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       11          54{txt}  {c |}  {res}       65       0.1692
+        {txt}Controls {c |} {res}       16          72{txt}  {c |}  {res}       88       0.1818
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       27         126{txt}  {c |}  {res}      153       0.1765
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .9166667{txt}{col 43}{c |}   {res} .3540845    2.301484{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .0833333{txt}{col 43}{c |}   {res}-1.301484    .6459155{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27} .0151515{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.04{txt}  Pr>chi2 ={res} 0.8400
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       15          50{txt}  {c |}  {res}       65       0.2308
+        {txt}Controls {c |} {res}       19          69{txt}  {c |}  {res}       88       0.2159
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       34         119{txt}  {c |}  {res}      153       0.2222
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.089474{txt}{col 43}{c |}   {res} .4658117    2.511832{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .0821256{txt}{col 43}{c |}   {res} -1.14679    .6018842{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .0189521{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.05{txt}  Pr>chi2 ={res} 0.8270
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       13          52{txt}  {c |}  {res}       65       0.2000
+        {txt}Controls {c |} {res}       14          74{txt}  {c |}  {res}       88       0.1591
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       27         126{txt}  {c |}  {res}      153       0.1765
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} 1.321429{txt}{col 43}{c |}   {res}  .523085     3.30929{txt} (exact)
+ Attr. frac. ex. {c |} {res}{col 27} .2432432{txt}{col 43}{c |}   {res}-.9117353    .6978203{txt} (exact)
+ Attr. frac. pop {c |} {res}{col 27} .0486486{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.43{txt}  Pr>chi2 ={res} 0.5117
+                                                        {txt} Proportion
+{col 18}{c |}   Exposed   Unexposed  {c |}      Total     Exposed
+{hline 17}{c +}{hline 24}{c +}{hline 24}
+           Cases {c |} {res}       21          44{txt}  {c |}  {res}       65       0.3231
+        {txt}Controls {c |} {res}       30          58{txt}  {c |}  {res}       88       0.3409
+{txt}{hline 17}{c +}{hline 24}{c +}{hline 24}
+{col 12}Total {c |} {res}       51         102{txt}  {c |}  {res}      153       0.3333
+{txt}{col 18}{c |}{col 43}{c |}
+{col 18}{c |}      Point estimate    {c |}    [95% Conf. Interval]
+{col 18}{c LT}{hline 24}{c +}{hline 24}
+      Odds ratio {c |} {res}{col 27} .9227273{txt}{col 43}{c |}   {res} .4392233     1.92293{txt} (exact)
+ Prev. frac. ex. {c |} {res}{col 27} .0772727{txt}{col 43}{c |}   {res}  -.92293    .5607767{txt} (exact)
+ Prev. frac. pop {c |} {res}{col 27}  .026343{txt}{col 43}{c |}
+{col 18}{c BLC}{hline 24}{c BT}{hline 24}
+                               chi2(1) ={res}     0.05{txt}  Pr>chi2 ={res} 0.8171
+{txt}
+{com}. 
+. di  "LIEN QUAN GIUA KIEM SOAT HEN CHUNG VA DI UNG NGUYEN, phan tang tai kham khong thuong xuyen"
+{res}LIEN QUAN GIUA KIEM SOAT HEN CHUNG VA DI UNG NGUYEN, phan tang tai kham khong thuong xuyen
+{txt}
+{com}. tab1 kshen
+
+{res}-> tabulation of kshen  
+
+     {txt}kiem soat hen {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+     kiem soat tot {c |}{res}         88       57.52       57.52
+{txt}kiem soat mot phan {c |}{res}         65       42.48      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+{txt}
+{com}. foreach X of varlist v6bpos2 v7bpos2 v8bpos2 v9bpos2 v10bpos2 v11bpos2 {c -(}
+{txt}  2{com}. cc outcome `X', by(ktkb7)
+{txt}  3{com}. {c )-}
+
+    {txt}hen tai kham {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+                 {c |}  {res}  2.97619      .4815013   21.57611      .893617{txt} (exact)
+    thuong xuyen {c |}  {res}      .75      .2059913   2.512879     3.773585{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} 1.175214      .4397085   3.085997{txt}{col 69}(exact)
+    M-H combined {c |}  {res} 1.176243         .4938   2.801838{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    1.99{txt}  Pr>chi2 = {res}0.1587
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.14
+                                                {txt}Pr>chi2 ={res}    0.7130
+
+    {txt}hen tai kham {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+                 {c |}  {res}  .562963      .1066037   2.561891      2.87234{txt} (exact)
+    thuong xuyen {c |}  {res} .9191919      .3581125   2.320627     5.603774{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .8001543      .3644791    1.72927{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .7984749      .3905093   1.632643{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    0.36{txt}  Pr>chi2 = {res}0.5482
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.38
+                                                {txt}Pr>chi2 ={res}    0.5396
+
+    {txt}hen tai kham {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+                 {c |}  {res} .3333333      .0064182   3.834896     1.531915{txt} (exact)
+    thuong xuyen {c |}  {res} 1.111111      .3829554   3.158122     4.075472{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .9166667      .3540845   2.301484{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .8986254      .3830413     2.1082{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    0.92{txt}  Pr>chi2 = {res}0.3364
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.06
+                                                {txt}Pr>chi2 ={res}    0.8071
+
+    {txt}hen tai kham {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+                 {c |}  {res} 2.222222      .3208962   17.01558     .9574468{txt} (exact)
+    thuong xuyen {c |}  {res} .8642857       .319004   2.283623     5.283019{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} 1.089474      .4658117   2.511832{txt}{col 69}(exact)
+    M-H combined {c |}  {res} 1.072628      .4966144   2.316748{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    1.00{txt}  Pr>chi2 = {res}0.3181
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.03
+                                                {txt}Pr>chi2 ={res}    0.8584
+
+    {txt}hen tai kham {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+                 {c |}  {res}   1.5625       .183957   13.04302     1.021277{txt} (exact)
+    thuong xuyen {c |}  {res} 1.237374      .4201208    3.59785     3.735849{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} 1.321429       .523085    3.30929{txt}{col 69}(exact)
+    M-H combined {c |}  {res} 1.307173      .5661588    3.01806{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    0.05{txt}  Pr>chi2 = {res}0.8163
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.39
+                                                {txt}Pr>chi2 ={res}    0.5319
+
+    {txt}hen tai kham {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+                 {c |}  {res} 2.222222      .3208962   17.01558     .9574468{txt} (exact)
+    thuong xuyen {c |}  {res} .7164751      .3020952   1.685683     7.386792{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .9227273      .4392233    1.92293{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .8892497      .4418754   1.789566{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (M-H)      chi2({res}1{txt}) = {res}    1.51{txt}  Pr>chi2 = {res}0.2197
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.11
+                                                {txt}Pr>chi2 ={res}    0.7415
+{txt}
+{com}. 
+. di "LIEN QUAN GIUA KIEM SOAT HEN CHUNG VA DI UNG NGUYEN, phan tang quen dung thuoc"
+{res}LIEN QUAN GIUA KIEM SOAT HEN CHUNG VA DI UNG NGUYEN, phan tang quen dung thuoc
+{txt}
+{com}. tab1 kshen
+
+{res}-> tabulation of kshen  
+
+     {txt}kiem soat hen {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+     kiem soat tot {c |}{res}         88       57.52       57.52
+{txt}kiem soat mot phan {c |}{res}         65       42.48      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+{txt}
+{com}. foreach X of varlist v6bpos2 v7bpos2 v8bpos2 v9bpos2 v10bpos2 v11bpos2 {c -(}
+{txt}  2{com}. cc outcome `X', by(ktkb6)
+{txt}  3{com}. {c )-}
+
+{txt}hen quen thuoc p {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+          0 ngay {c |}  {res} 1.423077      .5262296   3.769816     4.028169{txt} (exact)
+        1-2 ngay {c |}  {res}        .             .          .            0{txt} (exact)
+        >=3 ngay {c |}  {res}        .             .          .            0{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} 1.175214      .4397085   3.085997{txt}{col 69}(exact)
+    M-H combined {c |}  {res} 1.423077      .5870876   3.449482{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}2{txt}) = {res}    0.00{txt}  Pr>chi2 = {res}1.0000
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.61
+                                                {txt}Pr>chi2 ={res}    0.4350
+
+{txt}hen quen thuoc p {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+          0 ngay {c |}  {res} .8333333      .3642272   1.865573     7.605634{txt} (exact)
+        1-2 ngay {c |}  {res}        .             .          .            0{txt} (exact)
+        >=3 ngay {c |}  {res}        .             0          .            0{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .8001543      .3644791    1.72927{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .8990741      .4325059   1.868955{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}2{txt}) = {res}    1.48{txt}  Pr>chi2 = {res}0.4763
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.08
+                                                {txt}Pr>chi2 ={res}    0.7766
+
+{txt}hen quen thuoc p {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+          0 ngay {c |}  {res} .8682065      .3107748   2.300404     5.183099{txt} (exact)
+        1-2 ngay {c |}  {res}        .             0          .            0{txt} (exact)
+        >=3 ngay {c |}  {res}        .             0          .            0{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .9166667      .3540845   2.301484{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .9164402      .3791094   2.215357{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}2{txt}) = {res}    0.53{txt}  Pr>chi2 = {res}0.7673
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.04
+                                                {txt}Pr>chi2 ={res}    0.8481
+
+{txt}hen quen thuoc p {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+          0 ngay {c |}  {res}  1.22208      .5071765   2.889182     5.485915{txt} (exact)
+        1-2 ngay {c |}  {res}        .             0          .            0{txt} (exact)
+        >=3 ngay {c |}  {res}        .             .          .            0{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} 1.089474      .4658117   2.511832{txt}{col 69}(exact)
+    M-H combined {c |}  {res}  1.22208      .5537031   2.697255{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}2{txt}) = {res}    0.00{txt}  Pr>chi2 = {res}1.0000
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.25
+                                                {txt}Pr>chi2 ={res}    0.6205
+
+{txt}hen quen thuoc p {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+          0 ngay {c |}  {res}  1.45515      .5574168   3.732911     4.239437{txt} (exact)
+        1-2 ngay {c |}  {res}        .             0          .            0{txt} (exact)
+        >=3 ngay {c |}  {res}        .             .          .            0{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} 1.321429       .523085    3.30929{txt}{col 69}(exact)
+    M-H combined {c |}  {res}  1.45515      .6168867   3.432494{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}2{txt}) = {res}    0.00{txt}  Pr>chi2 = {res}1.0000
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.73
+                                                {txt}Pr>chi2 ={res}    0.3917
+
+{txt}hen quen thuoc p {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+          0 ngay {c |}  {res} 1.002778      .4606713   2.157816     7.605634{txt} (exact)
+        1-2 ngay {c |}  {res}        .             0          .            0{txt} (exact)
+        >=3 ngay {c |}  {res}        .             0          .            0{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .9227273      .4392233    1.92293{txt}{col 69}(exact)
+    M-H combined {c |}  {res} 1.035648      .5121729    2.09415{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}2{txt}) = {res}    0.44{txt}  Pr>chi2 = {res}0.8029
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.01
+                                                {txt}Pr>chi2 ={res}    0.9229
+{txt}
+{com}. 
+. di "LIEN QUAN GIUA KIEM SOAT HEN CHUNG VA DI UNG NGUYEN, phan tang ki thuat dung thuoc"
+{res}LIEN QUAN GIUA KIEM SOAT HEN CHUNG VA DI UNG NGUYEN, phan tang ki thuat dung thuoc
+{txt}
+{com}. tab1 kshen
+
+{res}-> tabulation of kshen  
+
+     {txt}kiem soat hen {c |}      Freq.     Percent        Cum.
+{hline 19}{c +}{hline 35}
+     kiem soat tot {c |}{res}         88       57.52       57.52
+{txt}kiem soat mot phan {c |}{res}         65       42.48      100.00
+{txt}{hline 19}{c +}{hline 35}
+             Total {c |}{res}        153      100.00
+{txt}
+{com}. foreach X of varlist v6bpos2 v7bpos2 v8bpos2 v9bpos2 v10bpos2 v11bpos2 {c -(}
+{txt}  2{com}. cc outcome `X', by(ktkb8)
+{txt}  3{com}. {c )-}
+
+    {txt}hen ky thuat {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+                 {c |}  {res}        .             .          .            0{txt} (exact)
+            dung {c |}  {res} 1.220414      .4557349   3.209839     4.476821{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} 1.175214      .4397085   3.085997{txt}{col 69}(exact)
+    M-H combined {c |}  {res} 1.220414      .5075296   2.934628{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}1{txt}) = {res}    0.00{txt}  Pr>chi2 = {res}1.0000
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.20
+                                                {txt}Pr>chi2 ={res}    0.6571
+
+    {txt}hen ky thuat {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+                 {c |}  {res}        .             .          .            0{txt} (exact)
+            dung {c |}  {res} .8349436      .3792562   1.809519     8.225166{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .8001543      .3644791    1.72927{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .8349436      .4074499   1.710961{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}1{txt}) = {res}    0.00{txt}  Pr>chi2 = {res}1.0000
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.24
+                                                {txt}Pr>chi2 ={res}    0.6231
+
+    {txt}hen ky thuat {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+                 {c |}  {res}        .             0          .            0{txt} (exact)
+            dung {c |}  {res} .8490566      .3177866   2.178331     5.615894{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .9166667      .3540845   2.301484{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .8490566      .3571156   2.018666{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}1{txt}) = {res}    0.00{txt}  Pr>chi2 = {res}1.0000
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.14
+                                                {txt}Pr>chi2 ={res}    0.7119
+
+    {txt}hen ky thuat {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+                 {c |}  {res}        .             .          .            0{txt} (exact)
+            dung {c |}  {res} 1.134868      .4840126   2.622592     6.039735{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} 1.089474      .4658117   2.511832{txt}{col 69}(exact)
+    M-H combined {c |}  {res} 1.134868      .5250897   2.452774{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}1{txt}) = {res}    0.00{txt}  Pr>chi2 = {res}1.0000
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.10
+                                                {txt}Pr>chi2 ={res}    0.7484
+
+    {txt}hen ky thuat {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+                 {c |}  {res}        .             .          .            0{txt} (exact)
+            dung {c |}  {res} 1.374286       .542815   3.442892     4.635762{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} 1.321429       .523085    3.30929{txt}{col 69}(exact)
+    M-H combined {c |}  {res} 1.374286      .5957672   3.170133{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}1{txt}) = {res}    0.00{txt}  Pr>chi2 = {res}1.0000
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.55
+                                                {txt}Pr>chi2 ={res}    0.4564
+
+    {txt}hen ky thuat {c |}{col 26}OR{col 35}[95% Conf. Interval]   M-H Weight
+{hline 17}{c +}{hline 49}
+                 {c |}  {res}        .             .          .            0{txt} (exact)
+            dung {c |}  {res} .9666667      .4585339   2.021603     8.344371{txt} (exact)
+{hline 17}{c +}{hline 49}
+           Crude {c |}  {res} .9227273      .4392233    1.92293{txt}{col 69}(exact)
+    M-H combined {c |}  {res} .9666667      .4874845    1.91687{txt}{col 69}
+{hline 17}{c BT}{hline 49}
+Test of homogeneity (Tarone)   chi2({res}1{txt}) = {res}    0.00{txt}  Pr>chi2 = {res}1.0000
+
+                   {txt}Test that combined OR = 1:
+                                Mantel-Haenszel chi2(1) ={res}      0.01
+                                                {txt}Pr>chi2 ={res}    0.9229
+{txt}
+{com}. 
+. di "Khao sat ca 3 moi lien quan sau va kiem soat cung luot ca 3 yeu to gay nhieu, bao gom: (phan tich da bien?)"
+{res}Khao sat ca 3 moi lien quan sau va kiem soat cung luot ca 3 yeu to gay nhieu, bao gom: (phan tich da bien?)
+{txt}
+{com}. di "•   Quen dung thuoc = 3 ngay (ktkm6, ktkh6, ktkb6)"
+{res}•   Quen dung thuoc = 3 ngay (ktkm6, ktkh6, ktkb6)
+{txt}
+{com}. logistic outcome ktkm6 ktkh6  ktkb6
+
+{txt}Logistic regression                               Number of obs   = {res}       153
+                                                  {txt}LR chi2({res}3{txt})      = {res}     14.87
+                                                  {txt}Prob > chi2     = {res}    0.0019
+{txt}Log likelihood = {res} -96.88336                       {txt}Pseudo R2       = {res}    0.0713
+
+{txt}{hline 13}{c TT}{hline 64}
+     outcome {c |} Odds Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+{hline 13}{c +}{hline 64}
+       ktkm6 {c |}  {res} 1.594974   .6127033     1.22   0.224     .7512208     3.38641
+       {txt}ktkh6 {c |}  {res} 2.610809   1.636138     1.53   0.126     .7644433    8.916714
+       {txt}ktkb6 {c |}  {res} 3.793756   2.516381     2.01   0.044     1.033883    13.92091
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. 
+. di "•   Tai kham khong thuong xuyen (ktkm7, ktkh7, ktkb7)"
+{res}•   Tai kham khong thuong xuyen (ktkm7, ktkh7, ktkb7)
+{txt}
+{com}. logistic outcome ktkm7 ktkh7  ktkb7
+
+{txt}Logistic regression                               Number of obs   = {res}       153
+                                                  {txt}LR chi2({res}3{txt})      = {res}      3.18
+                                                  {txt}Prob > chi2     = {res}    0.3647
+{txt}Log likelihood = {res}-102.72605                       {txt}Pseudo R2       = {res}    0.0152
+
+{txt}{hline 13}{c TT}{hline 64}
+     outcome {c |} Odds Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+{hline 13}{c +}{hline 64}
+       ktkm7 {c |}  {res} 1.698053   .8556636     1.05   0.293      .632446      4.5591
+       {txt}ktkh7 {c |}  {res} .4462007   .2172319    -1.66   0.097     .1718401    1.158606
+       {txt}ktkb7 {c |}  {res} 1.452385   .6781835     0.80   0.424     .5815909    3.626985
+{txt}{hline 13}{c BT}{hline 64}
+
+{com}. 
+. 
+. di "•   Ky thuat dung thuoc khong dung (ktkm8, ktkh8, ktkb8)"
+{res}•   Ky thuat dung thuoc khong dung (ktkm8, ktkh8, ktkb8)
+{txt}
+{com}. logistic outcome ktkm8 ktkh8  ktkb8, asis
+
+{txt}Logistic regression                               Number of obs   = {res}       153
+                                                  {txt}LR chi2({res}3{txt})      = {res}      6.35
+                                                  {txt}Prob > chi2     = {res}    0.0959
+{txt}Log likelihood = {res}-101.14271                       {txt}Pseudo R2       = {res}    0.0304
+
+{txt}{hline 13}{c TT}{hline 64}
+     outcome {c |} Odds Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+{hline 13}{c +}{hline 64}
+       ktkm8 {c |}  {res} 7.10e+07   1.01e+08    12.69   0.000      4354700    1.16e+09
+       {txt}ktkh8 {c |}  {res} 9.99e-09          .        .       .            .           .
+       {txt}ktkb8 {c |}  {res} 1.19e-08   1.69e-08   -12.90   0.000     7.46e-10    1.91e-07
+{txt}{hline 13}{c BT}{hline 64}
+Note: 1 failure and 3 successes completely determined.
+
+{com}. 
+. 
+. 
+{txt}end of do-file
+
+{com}. exit, clear

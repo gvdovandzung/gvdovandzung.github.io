@@ -1,0 +1,42 @@
+{smcl}
+{p 0 4}
+{bf:{help vgsg:A Visual Guide to Stata Graphics}} > {bf:{help vgsg_ref:Cross Reference}} > {bf:Appendix}
+{p_end}
+{hline}
+
+{title:Appendix}
+
+{p 4 8 4}
+Angle{break}
+{bf:{help anglestyle}}
+
+{p 4 8 4}Stat Graphs{break}
+{bf:{help graph_other}}
+
+{p 4 8 4}Stat Graph Options{break}
+ {bf:{help twoway_options}}{break}
+
+{p 4 8 4}Save/Redisplay/Combine{break}
+ {bf:{help saving_option}}{break}
+ {bf:{help graph_use}}{break}
+ {bf:{help name_option}}{break}
+ {bf:{help graph_display}}{break}
+ {bf:{help graph_combine}}{break}
+
+{p 4 8 4}More Examples{break}
+ {bf:{help graph_intro}}{break}
+
+{p 4 8 4}Common Mistakes{break}
+
+{p 4 8 4}Customizing Schemes{break}
+ {bf:{help schemes}}{break}
+ {bf:{browse www.stata-press.com/books/vgsg.html:Online Supplements}}
+
+
+
+
+
+
+{hline}
+
+  

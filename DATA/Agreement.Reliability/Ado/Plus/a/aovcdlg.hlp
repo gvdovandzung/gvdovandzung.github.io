@@ -1,0 +1,82 @@
+.-
+help for ^N-factor ANOVA & ANOCOVA^                       Menu: Statistics--ANOVA                      
+.-
+
+Topics covered
+--------------
+
+^Description of the test^
+^How to fill in the dialog box^
+
+
+^Description of the test^
+^-----------------------^
+
+This command performs N-factor ANOVA and ANOCOVA (analysis of covariance).
+
+For example, you can compute 3-factor ANOVA models such as
+
+	Y = A B C A*B A*C B*C A*B*C
+
+where Y is the outcome variable and A, B, and C are categorical variables.
+You can select which (if any) of the interaction terms to include in the model;
+see ^How to fill in the dialog box^ below.
+
+You can also compute ANOCOVA (analysis of covariance) models.  For example,
+
+	Y = gender race age
+
+where age is continuous.  In this model, you are controlling for the
+covariate age, which may differ in the gender and race groups.
+You can also add interaction terms:
+
+	Y = gender race age gender*race gender*age race*age  
+
+
+^How to fill in the dialog box^
+^-----------------------------^
+
+Dependent variable:	  This is the variable that contains the ^measurement^
+			  of interest.  Click on the button with the down
+			  arrow to the right of the box to expose a drop-down
+			  list box.  Click on a variable in this list box to
+			  load it into the command line.  Or type in the name.
+ 
+Categorical variables:    These variables must contain ^numbers^ that represent
+			  different levels.  Click on one or more variables in
+			  the list box to load them into the command.  Or type
+			  the name(s) of the variable(s).  You must enter at 
+			  least one categorical variable.
+
+Continuous variables:     Enter your ^covariates^ here.  Click on none, one, or
+			  more variables in the list box to load them into the
+			  command.  Or type the name(s) of the variable(s).
+
+Build interaction terms:  If you want the interaction term ^A*B^, then
+                          
+                          1. Click on the variable ^A^ in the list box.  Or type
+			     it in.
+
+			  2. Click on the variable ^B^.  Or type a space, then ^B^.
+
+			  3. Click on the "Add term" button.  The term ^A*B^ will
+			     appear in the "Interactions" box.
+
+			  If you want the interaction term ^A*B*C^, click on
+			  each of ^A^, ^B^, and ^C^, then click "Add term".
+
+			  You can create interactions for any combination of 
+			  categorical and continuous variables.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@kwaldlg!One-way nonparametric ANOVA (Kruskal-Wallis test)@ 
+@onewdlg!One-way ANOVA (parametric)@
+@onegdlg!One-way ANOVA plots@
+@rpmdlg!Repeated-measures ANOVA@
+@twowdlg!Two-way ANOVA@
+@aovmdlg!Two-way ANOVA plots@

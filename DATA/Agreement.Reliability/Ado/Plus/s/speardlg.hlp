@@ -1,0 +1,31 @@
+.-
+help for ^Spearman rank correlation^                Menu: Statistics--Correlation
+.-
+
+^Description^
+^-----------^
+
+This command computes the Spearman rank correlation coefficient rho
+for the correlation of a variable X with a variable Y.
+
+This is a nonparametric correlation.  The data for X are ranked,
+and the data for Y are ranked.  Then the correlation of the
+ranks is computed.  If there are ties in the data, average ranks
+are used.
+
+
+^How to fill in the dialog box^
+^-----------------------------^
+
+Enter the X variable in the "Data variable #1" box and the Y variable
+in the "Data variable #2" box (order does not matter).
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@pearsdlg!Pearson correlation@
+
+@spearman!For the command-line version, see help for spearman.@

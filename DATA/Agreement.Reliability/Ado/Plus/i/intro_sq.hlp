@@ -1,0 +1,115 @@
+.-
+help for ^Introduction to StataQuest windows^
+.-
+
+When StataQuest comes up, you will see the ^Stata Results^, ^Review^, ^Variables^,
+and ^Stata Command^ windows:
+
+=========================================================================
+===================                                                     |
+|     ^Review^      |                                                     |
+|-----------------|=====================================================|
+|                 |                    ^Stata Results^                    |
+|  Past commands  |-----------------------------------------------------|
+|    appear in    |                                                     |
+|   this window   |                                                     |
+|                 |                Results from commands                |
+|=================|                                                     |
+|    ^Variables^    |                    are displayed                    |
+|-----------------|                                                     |
+|                 |                        here                         |
+|   The names of  |                                                     |
+|  your variables |                                                     |
+|   appear here   |=====================================================|
+|                 |                    ^Stata Command^                    |
+|                 |-----------------------------------------------------|
+|                 |     You can type commands here or use the menus     |
+=========================================================================
+
+
+In addition, if you give one of the commands under the ^Graph^ menu, a ^Stata^
+^Graph^ window will appear.  @graph_sq!Click here for more information about graphs.@
+
+If you click on the ^Log^ button, a ^Stata Log^ window is created (although
+it may remain hidden under your other windows).  @log_sq!Click here for help on logs.@
+
+
+^Giving commands in StataQuest^
+^-----------------------------^
+
+You can give commands in StataQuest by either
+
+	- using the menus, or
+
+	- typing commands in the ^Stata Command^ window.
+
+Using the menus is easier.  @menu_sq!Click here for an introduction to using the menus@
+@menu_sq!and giving commands in StataQuest.@  
+
+In Professional Stata, commands are entered in the ^Stata Command^ window.
+You can also use the ^Command^ window in StataQuest.  There are many advantages
+to using the ^Command^ window.  
+
+@cmd_sq!Click here to learn about using the ^Command^ window in StataQuest.@
+
+
+^Results and output^
+^------------------^
+
+Once you have given a command, output will appear in the ^Stata Results^ window.
+
+Note: Output is not saved until you start a log by clicking on the ^Log^ button.
+
+@log_sq!Click here to learn about saving and printing output using logs.@
+
+
+^Review window^
+^-------------^
+
+The past commands you have given (but no output) appear in the ^Review^ window.
+
+You can use the ^Review^ window together with the ^Stata Command^ window to repeat
+commands.
+
+Clicking once on a command in the ^Review^ window loads it into the ^Command^
+window where it can be edited and reissued.
+  
+Clicking twice on a command in the ^Review^ window executes it.  
+
+@cmd_sq!Click here for information on using command-line mode in StataQuest.@
+
+@stata_sq!Click here for information on Professional Stata.@
+
+
+^Variables window^
+^----------------^
+
+The names of your variables appear in the ^Variables^ window.  Variable names
+will appear when you have
+
+	@input_sq!1. Entered data using the spreadsheet editor.  You enter the editor by@
+	   @input_sq!clicking the Editor button or by selecting New under the File menu.@
+
+	@save_sq!2. Loaded a Stata data set by selecting ^Open^ under the ^File^ menu.@
+
+	@impor_sq!3. Imported an ASCII file of data.@
+
+Click on any of the topics above for help.
+
+If your ^Variables^ window is empty, you don't have any data in StataQuest.
+
+If you use the ^Stata Command^ window to enter commands, the ^Variables^
+window will help build up your command.  Clicking on a variable loads it
+into the ^Command^ window.  @cmd_sq!See help for command-line mode.@
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@menu_sq!StataQuest menus and buttons@
+
+@examp_sq!An example of a StataQuest session@
+
+@sqcont!Table of contents for StataQuest@

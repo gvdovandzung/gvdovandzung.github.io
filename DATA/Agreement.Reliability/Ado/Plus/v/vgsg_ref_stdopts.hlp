@@ -1,0 +1,27 @@
+{smcl}
+{p 0 4}
+{bf:{help vgsg:A Visual Guide to Stata Graphics}} > {bf:{help vgsg_ref:Cross Reference}} > {bf:Standard Options}
+{p_end}
+{hline}
+
+{title:Standard Options}
+
+{p 4 8 4}
+Titles{break}
+{bf:{help title_options}}
+
+{p 4 8 4}
+Schemes{break}
+{bf:{help scheme_option}}
+
+{p 4 8 4}
+Size and Scale{break}
+{bf:{help scale_option}}{break}
+{bf:{help region_options}}
+
+{p 4 8 4}
+Region{break}
+{bf:{help region_options}}
+
+{hline}
+

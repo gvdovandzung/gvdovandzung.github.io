@@ -1,0 +1,65 @@
+.-
+help for ^Poisson confidence interval^                           Menu: Calculator
+.-
+
+^Description^
+^-----------^
+
+This command computes an exact confidence interval for count data.
+
+The confidence interval for the total number of events is first computed.
+Then it is divided by the total exposure time.  The output displays the
+mean, standard error, and confidence interval for the counts divided by
+exposure time.    
+
+If X has a Poisson(lambda) distribution and x_obs is the observed total
+number of events, then an exact 95% confidence interval for lambda is given
+by
+	[ lambda1, lambda2 ]
+
+where lambda1 is such that 
+
+0.025 = P(X >= x_obs) = (sum over x = x_obs, x_obs + 1,...) Poisson(x, lambda1)
+
+and lambda2 is such that
+
+0.025 = P(X <= x_obs) = (sum over x = 0, 1,..., x_obs) Poisson(x, lambda2)
+
+If T is the total exposure time, then the command displays
+
+	               mean = x_obs/T
+
+	     standard error = sqrt(x_obs)/T
+
+	lower bound of C.I. = lambda1/T
+	upper bound of C.I. = lambda2/T
+
+
+^Example^
+^-------^
+
+Suppose that in a city, 84 automobile accidents occur over a 
+48-hour weekend.
+
+To get a 95% confidence interval for the total number of events:
+
+Enter ^1^ for "Total exp. time" and ^84^ for "No. of events".
+
+The confidence interval is [67, 104].
+
+Note that 0.025 = (sum over x = 84, 85,...  ) Poisson(x, lambda =  67)
+and       0.025 = (sum over x = 0, 1,..., 84) Poisson(x, lambda = 104) 
+
+To get a 95% confidence interval for the number of events per hour:
+
+Enter ^48^ for "Total exp. time" and ^84^ for "No. of events".
+
+The confidence interval is [1.40, 2.17] = [67/48, 104/48].
+ 
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@cii!For the command-line version, see help for cii.@

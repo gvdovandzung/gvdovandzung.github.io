@@ -1,0 +1,50 @@
+.-
+help for ^tkcomp^
+.-
+
+Tukey-Kramer pairwise comparisons
+----------------------------------
+ 
+	^tkcomp^ var [if] [, Level(sig) nu(dfe) mse(mse) dv(varname) ]
+
+
+Description
+-----------
+
+^tkcomp^ performs Tukey-Kramer pairwise comparisons after
+       running ^anova^.
+       
+       ^tkcomp^ requires the ^gsturng^ and the ^sturng*^ files.
+
+
+Examples
+--------
+
+ . ^anova y b^
+ . ^tkcomp b^
+ . ^tkcomp b, level(.99) ^
+ . ^tkcomp b, dv(adj) ^
+ 
+  ^/* differences in b at a==3 */^
+ . ^anova y a b a*b^
+ . ^tkcomp b if a==3^
+ . ^tkcomp b if a==3, nu(3) mse(71.6)^
+
+
+Author
+------
+
+      Philip B. Ender
+      UCLA Academic Technology Services
+      ender@@ucla.edu 
+      
+      
+Acknowledgements
+----------------
+
+      John R. Gleason
+      Syracuse University
+      loesljrg@ican.net
+      
+      For ^qsturng^ and ^strung*^
+      STB-47/sg101

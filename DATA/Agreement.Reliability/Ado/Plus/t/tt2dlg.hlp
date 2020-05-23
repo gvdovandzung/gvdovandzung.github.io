@@ -1,0 +1,56 @@
+.-
+help for ^2-sample t test (Calculator version)^                  Menu: Calculator
+.-
+
+^Note on dataset version of command^
+^----------------------------------^
+
+This command computes a 2-sample t test when you have already calculated
+the means and sample standard deviations for your two samples.
+
+Use the ^2-sample t test^ command under the ^Parametric tests^ section of 
+the ^Statistics^ menu if you wish to have StataQuest compute the means and
+standard deviations from the samples, and then perform the t test.
+
+@ptt2dlg!Click here for help on the dataset version of the 2-sample t test.@
+
+
+^Description of the test^
+^-----------------------^
+
+The 2-sample t test tests the null hypothesis Ho that the mean m1 of a random
+variable X1 is equal to the mean m2 of a random variable X2; i.e., Ho: m1 = m2.
+
+X1 is a measurement (e.g., height) for subjects in population 1, and X2 is a
+measurement for subjects in population 2.
+
+The test assumes that X1 and X2 are normally distributed in population 1 and
+population 2, respectively.
+
+
+^Unequal variances option^
+^------------------------^
+
+The standard t test also assumes that the population variance of X1 is the
+same as the population variance of X2.  To do the standard t test, leave the
+"Unequal variances" box unchecked.
+
+If you do not want to assume equal population variances, check the "Unequal
+variances" box.  When you check it, the command uses Satterthwaite's approx-
+imation formula to handle (possibly) unequal variances.
+
+
+^Where to go for more help^
+^-------------------------^
+
+Click on the topic to go to the help file.
+
+@ptt2dlg!2-sample t test       (Statistics--Parametric tests)@
+@ptt1dlg!1-sample t test       (Statistics--Parametric tests)@
+
+@tt2dlg!1-sample t test       (Calculator menu)@
+
+@zt1dlg!1-sample normal test  (Calculator menu@
+@zt2dlg!2-sample normal test  (Calculator menu@
+
+@ttesti!For the command-line version, see help for ttesti.@
